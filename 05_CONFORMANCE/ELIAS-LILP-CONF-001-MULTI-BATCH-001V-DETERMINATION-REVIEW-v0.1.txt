@@ -1,0 +1,29 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 001V v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 84
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 86
+
+COVERED_BY_EXISTING: 1
+NEW_TEST_REQUIRED: 1
+NEW TEST DEFINITIONS RESERVED: 1
+
+CLAIM-007:
+COVERED_BY_EXISTING -> LILP-TC-T16-001;LILP-TC-T16-003
+Integrity evidence remains bounded to what it actually establishes; unsupported stronger external-status claims are refused or remain NOT_ESTABLISHED.
+
+CLAIM-008:
+NEW_TEST_REQUIRED -> LILP-TC-T16-013 RESERVED
+Distinct obligation: a conformance claim identifies the exact standard version and conformance profile relied upon.
+
+T16-007 profile-matrix completeness does not substitute for exact standard-version/profile identification in the claim itself.
+T16-013 is reserved only.
+T16-014 remains unreserved.
+T16-013 definition remains NOT_ESTABLISHED.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

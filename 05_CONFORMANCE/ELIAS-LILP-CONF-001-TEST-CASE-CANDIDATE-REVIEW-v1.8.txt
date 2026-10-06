@@ -1,0 +1,38 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v1.8
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 111
+NEW TEST DEFINITIONS: 2
+SUCCESSOR TEST CASES: 113
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-DET-004 -> LILP-TC-T08-010
+LILP-REQ-DET-005 -> LILP-TC-T08-011
+
+NEW TEST 1:
+TEST CASE: LILP-TC-T08-010
+RUN CLASS: CONTROL
+TITLE: DENY represents established prohibition within declared governance scope
+OBJECTIVE: Establish the normative semantics of DENY: the determination represents an established prohibition applicable within the declared governance scope and remains distinguishable from unresolved uncertainty, HOLD or mere absence of execution permission.
+EXPECTED: The determination is DENY only where the applicable prohibition is established within the declared governance scope. The prohibition basis and scope remain identifiable, consequential execution is not authorised, and unresolved or merely absent permission is not silently represented as DENY.
+FAILURE ORACLE: FAIL if DENY is produced without an established prohibition, if the prohibition is not applicable within the declared governance scope, or if unresolved uncertainty, HOLD or absence of permission is silently represented as DENY.
+
+NEW TEST 2:
+TEST CASE: LILP-TC-T08-011
+RUN CLASS: CONTROL
+TITLE: ESCALATE references separately authorised process without itself granting execution authority
+OBJECTIVE: Establish the normative semantics of ESCALATE: the determination identifies or references a separately authorised process while remaining distinct from execution authority unless the governing policy explicitly establishes such authority.
+EXPECTED: ESCALATE identifies or references a separately authorised process. The escalation determination does not itself grant consequential execution authority unless the applicable governing policy explicitly establishes that authority. Escalation routing and execution authority remain independently inspectable.
+FAILURE ORACLE: FAIL if ESCALATE does not identify or reference a separately authorised process, or if the escalation determination itself is treated as granting consequential execution authority without explicit governing-policy support.
+
+DENY is preserved as established prohibition within declared governance scope.
+ESCALATE is preserved as routing to a separately authorised process, not execution authority by implication.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

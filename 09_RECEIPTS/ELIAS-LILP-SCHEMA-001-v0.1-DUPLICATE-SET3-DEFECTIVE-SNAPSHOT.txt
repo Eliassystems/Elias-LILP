@@ -1,0 +1,1168 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+ELIAS SYSTEMS MACHINE-READABLE OBJECT & RECEIPT SCHEMAS
+
+Document ID:
+ELIAS-LILP-SCHEMA-001
+
+Version:
+v0.1
+
+Date:
+2026-10-01
+
+Status:
+WORKING DRAFT
+
+======================================================================
+0. DOCUMENT CONTROL
+======================================================================
+
+ELIAS-LILP-SCHEMA-001 defines machine-readable representations for the
+principal objects described by the frozen LILP normative standard and
+its implementation manual.
+
+This schema specification is subordinate to:
+
+ELIAS-LILP-STD-001 v0.1
+
+and uses implementation guidance from:
+
+ELIAS-LILP-MAN-001 v0.1
+
+Terminology is bound to:
+
+ELIAS-LILP-LEX-001 v0.1
+
+Where a machine-readable schema conflicts with the frozen normative
+standard:
+
+THE FROZEN STANDARD CONTROLS.
+
+======================================================================
+0.1 FROZEN ANCESTOR BINDINGS
+======================================================================
+
+Frozen Normative Standard:
+
+ELIAS-LILP-STD-001 v0.1
+
+SHA-256:
+
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+
+Frozen Implementation Manual:
+
+ELIAS-LILP-MAN-001 v0.1
+
+SHA-256:
+
+429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2
+
+MAN-001 Freeze Receipt SHA-256:
+
+9BE84255B92B7BE1653C7B539A378E8F9C3F11DD129C9A074BC1572E51104B5F
+
+
+Frozen Semantic and Governance Lexicon:
+
+ELIAS-LILP-LEX-001 v0.1
+
+SHA-256:
+
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+======================================================================
+1. PURPOSE
+======================================================================
+
+The purpose of SCHEMA-001 is to provide machine-readable structural
+contracts for LILP governance objects.
+
+The schema package is intended to support:
+
+- object validation;
+- implementation consistency;
+- deterministic field representation;
+- test-harness construction;
+- evidence-package validation;
+- receipt validation;
+- inter-system examination;
+- and bounded reproducibility.
+
+Schema validity does not itself establish semantic truth.
+
+Schema validity does not itself establish authority.
+
+Schema validity does not itself establish conformance.
+
+======================================================================
+2. SCHEMA AUTHORITY BOUNDARY
+======================================================================
+
+A schema answers questions such as:
+
+"Does this object contain the required structural fields?"
+
+A schema does not, by itself, answer questions such as:
+
+"Is this authority genuine?"
+
+"Is this evidence true?"
+
+"Is this actor authorised?"
+
+"Did the consequence actually occur?"
+
+Those require evidence and governance determination.
+
+STRUCTURAL VALIDITY DOES NOT EQUAL GOVERNANCE VALIDITY.
+
+======================================================================
+3. INITIAL SCHEMA SET
+======================================================================
+
+SCHEMA-001 v0.1 will define machine-readable representations for:
+
+01 — Governing State Object
+
+02 — Authority Object
+
+03 — Evidence Object
+
+04 — Interpretation Object
+
+05 — Delta Object
+
+06 — Determination Object
+
+07 — Gate Evaluation Object
+
+08 — Execution Record
+
+09 — Consequence Record
+
+10 — Receipt Object
+
+11 — Correction / Deficiency Object
+
+12 — Conformance Result Object
+
+13 — Evidence Package Manifest
+
+14 — Requirements Matrix Entry
+
+15 — Chain Continuity Object
+
+Each object will receive:
+
+- stable schema identity;
+- schema version;
+- declared required fields;
+- field types;
+- enumerated values where bounded;
+- identifier rules;
+- timestamp rules;
+- hash metadata;
+- canonicalisation metadata where applicable;
+- and claim-boundary notes.
+
+======================================================================
+4. REPRESENTATION FORMAT
+======================================================================
+
+The initial reference representation will use JSON.
+
+Machine-readable JSON schemas will be developed as separate artifacts
+beneath the SCHEMA-001 package.
+
+The initial schema implementation may use the JSON Schema 2020-12
+vocabulary as a declared technical representation.
+
+Use of that vocabulary does not imply endorsement, certification or
+conformance by any external standards organisation.
+
+======================================================================
+5. COMMON META-FIELDS
+======================================================================
+
+Where applicable, LILP machine-readable objects may contain:
+
+object_id
+object_type
+schema_id
+schema_version
+created_at
+created_by
+predecessor_reference
+evidence_references
+canonicalisation_profile
+hash_algorithm
+object_hash
+
+Not every object requires every common field.
+
+The frozen standard controls the semantic requirement.
+
+======================================================================
+6. HASHING RULE
+======================================================================
+
+Where an object claims cryptographic identity:
+
+1. identify the declared canonicalisation profile;
+
+2. exclude the object's self-digest field from its own digest input
+   unless a separate non-circular construction is explicitly defined;
+
+3. canonicalise the remaining object;
+
+4. encode using the declared encoding;
+
+5. calculate the declared digest;
+
+6. store the digest together with its algorithm identity.
+
+Example:
+
+hash_algorithm:
+SHA-256
+
+object_hash:
+<digest>
+
+A matching digest establishes byte identity under the declared
+canonicalisation procedure.
+
+It does not establish truth.
+
+======================================================================
+7. THREE-STATE GOVERNANCE VALUES
+======================================================================
+
+Where an evidentiary predicate cannot legitimately be reduced to
+Boolean TRUE or FALSE, schema representations should support:
+
+ESTABLISHED
+
+FAILED
+
+NOT_ESTABLISHED
+
+These values are semantically distinct.
+
+NOT_ESTABLISHED does not automatically mean FALSE.
+
+FAILED does not automatically mean NOT_ESTABLISHED.
+
+======================================================================
+8. DETERMINATION VALUES
+======================================================================
+
+The principal governance determination values are:
+
+ALLOW
+
+HOLD
+
+DENY
+
+ESCALATE
+
+Structural outcomes may additionally include:
+
+NOT_ESTABLISHED
+
+INVALID
+
+NEW_CHAIN_REQUIRED
+
+Schema representations shall preserve the distinction between a
+governance determination and a structural state.
+
+======================================================================
+9. EXECUTION AND CONSEQUENCE SEPARATION
+======================================================================
+
+Machine-readable representations shall preserve separate fields or
+objects for:
+
+determination
+
+gate result
+
+execution status
+
+consequence status
+
+This prevents:
+
+ALLOW
+
+from being treated as:
+
+EXECUTED
+
+and prevents:
+
+EXECUTION_ATTEMPTED
+
+from being treated as:
+
+CONSEQUENCE_OBSERVED
+
+======================================================================
+10. SUCCESSOR DISCIPLINE
+======================================================================
+
+A schema revision shall not silently redefine the meaning of a frozen
+predecessor object.
+
+Material schema changes shall use:
+
+new schema version
+
+and where required:
+
+new object version
+new successor object
+new receipt
+new evidence chain
+
+Frozen predecessors remain historical evidence.
+
+======================================================================
+11. DEVELOPMENT STATUS
+======================================================================
+
+This initial SCHEMA-001 v0.1 foundation establishes:
+
+- frozen ancestor bindings;
+- schema authority boundary;
+- initial object inventory;
+- machine-readable representation direction;
+- common metadata;
+- hashing rules;
+- three-state governance values;
+- determination values;
+- execution/consequence separation;
+- and successor discipline.
+
+No JSON object schemas have yet been frozen.
+
+No implementation conformance is established.
+
+SCHEMA-001 v0.1 remains a WORKING DRAFT.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+======================================================================
+12. FIRST MACHINE-READABLE OBJECT SET
+======================================================================
+
+The first SCHEMA-001 machine-readable object set contains:
+
+1. Governing State Object
+
+2. Authority Object
+
+3. Evidence Object
+
+Each object is represented as a JSON Schema 2020-12 working reference
+schema.
+
+These machine-readable schemas provide structural validation rules.
+
+They do not independently establish:
+
+truth;
+authority;
+standing;
+admissibility;
+execution permission;
+conformance;
+certification;
+or consequence.
+
+THE FROZEN STANDARD CONTROLS.
+
+----------------------------------------------------------------------
+12.1 GOVERNING STATE OBJECT SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-GOVERNING-STATE-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:governing-state:v0.1
+
+Byte Length:
+
+3631
+
+SHA-256:
+
+EF5A5FEDDCBD0A9E7DC8F8AB438F400D136917C36CF486152B7D292BC8BA4A40
+
+Required structural fields:
+
+18
+
+The schema preserves separate representations for:
+
+identity;
+authority reference;
+standing;
+admissibility;
+evidence references;
+policy;
+scope;
+jurisdiction;
+temporal context;
+contemplated effect;
+predecessor;
+delta;
+provenance;
+canonicalisation;
+and hash identity.
+
+A structurally valid Governing State Object does not by itself
+establish that the represented state is true or executable.
+
+----------------------------------------------------------------------
+12.2 AUTHORITY OBJECT SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-AUTHORITY-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:authority:v0.1
+
+Byte Length:
+
+3682
+
+SHA-256:
+
+3B4448F4A83DB143A382DF1DB36F90F4BF880C169770619DBD830FE8C115CEAF
+
+Required structural fields:
+
+15
+
+Authority classes represented by the working schema:
+
+OBSERVE
+INTERPRET
+PROPOSE
+DETERMINE
+GOVERN
+EXECUTE
+WITNESS
+
+Authority status values represented by the working schema:
+
+ACTIVE
+EXPIRED
+REVOKED
+SUSPENDED
+NOT_ESTABLISHED
+
+Technical possession of credentials or execution capability does not
+establish an ACTIVE authority state.
+
+----------------------------------------------------------------------
+12.3 EVIDENCE OBJECT SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-EVIDENCE-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:evidence:v0.1
+
+Byte Length:
+
+3300
+
+SHA-256:
+
+D86BC734B043FD5B3F456EE5E3139C475951BBB2EB8FC14C4F04F312BF70CE36
+
+Required structural fields:
+
+10
+
+The Evidence Object preserves:
+
+evidence identity;
+evidence class;
+source identity;
+observation time;
+acquisition time;
+content or reference;
+content digest where available;
+scope;
+provenance;
+and relationship to separately represented interpretation.
+
+The schema deliberately does not convert observation into
+interpretation.
+
+A content digest does not establish truth.
+
+======================================================================
+13. FIRST OBJECT-SET STATUS
+======================================================================
+
+The following machine-readable schemas are now established as working
+SCHEMA-001 v0.1 artifacts:
+
+GOVERNING STATE
+AUTHORITY
+EVIDENCE
+
+They are not yet frozen.
+
+Their current byte identities are recorded above.
+
+Material changes to these working schema artifacts will produce new
+byte identities.
+
+No implementation conformance is established by creation of these
+schemas.
+
+SCHEMA-001 v0.1 remains a WORKING DRAFT.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+
+======================================================================
+14. SECOND MACHINE-READABLE OBJECT SET
+======================================================================
+
+The second SCHEMA-001 machine-readable object set contains:
+
+1. Interpretation Object
+
+2. Delta Object
+
+3. Determination Object
+
+4. Gate Evaluation Object
+
+The object sequence preserves the distinction between:
+
+observation;
+interpretation;
+material change;
+governance determination;
+and pre-execution permission.
+
+No stage silently implies the next.
+
+THE FROZEN STANDARD CONTROLS.
+
+----------------------------------------------------------------------
+14.1 INTERPRETATION OBJECT SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-INTERPRETATION-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:interpretation:v0.1
+
+Byte Length:
+
+2666
+
+SHA-256:
+
+B72020D0827C7015D7BA14633CC7019F816D41621F63B9F3B6EC07AFC43AED18
+
+Required structural fields:
+
+7
+
+The schema binds interpretation to separately preserved evidence.
+
+It does not permit interpretation to silently replace the original
+observation.
+
+----------------------------------------------------------------------
+14.2 DELTA OBJECT SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-DELTA-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:delta:v0.1
+
+Byte Length:
+
+3219
+
+SHA-256:
+
+33425880365E1B9C15D5F09FE226FB4A821796C67E8002057E3B73EC47A90472
+
+Required structural fields:
+
+12
+
+Represented delta classes:
+
+DELTA-A
+DELTA-C
+DELTA-E
+DELTA-N
+DELTA-S
+DELTA-St
+DELTA-X
+
+Materiality states represented by the working schema:
+
+MATERIAL
+IMMATERIAL
+NOT_ESTABLISHED
+
+NOT_ESTABLISHED materiality shall not be silently treated as
+IMMATERIAL for consequential execution.
+
+----------------------------------------------------------------------
+14.3 DETERMINATION OBJECT SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-DETERMINATION-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:determination:v0.1
+
+Byte Length:
+
+3326
+
+SHA-256:
+
+8030A8D194FDD43E6B5F1820F0223E66FA855C987BE5D991AC56F87F8381C337
+
+Required structural fields:
+
+12
+
+Governance determinations:
+
+ALLOW
+HOLD
+DENY
+ESCALATE
+
+Structural states remain separately representable:
+
+NOT_ESTABLISHED
+INVALID
+NEW_CHAIN_REQUIRED
+
+A determination does not establish execution.
+
+----------------------------------------------------------------------
+14.4 GATE EVALUATION OBJECT SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-GATE-EVALUATION-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:gate-evaluation:v0.1
+
+Byte Length:
+
+5027
+
+SHA-256:
+
+1D75D6D895ED2D22B9FFD1FB3B268CFA752BC14AAE728B5A01DDD9827BED1290
+
+Required structural fields:
+
+13
+
+The Gate Evaluation Object separately records ten predicate results:
+
+identity
+authority
+standing
+admissibility
+evidence
+policy
+scope
+jurisdiction
+temporal validity
+contemplated-effect alignment
+
+Each predicate supports:
+
+ESTABLISHED
+FAILED
+NOT_ESTABLISHED
+
+Gate results:
+
+PERMIT
+WITHHOLD
+
+PERMIT does not mandate execution.
+
+WITHHOLD preserves the refusal boundary where mandatory permission
+cannot be established.
+
+======================================================================
+15. SECOND OBJECT-SET STATUS
+======================================================================
+
+The following additional machine-readable schemas are now established
+as working SCHEMA-001 v0.1 artifacts:
+
+INTERPRETATION
+DELTA
+DETERMINATION
+GATE EVALUATION
+
+Together with Set 1, the working schema package now contains seven
+machine-readable object schemas.
+
+They are not yet frozen.
+
+Schema creation does not establish implementation conformance.
+
+SCHEMA-001 v0.1 remains a WORKING DRAFT.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+
+======================================================================
+16. THIRD MACHINE-READABLE OBJECT SET
+======================================================================
+
+The third SCHEMA-001 machine-readable object set contains:
+
+1. Execution Record
+
+2. Consequence Record
+
+3. Receipt Object
+
+4. Correction / Deficiency Object
+
+This set preserves the distinctions between:
+
+permission;
+execution;
+observed consequence;
+witness evidence;
+and later correction.
+
+No stage silently proves another stage.
+
+THE FROZEN STANDARD CONTROLS.
+
+----------------------------------------------------------------------
+16.1 EXECUTION RECORD SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-EXECUTION-RECORD-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:execution-record:v0.1
+
+Byte Length:
+
+4260
+
+SHA-256:
+
+4DC0F4A99548D8F6D276F8878F2E26EC9FB99140142261B71CEE290958FC7E05
+
+Required structural fields:
+
+15
+
+Execution status values:
+
+NOT_EXECUTED
+WITHHELD
+ATTEMPTED
+ACCEPTED_BY_TARGET
+REJECTED_BY_TARGET
+FAILED
+
+PERMIT does not mandate execution.
+
+Execution attempt does not establish successful consequence.
+
+----------------------------------------------------------------------
+16.2 CONSEQUENCE RECORD SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-CONSEQUENCE-RECORD-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:consequence-record:v0.1
+
+Byte Length:
+
+3315
+
+SHA-256:
+
+34A18F568BD57A0AC5716834206FF2D3A400CE32130E5998F1DA9375558F6F6C
+
+Required structural fields:
+
+10
+
+Consequence states:
+
+OBSERVED
+PARTIALLY_OBSERVED
+FAILED
+NOT_ESTABLISHED
+NOT_APPLICABLE
+
+Execution success must not be used as substitute evidence for
+consequence observation.
+
+----------------------------------------------------------------------
+16.3 RECEIPT OBJECT SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-RECEIPT-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:receipt:v0.1
+
+Byte Length:
+
+3713
+
+SHA-256:
+
+23796736F60EE01EF9A7F8DB285EFEDBB0B6707B68B5172A4DC560C8B7DD8560
+
+Required structural fields:
+
+14
+
+The receipt schema can bind:
+
+subject;
+governing state;
+determination;
+execution;
+consequence;
+evidence;
+witness;
+predecessor receipt;
+claim ceiling;
+and provenance.
+
+Receipt existence does not equal independent verification.
+
+Hash identity does not equal truth.
+
+----------------------------------------------------------------------
+16.4 CORRECTION / DEFICIENCY OBJECT SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-CORRECTION-DEFICIENCY-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:correction-deficiency:v0.1
+
+Byte Length:
+
+3303
+
+SHA-256:
+
+8CB30F9EF1272361B7CA7C91BFA59C555A9EB80C24281F805175CF127017DB18
+
+Required structural fields:
+
+13
+
+Record classes:
+
+DEFICIENCY
+CORRECTION
+INCIDENT
+SUCCESSOR_CORRECTION
+
+A correction object preserves the predecessor reference.
+
+It does not erase the original failure.
+
+NO RETROSPECTIVE REPAIR.
+
+======================================================================
+17. THIRD OBJECT-SET STATUS
+======================================================================
+
+The following additional working schemas are now established:
+
+EXECUTION RECORD
+CONSEQUENCE RECORD
+RECEIPT
+CORRECTION / DEFICIENCY
+
+Together with Sets 1 and 2, SCHEMA-001 now contains eleven working
+machine-readable object schemas.
+
+They remain working artifacts and are not yet frozen.
+
+No implementation conformance is established.
+
+SCHEMA-001 v0.1 remains a WORKING DRAFT.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+
+======================================================================
+16. THIRD MACHINE-READABLE OBJECT SET
+======================================================================
+
+The third SCHEMA-001 machine-readable object set contains:
+
+1. Execution Record
+
+2. Consequence Record
+
+3. Receipt Object
+
+4. Correction / Deficiency Object
+
+This set preserves the distinctions between:
+
+permission;
+execution;
+observed consequence;
+witness evidence;
+and later correction.
+
+No stage silently proves another stage.
+
+THE FROZEN STANDARD CONTROLS.
+
+----------------------------------------------------------------------
+16.1 EXECUTION RECORD SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-EXECUTION-RECORD-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:execution-record:v0.1
+
+Byte Length:
+
+4260
+
+SHA-256:
+
+4DC0F4A99548D8F6D276F8878F2E26EC9FB99140142261B71CEE290958FC7E05
+
+Required structural fields:
+
+15
+
+Execution status values:
+
+NOT_EXECUTED
+WITHHELD
+ATTEMPTED
+ACCEPTED_BY_TARGET
+REJECTED_BY_TARGET
+FAILED
+
+PERMIT does not mandate execution.
+
+Execution attempt does not establish successful consequence.
+
+----------------------------------------------------------------------
+16.2 CONSEQUENCE RECORD SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-CONSEQUENCE-RECORD-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:consequence-record:v0.1
+
+Byte Length:
+
+3315
+
+SHA-256:
+
+34A18F568BD57A0AC5716834206FF2D3A400CE32130E5998F1DA9375558F6F6C
+
+Required structural fields:
+
+10
+
+Consequence states:
+
+OBSERVED
+PARTIALLY_OBSERVED
+FAILED
+NOT_ESTABLISHED
+NOT_APPLICABLE
+
+Execution success must not be used as substitute evidence for
+consequence observation.
+
+----------------------------------------------------------------------
+16.3 RECEIPT OBJECT SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-RECEIPT-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:receipt:v0.1
+
+Byte Length:
+
+3713
+
+SHA-256:
+
+23796736F60EE01EF9A7F8DB285EFEDBB0B6707B68B5172A4DC560C8B7DD8560
+
+Required structural fields:
+
+14
+
+The receipt schema can bind:
+
+subject;
+governing state;
+determination;
+execution;
+consequence;
+evidence;
+witness;
+predecessor receipt;
+claim ceiling;
+and provenance.
+
+Receipt existence does not equal independent verification.
+
+Hash identity does not equal truth.
+
+----------------------------------------------------------------------
+16.4 CORRECTION / DEFICIENCY OBJECT SCHEMA
+----------------------------------------------------------------------
+
+Artifact:
+
+04_SCHEMAS\OBJECTS\ELIAS-LILP-CORRECTION-DEFICIENCY-v0.1.schema.json
+
+Schema ID:
+
+urn:elias:lilp:schema:correction-deficiency:v0.1
+
+Byte Length:
+
+3303
+
+SHA-256:
+
+8CB30F9EF1272361B7CA7C91BFA59C555A9EB80C24281F805175CF127017DB18
+
+Required structural fields:
+
+13
+
+Record classes:
+
+DEFICIENCY
+CORRECTION
+INCIDENT
+SUCCESSOR_CORRECTION
+
+A correction object preserves the predecessor reference.
+
+It does not erase the original failure.
+
+NO RETROSPECTIVE REPAIR.
+
+======================================================================
+17. THIRD OBJECT-SET STATUS
+======================================================================
+
+The following additional working schemas are now established:
+
+EXECUTION RECORD
+CONSEQUENCE RECORD
+RECEIPT
+CORRECTION / DEFICIENCY
+
+Together with Sets 1 and 2, SCHEMA-001 now contains eleven working
+machine-readable object schemas.
+
+They remain working artifacts and are not yet frozen.
+
+No implementation conformance is established.
+
+SCHEMA-001 v0.1 remains a WORKING DRAFT.
+
+LOCK IT.
+LOG IT.
+PROVE IT.

@@ -1,0 +1,29 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 001Z v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 92
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 94
+
+COVERED_BY_EXISTING: 0
+NEW_TEST_REQUIRED: 2
+NEW TEST DEFINITIONS RESERVED: 2
+
+CONF-007:
+NEW_TEST_REQUIRED -> LILP-TC-T16-016 RESERVED
+Distinct rule: mandatory NOT_ESTABLISHED blocks PASS unless that requirement itself explicitly permits the state.
+
+CONF-011:
+NEW_TEST_REQUIRED -> LILP-TC-T16-017 RESERVED
+Distinct LILP-FULL claim ceiling across applicable mandatory FAIL and NOT_ESTABLISHED states.
+
+T16-016 and T16-017 are reserved only.
+T16-018 remains unreserved.
+Both reserved test definitions remain NOT_ESTABLISHED.
+Test register remains at 120 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

@@ -1,0 +1,28 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 001X v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 88
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 90
+
+COVERED_BY_EXISTING: 1
+NEW_TEST_REQUIRED: 1
+NEW TEST DEFINITIONS RESERVED: 1
+
+PROOF-007:
+NEW_TEST_REQUIRED -> LILP-TC-T16-015 RESERVED
+Distinct PL5 obligation: identify the reproduction conditions and the result.
+
+CONF-001:
+COVERED_BY_EXISTING -> LILP-TC-T16-013
+T16-013 already requires the conformance claim to identify or unambiguously bind the conformance profile relied upon, together with the exact standard version.
+
+T16-015 is reserved only.
+T16-016 remains unreserved.
+T16-015 definition remains NOT_ESTABLISHED.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

@@ -1,0 +1,111 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+ELIAS-LILP-MAN-001 v0.1
+WHOLE-OBJECT PRE-FREEZE VERIFICATION — v0.3 CLEAN SUCCESSOR
+
+Record ID:
+ELIAS-LILP-MAN001-PREFREEZE-003
+
+Recorded UTC:
+2026-10-01T22:51:37.917Z
+
+Candidate:
+02_MANUAL\ELIAS-LILP-MAN-001-v0.1.txt
+
+Candidate Bytes:
+105931
+
+Candidate SHA-256:
+429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2
+
+Original HOLD Pre-Freeze Record SHA-256:
+7984699EAD8E7EE451DCF46967AE434ECABC41C60C84806F06068EFF6DEE65CB
+
+v0.2 Successor Record SHA-256:
+FAD5692E74982D1F1024B17C398DCEB22BAC0D3926F0423A52FA7E118AE79C8F
+
+Semantic Checker Correction Receipt 0007 SHA-256:
+0415FD1ADF7A16E867F8F41CF0682EAEA10918065C7E6E1AD37F4C192DA4F59C
+
+Interactive Parser Deficiency Receipt 0008 SHA-256:
+84CD93A3EBE8ABA964D0C99D4F13B8BCF3CA3DAA95C795EE66FCC0F68C06E9B0
+
+Frozen STD-001 SHA-256:
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+Frozen LEX-001 SHA-256:
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+Frozen Requirement Count:
+191
+
+Unique Frozen Requirement Count:
+191
+
+Traceability Row Count:
+191
+
+Unique Traceability ID Count:
+191
+
+Missing Requirement Mappings:
+0
+
+Extra Requirement Mappings:
+0
+
+Actual Transcript Prompt Hits:
+0
+
+Actual Continuation Prompt Hits:
+0
+
+Unexpected Placeholder Hits:
+0
+
+Semantic Proposition Count:
+9
+
+Semantic Failures:
+0
+
+Direct Contradiction Hits:
+0
+
+Verification Procedure:
+NO ELSE CLAUSES USED IN v0.3 CONTROL FLOW
+
+Determination:
+PASS
+
+Freeze Status:
+READY TO FREEZE
+
+Failures:
+NONE
+
+CLAIM CEILING:
+
+This record establishes the result of the v0.3 local whole-object
+pre-freeze examination against the same MAN-001 candidate bytes.
+
+The original HOLD record remains preserved.
+
+The v0.2 successor record remains preserved.
+
+Receipt 0008 preserves the interactive execution deficiency observed
+during the v0.2 procedure.
+
+No MAN-001 content was altered to obtain the v0.3 result.
+
+This record does not establish implementation conformance, external
+certification, independent validation, ISO or IEC adoption, regulatory
+approval, government approval, industry adoption, universal safety or
+universal security.
+
+The frozen normative standard remains controlling.
+
+LOCK IT.
+LOG IT.
+PROVE IT.

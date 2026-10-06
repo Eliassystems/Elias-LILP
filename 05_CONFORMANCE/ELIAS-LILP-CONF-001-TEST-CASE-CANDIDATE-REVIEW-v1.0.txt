@@ -1,0 +1,28 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v1.0
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 100
+NEW TEST DEFINITIONS: 1
+SUCCESSOR TEST CASES: 101
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-STATE-006 -> covered by existing LILP-TC-T01-001;LILP-TC-T01-004; no new test introduced.
+LILP-REQ-EVID-001 -> reserved LILP-TC-T05-009
+
+NEW TEST:
+TEST CASE: LILP-TC-T05-009
+TITLE: Material Evidence Object possesses stable identifier
+OBJECTIVE: Establish that each material Evidence Object relied upon by governance possesses an explicit stable evidence identifier.
+EXPECTED: The Evidence Object contains a non-empty explicit evidence identifier, and repeated references to the same unchanged preserved Evidence Object resolve to the same identifier within the declared scope.
+FAILURE ORACLE: FAIL if the material Evidence Object lacks an explicit evidence identifier, the identifier is empty or ambiguous, or the same unchanged preserved Evidence Object resolves to inconsistent identifiers within the declared scope without an explicit permitted identity rule.
+
+Stable evidence-object identity remains distinct from provenance, admissibility and package re-hashability.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

@@ -1,0 +1,264 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+LILP EVIDENCE RECEIPT
+
+Receipt ID:
+ELIAS-LILP-RECEIPT-0012
+
+Receipt Type:
+CONF001_REQUIREMENT_EXTRACTION_SUCCESSOR_CORRECTION
+
+Recorded UTC:
+2026-10-02T00:49:58.069Z
+
+Status:
+SUCCESSOR CORRECTION ESTABLISHED
+
+======================================================================
+SUBJECT
+======================================================================
+
+ELIAS-LILP-CONF-001 v0.1
+Requirement extraction substrate
+
+Frozen normative source:
+
+ELIAS-LILP-STD-001 v0.1
+
+Frozen STD-001 SHA-256:
+
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+======================================================================
+PRESERVED PREDECESSOR ARTIFACTS
+======================================================================
+
+Requirement Inventory v0.1:
+
+Bytes:
+96366
+
+SHA-256:
+3E8EFF5F65366128CAD469878A8976C636B0DDC952E9DFF4A1287841511393FA
+
+
+Requirement Matrix v0.1:
+
+Bytes:
+68800
+
+SHA-256:
+18B74F95B2A8804B30C8E8ABD468BD030221BB3F06FEB054BDD5B13E471DA123
+
+
+Semantic Mapping Candidate v0.1:
+
+Bytes:
+148720
+
+SHA-256:
+0F4C5B1225DB2C539F63F385AF65EEBBFE9CA83C198D54790059BD17DE4F1DE5
+
+
+Semantic Mapping Review v0.1:
+
+Bytes:
+52393
+
+SHA-256:
+DD2285FA86C1A11CF8C48CB2DAE9CF65BC764194C3DABFCAABF9EC609D9CE92C
+
+These predecessor artifacts remain preserved.
+
+They are not retrospectively repaired.
+
+======================================================================
+DEFICIENCY
+======================================================================
+
+The original requirement extractor bounded each requirement from its
+identifier to the next requirement identifier.
+
+For requirements located at the end of a structural section, this
+allowed following section headings, explanatory text, semantic models,
+test definitions or other non-requirement content to enter the
+RequirementText field.
+
+A later first correction audit used the first blank line as the
+requirement boundary.
+
+That audit was also defective because the frozen standard places a
+blank line between each requirement identifier and its normative body.
+
+That audit therefore reduced requirement blocks to identifier-only
+content and produced a false STRUCTURALLY_ADMISSIBLE result.
+
+The identifier-only audit was not used to modify any artifact.
+
+A second boundary-aware audit used the earlier of:
+
+- the next requirement identifier;
+- a structural divider;
+- or end of source.
+
+That audit established:
+
+191 unique requirement blocks
+
+0 missing bodies
+
+0 multiple-requirement-ID blocks
+
+0 structural leaks
+
+167 predecessor requirement texts already correct
+
+24 predecessor requirement texts contaminated by following structural
+content
+
+======================================================================
+MODAL-LANGUAGE REVIEW
+======================================================================
+
+Three correctly extracted frozen requirements do not use the literal
+tokens SHALL, MUST, SHOULD or MAY:
+
+LILP-REQ-CONF-006 | A mandatory requirement with status FAIL prevents a PASS conformance determination for the affected profile.
+LILP-REQ-CONF-007 | A mandatory requirement with status NOT ESTABLISHED prevents a PASS conformance determination unless the requirement itself explicitly permits that state.
+LILP-REQ-TEST-005 | A test PASS requires the observed behaviour to satisfy the declared expected result.
+
+These three are not extraction defects.
+
+CONF-006 and CONF-007 prescribe the effect of FAIL and NOT ESTABLISHED
+by stating that those states prevent a PASS conformance determination.
+
+TEST-005 uses the prescriptive term "requires".
+
+Their frozen wording remains unchanged.
+
+No frozen normative source has been modified.
+
+======================================================================
+24 EXTRACTION CORRECTIONS
+======================================================================
+
+LILP-REQ-OBJ-008 | STD_LINES=490-499 | PREDECESSOR_LENGTH=441 | SUCCESSOR_LENGTH=269 | REMOVED=172
+LILP-REQ-CAN-004 | STD_LINES=535-539 | PREDECESSOR_LENGTH=872 | SUCCESSOR_LENGTH=166 | REMOVED=706
+LILP-REQ-STATE-011 | STD_LINES=635-638 | PREDECESSOR_LENGTH=578 | SUCCESSOR_LENGTH=98 | REMOVED=480
+LILP-REQ-AUTH-008 | STD_LINES=717-721 | PREDECESSOR_LENGTH=625 | SUCCESSOR_LENGTH=165 | REMOVED=460
+LILP-REQ-EVID-008 | STD_LINES=790-794 | PREDECESSOR_LENGTH=966 | SUCCESSOR_LENGTH=170 | REMOVED=796
+LILP-REQ-DELTA-007 | STD_LINES=868-872 | PREDECESSOR_LENGTH=1059 | SUCCESSOR_LENGTH=216 | REMOVED=843
+LILP-REQ-CHAIN-005 | STD_LINES=933-936 | PREDECESSOR_LENGTH=750 | SUCCESSOR_LENGTH=135 | REMOVED=615
+LILP-REQ-RCPT-010 | STD_LINES=1026-1028 | PREDECESSOR_LENGTH=720 | SUCCESSOR_LENGTH=87 | REMOVED=633
+LILP-REQ-EXEC-003 | STD_LINES=1072-1075 | PREDECESSOR_LENGTH=684 | SUCCESSOR_LENGTH=145 | REMOVED=539
+LILP-REQ-GATE-008 | STD_LINES=1152-1156 | PREDECESSOR_LENGTH=481 | SUCCESSOR_LENGTH=161 | REMOVED=320
+LILP-REQ-DET-007 | STD_LINES=1215-1217 | PREDECESSOR_LENGTH=4529 | SUCCESSOR_LENGTH=75 | REMOVED=4454
+LILP-REQ-CLAIM-009 | STD_LINES=1490-1493 | PREDECESSOR_LENGTH=2961 | SUCCESSOR_LENGTH=108 | REMOVED=2853
+LILP-REQ-PROOF-009 | STD_LINES=1631-1634 | PREDECESSOR_LENGTH=2514 | SUCCESSOR_LENGTH=161 | REMOVED=2353
+LILP-REQ-CONF-012 | STD_LINES=1784-1787 | PREDECESSOR_LENGTH=1072 | SUCCESSOR_LENGTH=110 | REMOVED=962
+LILP-REQ-CONF-017 | STD_LINES=1845-1848 | PREDECESSOR_LENGTH=7123 | SUCCESSOR_LENGTH=158 | REMOVED=6965
+LILP-REQ-TEST-008 | STD_LINES=2129-2132 | PREDECESSOR_LENGTH=799 | SUCCESSOR_LENGTH=133 | REMOVED=666
+LILP-REQ-CONF-021 | STD_LINES=2184-2186 | PREDECESSOR_LENGTH=849 | SUCCESSOR_LENGTH=81 | REMOVED=768
+LILP-REQ-WORD-008 | STD_LINES=2262-2266 | PREDECESSOR_LENGTH=3132 | SUCCESSOR_LENGTH=192 | REMOVED=2940
+LILP-REQ-SEC-010 | STD_LINES=2467-2470 | PREDECESSOR_LENGTH=878 | SUCCESSOR_LENGTH=156 | REMOVED=722
+LILP-REQ-VER-008 | STD_LINES=2540-2543 | PREDECESSOR_LENGTH=638 | SUCCESSOR_LENGTH=107 | REMOVED=531
+LILP-REQ-DEV-008 | STD_LINES=2615-2618 | PREDECESSOR_LENGTH=425 | SUCCESSOR_LENGTH=91 | REMOVED=334
+LILP-REQ-LIFE-008 | STD_LINES=2676-2680 | PREDECESSOR_LENGTH=705 | SUCCESSOR_LENGTH=183 | REMOVED=522
+LILP-REQ-MATR-007 | STD_LINES=2741-2744 | PREDECESSOR_LENGTH=532 | SUCCESSOR_LENGTH=117 | REMOVED=415
+LILP-REQ-FREEZE-016 | STD_LINES=2883-2886 | PREDECESSOR_LENGTH=2372 | SUCCESSOR_LENGTH=103 | REMOVED=2269
+
+The correction removes only content outside the bounded frozen
+requirement block.
+
+It does not rewrite the requirement proposition.
+
+======================================================================
+SUCCESSOR ARTIFACTS
+======================================================================
+
+Requirement Inventory v0.2:
+
+Bytes:
+89312
+
+SHA-256:
+2F73BFFA2CEAB91043D1719B592CF72ACCBCF57639259777A67BDAF085BAD522
+
+
+Requirement Matrix v0.2:
+
+Bytes:
+46355
+
+SHA-256:
+47F06F95A6FBA1E2ED0A7FCA251DC576CAADC3C7A2F969E03E1DE1AA7B478599
+
+Rows:
+191
+
+Unassigned Mappings:
+191
+
+Semantic/Test Assignments:
+0
+
+======================================================================
+CANDIDATE-MAPPING EFFECT
+======================================================================
+
+The v0.1 semantic candidate and review artifacts remain preserved as
+historical evidence.
+
+They were generated using the v0.1 requirement extraction substrate.
+
+They SHALL NOT be promoted as the final semantic mapping.
+
+Semantic mapping SHALL restart from the corrected v0.2 requirement
+matrix.
+
+No executable test-case identifiers have yet been established.
+
+======================================================================
+CLAIM CEILING
+======================================================================
+
+This receipt establishes a bounded local correction to the derived
+CONF-001 requirement-extraction substrate.
+
+It does not alter:
+
+ELIAS-LILP-STD-001 v0.1
+
+ELIAS-LILP-MAN-001 v0.1
+
+ELIAS-LILP-LEX-001 v0.1
+
+ELIAS-LILP-SCHEMA-001 v0.1
+
+or the frozen normative meaning of any requirement.
+
+It does not establish implementation conformance.
+
+It does not establish external certification.
+
+It does not establish that semantic test-family mapping has completed.
+
+It does not establish executable test cases.
+
+The correction preserves the predecessor and corrects forward through
+a separately identifiable successor substrate.
+
+NO RETROSPECTIVE REPAIR.
+
+PRESERVE THE DEFECT.
+
+PRESERVE THE PREDECESSOR.
+
+CORRECT FORWARD.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+ELIAS SYSTEMS LTD

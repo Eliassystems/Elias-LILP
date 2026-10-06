@@ -1,0 +1,61 @@
+﻿{
+    "RecordType":  "OBJ-002_v0.2_HARNESS_EXECUTION",
+    "RecordVersion":  "0.1",
+    "State":  "EXECUTED_CAPTURED_PENDING_RESULT_REVIEW",
+    "Authorization":  {
+                          "AuthorizedExecutionCount":  1,
+                          "ExecutionCountConsumed":  1,
+                          "DesignationSHA256":  "E7B561A07306FFA7FBDDB1DEB08B199997DB62C16AAEC68A51BA0960210D5FDF",
+                          "ReadinessReviewSHA256":  "3AA5BBEDA79FC0F3D9710DB0FE520683432B22A20FC01BDDFC7F8C88060EB493"
+                      },
+    "Harness":  {
+                    "HarnessId":  "LILP-HI-OBJ-002-v0.2",
+                    "HarnessPath":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-HI-OBJ-002-v0.2.ps1",
+                    "HarnessSHA256":  "789D793F0E74AB8EF9E9A230FD1321166ADE94E314F224EFF3C68317237182F3"
+                },
+    "Binding":  {
+                    "BindingId":  "LILP-BIND-OBJ-002-v0.2",
+                    "BindingRegister":  "ELIAS-LILP-CONF-001-HARNESS-BINDING-REGISTER-v0.3.csv",
+                    "BindingRegisterSHA256":  "516A0028937AD0B9456505E370755F72C91815288C66A3C7230827FCECA0651C"
+                },
+    "Inputs":  {
+                   "CandidatePath":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-HARNESS-IMPLEMENTATION-REGISTER-v0.5.csv",
+                   "CandidateSHA256":  "F1A44C84CC63C175D26A5383688AAC69D2CBEE8630FE4B4516503334D0A82398",
+                   "CandidateVersion":  "0.5",
+                   "ComparisonVersion":  "0.4",
+                   "ComparisonSource":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-HARNESS-IMPLEMENTATION-REGISTER-v0.4.csv",
+                   "ComparisonSourceSHA256":  "340E483563015C622CB25C21E1316355C2D1EE307518BBA76CB54D4A8C8D725E",
+                   "ComparisonRole":  "EXACT_COMPARISON_INPUT_ONLY"
+               },
+    "Process":  {
+                    "Executable":  "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                    "Arguments":  "-NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-HI-OBJ-002-v0.2.ps1\" -CandidatePath \"C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-HARNESS-IMPLEMENTATION-REGISTER-v0.5.csv\" -ComparisonVersion \"0.4\"",
+                    "Invocation":  "\u0026 \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-HI-OBJ-002-v0.2.ps1\" -CandidatePath \"C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-HARNESS-IMPLEMENTATION-REGISTER-v0.5.csv\" -ComparisonVersion \"0.4\"",
+                    "ProcessId":  37648,
+                    "LaunchUtc":  "2026-10-04T23:29:59.9125505Z",
+                    "CompletionUtc":  "2026-10-04T23:30:00.8575778Z",
+                    "ExitCode":  0,
+                    "ProcessScopedBypass":  true,
+                    "PersistentPolicyChange":  false
+                },
+    "Capture":  {
+                    "StdoutSHA256":  "F349689AD3C8EAC2316A2645BA19B48B628ACF44E4711873410C3076334FDFFD",
+                    "StderrSHA256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+                    "Stdout":  "\r\n\r\nImplementationId           : LILP-HI-OBJ-002-v0.2\r\nSupersedesImplementationId : LILP-HI-OBJ-002-v0.1\r\nHarnessDefinitionId        : LILP-HB-OBJ-002-v0.1\r\nRequirementId              : LILP-REQ-OBJ-002\r\nTestCaseId                 : LILP-TC-T02-009\r\nVerificationMethodId       : LILP-VM-OBJ-002-v0.1\r\nHarnessMode                : DETERMINISTIC_CSV_OBJECTVERSION_IDENTITY_INSPECTION\r\nAuthorityType              : DETERMINISTIC_MECHANICAL\r\nAuthorityBoundary          : EXPLICIT_CSV_OBJECTVERSION_FIELD_EXTRACTION_AND_EXACT_COMPARISON_ONLY_NO_FILENAME_INFERENC\r\n                             E_NO_SEMANTIC_OR_GOVERNANCE_INFERENCE\r\nCandidatePath              : C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-HARNESS-IM\r\n                             PLEMENTATION-REGISTER-v0.5.csv\r\nCandidateSHA256            : F1A44C84CC63C175D26A5383688AAC69D2CBEE8630FE4B4516503334D0A82398\r\nCandidateBytes             : 6960\r\nRowCount                   : 7\r\nObjectVersionColumnCount   : 1\r\nVersionMatchCount          : 7\r\nVersionMatches             : {@{RowNumber=1; ObjectVersion=0.5}, @{RowNumber=2; ObjectVersion=0.5}, @{RowNumber=3; \r\n                             ObjectVersion=0.5}, @{RowNumber=4; ObjectVersion=0.5}...}\r\nObservedVersion            : 0.5\r\nExplicitPresent            : True\r\nNonEmpty                   : True\r\nUnambiguous                : True\r\nComparisonVersions         : {0.4}\r\nComparisonValuesValid      : True\r\nDistinctFromComparisons    : True\r\nDetermination              : ESTABLISHED\r\n\r\n\r\n\r\n",
+                    "Stderr":  "",
+                    "DeterminationExtraction":  "MECHANICAL_ONLY_NO_RESULT_INTERPRETATION",
+                    "CapturedDetermination":  "ESTABLISHED",
+                    "DeterminationCandidates":  [
+                                                    "ESTABLISHED"
+                                                ]
+                },
+    "HistoricalBoundary":  {
+                               "HistoricalResultSHA256":  "2157477107BD1F6EEA6DCD39D236C35272361AB72225C50FB9D1DBA148099F4D",
+                               "HistoricalClosureSHA256":  "7EA3D035086658EC7A29928CDB66FAD7C331546168D5482F281060C744F101E2",
+                               "HistoricalResultReused":  false,
+                               "HistoricalFailReclassified":  false,
+                               "RetrospectiveRepair":  false
+                           },
+    "ResultStatus":  "PENDING_CONTROLLED_RESULT_REVIEW",
+    "CONF001":  "NOT_ESTABLISHED"
+}

@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 001Q v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 74
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 76
+
+NEW_TEST_REQUIRED: 2
+COVERED_BY_EXISTING: 0
+NEW TEST DEFINITIONS RESERVED: 2
+
+DET-004:
+NEW_TEST_REQUIRED -> LILP-TC-T08-010 RESERVED
+Distinct obligation: DENY represents established prohibition within declared governance scope.
+
+DET-005:
+NEW_TEST_REQUIRED -> LILP-TC-T08-011 RESERVED
+Distinct obligation: ESCALATE references a separately authorised process and does not itself confer execution authority absent explicit policy.
+
+Both IDs are reserved only.
+Neither test definition is yet established.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

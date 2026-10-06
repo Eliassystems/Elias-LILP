@@ -1,0 +1,85 @@
+ELIAS LILP CONF-001
+FREEZE-010 HUMAN MATERIALITY DETERMINATION — HISTORICAL STATE v0.1
+
+RECORDED UTC:
+2026-10-04T11:01:24.273Z
+
+REVIEWER ID:
+Gary williams
+
+REVIEWER AUTHORITY:
+ELIAS_SYSTEMS_FOUNDER_AND_AUTHORIZED_HUMAN_REVIEWER
+
+AUTHORITY BOUNDARY:
+INTERNAL ELIAS SYSTEMS HUMAN REVIEW AUTHORITY ONLY
+
+TERM:
+HISTORICAL STATE
+
+SOURCE MATERIALITY EVIDENCE SUPPORT:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-010-MATERIALITY-EVIDENCE-SUPPORT-v0.2.csv
+
+SOURCE SUPPORT SHA-256:
+88FBAFD23BF9FDA903273C461CFDAB5268E08132EEEAD3DE86371FAD5A2F6F2F
+
+SOURCE BASIS:
+LEXICON_CURRENT_NORMATIVE_TERM_USED_IN_STANDARD
+
+STANDARD OCCURRENCE COUNT:
+1
+
+LEXICON HEADING:
+HISTORICAL STATE
+
+LEXICON CLASS OBSERVATION:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+LEXICON DEFINITION:
+A preserved prior state that remains evidence of its earlier condition but does not automatically retain present governing authority.
+
+LEXICON BOUNDARY:
+
+
+HUMAN MATERIALITY DETERMINATION:
+MATERIAL
+
+REVIEWER RATIONALE:
+Historical state is materially normative because the frozen standard requires systems that rely on historical state to detect or receive information about material change relevant to their mandatory governance conditions, and the bound lexicon defines historical state as preserved evidence of an earlier condition that does not automatically retain present governing authority. The term therefore directly constrains how prior state may be relied upon and prevents historical validity from being treated as current authority after material change.
+
+BOUNDARY:
+
+This record establishes only the named human reviewer's bounded
+materiality determination for the term:
+
+HISTORICAL STATE
+
+within the FREEZE-010 material-term inventory process.
+
+It does NOT establish:
+
+- semantic compatibility;
+- explicit narrowing;
+- material conflict;
+- material-term inventory completeness;
+- FREEZE-010 PASS;
+- execution input binding;
+- harness execution;
+- test result;
+- independent verification;
+- certification;
+- or conformance.
+
+SEMANTIC CLASSIFICATION:
+NOT_PERFORMED
+
+EXECUTION INPUT BINDING:
+NOT_ESTABLISHED
+
+HARNESS EXECUTION:
+NOT_EXECUTED
+
+RESULT:
+NOT_TESTED
+
+CONFORMANCE:
+NOT_ESTABLISHED

@@ -1,0 +1,5131 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+ELIAS-LILP-CONF-001 v0.1
+FROZEN STD-001 REQUIREMENT INVENTORY
+
+Requirement Inventory Version:
+v0.2
+
+Status:
+CORRECTED SUCCESSOR REQUIREMENT SUBSTRATE
+
+Frozen Normative Source:
+ELIAS-LILP-STD-001 v0.1 FROZEN BASELINE
+
+Frozen Source SHA-256:
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+Predecessor Inventory:
+ELIAS-LILP-CONF-001-REQUIREMENT-INVENTORY-v0.1.txt
+
+Predecessor Inventory SHA-256:
+3E8EFF5F65366128CAD469878A8976C636B0DDC952E9DFF4A1287841511393FA
+
+Requirement Count:
+191
+
+Unchanged From Predecessor:
+167
+
+Corrected Extraction Boundaries:
+24
+
+Modal-Language Exceptions Preserved:
+3
+
+Mapping Status:
+UNASSIGNED
+
+The frozen STD-001 normative bytes were not changed.
+
+The v0.1 requirement substrate remains preserved as historical
+evidence and SHALL NOT be retrospectively repaired.
+
+The prior semantic candidate and review artifacts remain preserved.
+
+They SHALL NOT be promoted because they were generated from the
+v0.1 extraction substrate.
+
+======================================================================
+
+REQUIREMENT 001
+
+Requirement ID:
+LILP-REQ-OBJ-001
+
+Frozen STD Lines:
+447-450
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-OBJ-001
+
+Each material governance object SHALL possess a stable object
+identifier within its declared scope.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 002
+
+Requirement ID:
+LILP-REQ-OBJ-002
+
+Frozen STD Lines:
+453-455
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-OBJ-002
+
+Each versioned object SHALL identify its version.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 003
+
+Requirement ID:
+LILP-REQ-OBJ-003
+
+Frozen STD Lines:
+458-461
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-OBJ-003
+
+Each object relied upon for consequential governance SHALL identify
+the time or temporal state relevant to its creation or applicability.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 004
+
+Requirement ID:
+LILP-REQ-OBJ-004
+
+Frozen STD Lines:
+464-467
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-OBJ-004
+
+Where an object has a predecessor, the predecessor relationship SHALL
+be explicitly representable.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 005
+
+Requirement ID:
+LILP-REQ-OBJ-005
+
+Frozen STD Lines:
+470-473
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-OBJ-005
+
+A material object SHALL be capable of being given a reproducible
+cryptographic byte identity.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 006
+
+Requirement ID:
+LILP-REQ-OBJ-006
+
+Frozen STD Lines:
+476-479
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-OBJ-006
+
+The implementation SHALL declare the hash algorithm used to identify
+the object's canonical byte representation.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 007
+
+Requirement ID:
+LILP-REQ-OBJ-007
+
+Frozen STD Lines:
+482-487
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-OBJ-007
+
+The field containing an object's own final digest SHALL NOT be included
+recursively within the bytes over which that digest is calculated,
+unless the implementation defines and proves another non-circular
+construction.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 008
+
+Requirement ID:
+LILP-REQ-OBJ-008
+
+Frozen STD Lines:
+490-499
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-OBJ-008
+
+A required field whose value cannot be established SHALL NOT be
+silently omitted where omission would conceal uncertainty.
+
+The implementation SHALL explicitly represent the relevant condition,
+including where appropriate:
+
+NOT ESTABLISHED
+NOT APPLICABLE
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 009
+
+Requirement ID:
+LILP-REQ-CAN-001
+
+Frozen STD Lines:
+506-509
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CAN-001
+
+Where cryptographic identity is claimed, the implementation SHALL
+define a deterministic canonicalisation procedure.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 010
+
+Requirement ID:
+LILP-REQ-CAN-002
+
+Frozen STD Lines:
+512-516
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CAN-002
+
+Equivalent instances intended to represent the same canonical object
+SHALL produce the same canonical byte sequence under the declared
+canonicalisation procedure.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 011
+
+Requirement ID:
+LILP-REQ-CAN-003
+
+Frozen STD Lines:
+519-532
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CAN-003
+
+Canonicalisation SHALL define all representation details capable of
+altering byte identity, including where applicable:
+
+- field ordering;
+- character encoding;
+- line-ending treatment;
+- whitespace treatment;
+- number representation;
+- timestamp representation;
+- null or absent-field handling;
+- collection ordering;
+- and binary encoding.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 012
+
+Requirement ID:
+LILP-REQ-CAN-004
+
+Frozen STD Lines:
+535-539
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CAN-004
+
+A system SHALL NOT claim reproducible cryptographic identity where its
+canonicalisation procedure leaves material byte-producing behaviour
+undefined.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 013
+
+Requirement ID:
+LILP-REQ-STATE-001
+
+Frozen STD Lines:
+575-578
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-STATE-001
+
+A consequential determination SHALL reference an identifiable
+governing state.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 014
+
+Requirement ID:
+LILP-REQ-STATE-002
+
+Frozen STD Lines:
+581-584
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-STATE-002
+
+A Governing State Object SHALL identify the subject, system, actor or
+other identity to which the state applies.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 015
+
+Requirement ID:
+LILP-REQ-STATE-003
+
+Frozen STD Lines:
+587-590
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-STATE-003
+
+A Governing State Object SHALL identify the authority relied upon or
+explicitly record that authority is NOT ESTABLISHED.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 016
+
+Requirement ID:
+LILP-REQ-STATE-004
+
+Frozen STD Lines:
+593-596
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-STATE-004
+
+A Governing State Object SHALL identify relevant standing and
+admissibility where those properties are required by the use case.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 017
+
+Requirement ID:
+LILP-REQ-STATE-005
+
+Frozen STD Lines:
+599-602
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-STATE-005
+
+The evidence relied upon by the governing state SHALL be referenceable
+without requiring retrospective reconstruction.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 018
+
+Requirement ID:
+LILP-REQ-STATE-006
+
+Frozen STD Lines:
+605-608
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-STATE-006
+
+The policy or rule set governing the contemplated consequence SHALL be
+identifiable.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 019
+
+Requirement ID:
+LILP-REQ-STATE-007
+
+Frozen STD Lines:
+611-613
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-STATE-007
+
+The scope of the governing state SHALL be explicit.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 020
+
+Requirement ID:
+LILP-REQ-STATE-008
+
+Frozen STD Lines:
+616-619
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-STATE-008
+
+Where jurisdiction affects authority or policy, jurisdiction SHALL be
+explicitly represented.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 021
+
+Requirement ID:
+LILP-REQ-STATE-009
+
+Frozen STD Lines:
+622-625
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-STATE-009
+
+The temporal context relevant to validity SHALL be explicitly
+representable.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 022
+
+Requirement ID:
+LILP-REQ-STATE-010
+
+Frozen STD Lines:
+628-632
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-STATE-010
+
+The contemplated effect SHALL be sufficiently identified to determine
+whether later execution remains within the authorised consequence
+boundary.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 023
+
+Requirement ID:
+LILP-REQ-STATE-011
+
+Frozen STD Lines:
+635-638
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-STATE-011
+
+A frozen predecessor state SHALL NOT be modified to represent later
+conditions.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 024
+
+Requirement ID:
+LILP-REQ-AUTH-001
+
+Frozen STD Lines:
+667-669
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-AUTH-001
+
+Authority SHALL be represented separately from technical capability.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 025
+
+Requirement ID:
+LILP-REQ-AUTH-002
+
+Frozen STD Lines:
+672-675
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-AUTH-002
+
+An Authority Object SHALL identify the subject to whom or to which the
+authority applies.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 026
+
+Requirement ID:
+LILP-REQ-AUTH-003
+
+Frozen STD Lines:
+678-690
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-AUTH-003
+
+The authority class SHALL be explicit.
+
+Authority classes MAY include, where applicable:
+
+OBSERVE
+INTERPRET
+PROPOSE
+DETERMINE
+GOVERN
+EXECUTE
+WITNESS
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 027
+
+Requirement ID:
+LILP-REQ-AUTH-004
+
+Frozen STD Lines:
+693-695
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-AUTH-004
+
+Authority scope SHALL be bounded.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 028
+
+Requirement ID:
+LILP-REQ-AUTH-005
+
+Frozen STD Lines:
+698-701
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-AUTH-005
+
+Where authority is jurisdiction-dependent, the governing jurisdiction
+SHALL be identifiable.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 029
+
+Requirement ID:
+LILP-REQ-AUTH-006
+
+Frozen STD Lines:
+704-707
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-AUTH-006
+
+Where authority has temporal limits, those limits SHALL be
+representable.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 030
+
+Requirement ID:
+LILP-REQ-AUTH-007
+
+Frozen STD Lines:
+710-714
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-AUTH-007
+
+Revocation, expiry, suspension or another material authority-state
+change SHALL invalidate reliance on the earlier execution authority
+where that change is relevant to the contemplated effect.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 031
+
+Requirement ID:
+LILP-REQ-AUTH-008
+
+Frozen STD Lines:
+717-721
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-AUTH-008
+
+Execution authority SHALL be evaluated at the time required for
+consequential execution and SHALL NOT be inferred solely from
+historical authority.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 032
+
+Requirement ID:
+LILP-REQ-EVID-001
+
+Frozen STD Lines:
+746-749
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-EVID-001
+
+Each material Evidence Object SHALL possess a stable evidence
+identifier.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 033
+
+Requirement ID:
+LILP-REQ-EVID-002
+
+Frozen STD Lines:
+752-755
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-EVID-002
+
+The evidence class SHALL be explicit where different epistemic classes
+could materially affect the determination.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 034
+
+Requirement ID:
+LILP-REQ-EVID-003
+
+Frozen STD Lines:
+758-760
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-EVID-003
+
+Direct observation SHALL remain distinguishable from interpretation.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 035
+
+Requirement ID:
+LILP-REQ-EVID-004
+
+Frozen STD Lines:
+763-767
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-EVID-004
+
+Where interpretation is derived from an observation, the relationship
+between the interpretation and underlying observation SHALL be
+inspectable.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 036
+
+Requirement ID:
+LILP-REQ-EVID-005
+
+Frozen STD Lines:
+770-774
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-EVID-005
+
+Where source identity is material to evidentiary weight or authority,
+the evidence SHALL identify that source or explicitly record that the
+source identity is NOT ESTABLISHED.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 037
+
+Requirement ID:
+LILP-REQ-EVID-006
+
+Frozen STD Lines:
+777-780
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-EVID-006
+
+Where time affects relevance or validity, the observation or acquisition
+time SHALL be preserved.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 038
+
+Requirement ID:
+LILP-REQ-EVID-007
+
+Frozen STD Lines:
+783-787
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-EVID-007
+
+Where integrity of an external evidence payload is claimed, the payload
+or a verifiable content reference SHALL be bound to an integrity
+identifier.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 039
+
+Requirement ID:
+LILP-REQ-EVID-008
+
+Frozen STD Lines:
+790-794
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-EVID-008
+
+Evidence absence SHALL NOT be represented as evidence of the opposite
+proposition unless the applicable method independently establishes
+that inference.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 040
+
+Requirement ID:
+LILP-REQ-DELTA-001
+
+Frozen STD Lines:
+832-836
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DELTA-001
+
+A system relying on historical state SHALL be capable of detecting or
+receiving information about material change relevant to its mandatory
+governance predicates.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 041
+
+Requirement ID:
+LILP-REQ-DELTA-002
+
+Frozen STD Lines:
+839-842
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DELTA-002
+
+A detected material change SHALL be represented separately from the
+predecessor state.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 042
+
+Requirement ID:
+LILP-REQ-DELTA-003
+
+Frozen STD Lines:
+845-847
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DELTA-003
+
+The predecessor SHALL remain preserved.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 043
+
+Requirement ID:
+LILP-REQ-DELTA-004
+
+Frozen STD Lines:
+850-853
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DELTA-004
+
+The Delta Object SHALL identify which governing predicates are affected
+where that relationship can be established.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 044
+
+Requirement ID:
+LILP-REQ-DELTA-005
+
+Frozen STD Lines:
+856-859
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DELTA-005
+
+Where materiality cannot be determined with available evidence, the
+system SHALL permit a NOT ESTABLISHED result.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 045
+
+Requirement ID:
+LILP-REQ-DELTA-006
+
+Frozen STD Lines:
+862-865
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DELTA-006
+
+A delta affecting a mandatory execution predicate SHALL trigger
+reassessment before consequential execution.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 046
+
+Requirement ID:
+LILP-REQ-DELTA-007
+
+Frozen STD Lines:
+868-872
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DELTA-007
+
+A system SHALL NOT preserve an earlier ALLOW determination as sufficient
+execution authority where a subsequent material delta invalidates one
+or more conditions on which that determination relied.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 047
+
+Requirement ID:
+LILP-REQ-CHAIN-001
+
+Frozen STD Lines:
+908-911
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CHAIN-001
+
+Chain continuity SHALL NOT be inferred solely because two objects use
+the same human-readable name.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 048
+
+Requirement ID:
+LILP-REQ-CHAIN-002
+
+Frozen STD Lines:
+914-917
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CHAIN-002
+
+Where identity continuity is required, sufficient identity evidence
+SHALL exist to support the claimed link.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 049
+
+Requirement ID:
+LILP-REQ-CHAIN-003
+
+Frozen STD Lines:
+920-924
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CHAIN-003
+
+Where required continuity cannot be established without inventing or
+retrospectively constructing missing evidence, the system SHALL NOT
+claim continuity.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 050
+
+Requirement ID:
+LILP-REQ-CHAIN-004
+
+Frozen STD Lines:
+927-930
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CHAIN-004
+
+NEW_CHAIN_REQUIRED SHALL preserve the predecessor chain rather than
+rewriting it into the successor.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 051
+
+Requirement ID:
+LILP-REQ-CHAIN-005
+
+Frozen STD Lines:
+933-936
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CHAIN-005
+
+A chain boundary determination SHALL be recorded where it materially
+affects execution, verification or claim scope.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 052
+
+Requirement ID:
+LILP-REQ-RCPT-001
+
+Frozen STD Lines:
+967-970
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-RCPT-001
+
+Each receipt SHALL have a unique receipt identifier within the declared
+receipt namespace.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 053
+
+Requirement ID:
+LILP-REQ-RCPT-002
+
+Frozen STD Lines:
+973-976
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-RCPT-002
+
+Receipt creation tooling SHALL NOT silently replace an existing receipt
+under the same receipt identifier.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 054
+
+Requirement ID:
+LILP-REQ-RCPT-003
+
+Frozen STD Lines:
+979-987
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-RCPT-003
+
+Where a requested receipt identifier already exists, the implementation
+SHALL:
+
+- refuse the write;
+- or create an explicitly identified successor or correction object.
+
+It SHALL NOT silently overwrite the predecessor.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 055
+
+Requirement ID:
+LILP-REQ-RCPT-004
+
+Frozen STD Lines:
+990-992
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-RCPT-004
+
+A receipt SHALL identify when it was recorded.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 056
+
+Requirement ID:
+LILP-REQ-RCPT-005
+
+Frozen STD Lines:
+995-997
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-RCPT-005
+
+A receipt SHALL identify the state, event or object to which it refers.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 057
+
+Requirement ID:
+LILP-REQ-RCPT-006
+
+Frozen STD Lines:
+1000-1003
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-RCPT-006
+
+Where a receipt asserts reliance upon a Governing State Object, it SHALL
+bind to that state by an independently checkable identifier.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 058
+
+Requirement ID:
+LILP-REQ-RCPT-007
+
+Frozen STD Lines:
+1006-1010
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-RCPT-007
+
+Where cryptographic identity is claimed, the receipt SHALL be
+independently re-hashable using the declared canonicalisation and hash
+procedure.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 059
+
+Requirement ID:
+LILP-REQ-RCPT-008
+
+Frozen STD Lines:
+1013-1016
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-RCPT-008
+
+Where receipts are cryptographically chained, the predecessor receipt
+identity SHALL be included in the successor's canonical input.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 060
+
+Requirement ID:
+LILP-REQ-RCPT-009
+
+Frozen STD Lines:
+1019-1023
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-RCPT-009
+
+A correction receipt SHALL preserve the observed deficiency or error
+rather than representing the corrected state as though the deficiency
+never occurred.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 061
+
+Requirement ID:
+LILP-REQ-RCPT-010
+
+Frozen STD Lines:
+1026-1028
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-RCPT-010
+
+Execution status and consequence status SHALL remain distinguishable.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 062
+
+Requirement ID:
+LILP-REQ-EXEC-001
+
+Frozen STD Lines:
+1060-1063
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-EXEC-001
+
+Evidence that execution was attempted SHALL NOT be represented as
+evidence that the intended consequence completed.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 063
+
+Requirement ID:
+LILP-REQ-EXEC-002
+
+Frozen STD Lines:
+1066-1069
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-EXEC-002
+
+Evidence that a consequence occurred SHALL identify the observation or
+verification method supporting that conclusion.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 064
+
+Requirement ID:
+LILP-REQ-EXEC-003
+
+Frozen STD Lines:
+1072-1075
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-EXEC-003
+
+Where consequence cannot be observed or established, the system SHALL
+permit NOT_ESTABLISHED rather than manufacturing success.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 065
+
+Requirement ID:
+LILP-REQ-GATE-001
+
+Frozen STD Lines:
+1101-1104
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-GATE-001
+
+A consequential action SHALL NOT execute unless every mandatory
+predicate required for that action is established.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 066
+
+Requirement ID:
+LILP-REQ-GATE-002
+
+Frozen STD Lines:
+1107-1111
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-GATE-002
+
+A mandatory predicate with value NOT ESTABLISHED SHALL fail closed for
+the contemplated consequence unless a separately authorised escalation
+path applies.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 067
+
+Requirement ID:
+LILP-REQ-GATE-003
+
+Frozen STD Lines:
+1114-1117
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-GATE-003
+
+An earlier ALLOW determination SHALL NOT bypass a later failed execution
+predicate.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 068
+
+Requirement ID:
+LILP-REQ-GATE-004
+
+Frozen STD Lines:
+1120-1124
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-GATE-004
+
+Where a relevant condition may change between determination and
+execution, the implementation SHALL provide a time-of-check /
+time-of-use control appropriate to the declared risk.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 069
+
+Requirement ID:
+LILP-REQ-GATE-005
+
+Frozen STD Lines:
+1127-1131
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-GATE-005
+
+Where a material governing condition changes after check but before
+execution, execution SHALL be withheld until reassessment establishes
+the new governing state.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 070
+
+Requirement ID:
+LILP-REQ-GATE-006
+
+Frozen STD Lines:
+1134-1143
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-GATE-006
+
+An execution gate SHALL produce or cause preservation of sufficient
+evidence to establish:
+
+- what predicates were evaluated;
+- what values were observed;
+- what determination resulted;
+- whether execution occurred;
+- and what consequence, if any, was established.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 071
+
+Requirement ID:
+LILP-REQ-GATE-007
+
+Frozen STD Lines:
+1146-1149
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-GATE-007
+
+Technical capability to bypass the governance gate SHALL NOT constitute
+permission to bypass it.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 072
+
+Requirement ID:
+LILP-REQ-GATE-008
+
+Frozen STD Lines:
+1152-1156
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-GATE-008
+
+Where the architecture claims non-bypassable restraint, conformance
+testing SHALL include an attempted bypass or equivalent falsification
+test.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 073
+
+Requirement ID:
+LILP-REQ-DET-001
+
+Frozen STD Lines:
+1176-1179
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DET-001
+
+Each determination SHALL be attributable to the governing state and
+evidence on which it relied.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 074
+
+Requirement ID:
+LILP-REQ-DET-002
+
+Frozen STD Lines:
+1182-1187
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DET-002
+
+ALLOW SHALL mean that the applicable governance determination permits
+progression within the declared scope.
+
+ALLOW SHALL NOT mean that later execution predicates may be skipped.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 075
+
+Requirement ID:
+LILP-REQ-DET-003
+
+Frozen STD Lines:
+1190-1193
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DET-003
+
+HOLD SHALL preserve non-execution while required information,
+authority, state or evidence remains unresolved.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 076
+
+Requirement ID:
+LILP-REQ-DET-004
+
+Frozen STD Lines:
+1196-1199
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DET-004
+
+DENY SHALL represent an established prohibition within the declared
+governance scope.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 077
+
+Requirement ID:
+LILP-REQ-DET-005
+
+Frozen STD Lines:
+1202-1207
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DET-005
+
+ESCALATE SHALL identify or reference a separately authorised process.
+
+ESCALATE SHALL NOT itself grant execution authority unless the
+governing policy explicitly establishes that authority.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 078
+
+Requirement ID:
+LILP-REQ-DET-006
+
+Frozen STD Lines:
+1210-1212
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DET-006
+
+NOT ESTABLISHED SHALL remain distinguishable from DENY.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 079
+
+Requirement ID:
+LILP-REQ-DET-007
+
+Frozen STD Lines:
+1215-1217
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DET-007
+
+INVALID SHALL remain distinguishable from NOT ESTABLISHED.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 080
+
+Requirement ID:
+LILP-REQ-CLAIM-001
+
+Frozen STD Lines:
+1436-1439
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CLAIM-001
+
+Every material claim SHALL identify its claim class or otherwise make
+the claimed property unambiguous.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 081
+
+Requirement ID:
+LILP-REQ-CLAIM-002
+
+Frozen STD Lines:
+1442-1444
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CLAIM-002
+
+A claim SHALL identify the subject to which it applies.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 082
+
+Requirement ID:
+LILP-REQ-CLAIM-003
+
+Frozen STD Lines:
+1447-1449
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CLAIM-003
+
+A claim SHALL identify its applicable scope.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 083
+
+Requirement ID:
+LILP-REQ-CLAIM-004
+
+Frozen STD Lines:
+1452-1455
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CLAIM-004
+
+Where time materially affects validity, the claim SHALL identify its
+temporal scope.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 084
+
+Requirement ID:
+LILP-REQ-CLAIM-005
+
+Frozen STD Lines:
+1458-1460
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CLAIM-005
+
+A claim SHALL be traceable to the evidence supporting it.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 085
+
+Requirement ID:
+LILP-REQ-CLAIM-006
+
+Frozen STD Lines:
+1463-1466
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CLAIM-006
+
+A claim SHALL NOT silently combine multiple claim classes where the
+evidence establishes only one of those classes.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 086
+
+Requirement ID:
+LILP-REQ-CLAIM-007
+
+Frozen STD Lines:
+1469-1481
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CLAIM-007
+
+Evidence supporting an integrity claim SHALL NOT, without additional
+evidence, be represented as establishing:
+
+- truth;
+- authority;
+- correctness;
+- safety;
+- execution;
+- consequence;
+- conformance;
+- or external validation.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 087
+
+Requirement ID:
+LILP-REQ-CLAIM-008
+
+Frozen STD Lines:
+1484-1487
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CLAIM-008
+
+A conformance claim SHALL identify the exact standard version and
+conformance profile relied upon.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 088
+
+Requirement ID:
+LILP-REQ-CLAIM-009
+
+Frozen STD Lines:
+1490-1493
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CLAIM-009
+
+An external-validation claim SHALL NOT be inferred solely from internal
+LILP conformance.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 089
+
+Requirement ID:
+LILP-REQ-PROOF-001
+
+Frozen STD Lines:
+1588-1591
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-PROOF-001
+
+Every proof-level claim SHALL identify the bounded property to which
+the proof level applies.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 090
+
+Requirement ID:
+LILP-REQ-PROOF-002
+
+Frozen STD Lines:
+1594-1596
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-PROOF-002
+
+Proof levels SHALL NOT be used as universal system scores.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 091
+
+Requirement ID:
+LILP-REQ-PROOF-003
+
+Frozen STD Lines:
+1599-1601
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-PROOF-003
+
+PL1 SHALL NOT be described as independent verification.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 092
+
+Requirement ID:
+LILP-REQ-PROOF-004
+
+Frozen STD Lines:
+1604-1607
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-PROOF-004
+
+PL2 SHALL NOT be represented as establishing semantic truth merely
+because integrity was verified.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 093
+
+Requirement ID:
+LILP-REQ-PROOF-005
+
+Frozen STD Lines:
+1610-1612
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-PROOF-005
+
+PL3 SHALL identify the procedure and evidence used.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 094
+
+Requirement ID:
+LILP-REQ-PROOF-006
+
+Frozen STD Lines:
+1615-1617
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-PROOF-006
+
+PL4 SHALL identify the verifier and declared verification scope.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 095
+
+Requirement ID:
+LILP-REQ-PROOF-007
+
+Frozen STD Lines:
+1620-1622
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-PROOF-007
+
+PL5 SHALL identify the reproduction conditions and result.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 096
+
+Requirement ID:
+LILP-REQ-PROOF-008
+
+Frozen STD Lines:
+1625-1628
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-PROOF-008
+
+Where independence is claimed, material conflicts or relationships
+capable of affecting that independence SHOULD be disclosed.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 097
+
+Requirement ID:
+LILP-REQ-PROOF-009
+
+Frozen STD Lines:
+1631-1634
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-PROOF-009
+
+Failure to establish a requested proof level SHALL preserve the highest
+bounded property actually established rather than inflating the claim.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 098
+
+Requirement ID:
+LILP-REQ-CONF-001
+
+Frozen STD Lines:
+1716-1718
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-001
+
+Every conformance claim SHALL name the profile being claimed.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 099
+
+Requirement ID:
+LILP-REQ-CONF-002
+
+Frozen STD Lines:
+1721-1724
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-002
+
+Every conformance claim SHALL declare the system, component, workflow
+or artifact scope being evaluated.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 100
+
+Requirement ID:
+LILP-REQ-CONF-003
+
+Frozen STD Lines:
+1727-1729
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-003
+
+A profile claim SHALL identify the exact version of this standard.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 101
+
+Requirement ID:
+LILP-REQ-CONF-004
+
+Frozen STD Lines:
+1732-1735
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-004
+
+All mandatory requirements applicable to the declared profile and scope
+SHALL be evaluated.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 102
+
+Requirement ID:
+LILP-REQ-CONF-005
+
+Frozen STD Lines:
+1738-1745
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-005
+
+Each mandatory requirement SHALL receive one of the following statuses:
+
+PASS
+FAIL
+NOT APPLICABLE
+NOT ESTABLISHED
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 103
+
+Requirement ID:
+LILP-REQ-CONF-006
+
+Frozen STD Lines:
+1748-1751
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+PRESCRIPTIVE_LANGUAGE_WITHOUT_STANDARD_MODAL
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-006
+
+A mandatory requirement with status FAIL prevents a PASS conformance
+determination for the affected profile.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 104
+
+Requirement ID:
+LILP-REQ-CONF-007
+
+Frozen STD Lines:
+1754-1758
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+PRESCRIPTIVE_LANGUAGE_WITHOUT_STANDARD_MODAL
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-007
+
+A mandatory requirement with status NOT ESTABLISHED prevents a PASS
+conformance determination unless the requirement itself explicitly
+permits that state.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 105
+
+Requirement ID:
+LILP-REQ-CONF-008
+
+Frozen STD Lines:
+1761-1764
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-008
+
+A NOT APPLICABLE status SHALL include the rationale establishing why
+the requirement does not apply to the declared scope.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 106
+
+Requirement ID:
+LILP-REQ-CONF-009
+
+Frozen STD Lines:
+1767-1769
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-009
+
+A profile PASS SHALL NOT be extrapolated beyond the evaluated scope.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 107
+
+Requirement ID:
+LILP-REQ-CONF-010
+
+Frozen STD Lines:
+1772-1775
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-010
+
+Conformance to one profile SHALL NOT be represented as conformance to
+another profile unless the latter profile was separately established.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 108
+
+Requirement ID:
+LILP-REQ-CONF-011
+
+Frozen STD Lines:
+1778-1781
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-011
+
+LILP-FULL SHALL NOT be claimed while an applicable mandatory
+requirement remains FAIL or NOT ESTABLISHED.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 109
+
+Requirement ID:
+LILP-REQ-CONF-012
+
+Frozen STD Lines:
+1784-1787
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-012
+
+A conformance determination SHALL be traceable to its requirements
+matrix and test evidence.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 110
+
+Requirement ID:
+LILP-REQ-CONF-013
+
+Frozen STD Lines:
+1822-1825
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-013
+
+The conformance package SHALL preserve the actual failed tests and
+known deficiencies relevant to the determination.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 111
+
+Requirement ID:
+LILP-REQ-CONF-014
+
+Frozen STD Lines:
+1828-1831
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-014
+
+A conformance package SHALL NOT delete a failed result merely because a
+later successor test passed.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 112
+
+Requirement ID:
+LILP-REQ-CONF-015
+
+Frozen STD Lines:
+1834-1837
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-015
+
+Where a successor run corrects a failure, the predecessor result and
+successor relationship SHALL remain inspectable.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 113
+
+Requirement ID:
+LILP-REQ-CONF-016
+
+Frozen STD Lines:
+1840-1842
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-016
+
+The evidence package SHOULD be independently re-hashable.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 114
+
+Requirement ID:
+LILP-REQ-CONF-017
+
+Frozen STD Lines:
+1845-1848
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-017
+
+Where reproducibility is claimed, the evidence package SHALL contain or
+identify the material necessary to perform the claimed reproduction.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 115
+
+Requirement ID:
+LILP-REQ-TEST-001
+
+Frozen STD Lines:
+2086-2089
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-TEST-001
+
+Every claimed conformance profile SHALL execute all mandatory general
+falsification tests applicable to that profile and declared scope.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 116
+
+Requirement ID:
+LILP-REQ-TEST-002
+
+Frozen STD Lines:
+2092-2095
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-TEST-002
+
+Test evidence SHALL preserve the test input, expected result, observed
+result and determination.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 117
+
+Requirement ID:
+LILP-REQ-TEST-003
+
+Frozen STD Lines:
+2098-2101
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-TEST-003
+
+A failed mandatory falsification test SHALL prevent PASS for any
+conformance profile whose claimed property depends upon that test.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 118
+
+Requirement ID:
+LILP-REQ-TEST-004
+
+Frozen STD Lines:
+2104-2107
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-TEST-004
+
+A test SHALL NOT be marked PASS solely because the test harness
+completed without error.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 119
+
+Requirement ID:
+LILP-REQ-TEST-005
+
+Frozen STD Lines:
+2110-2113
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+PRESCRIPTIVE_LANGUAGE_WITHOUT_STANDARD_MODAL
+
+Frozen Requirement Block:
+
+LILP-REQ-TEST-005
+
+A test PASS requires the observed behaviour to satisfy the declared
+expected result.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 120
+
+Requirement ID:
+LILP-REQ-TEST-006
+
+Frozen STD Lines:
+2116-2120
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-TEST-006
+
+Where the test cannot be completed because required conditions or
+evidence are unavailable, the result SHALL be NOT ESTABLISHED unless
+another defined result more accurately describes the condition.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 121
+
+Requirement ID:
+LILP-REQ-TEST-007
+
+Frozen STD Lines:
+2123-2126
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-TEST-007
+
+A later passing successor test SHALL NOT erase the evidence of an
+earlier failing test.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 122
+
+Requirement ID:
+LILP-REQ-TEST-008
+
+Frozen STD Lines:
+2129-2132
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-TEST-008
+
+Test scope SHALL be sufficiently explicit to prevent a bounded PASS
+from being represented as universal validation.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 123
+
+Requirement ID:
+LILP-REQ-CONF-018
+
+Frozen STD Lines:
+2165-2168
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-018
+
+PASS SHALL NOT be issued where an applicable mandatory requirement is
+FAIL.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 124
+
+Requirement ID:
+LILP-REQ-CONF-019
+
+Frozen STD Lines:
+2171-2174
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-019
+
+PASS SHALL NOT be issued where an unresolved applicable mandatory
+requirement remains NOT ESTABLISHED.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 125
+
+Requirement ID:
+LILP-REQ-CONF-020
+
+Frozen STD Lines:
+2177-2181
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-020
+
+PASS SHALL NOT be issued where a mandatory falsification test required
+by the declared profile has not been executed without an established
+NOT APPLICABLE rationale.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 126
+
+Requirement ID:
+LILP-REQ-CONF-021
+
+Frozen STD Lines:
+2184-2186
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-CONF-021
+
+The conformance determination SHALL preserve its claim ceiling.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 127
+
+Requirement ID:
+LILP-REQ-WORD-001
+
+Frozen STD Lines:
+2210-2214
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-WORD-001
+
+A self-assessed PASS SHALL identify itself as self-assessed where the
+claim could otherwise reasonably be understood as independent
+verification.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 128
+
+Requirement ID:
+LILP-REQ-WORD-002
+
+Frozen STD Lines:
+2217-2221
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-WORD-002
+
+A LILP conformance result SHALL NOT, by itself, be described as
+"certified" unless a separately established certification process
+authorises that wording.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 129
+
+Requirement ID:
+LILP-REQ-WORD-003
+
+Frozen STD Lines:
+2224-2227
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-WORD-003
+
+LILP conformance SHALL NOT, by itself, be described as ISO-compliant,
+IEC-compliant, regulator-approved or government-approved.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 130
+
+Requirement ID:
+LILP-REQ-WORD-004
+
+Frozen STD Lines:
+2230-2242
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-WORD-004
+
+A LILP PASS SHALL NOT, by itself, establish that a system is:
+
+- safe;
+- secure;
+- lawful;
+- ethical in every context;
+- production-ready;
+- error-free;
+- immutable;
+- trustworthy in every context;
+- or externally certified.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 131
+
+Requirement ID:
+LILP-REQ-WORD-005
+
+Frozen STD Lines:
+2245-2248
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-WORD-005
+
+Where such additional properties are claimed, each property SHALL have
+its own supporting evidence and bounded verification method.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 132
+
+Requirement ID:
+LILP-REQ-WORD-006
+
+Frozen STD Lines:
+2251-2254
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-WORD-006
+
+The standard version SHALL accompany public conformance claims where
+version differences could materially alter the requirements.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 133
+
+Requirement ID:
+LILP-REQ-WORD-007
+
+Frozen STD Lines:
+2257-2259
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-WORD-007
+
+The profile SHALL accompany a public conformance claim.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 134
+
+Requirement ID:
+LILP-REQ-WORD-008
+
+Frozen STD Lines:
+2262-2266
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-WORD-008
+
+Material scope limitations SHALL NOT be omitted from a conformance
+claim where their omission could cause the claim to be interpreted more
+broadly than the evidence supports.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 135
+
+Requirement ID:
+LILP-REQ-SEC-001
+
+Frozen STD Lines:
+2407-2410
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-SEC-001
+
+A LILP implementation SHALL identify material trust boundaries relevant
+to the declared conformance scope.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 136
+
+Requirement ID:
+LILP-REQ-SEC-002
+
+Frozen STD Lines:
+2413-2417
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-SEC-002
+
+Evidence crossing a material trust boundary SHALL retain sufficient
+identity or provenance for the receiving process to determine what is
+and is not established.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 137
+
+Requirement ID:
+LILP-REQ-SEC-003
+
+Frozen STD Lines:
+2420-2424
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-SEC-003
+
+A system SHALL NOT represent unverified externally supplied content as
+internally established evidence solely because the content was received
+through an authenticated channel.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 138
+
+Requirement ID:
+LILP-REQ-SEC-004
+
+Frozen STD Lines:
+2427-2430
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-SEC-004
+
+Authentication of a source SHALL remain distinguishable from truth of
+the source's assertion.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 139
+
+Requirement ID:
+LILP-REQ-SEC-005
+
+Frozen STD Lines:
+2433-2437
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-SEC-005
+
+Where cryptographic signatures are used, the implementation SHALL
+identify the key, certificate, trust anchor or equivalent verification
+basis required to verify the signature.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 140
+
+Requirement ID:
+LILP-REQ-SEC-006
+
+Frozen STD Lines:
+2440-2444
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-SEC-006
+
+Where loss or compromise of a credential or signing key could alter
+authority, integrity or provenance, that condition SHALL be capable of
+triggering reassessment.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 141
+
+Requirement ID:
+LILP-REQ-SEC-007
+
+Frozen STD Lines:
+2447-2451
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-SEC-007
+
+Access-control permission SHALL NOT automatically be treated as
+governance authority unless that relationship is explicitly
+established.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 142
+
+Requirement ID:
+LILP-REQ-SEC-008
+
+Frozen STD Lines:
+2454-2458
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-SEC-008
+
+A cryptographically intact malicious, false or unauthorised object
+SHALL NOT be represented as trustworthy merely because its integrity
+check succeeds.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 143
+
+Requirement ID:
+LILP-REQ-SEC-009
+
+Frozen STD Lines:
+2461-2464
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-SEC-009
+
+Where protected evidence is disclosed for verification, disclosure
+SHALL remain bounded to the authority and scope of the examination.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 144
+
+Requirement ID:
+LILP-REQ-SEC-010
+
+Frozen STD Lines:
+2467-2470
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-SEC-010
+
+LILP evidence mechanisms SHOULD preserve confidentiality requirements
+without destroying the inspectability required by the declared claim.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 145
+
+Requirement ID:
+LILP-REQ-VER-001
+
+Frozen STD Lines:
+2498-2501
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-VER-001
+
+A verifier SHALL be identifiable where independent verification is
+claimed.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 146
+
+Requirement ID:
+LILP-REQ-VER-002
+
+Frozen STD Lines:
+2504-2507
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-VER-002
+
+The verification record SHALL identify the verifier's declared
+relationship to the originating party.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 147
+
+Requirement ID:
+LILP-REQ-VER-003
+
+Frozen STD Lines:
+2510-2512
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-VER-003
+
+The scope of independent verification SHALL be explicit.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 148
+
+Requirement ID:
+LILP-REQ-VER-004
+
+Frozen STD Lines:
+2515-2519
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-VER-004
+
+A verifier SHALL NOT claim independent reproduction where the verifier
+did not possess the material necessary to perform the claimed
+reproduction.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 149
+
+Requirement ID:
+LILP-REQ-VER-005
+
+Frozen STD Lines:
+2522-2525
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-VER-005
+
+Automated re-execution by the originating implementation SHALL NOT, by
+itself, constitute independent verification.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 150
+
+Requirement ID:
+LILP-REQ-VER-006
+
+Frozen STD Lines:
+2528-2531
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-VER-006
+
+Use of a different AI model or software tool by the same controlling
+party SHALL NOT, by itself, establish organisational independence.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 151
+
+Requirement ID:
+LILP-REQ-VER-007
+
+Frozen STD Lines:
+2534-2537
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-VER-007
+
+A verifier's inability to examine a material dependency SHALL be
+preserved as a scope limitation or NOT ESTABLISHED condition.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 152
+
+Requirement ID:
+LILP-REQ-VER-008
+
+Frozen STD Lines:
+2540-2543
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-VER-008
+
+Independent verification SHALL NOT expand the claim beyond the property
+actually examined.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 153
+
+Requirement ID:
+LILP-REQ-DEV-001
+
+Frozen STD Lines:
+2562-2564
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DEV-001
+
+A known deviation from a mandatory requirement SHALL be recorded.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 154
+
+Requirement ID:
+LILP-REQ-DEV-002
+
+Frozen STD Lines:
+2567-2577
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DEV-002
+
+A deviation record SHALL identify:
+
+- the affected requirement;
+- the reason for deviation;
+- the affected scope;
+- the approving authority where approval is applicable;
+- the effective period where time-bounded;
+- the expected consequence;
+- and the residual claim limitation.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 155
+
+Requirement ID:
+LILP-REQ-DEV-003
+
+Frozen STD Lines:
+2580-2583
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DEV-003
+
+A deviation SHALL NOT silently convert a failed mandatory requirement
+into PASS.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 156
+
+Requirement ID:
+LILP-REQ-DEV-004
+
+Frozen STD Lines:
+2586-2589
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DEV-004
+
+An exception SHALL identify the governing rule that authorises the
+exception.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 157
+
+Requirement ID:
+LILP-REQ-DEV-005
+
+Frozen STD Lines:
+2592-2595
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DEV-005
+
+An exception SHALL NOT create authority beyond the scope granted by
+the governing exception rule.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 158
+
+Requirement ID:
+LILP-REQ-DEV-006
+
+Frozen STD Lines:
+2598-2606
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DEV-006
+
+NOT APPLICABLE SHALL NOT be used as a substitute for:
+
+FAIL
+NOT ESTABLISHED
+implementation inconvenience
+missing evidence
+or unperformed testing.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 159
+
+Requirement ID:
+LILP-REQ-DEV-007
+
+Frozen STD Lines:
+2609-2612
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DEV-007
+
+Where an exception or deviation materially changes the basis of a prior
+conformance claim, the prior claim SHALL be reassessed.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 160
+
+Requirement ID:
+LILP-REQ-DEV-008
+
+Frozen STD Lines:
+2615-2618
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-DEV-008
+
+Material deviations SHALL be included in the conformance evidence
+package.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 161
+
+Requirement ID:
+LILP-REQ-LIFE-001
+
+Frozen STD Lines:
+2632-2634
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-LIFE-001
+
+A frozen normative artifact SHALL NOT be silently edited.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 162
+
+Requirement ID:
+LILP-REQ-LIFE-002
+
+Frozen STD Lines:
+2637-2640
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-LIFE-002
+
+A material change to a frozen normative artifact SHALL create a new
+version or successor artifact.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 163
+
+Requirement ID:
+LILP-REQ-LIFE-003
+
+Frozen STD Lines:
+2643-2645
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-LIFE-003
+
+A successor normative artifact SHALL identify its predecessor.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 164
+
+Requirement ID:
+LILP-REQ-LIFE-004
+
+Frozen STD Lines:
+2648-2650
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-LIFE-004
+
+The reason for material successor change SHALL be recorded.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 165
+
+Requirement ID:
+LILP-REQ-LIFE-005
+
+Frozen STD Lines:
+2653-2656
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-LIFE-005
+
+A successor SHALL NOT cause the predecessor's historical hash identity
+to be represented as though it referred to the successor.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 166
+
+Requirement ID:
+LILP-REQ-LIFE-006
+
+Frozen STD Lines:
+2659-2662
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-LIFE-006
+
+Where a defect is discovered after freeze, the defect SHALL be
+preserved in the evidence chain.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 167
+
+Requirement ID:
+LILP-REQ-LIFE-007
+
+Frozen STD Lines:
+2665-2673
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-LIFE-007
+
+A post-freeze correction SHALL identify whether it:
+
+- changes normative meaning;
+- changes implementation guidance;
+- changes only metadata;
+- changes only presentation;
+- or does not alter the frozen object itself.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 168
+
+Requirement ID:
+LILP-REQ-LIFE-008
+
+Frozen STD Lines:
+2676-2680
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-LIFE-008
+
+Where a normative change alters conformance requirements, previous
+conformance claims SHALL remain bounded to the standard version under
+which they were established.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 169
+
+Requirement ID:
+LILP-REQ-MATR-001
+
+Frozen STD Lines:
+2707-2710
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-MATR-001
+
+Every normative requirement identifier in a claimed profile SHALL be
+represented in the requirements matrix.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 170
+
+Requirement ID:
+LILP-REQ-MATR-002
+
+Frozen STD Lines:
+2713-2715
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-MATR-002
+
+Each matrix entry SHALL identify exactly one normative requirement.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 171
+
+Requirement ID:
+LILP-REQ-MATR-003
+
+Frozen STD Lines:
+2718-2721
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-MATR-003
+
+Each applicable mandatory requirement SHALL have one determination
+status.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 172
+
+Requirement ID:
+LILP-REQ-MATR-004
+
+Frozen STD Lines:
+2724-2727
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-MATR-004
+
+A PASS matrix entry SHALL reference sufficient evidence to support the
+PASS determination.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 173
+
+Requirement ID:
+LILP-REQ-MATR-005
+
+Frozen STD Lines:
+2730-2732
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-MATR-005
+
+A FAIL matrix entry SHALL preserve the observed failure evidence.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 174
+
+Requirement ID:
+LILP-REQ-MATR-006
+
+Frozen STD Lines:
+2735-2738
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-MATR-006
+
+A NOT ESTABLISHED matrix entry SHALL identify the evidentiary gap where
+that gap can be determined.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 175
+
+Requirement ID:
+LILP-REQ-MATR-007
+
+Frozen STD Lines:
+2741-2744
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-MATR-007
+
+A requirements matrix SHALL NOT omit a mandatory requirement merely
+because the requirement failed.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 176
+
+Requirement ID:
+LILP-REQ-FREEZE-001
+
+Frozen STD Lines:
+2759-2762
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-001
+
+The candidate standard SHALL possess a reproducible SHA-256 identity
+before freeze.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 177
+
+Requirement ID:
+LILP-REQ-FREEZE-002
+
+Frozen STD Lines:
+2765-2767
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-002
+
+The candidate standard byte length SHALL be recorded.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 178
+
+Requirement ID:
+LILP-REQ-FREEZE-003
+
+Frozen STD Lines:
+2770-2772
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-003
+
+Every normative requirement identifier SHALL be unique.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 179
+
+Requirement ID:
+LILP-REQ-FREEZE-004
+
+Frozen STD Lines:
+2775-2777
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-004
+
+Every mandatory falsification test identifier SHALL be unique.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 180
+
+Requirement ID:
+LILP-REQ-FREEZE-005
+
+Frozen STD Lines:
+2780-2782
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-005
+
+All expected normative section headings SHALL be present.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 181
+
+Requirement ID:
+LILP-REQ-FREEZE-006
+
+Frozen STD Lines:
+2785-2788
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-006
+
+The final standard SHALL be inspected for embedded PowerShell prompt or
+continuation-prompt contamination.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 182
+
+Requirement ID:
+LILP-REQ-FREEZE-007
+
+Frozen STD Lines:
+2791-2799
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-007
+
+The frozen lexicon binding SHALL continue to identify:
+
+ELIAS-LILP-LEX-001 v0.1
+
+SHA-256:
+
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 183
+
+Requirement ID:
+LILP-REQ-FREEZE-008
+
+Frozen STD Lines:
+2802-2806
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-008
+
+The founding provenance binding SHALL continue to identify SHA-256:
+
+2754F23DB9E41A2423D4F7749C617A488D76CE4D9C879A5AA70EFB7755D40E43
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 184
+
+Requirement ID:
+LILP-REQ-FREEZE-009
+
+Frozen STD Lines:
+2809-2815
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-009
+
+A contradiction inspection SHALL be performed over the normative
+requirements before freeze.
+
+Where an unresolved material contradiction is identified, freeze SHALL
+be withheld.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 185
+
+Requirement ID:
+LILP-REQ-FREEZE-010
+
+Frozen STD Lines:
+2818-2825
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-010
+
+A terminology inspection SHALL be performed against the bound frozen
+lexicon before freeze.
+
+Where a material normative term conflicts with the frozen lexicon
+without an explicit narrower definition in this standard, freeze SHALL
+be withheld.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 186
+
+Requirement ID:
+LILP-REQ-FREEZE-011
+
+Frozen STD Lines:
+2828-2841
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-011
+
+The final candidate SHALL preserve the distinction between:
+
+- capability and authority;
+- observation and interpretation;
+- attestation and verification;
+- historical validity and present standing;
+- determination and execution;
+- execution and consequence;
+- FAIL and NOT ESTABLISHED;
+- predecessor and successor;
+- integrity and truth;
+- and self-assessment and independent verification.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 187
+
+Requirement ID:
+LILP-REQ-FREEZE-012
+
+Frozen STD Lines:
+2844-2854
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-012
+
+The final candidate SHALL preserve an explicit external-claim boundary
+preventing internal LILP status from being represented as:
+
+- ISO adoption;
+- IEC adoption;
+- regulatory approval;
+- government approval;
+- independent certification;
+- or industry-wide adoption.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 188
+
+Requirement ID:
+LILP-REQ-FREEZE-013
+
+Frozen STD Lines:
+2857-2860
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-013
+
+Freeze tooling SHALL be collision-protected and SHALL NOT overwrite a
+previous freeze artifact or receipt.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 189
+
+Requirement ID:
+LILP-REQ-FREEZE-014
+
+Frozen STD Lines:
+2863-2865
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-014
+
+The frozen copy SHALL be byte-identical to the verified candidate.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 190
+
+Requirement ID:
+LILP-REQ-FREEZE-015
+
+Frozen STD Lines:
+2868-2880
+
+Extraction Status:
+UNCHANGED_FROM_v0.1
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-015
+
+The freeze receipt SHALL record:
+
+- document identifier;
+- version;
+- byte length;
+- hash algorithm;
+- frozen SHA-256;
+- relevant predecessor evidence;
+- verification result;
+- claim ceiling;
+- and successor rule.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------
+
+REQUIREMENT 191
+
+Requirement ID:
+LILP-REQ-FREEZE-016
+
+Frozen STD Lines:
+2883-2886
+
+Extraction Status:
+CORRECTED_EXTRACTION_BOUNDARY
+
+Normative-Language Status:
+STANDARD_MODAL_PRESENT
+
+Frozen Requirement Block:
+
+LILP-REQ-FREEZE-016
+
+A freeze PASS SHALL NOT be declared if any mandatory pre-freeze
+verification fails.
+
+Mapping Status:
+UNASSIGNED
+
+----------------------------------------------------------------------

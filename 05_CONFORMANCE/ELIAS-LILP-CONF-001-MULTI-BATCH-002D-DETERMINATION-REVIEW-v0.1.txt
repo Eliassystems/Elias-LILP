@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002D v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 100
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 102
+
+COVERED_BY_EXISTING: 2
+NEW_TEST_REQUIRED: 0
+
+TEST-007:
+COVERED_BY_EXISTING -> LILP-TC-T13-002
+Later PASS remains separate and cannot rewrite the predecessor FAIL.
+
+TEST-008:
+COVERED_BY_EXISTING -> LILP-TC-T16-001
+A bounded claim or PASS cannot exceed its evaluated scope and evidence basis.
+
+T13-008 remains unreserved.
+T16-021 remains unreserved.
+Test register remains at 126 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

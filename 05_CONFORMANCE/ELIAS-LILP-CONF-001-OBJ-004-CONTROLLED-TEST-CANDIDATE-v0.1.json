@@ -1,0 +1,18 @@
+﻿{
+    "CandidateId":  "LILP-OBJ-004-CANDIDATE-v0.1",
+    "CandidateProvenance":  "CONTROLLED_TEST_FIXTURE_DESIGNED_UNDER_OBJ004_CANDIDATE_DESIGN_REVIEW_v0.1",
+    "GovernanceObject":  {
+                             "ObjectId":  "LILP-OBJ-004-CONTROLLED-GOVERNANCE-OBJECT-v0.1",
+                             "IdentityMaterial":  "CONTROLLED_OBJ004_TEST_OBJECT_IDENTITY_DIRECTLY_DECLARED",
+                             "LifecycleContext":  "CONTROLLED_SUCCESSOR_OBJECT_WITH_EXPLICIT_PREDECESSOR_RELATIONSHIP",
+                             "PredecessorExistence":  {
+                                                          "Status":  "EXISTS",
+                                                          "Source":  "CONTROLLED_TEST_FIXTURE_DIRECT_DECLARATION"
+                                                      },
+                             "PredecessorRelationship":  {
+                                                             "Identifier":  "LILP-OBJ-004-CONTROLLED-PREDECESSOR-v0.1",
+                                                             "Source":  "CONTROLLED_TEST_FIXTURE_DIRECT_RELATIONSHIP_DECLARATION",
+                                                             "AttributedObjectId":  "LILP-OBJ-004-CONTROLLED-GOVERNANCE-OBJECT-v0.1"
+                                                         }
+                         }
+}

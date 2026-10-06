@@ -1,0 +1,85 @@
+ELIAS LILP CONF-001
+FREEZE-010 HUMAN MATERIALITY DETERMINATION — ATTESTATION v0.1
+
+RECORDED UTC:
+2026-10-04T10:23:17.399Z
+
+REVIEWER ID:
+Gary williams
+
+REVIEWER AUTHORITY:
+ELIAS_SYSTEMS_FOUNDER_AND_AUTHORIZED_HUMAN_REVIEWER
+
+AUTHORITY BOUNDARY:
+INTERNAL ELIAS SYSTEMS HUMAN REVIEW AUTHORITY ONLY
+
+TERM:
+ATTESTATION
+
+SOURCE MATERIALITY EVIDENCE SUPPORT:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-010-MATERIALITY-EVIDENCE-SUPPORT-v0.2.csv
+
+SOURCE SUPPORT SHA-256:
+88FBAFD23BF9FDA903273C461CFDAB5268E08132EEEAD3DE86371FAD5A2F6F2F
+
+SOURCE BASIS:
+FREEZE-011_EXPLICIT_SEMANTIC_DISTINCTION;LEXICON_CURRENT_NORMATIVE_TERM_USED_IN_STANDARD
+
+STANDARD OCCURRENCE COUNT:
+5
+
+LEXICON HEADING:
+ATTESTATION
+
+LEXICON CLASS OBSERVATION:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+LEXICON DEFINITION:
+A statement by an identified actor or system asserting that a state, fact or event exists or occurred.
+
+LEXICON BOUNDARY:
+Attestation does not, by itself, establish independent verification.
+
+HUMAN MATERIALITY DETERMINATION:
+MATERIAL
+
+REVIEWER RATIONALE:
+Attestation is materially normative because the frozen standard expressly distinguishes attestation from independent verification, requires the existence of an attestation to be supported by preservation of the attestation itself, and preserves the attestation-verification distinction within its semantic controls. The term therefore directly constrains how asserted states, facts or events may be represented without overstating them as independently verified.
+
+BOUNDARY:
+
+This record establishes only the named human reviewer's bounded
+materiality determination for the term:
+
+ATTESTATION
+
+within the FREEZE-010 material-term inventory process.
+
+It does NOT establish:
+
+- semantic compatibility;
+- explicit narrowing;
+- material conflict;
+- material-term inventory completeness;
+- FREEZE-010 PASS;
+- execution input binding;
+- harness execution;
+- test result;
+- independent verification;
+- certification;
+- or conformance.
+
+SEMANTIC CLASSIFICATION:
+NOT_PERFORMED
+
+EXECUTION INPUT BINDING:
+NOT_ESTABLISHED
+
+HARNESS EXECUTION:
+NOT_EXECUTED
+
+RESULT:
+NOT_TESTED
+
+CONFORMANCE:
+NOT_ESTABLISHED

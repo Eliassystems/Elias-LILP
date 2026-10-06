@@ -1,0 +1,227 @@
+﻿ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+FOUNDING PROVENANCE RECORD
+Document ID: ELIAS-LILP-FOUNDING-PROVENANCE
+Version: v0.1
+Founding Date: 2026-10-01
+Status: FOUNDING RECORD
+
+======================================================================
+1. PURPOSE
+======================================================================
+
+This record establishes the founding provenance of the Elias Systems
+"Lock It. Log It. Prove It." technical-standard project.
+
+The project formalises an Elias Systems discipline for establishing:
+
+- what state was governing;
+- what authority existed;
+- what evidence was available;
+- what determination was reached;
+- what execution was attempted or completed;
+- what consequence occurred;
+- and what evidence supports the bounded claim subsequently made.
+
+The discipline is expressed through three primary requirements:
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+======================================================================
+2. FOUNDING DEFINITIONS
+======================================================================
+
+LOCK IT.
+
+Establish and bind the exact governing state relied upon before a
+consequential determination or execution.
+
+LOG IT.
+
+Preserve the material observations, evidence, state changes,
+determinations, refusals, execution attempts and consequences without
+retrospectively rewriting the historical record.
+
+PROVE IT.
+
+Make only those claims that can be supported by the preserved evidence
+and allow the bounded claim to be independently examined where the
+claim requires independent verification.
+
+======================================================================
+3. FOUNDING DOCTRINES
+======================================================================
+
+CAPABILITY DOES NOT EQUAL AUTHORITY.
+
+ATTESTATION DOES NOT EQUAL INDEPENDENT VERIFICATION.
+
+HISTORICAL VALIDITY DOES NOT, BY ITSELF, ESTABLISH PRESENT STANDING.
+
+RUNNABLE DOES NOT EQUAL ESTABLISHED.
+
+TECHNICAL FEASIBILITY DOES NOT AUTOMATICALLY ESTABLISH AUTHORITY.
+
+UNCERTAINTY IS AN ADMISSIBLE STATE.
+
+FAILURE IS A LEGITIMATE TECHNICAL RESULT.
+
+MATERIAL CHANGE DOES NOT RETROSPECTIVELY REWRITE HISTORY.
+
+A MATERIAL CHANGE REQUIRES REASSESSMENT AND, WHERE REQUIRED,
+A SUCCESSOR STATE OR NEW CHAIN.
+
+NO CONSEQUENTIAL CLAIM SHALL OUTRUN THE EVIDENCE PRESERVED TO SUPPORT IT.
+
+NO CONSEQUENTIAL EXECUTION SHALL OUTRUN THE AUTHORITY AND GOVERNING
+STATE ESTABLISHED FOR IT.
+
+======================================================================
+4. CLAIM CEILING
+======================================================================
+
+Evidence establishes only the property that the evidence is capable
+of establishing.
+
+Examples:
+
+- A matching cryptographic digest may establish byte-level identity.
+  It does not establish the truth of the file contents.
+
+- An attestation may establish that an identified party made a
+  statement.
+  It does not automatically establish that the statement is true.
+
+- A successful bounded test may establish success within the tested
+  conditions.
+  It does not automatically establish production suitability,
+  regulatory compliance or universal equivalence.
+
+- A historical authority record may establish that authority existed
+  at an earlier state.
+  It does not automatically establish authority after material change.
+
+======================================================================
+5. FAILURE AND UNCERTAINTY
+======================================================================
+
+The following are legitimate bounded technical outcomes:
+
+ALLOW
+HOLD
+DENY
+ESCALATE
+NOT ESTABLISHED
+INVALID
+NEW CHAIN REQUIRED
+
+A system conforming to the LILP discipline must not manufacture a
+successful outcome where required evidence, authority, identity,
+standing or governing state cannot be established.
+
+======================================================================
+6. HISTORICAL PRESERVATION
+======================================================================
+
+Historical material is preserved as historical material.
+
+Later terminology, corrections or technical improvements must not be
+represented as though they existed in an earlier record when they did
+not.
+
+The Elias Systems historical semantic and symbiotic terminology will
+therefore be preserved separately from successor governance and
+engineering terminology while maintaining their documented lineage.
+
+The intended lineage is:
+
+FOUNDATIONAL
+    ->
+HISTORICAL
+    ->
+SUCCESSOR
+    ->
+CURRENT NORMATIVE
+
+Where exact historical wording cannot be established from preserved
+source material, that limitation must itself be recorded.
+
+======================================================================
+7. STANDARD SERIES
+======================================================================
+
+The initial Elias LILP standard series is:
+
+ELIAS-LILP-STD-001
+Normative Technical Standard
+
+ELIAS-LILP-MAN-001
+Implementation Manual
+
+ELIAS-LILP-LEX-001
+Semantic, Symbiotic and Governance Lexicon
+
+ELIAS-LILP-SCHEMA-001
+Machine-Readable State, Evidence and Receipt Schemas
+
+ELIAS-LILP-CONF-001
+Conformance and Falsification Test Suite
+
+ELIAS-LILP-REF-001
+Reference Implementations and Examination Cases
+
+======================================================================
+8. STATUS AND EXTERNAL BOUNDARY
+======================================================================
+
+"Lock It. Log It. Prove It." is being established here as an
+Elias Systems-origin technical specification and engineering discipline.
+
+This record does not claim:
+
+- ISO adoption;
+- IEC adoption;
+- regulatory approval;
+- governmental endorsement;
+- industry-wide adoption;
+- external certification;
+- or independent validation of the complete standard.
+
+Any future external adoption, recognition, certification or validation
+must be separately evidenced.
+
+======================================================================
+9. DEVELOPMENT RULE
+======================================================================
+
+This founding record must not be silently rewritten to repair later
+deficiencies.
+
+Where correction, clarification or extension is required, the original
+record is preserved and a successor version is created.
+
+The development of the LILP standard must itself follow the discipline:
+
+LOCK THE VERSION.
+LOG THE CHANGE.
+PROVE THE SUCCESSOR.
+
+======================================================================
+10. FOUNDING STATEMENT
+======================================================================
+
+LOCK THE GOVERNING STATE.
+
+LOG THE CONSEQUENTIAL TRANSITION.
+
+PROVE ONLY WHAT THE EVIDENCE ESTABLISHES.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+Elias Systems Ltd
+Founded as a formal LILP standardisation project: 1 October 2026

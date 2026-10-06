@@ -1,0 +1,28 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002O v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 122
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 124
+
+TRUE UNRESOLVED BEFORE BATCH 002O: 15
+TRUE UNRESOLVED AFTER BATCH 002O: 13
+
+VER-008:
+COVERED_BY_EXISTING -> LILP-TC-T16-006;LILP-TC-T16-024
+Basis: independent-verification scope is bounded and additional claimed properties require property-specific evidence plus a bounded verification method.
+
+DEV-005:
+NEW_TEST_REQUIRED -> LILP-TC-T03-006 RESERVED
+Distinct obligation: an exception cannot create authority beyond the scope granted by the governing exception rule.
+
+T03-006 is reserved only.
+T03-007 remains unreserved.
+T16-028 remains unreserved.
+Test register remains at 136 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

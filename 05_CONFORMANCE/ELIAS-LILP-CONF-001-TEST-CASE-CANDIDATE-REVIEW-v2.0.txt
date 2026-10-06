@@ -1,0 +1,38 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v2.0
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 114
+NEW TEST DEFINITIONS: 2
+SUCCESSOR TEST CASES: 116
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-CLAIM-001 -> LILP-TC-T16-010
+LILP-REQ-CLAIM-002 -> LILP-TC-T16-011
+
+NEW TEST 1:
+TEST CASE: LILP-TC-T16-010
+RUN CLASS: CONTROL
+TITLE: Material claim identifies claim class or unambiguously identifies claimed property
+OBJECTIVE: Establish that every material claim identifies its claim class or otherwise makes the specific property being claimed unambiguous, so that the claim cannot silently shift between materially different claim meanings.
+EXPECTED: The material claim explicitly identifies its claim class or unambiguously identifies the property being claimed. The claim meaning remains inspectable from the governed claim representation and does not depend on unstated assumptions, surrounding implication or retrospective interpretation to determine what property was asserted.
+FAILURE ORACLE: FAIL if a material claim neither identifies its claim class nor makes the claimed property unambiguous, if materially different claim meanings remain plausible from the governed representation, or if the claimed property can only be established through undocumented or retrospective interpretation.
+
+NEW TEST 2:
+TEST CASE: LILP-TC-T16-011
+RUN CLASS: CONTROL
+TITLE: Claim identifies the subject to which it applies
+OBJECTIVE: Establish that a claim identifies the subject to which the claimed property applies, preserving attribution between the assertion and the specific system, object, component, process, profile, evidence package or other declared subject.
+EXPECTED: The claim identifies or unambiguously binds the subject to which it applies. The claimed property cannot silently transfer to another system, object, component, process, profile, evidence package or other subject merely because that subject appears in the same context.
+FAILURE ORACLE: FAIL if the subject of the claim is absent or materially ambiguous, if multiple materially different subjects could reasonably receive the claim, or if the claimed property can be silently attributed to a different subject without a separately established claim.
+
+Claim class or claimed-property identity remains distinct from claim-subject identity.
+Claim subject remains distinct from evaluated scope and evidence sufficiency.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

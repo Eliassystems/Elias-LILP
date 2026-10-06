@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002L v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 116
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 118
+
+TRUE UNRESOLVED BEFORE BATCH 002L: 19
+TRUE UNRESOLVED AFTER BATCH 002L: 17
+
+SEC-005:
+NEW_TEST_REQUIRED -> LILP-TC-T05-014 RESERVED
+Distinct obligation: identify the key, certificate, trust anchor or equivalent verification basis required to verify a cryptographic signature.
+
+SEC-007:
+COVERED_BY_EXISTING -> LILP-TC-T03-003
+Access, credentials or technical capability do not automatically establish governance authority.
+
+T05-014 is reserved only.
+T05-015 remains unreserved.
+Test register remains at 132 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

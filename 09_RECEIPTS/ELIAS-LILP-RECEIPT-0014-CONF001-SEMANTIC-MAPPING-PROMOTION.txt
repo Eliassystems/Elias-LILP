@@ -1,0 +1,257 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+LILP EVIDENCE RECEIPT
+
+Receipt ID:
+ELIAS-LILP-RECEIPT-0014
+
+Receipt Type:
+CONF001_SEMANTIC_MAPPING_PROMOTION
+
+Recorded UTC:
+2026-10-02T01:20:06.199Z
+
+Status:
+SEMANTIC MAPPING SUCCESSOR ESTABLISHED
+
+======================================================================
+SUBJECT
+======================================================================
+
+ELIAS-LILP-CONF-001
+
+Requirement Matrix v0.3
+
+Semantic Test-Family Mapping Promotion
+
+======================================================================
+PREDECESSOR
+======================================================================
+
+Predecessor Matrix:
+
+ELIAS-LILP-CONF-001-REQUIREMENT-MATRIX-v0.2.csv
+
+Predecessor Bytes:
+
+46355
+
+Predecessor SHA-256:
+
+47F06F95A6FBA1E2ED0A7FCA251DC576CAADC3C7A2F969E03E1DE1AA7B478599
+
+Predecessor State:
+
+191 requirements
+
+191 UNASSIGNED semantic mappings
+
+0 assigned semantic mappings
+
+0 executable test-case IDs
+
+0 final verification methods
+
+The predecessor remains preserved and is not retrospectively modified.
+
+======================================================================
+PROMOTION AUTHORITY
+======================================================================
+
+Verified Semantic Resolution Proposal:
+
+ELIAS-LILP-CONF-001-SEMANTIC-RESOLUTION-PROPOSAL-v0.3.csv
+
+Proposal Bytes:
+
+111469
+
+Proposal SHA-256:
+
+5E8E8E9FE171C917081C13A8D25EE01E6A2061CAED9049D78864A761BB1866EE
+
+
+Proposal Review:
+
+ELIAS-LILP-CONF-001-SEMANTIC-RESOLUTION-REVIEW-v0.3.txt
+
+Proposal Review SHA-256:
+
+7F331FF98F63C3047725F11DCF3BA1DD9077E5FC7CF6DBAC7244D5E602065D84
+
+
+Verification Receipt:
+
+ELIAS-LILP-RECEIPT-0013
+
+Verification Receipt Bytes:
+
+4012
+
+Verification Receipt SHA-256:
+
+09607BF381F8C51A2DCA13BE8A8E2CE64227F7A830E01BD58261AE3026CA7B21
+
+======================================================================
+PROMOTED SUCCESSOR
+======================================================================
+
+Successor Matrix:
+
+ELIAS-LILP-CONF-001-REQUIREMENT-MATRIX-v0.3.csv
+
+Successor Bytes:
+
+102725
+
+Successor SHA-256:
+
+7EAB99878691315145879458EFFFC020E5F0FBA1F78C1BD168480CE00193F537
+
+Requirements:
+
+191
+
+Semantic Test-Family Mappings:
+
+191
+
+Unmapped Requirements:
+
+0
+
+Requirement Text Mismatches:
+
+0
+
+Primary-Family Promotion Mismatches:
+
+0
+
+======================================================================
+SEMANTIC RESOLUTION LINEAGE
+======================================================================
+
+Controlled-Clear Mappings Inherited:
+
+137
+
+Manual Semantic Resolutions:
+
+54
+
+Semantic Primary Overrides:
+
+20
+
+Unchanged Extraction Source Rows:
+
+167
+
+Corrected Extraction Source Rows:
+
+24
+
+The verified proposal remains the detailed semantic provenance record,
+including supporting-family relationships and semantic bases.
+
+The v0.3 requirements matrix promotes the verified primary T01-T16
+family into the TestFamily field.
+
+Supporting-family relationships are not collapsed into additional
+primary mappings.
+
+======================================================================
+PRIMARY FAMILY DISTRIBUTION
+======================================================================
+
+T01 = 10
+T02 = 13
+T03 = 10
+T04 = 1
+T05 = 16
+T06 = 2
+T07 = 6
+T08 = 9
+T09 = 6
+T10 = 3
+T11 = 4
+T12 = 9
+T13 = 14
+T14 = 26
+T15 = 1
+T16 = 61
+
+Total = 191
+
+======================================================================
+UNESTABLISHED LAYERS
+======================================================================
+
+Executable Test-Case IDs Assigned:
+
+0
+
+Executable Test Cases:
+
+NOT ESTABLISHED
+
+
+Final Verification Methods Assigned:
+
+0
+
+Final Verification Methods:
+
+NOT ESTABLISHED
+
+
+Implementation Conformance:
+
+NOT ESTABLISHED
+
+
+External Certification:
+
+NOT ESTABLISHED
+
+======================================================================
+CLAIM CEILING
+======================================================================
+
+This receipt establishes, within the local Elias evidence and versioning
+scope, promotion of the verified T01-T16 semantic requirement-family
+mapping into a separately versioned v0.3 successor requirements matrix.
+
+It establishes semantic mapping only.
+
+It does not establish executable conformance tests.
+
+It does not establish that any implementation has passed a test family.
+
+It does not establish implementation conformance.
+
+It does not establish production fitness.
+
+It does not establish regulatory approval.
+
+It does not establish external certification.
+
+It does not establish industry adoption.
+
+It does not modify the frozen normative STD-001 source.
+
+It does not modify predecessor requirement matrix v0.2.
+
+NO RETROSPECTIVE REPAIR.
+
+PRESERVE THE PREDECESSOR.
+
+PROMOTE THROUGH SUCCESSOR.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+ELIAS SYSTEMS LTD

@@ -1,0 +1,85 @@
+ELIAS LILP CONF-001
+FREEZE-010 HUMAN MATERIALITY DETERMINATION — BOUNDED CLAIM v0.1
+
+RECORDED UTC:
+2026-10-04T10:27:31.891Z
+
+REVIEWER ID:
+Gary williams
+
+REVIEWER AUTHORITY:
+ELIAS_SYSTEMS_FOUNDER_AND_AUTHORIZED_HUMAN_REVIEWER
+
+AUTHORITY BOUNDARY:
+INTERNAL ELIAS SYSTEMS HUMAN REVIEW AUTHORITY ONLY
+
+TERM:
+BOUNDED CLAIM
+
+SOURCE MATERIALITY EVIDENCE SUPPORT:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-010-MATERIALITY-EVIDENCE-SUPPORT-v0.2.csv
+
+SOURCE SUPPORT SHA-256:
+88FBAFD23BF9FDA903273C461CFDAB5268E08132EEEAD3DE86371FAD5A2F6F2F
+
+SOURCE BASIS:
+LEXICON_CURRENT_NORMATIVE_TERM_USED_IN_STANDARD
+
+STANDARD OCCURRENCE COUNT:
+3
+
+LEXICON HEADING:
+BOUNDED CLAIM
+
+LEXICON CLASS OBSERVATION:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+LEXICON DEFINITION:
+A claim explicitly restricted to the property, scope and conditions that its evidence can support.
+
+LEXICON BOUNDARY:
+
+
+HUMAN MATERIALITY DETERMINATION:
+MATERIAL
+
+REVIEWER RATIONALE:
+Bounded claim is materially normative because the frozen standard uses bounded claims as the unit to which LILP proof levels and verification methods apply, requires claims to be examined against relevant evidence using an identified method, and defines a bounded claim as restricted to the property, scope and conditions its evidence can support. The term therefore directly constrains claim scope and prevents evidence from being used to support a broader proposition than it can establish.
+
+BOUNDARY:
+
+This record establishes only the named human reviewer's bounded
+materiality determination for the term:
+
+BOUNDED CLAIM
+
+within the FREEZE-010 material-term inventory process.
+
+It does NOT establish:
+
+- semantic compatibility;
+- explicit narrowing;
+- material conflict;
+- material-term inventory completeness;
+- FREEZE-010 PASS;
+- execution input binding;
+- harness execution;
+- test result;
+- independent verification;
+- certification;
+- or conformance.
+
+SEMANTIC CLASSIFICATION:
+NOT_PERFORMED
+
+EXECUTION INPUT BINDING:
+NOT_ESTABLISHED
+
+HARNESS EXECUTION:
+NOT_EXECUTED
+
+RESULT:
+NOT_TESTED
+
+CONFORMANCE:
+NOT_ESTABLISHED

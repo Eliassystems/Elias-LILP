@@ -1,0 +1,67 @@
+﻿{
+    "RecordType":  "ELIAS_LILP_OBJ-002_v0.2_CLOSURE_RECEIPT",
+    "RecordVersion":  "0.1",
+    "ClosureState":  "CLOSED_BOUNDED_PASS",
+    "Scope":  "OBJ-002_v0.2_EXECUTION_CHAIN_ONLY",
+    "RequirementId":  "LILP-REQ-OBJ-002",
+    "TestCaseId":  "LILP-TC-T02-009",
+    "VerificationMethodId":  "LILP-VM-OBJ-002-v0.1",
+    "Harness":  {
+                    "ImplementationId":  "LILP-HI-OBJ-002-v0.2",
+                    "SHA256":  "789D793F0E74AB8EF9E9A230FD1321166ADE94E314F224EFF3C68317237182F3",
+                    "BindingId":  "LILP-BIND-OBJ-002-v0.2"
+                },
+    "Execution":  {
+                      "Record":  "ELIAS-LILP-CONF-001-OBJ-002-v0.2-HARNESS-EXECUTION-v0.1.json",
+                      "SHA256":  "768D6E5BF86B5D9FC5384AFE04DC2898320CF61CE991A210FAACDCAA1F9F58F2",
+                      "AuthorizedExecutionCount":  1,
+                      "ExecutionCountConsumed":  1,
+                      "HarnessRerun":  false,
+                      "ExecutionAuthorityReset":  false
+                  },
+    "Result":  {
+                   "Artifact":  "ELIAS-LILP-CONF-001-OBJ-002-v0.2-BOUNDED-RESULT-v0.1.json",
+                   "SHA256":  "A38CEDEDBEABB70A40B52725F619D38E2EF76C755B33528EE17DDF2774A565E6",
+                   "Bytes":  4229,
+                   "Classification":  "BOUNDED_PASS",
+                   "Status":  "ESTABLISHED",
+                   "ObservedVersion":  "0.5",
+                   "ComparisonVersion":  "0.4"
+               },
+    "TestReceipt":  {
+                        "Artifact":  "ELIAS-LILP-CONF-001-OBJ-002-v0.2-TEST-RECEIPT-v0.1.json",
+                        "SHA256":  "A22DB143D260E74F3016F3CEAB038E611E23C79304959384BC07B13E0F033B90",
+                        "Bytes":  3876,
+                        "State":  "TEST_RECEIPT_ESTABLISHED"
+                    },
+    "Governance":  {
+                       "ClosureGovernanceReview":  "ELIAS-LILP-CONF-001-OBJ-002-v0.2-CLOSURE-GOVERNANCE-REVIEW-v0.1.txt",
+                       "ClosureGovernanceReviewSHA256":  "C67322F4B8FF8C7E0E07CA57858AE033AF695B48F0615B66979504E2BCC2FFA8",
+                       "ReconciliationReview":  "ELIAS-LILP-CONF-001-OBJ-002-v0.2-RESULT-RECONCILIATION-REVIEW-v0.1.txt",
+                       "ReconciliationReviewSHA256":  "92F61BC8320A0587AA4440FE60D700B3FB2034A96B8ABEC08BBD76C5045E30C6",
+                       "PriorControlledResultReview":  "ELIAS-LILP-CONF-001-OBJ-002-v0.2-CONTROLLED-RESULT-REVIEW-v0.1.txt",
+                       "PriorControlledResultReviewSHA256":  "A16803796B2C10340BF3CDBB71E7B46E62116543D33365BF64C8B8014C06FF7A",
+                       "PriorHoldBoundaryPreserved":  true,
+                       "ReconciliationBasis":  "PRESERVED_EXECUTION_EVIDENCE_ONLY"
+                   },
+    "HistoricalBoundary":  {
+                               "HistoricalBoundedResult":  "ELIAS-LILP-CONF-001-OBJ-002-BOUNDED-RESULT-v0.1.json",
+                               "HistoricalBoundedResultSHA256":  "2157477107BD1F6EEA6DCD39D236C35272361AB72225C50FB9D1DBA148099F4D",
+                               "HistoricalClosureReceipt":  "ELIAS-LILP-CONF-001-OBJ-002-CLOSURE-RECEIPT-v0.1.json",
+                               "HistoricalClosureReceiptSHA256":  "7EA3D035086658EC7A29928CDB66FAD7C331546168D5482F281060C744F101E2",
+                               "HistoricalClosureState":  "CLOSED_BOUNDED_FAIL",
+                               "HistoricalChainReopened":  false,
+                               "HistoricalResultReused":  false,
+                               "HistoricalFailReclassified":  false,
+                               "RetrospectiveRepair":  false
+                           },
+    "RegisterBoundary":  {
+                             "RegisterUpdateAuthorized":  false,
+                             "RegisterUpdated":  false
+                         },
+    "Conformance":  {
+                        "CONF001":  "NOT_ESTABLISHED"
+                    },
+    "ClaimCeiling":  "This receipt closes only the new OBJ-002 v0.2 execution chain as CLOSED_BOUNDED_PASS. It does not erase, reopen, repair or reclassify the historical OBJ-002 v0.1 CLOSED_BOUNDED_FAIL. It does not update any implementation, binding, test-case, result or conformance register and does not establish CONF-001.",
+    "NextState":  "READY_FOR_CONTROLLED_OBJ-002_v0.2_POST_CLOSURE_REGISTER_GOVERNANCE_REVIEW"
+}

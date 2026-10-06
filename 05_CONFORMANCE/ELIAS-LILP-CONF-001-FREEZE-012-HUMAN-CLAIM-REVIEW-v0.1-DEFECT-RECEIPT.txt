@@ -1,0 +1,55 @@
+ELIAS LILP CONF-001
+FREEZE-012 HUMAN CLAIM REVIEW v0.1 DEFECT RECEIPT
+
+RECORDED UTC:
+2026-10-04T13:37:38.830Z
+
+DEFECTIVE REVIEW:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-012-HUMAN-CLAIM-REVIEW-v0.1.csv
+
+DEFECTIVE REVIEW SHA-256:
+E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855
+
+DEFECTIVE REVIEW BYTES:
+0
+
+DEFECTIVE RECEIPT:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-012-HUMAN-CLAIM-REVIEW-RECEIPT-v0.1.txt
+
+DEFECTIVE RECEIPT SHA-256:
+4CE7D7113B927A75B740922CCBD675AC9A459A5F932E1BC4E63883C695076FDB
+
+OBSERVED DEFECT:
+The interactive v0.1 review failed before any human category determination was entered.
+
+PowerShell automatic variable $Matches was populated by the -match operator.
+The script then attempted to append a PSCustomObject to that automatic hashtable,
+causing AddHashTableToNonHashTable.
+
+No six-category human review was completed.
+
+The later v0.1 receipt and printed status therefore do not establish a valid
+human claim review.
+
+HUMAN DETERMINATIONS RECORDED:
+0 / 6
+
+v0.1 HUMAN REVIEW STATUS:
+INVALID_INCOMPLETE_EXECUTION
+
+EXECUTION INPUT BINDING:
+NOT_ESTABLISHED
+
+HARNESS EXECUTION:
+NOT_EXECUTED
+
+RESULT:
+NOT_TESTED
+
+CONFORMANCE:
+NOT_ESTABLISHED
+
+CORRECTION:
+Preserve v0.1 unchanged.
+Create a new successor review object.
+No retrospective overwrite, deletion, repair, or relabelling.

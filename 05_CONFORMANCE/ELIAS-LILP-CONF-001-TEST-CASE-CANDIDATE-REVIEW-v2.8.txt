@@ -1,0 +1,25 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v2.8
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 125
+NEW TEST DEFINITIONS: 1
+SUCCESSOR TEST CASES: 126
+
+NEW TEST: LILP-TC-T05-012
+TITLE: Test evidence preserves input expected result observed result and determination
+RUN CLASS: CONTROL
+
+HUMAN BASIS: LILP-REQ-TEST-002 / Batch 002C
+T05-013 remains unreserved.
+T16-021 remains unreserved.
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+The test preserves the four-part evidence tuple of test input, expected result, observed result and determination.
+Definition existence does not establish execution or conformance.
+
+LOCK IT. LOG IT. PROVE IT.

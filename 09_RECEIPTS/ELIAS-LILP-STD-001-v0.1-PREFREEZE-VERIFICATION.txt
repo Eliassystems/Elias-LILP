@@ -1,0 +1,71 @@
+﻿ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+ELIAS-LILP-STD-001 v0.1
+PRE-FREEZE VERIFICATION RECORD
+
+Record ID:
+ELIAS-LILP-STD001-PREFREEZE-001
+
+Recorded UTC:
+2026-10-01T21:38:14.968Z
+
+Candidate:
+01_STANDARD\ELIAS-LILP-STD-001-v0.1.txt
+
+Candidate Bytes:
+72148
+
+Candidate SHA-256:
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+Frozen Lexicon SHA-256:
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+Normative Requirement Count:
+191
+
+Unique Normative Requirement Count:
+191
+
+Mandatory Falsification Test Count:
+16
+
+Unique Mandatory Falsification Test Count:
+16
+
+PowerShell Prompt Contamination:
+0
+
+Continuation Prompt Contamination:
+0
+
+Direct Core-Distinction Contradiction Hits:
+0
+
+Determination:
+PASS
+
+Freeze Status:
+READY TO FREEZE
+
+Failures:
+NONE
+
+CLAIM CEILING:
+
+This record establishes the results of the defined local pre-freeze
+inspection against the candidate byte sequence identified above.
+
+The contradiction scan is a bounded technical inspection for direct
+inversion of the declared core normative distinctions.
+
+It is not represented as proof that no conceivable semantic ambiguity,
+legal issue or future defect exists.
+
+No external certification, standards-body adoption, regulatory
+approval or independent validation is established by this record.
+
+LOCK IT.
+LOG IT.
+PROVE IT.

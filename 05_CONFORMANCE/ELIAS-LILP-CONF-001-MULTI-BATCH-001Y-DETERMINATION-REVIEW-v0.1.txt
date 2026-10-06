@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 001Y v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 90
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 92
+
+COVERED_BY_EXISTING: 2
+NEW_TEST_REQUIRED: 0
+NEW TEST DEFINITIONS RESERVED: 0
+
+CONF-002:
+COVERED_BY_EXISTING -> LILP-TC-T16-001;LILP-TC-T16-011
+Bounded claim scope and explicit subject identity jointly preserve the declared system/component/workflow/artifact evaluation scope.
+
+CONF-004:
+COVERED_BY_EXISTING -> LILP-TC-T16-009;LILP-TC-T16-007
+Every applicable mandatory requirement receives a permitted evaluation status, while claimed-profile completeness prevents normative requirements from disappearing by omission.
+
+T16-016 remains unreserved.
+Test register remains at 120 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

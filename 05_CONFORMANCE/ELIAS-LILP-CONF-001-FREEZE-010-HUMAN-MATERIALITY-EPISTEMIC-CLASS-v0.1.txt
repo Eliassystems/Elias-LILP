@@ -1,0 +1,85 @@
+ELIAS LILP CONF-001
+FREEZE-010 HUMAN MATERIALITY DETERMINATION — EPISTEMIC CLASS v0.1
+
+RECORDED UTC:
+2026-10-04T10:41:26.977Z
+
+REVIEWER ID:
+Gary williams
+
+REVIEWER AUTHORITY:
+ELIAS_SYSTEMS_FOUNDER_AND_AUTHORIZED_HUMAN_REVIEWER
+
+AUTHORITY BOUNDARY:
+INTERNAL ELIAS SYSTEMS HUMAN REVIEW AUTHORITY ONLY
+
+TERM:
+EPISTEMIC CLASS
+
+SOURCE MATERIALITY EVIDENCE SUPPORT:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-010-MATERIALITY-EVIDENCE-SUPPORT-v0.2.csv
+
+SOURCE SUPPORT SHA-256:
+88FBAFD23BF9FDA903273C461CFDAB5268E08132EEEAD3DE86371FAD5A2F6F2F
+
+SOURCE BASIS:
+LEXICON_CURRENT_NORMATIVE_TERM_USED_IN_STANDARD
+
+STANDARD OCCURRENCE COUNT:
+1
+
+LEXICON HEADING:
+EPISTEMIC CLASS
+
+LEXICON CLASS OBSERVATION:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+LEXICON DEFINITION:
+The declared knowledge status of information. Elias epistemic distinctions may include states such as: OBSERVED INTERPRETED PROPOSED DETERMINED WITNESSED
+
+LEXICON BOUNDARY:
+
+
+HUMAN MATERIALITY DETERMINATION:
+MATERIAL
+
+REVIEWER RATIONALE:
+Epistemic class is materially normative because the frozen standard requires the evidence class to be explicit whenever differing epistemic classes could materially affect a determination, and the bound lexicon defines epistemic class as the declared knowledge status of information. The term therefore directly constrains how information is represented and evaluated by distinguishing states such as OBSERVED, INTERPRETED, PROPOSED, DETERMINED and WITNESSED before they can influence a governed determination.
+
+BOUNDARY:
+
+This record establishes only the named human reviewer's bounded
+materiality determination for the term:
+
+EPISTEMIC CLASS
+
+within the FREEZE-010 material-term inventory process.
+
+It does NOT establish:
+
+- semantic compatibility;
+- explicit narrowing;
+- material conflict;
+- material-term inventory completeness;
+- FREEZE-010 PASS;
+- execution input binding;
+- harness execution;
+- test result;
+- independent verification;
+- certification;
+- or conformance.
+
+SEMANTIC CLASSIFICATION:
+NOT_PERFORMED
+
+EXECUTION INPUT BINDING:
+NOT_ESTABLISHED
+
+HARNESS EXECUTION:
+NOT_EXECUTED
+
+RESULT:
+NOT_TESTED
+
+CONFORMANCE:
+NOT_ESTABLISHED

@@ -1,0 +1,34 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v0.6
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 95
+NEW TEST DEFINITIONS: 2
+SUCCESSOR TEST CASES: 97
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-OBJ-002 -> reserved LILP-TC-T02-009
+LILP-REQ-OBJ-007 -> reserved LILP-TC-T02-010
+
+NEW TEST 1:
+TEST CASE: LILP-TC-T02-009
+TITLE: Versioned object explicitly identifies version
+OBJECTIVE: Establish that every versioned governance object explicitly identifies the version of that object.
+EXPECTED: The versioned object contains an explicit, non-empty and unambiguous version identifier that identifies the object's declared version and can be distinguished from other versions of the object.
+FAILURE ORACLE: FAIL if a versioned object lacks an explicit version identifier, carries an ambiguous version value, or cannot be distinguished as the claimed version through its declared version representation.
+
+NEW TEST 2:
+TEST CASE: LILP-TC-T02-010
+TITLE: Object digest construction is non-circular
+OBJECTIVE: Establish that an object's own final digest is not recursively included within the bytes over which that digest is calculated unless another explicitly defined construction is demonstrably non-circular.
+EXPECTED: The object's final-digest field is excluded from the byte sequence used to calculate that same final digest, or an alternative explicitly defined construction is shown through reproducible evidence to terminate without recursive self-reference.
+FAILURE ORACLE: FAIL if the object's own final digest is recursively required as input to calculate itself, or if an alternative construction is claimed without an explicit and reproducible demonstration that the construction is non-circular.
+
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

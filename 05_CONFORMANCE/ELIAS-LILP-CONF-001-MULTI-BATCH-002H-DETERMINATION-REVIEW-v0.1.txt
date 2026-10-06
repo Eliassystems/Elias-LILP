@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002H v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 108
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 110
+
+TRUE UNRESOLVED BEFORE BATCH 002H: 24
+TRUE UNRESOLVED AFTER BATCH 002H: 22
+
+WORD-004:
+COVERED_BY_EXISTING -> LILP-TC-T16-001;LILP-TC-T16-003
+General evidence-bounded claim ceiling plus rejection of unsupported stronger/external-status claims.
+
+WORD-005:
+NEW_TEST_REQUIRED -> LILP-TC-T16-024 RESERVED
+Generic property-specific evidence plus bounded verification-method obligation is not established by the existing PL3/PL5-specific controls.
+
+T16-024 is reserved only.
+T16-025 remains unreserved.
+Test register remains at 129 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

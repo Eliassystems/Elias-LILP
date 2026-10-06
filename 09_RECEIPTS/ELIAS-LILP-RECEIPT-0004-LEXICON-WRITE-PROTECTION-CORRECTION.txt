@@ -1,0 +1,145 @@
+﻿ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+LILP DEFICIENCY / CORRECTION RECEIPT
+
+Receipt ID: ELIAS-LILP-RECEIPT-0004
+Receipt Type: LEXICON_WRITE_PROTECTION_CORRECTION
+Recorded UTC: 2026-10-01T21:22:41.516Z
+Status: DEFICIENCY PRESERVED / CORRECTION VERIFIED
+
+======================================================================
+PREDECESSOR
+======================================================================
+
+Receipt:
+ELIAS-LILP-RECEIPT-0003
+
+Receipt SHA-256:
+EA60056D55EEBB8AF990C5261FA367727897DA62BD8AC4D8CD43614769221DE0
+
+Frozen Lexicon SHA-256:
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+======================================================================
+OBSERVED DEFICIENCY
+======================================================================
+
+During the v0.1 freeze procedure, the following command was attempted:
+
+$Source.IsReadOnly = $true
+
+At that time, $Source represented a pathname string rather than a
+System.IO.FileInfo object.
+
+PowerShell therefore returned PropertyAssignmentException.
+
+The source lexicon read-only attribute was not established by that
+command.
+
+The frozen baseline FileInfo object was successfully marked read-only.
+
+======================================================================
+IMPACT
+======================================================================
+
+The defect affected local source-file metadata protection only.
+
+It did NOT alter:
+
+- source lexicon bytes;
+- frozen baseline bytes;
+- frozen lexicon SHA-256;
+- Receipt 0003 bytes;
+- or the frozen baseline byte-identity determination.
+
+Receipt 0003 therefore remains evidence of the established frozen
+byte identity.
+
+The failed source metadata operation is preserved here rather than
+silently omitted.
+
+======================================================================
+CORRECTION
+======================================================================
+
+The source path was resolved to a System.IO.FileInfo object.
+
+The source read-only attribute was then set successfully.
+
+Following correction:
+
+Source Read-Only:
+True
+
+Frozen Baseline Read-Only:
+True
+
+Source SHA-256:
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+Frozen SHA-256:
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+Both hashes remain identical to the frozen v0.1 identity.
+
+======================================================================
+DETERMINATION
+======================================================================
+
+DEFICIENCY:
+ESTABLISHED
+
+BYTE MUTATION:
+FALSE
+
+SOURCE WRITE-PROTECTION:
+ESTABLISHED AFTER CORRECTION
+
+FROZEN BASELINE WRITE-PROTECTION:
+ESTABLISHED
+
+FROZEN BYTE IDENTITY:
+UNCHANGED
+
+======================================================================
+CLAIM CEILING
+======================================================================
+
+The Windows read-only attribute is a local write-protection guard.
+
+It is not claimed to provide:
+
+- cryptographic immutability;
+- append-only storage;
+- tamper-proof storage;
+- hardware-enforced immutability;
+- or protection against an authorised actor deliberately removing the
+  read-only attribute.
+
+The frozen SHA-256 identity remains the primary byte-identity reference.
+
+======================================================================
+LILP APPLICATION
+======================================================================
+
+LOCK:
+The frozen byte identity was preserved.
+
+LOG:
+The failed metadata operation and its correction are recorded.
+
+PROVE:
+The source and frozen hashes were recomputed after correction and
+remain identical to the frozen v0.1 hash.
+
+PRESERVE THE DEFICIENCY.
+CORRECT THE SUCCESSOR STATE.
+DO NOT REWRITE THE EVENT.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+ELIAS SYSTEMS LTD
+1 OCTOBER 2026

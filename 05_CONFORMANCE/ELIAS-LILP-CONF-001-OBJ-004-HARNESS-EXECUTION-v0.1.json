@@ -1,0 +1,74 @@
+﻿{
+    "ExecutionRecordId":  "LILP-OBJ-004-EXECUTION-v0.1",
+    "RequirementId":  "LILP-REQ-OBJ-004",
+    "TestCaseId":  "LILP-TC-T02-012",
+    "VerificationMethodId":  "LILP-VM-OBJ-004-v0.1",
+    "HarnessBindingId":  "LILP-BIND-OBJ-004-v0.1",
+    "ReadinessReview":  {
+                            "Path":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-OBJ-004-EXECUTION-READINESS-REVIEW-v0.1.txt",
+                            "SHA256":  "92663C05A2745C97196FAC9A1AF2FF9D4D39613652A8F0DE7CF83F94CB27040C",
+                            "PostExecutionSHA256":  "92663C05A2745C97196FAC9A1AF2FF9D4D39613652A8F0DE7CF83F94CB27040C",
+                            "Unchanged":  true
+                        },
+    "ExecutionInputDesignation":  {
+                                      "Path":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-OBJ-004-EXECUTION-INPUT-DESIGNATION-v0.1.txt",
+                                      "SHA256":  "67C00EA7F7B8F8F065F2DDA5572244F96AC53A1D16DD2D60A683E632CEC7D1D0",
+                                      "PostExecutionSHA256":  "67C00EA7F7B8F8F065F2DDA5572244F96AC53A1D16DD2D60A683E632CEC7D1D0",
+                                      "Unchanged":  true
+                                  },
+    "Harness":  {
+                    "HarnessId":  "LILP-HI-OBJ-004-v0.1",
+                    "Path":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-HI-OBJ-004-v0.1.ps1",
+                    "SHA256":  "A82FF894D9E4CAA15D84B0EA4338448ED0CB9BD3855A4CB9D9F8ECAB9BFD298D",
+                    "Bytes":  13687,
+                    "PostExecutionSHA256":  "A82FF894D9E4CAA15D84B0EA4338448ED0CB9BD3855A4CB9D9F8ECAB9BFD298D",
+                    "Unchanged":  true
+                },
+    "Candidate":  {
+                      "CandidateId":  "LILP-OBJ-004-CANDIDATE-v0.1",
+                      "CandidatePath":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-OBJ-004-CONTROLLED-TEST-CANDIDATE-v0.1.json",
+                      "SHA256":  "4CE9C1E88D365EBC2FEBBB94F6F1EA6CF5B94D7BA40AE4FC4C8702B3500B394F",
+                      "Bytes":  1366,
+                      "PostExecutionSHA256":  "4CE9C1E88D365EBC2FEBBB94F6F1EA6CF5B94D7BA40AE4FC4C8702B3500B394F",
+                      "Unchanged":  true
+                  },
+    "Execution":  {
+                      "AuthorizedProcess":  "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                      "AuthorizedProcessFlags":  "-NoProfile -NonInteractive -ExecutionPolicy Bypass",
+                      "AuthorizedInvocation":  "\u0026 \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-HI-OBJ-004-v0.1.ps1\" -CandidatePath \"C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-OBJ-004-CONTROLLED-TEST-CANDIDATE-v0.1.json\"",
+                      "ExecutionCountAuthorized":  1,
+                      "ExecutionCountPerformed":  1,
+                      "ProcessStarted":  true,
+                      "ProcessExitCode":  0,
+                      "Stdout":  "{\r\n    \"HarnessId\":  \"LILP-HI-OBJ-004-v0.1\",\r\n    \"HarnessVersion\":  \"0.1\",\r\n    \"VerificationMethodId\":  \"LILP-VM-OBJ-004-v0.1\",\r\n    \"RequirementId\":  \"LILP-REQ-OBJ-004\",\r\n    \"TestCaseId\":  \"LILP-TC-T02-012\",\r\n    \"CandidatePath\":  \"C:\\\\Users\\\\garys\\\\Documents\\\\ELIAS-LILP-STANDARD\\\\05_CONFORMANCE\\\\ELIAS-LILP-CONF-001-OBJ-004-CONTROLLED-TEST-CANDIDATE-v0.1.json\",\r\n    \"CandidateSHA256\":  \"4CE9C1E88D365EBC2FEBBB94F6F1EA6CF5B94D7BA40AE4FC4C8702B3500B394F\",\r\n    \"CandidateId\":  \"LILP-OBJ-004-CANDIDATE-v0.1\",\r\n    \"CandidateProvenance\":  \"CONTROLLED_TEST_FIXTURE_DESIGNED_UNDER_OBJ004_CANDIDATE_DESIGN_REVIEW_v0.1\",\r\n    \"GovernanceObjectId\":  \"LILP-OBJ-004-CONTROLLED-GOVERNANCE-OBJECT-v0.1\",\r\n    \"PredecessorExistenceStatus\":  \"EXISTS\",\r\n    \"PredecessorExistenceSource\":  \"CONTROLLED_TEST_FIXTURE_DIRECT_DECLARATION\",\r\n    \"PredecessorRelationshipRepresentation\":  {\r\n                                                  \"Identifier\":  \"LILP-OBJ-004-CONTROLLED-PREDECESSOR-v0.1\",\r\n                                                  \"Reference\":  null,\r\n                                                  \"EquivalentRepresentation\":  null\r\n                                              },\r\n    \"PredecessorRelationshipSource\":  \"CONTROLLED_TEST_FIXTURE_DIRECT_RELATIONSHIP_DECLARATION\",\r\n    \"RelationshipAttributedObjectId\":  \"LILP-OBJ-004-CONTROLLED-GOVERNANCE-OBJECT-v0.1\",\r\n    \"RequiredPredicateSet\":  [\r\n                                 \"P01_CANDIDATE_ID_PRESENT\",\r\n                                 \"P02_CANDIDATE_PROVENANCE_PRESENT\",\r\n                                 \"P03_GOVERNANCE_OBJECT_PRESENT\",\r\n                                 \"P04_GOVERNANCE_OBJECT_ID_PRESENT\",\r\n                                 \"P05_OBJECT_IDENTITY_MATERIAL_PRESENT\",\r\n                                 \"P06_LIFECYCLE_CONTEXT_PRESENT\",\r\n                                 \"P07_PREDECESSOR_EXISTENCE_STATE_PRESENT\",\r\n                                 \"P08_PREDECESSOR_EXISTENCE_STATE_EXPLICIT_AND_ALLOWED\",\r\n                                 \"P09_PREDECESSOR_EXISTENCE_SOURCE_PRESENT\",\r\n                                 \"P10_REQUIRED_PREDECESSOR_RELATIONSHIP_REPRESENTATION_PRESENT_WHEN_EXISTS\",\r\n                                 \"P11_PREDECESSOR_RELATIONSHIP_ATTRIBUTABLE_AND_NON_CONTRADICTORY\",\r\n                                 \"P12_NO_PREDECESSOR_INFERENCE_OR_RETROSPECTIVE_RECONSTRUCTION_REQUIRED\"\r\n                             ],\r\n    \"PredicateObservations\":  {\r\n                                  \"P01_CANDIDATE_ID_PRESENT\":  true,\r\n                                  \"P02_CANDIDATE_PROVENANCE_PRESENT\":  true,\r\n                                  \"P03_GOVERNANCE_OBJECT_PRESENT\":  true,\r\n                                  \"P04_GOVERNANCE_OBJECT_ID_PRESENT\":  true,\r\n                                  \"P05_OBJECT_IDENTITY_MATERIAL_PRESENT\":  true,\r\n                                  \"P06_LIFECYCLE_CONTEXT_PRESENT\":  true,\r\n                                  \"P07_PREDECESSOR_EXISTENCE_STATE_PRESENT\":  true,\r\n                                  \"P08_PREDECESSOR_EXISTENCE_STATE_EXPLICIT_AND_ALLOWED\":  true,\r\n                                  \"P09_PREDECESSOR_EXISTENCE_SOURCE_PRESENT\":  true,\r\n                                  \"P10_REQUIRED_PREDECESSOR_RELATIONSHIP_REPRESENTATION_PRESENT_WHEN_EXISTS\":  true,\r\n                                  \"P11_PREDECESSOR_RELATIONSHIP_ATTRIBUTABLE_AND_NON_CONTRADICTORY\":  true,\r\n                                  \"P12_NO_PREDECESSOR_INFERENCE_OR_RETROSPECTIVE_RECONSTRUCTION_REQUIRED\":  true\r\n                              },\r\n    \"AbsentPredicates\":  [\r\n\r\n                         ],\r\n    \"AmbiguousPredicates\":  [\r\n\r\n                            ],\r\n    \"ContradictoryPredicates\":  [\r\n\r\n                                ],\r\n    \"Determination\":  \"ESTABLISHED\",\r\n    \"InspectionRecord\":  {\r\n                             \"FileExists\":  true,\r\n                             \"ParseSucceeded\":  true,\r\n                             \"ParseError\":  null,\r\n                             \"PredecessorBranch\":  \"EXISTS\",\r\n                             \"RelationshipEvidencePresent\":  true,\r\n                             \"RelationshipRepresentationCount\":  1,\r\n                             \"DirectEvidenceOnly\":  true,\r\n                             \"FilenameSemanticAuthority\":  \"NONE\",\r\n                             \"PathSemanticAuthority\":  \"NONE\",\r\n                             \"FilesystemMetadataAuthority\":  \"NONE\",\r\n                             \"ChronologyInferenceAuthority\":  \"NONE\",\r\n                             \"SemanticSimilarityAuthority\":  \"NONE\",\r\n                             \"SystemClockAuthority\":  \"NONE\",\r\n                             \"ExternalLookupAuthority\":  \"NONE\",\r\n                             \"RetrospectiveReconstructionAuthority\":  \"NONE\",\r\n                             \"AbsenceEstablishesNone\":  false,\r\n                             \"UnknownPredecessorStateFailsClosed\":  true\r\n                         }\r\n}\r\n",
+                      "StdoutSHA256":  "D96AD47FCEEB72596E479E6951DE720EB2A4A080FB99865AED7F788338E4187D",
+                      "Stderr":  "",
+                      "StderrSHA256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+                      "StdoutJsonParsed":  true,
+                      "HarnessOutputParseError":  null,
+                      "RawHarnessDeterminationCaptured":  true,
+                      "RawHarnessDetermination":  "ESTABLISHED"
+                  },
+    "GovernanceState":  {
+                            "ExecutionReadinessEstablished":  true,
+                            "ProcessLaunchAuthorized":  true,
+                            "ExecutionAuthorized":  true,
+                            "HarnessInvoked":  true,
+                            "ExecutionPerformed":  true,
+                            "RawHarnessDeterminationCaptured":  true,
+                            "ResultDetermined":  false,
+                            "RequirementConformanceEstablished":  false,
+                            "CONF001":  "NOT_ESTABLISHED"
+                        },
+    "EvidenceBoundary":  {
+                             "RawStdoutPreserved":  true,
+                             "RawStderrPreserved":  true,
+                             "ProcessExitCodePreserved":  true,
+                             "RawHarnessDeterminationPreserved":  true,
+                             "HarnessOutputReinterpreted":  false,
+                             "HarnessOutputRepaired":  false,
+                             "HarnessOutputReclassified":  false,
+                             "SecondExecutionAuthorized":  false,
+                             "SecondExecutionPerformed":  false
+                         }
+}

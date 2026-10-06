@@ -1,0 +1,165 @@
+ELIAS-LILP-CONF-001
+REVIEW_RECOMMENDED HUMAN SEMANTIC DETERMINATION REVIEW v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+MAPPING STATUS: NOT_ESTABLISHED
+TEST EXECUTION STATUS: NOT_EXECUTED
+
+This artifact records human semantic determinations only.
+It does not establish authoritative requirement-to-test mappings.
+It does not establish the six proposed new test definitions.
+It does not establish harness bindings, test execution or conformance results.
+
+REVIEW_RECOMMENDED TOTAL: 19
+PRIOR HUMAN-RESOLVED: 1
+NEWLY HUMAN-REVIEWED: 18
+COVERED BY EXISTING TEST DEFINITIONS: 12
+NEW TEST REQUIRED: 6
+
+PRIOR HUMAN-RESOLVED REQUIREMENT:
+LILP-REQ-PROOF-004
+
+PROPOSED NEW TEST IDS — RESERVED ONLY:
+LILP-TC-T16-008
+LILP-TC-T13-006
+LILP-TC-T13-007
+LILP-TC-T14-006
+LILP-TC-T05-008
+LILP-TC-T14-007
+
+SOURCE IDENTITIES:
+MATRIX_v0.3 | BYTES=102725 | SHA256=7EAB99878691315145879458EFFFC020E5F0FBA1F78C1BD168480CE00193F537
+TEST_CANDIDATE_v0.2 | BYTES=74506 | SHA256=03710AA985356474382C8502A34F3AAD9927B9DA085DE7BAE8A218C57D77E561
+PRIOR_HUMAN_DETERMINATION_v0.1 | BYTES=8465 | SHA256=420C2FC27E260B809E6FDFEEAE63346C6B88425C11D4BD3234DDB4CC7F460FBF
+COVERAGE_v0.2 | BYTES=115465 | SHA256=57792916D1C78E561A22214470262F4F968E60129B4886A0E37BAE85B0570F6A
+COVERAGE_REVIEW_v0.2 | BYTES=23152 | SHA256=25827D305EB8D63DDBD2022218536FB8DF3C9C0978519E2D1DE045C6BC57FD0F
+
+DETERMINATIONS:
+
+REQUIREMENT: LILP-REQ-STATE-010
+FAMILY: T01
+DECISION: COVERED_BY_EXISTING
+EXISTING TESTS: LILP-TC-T01-001
+PROPOSED NEW TEST: 
+BASIS: The contemplated effect is part of the governing state needed before consequential action; T01-001 directly tests governing-state completeness before consequence.
+
+REQUIREMENT: LILP-REQ-AUTH-001
+FAMILY: T03
+DECISION: COVERED_BY_EXISTING
+EXISTING TESTS: LILP-TC-T03-003
+PROPOSED NEW TEST: 
+BASIS: The requirement explicitly separates authority from technical capability; T03-003 directly falsifies treatment of capability as execution authority.
+
+REQUIREMENT: LILP-REQ-AUTH-004
+FAMILY: T03
+DECISION: COVERED_BY_EXISTING
+EXISTING TESTS: LILP-TC-T03-001
+PROPOSED NEW TEST: 
+BASIS: Authority scope must be bounded; T03-001 directly establishes authority validity within declared scope.
+
+REQUIREMENT: LILP-REQ-AUTH-008
+FAMILY: T10
+DECISION: COVERED_BY_EXISTING
+EXISTING TESTS: LILP-TC-T10-001
+PROPOSED NEW TEST: 
+BASIS: Execution authority must be current rather than inferred from history; T10-001 directly performs execution-time revalidation against current state.
+
+REQUIREMENT: LILP-REQ-CLAIM-009
+FAMILY: T16
+DECISION: COVERED_BY_EXISTING
+EXISTING TESTS: LILP-TC-T16-003
+PROPOSED NEW TEST: 
+BASIS: Internal LILP conformance cannot establish external validation; T16-003 directly rejects unsupported stronger external-status claims.
+
+REQUIREMENT: LILP-REQ-PROOF-009
+FAMILY: T16
+DECISION: COVERED_BY_EXISTING
+EXISTING TESTS: LILP-TC-T16-001;LILP-TC-T16-004
+PROPOSED NEW TEST: 
+BASIS: T16-004 prevents inflation when the requested proof level is not established, while T16-001 keeps the surviving claim bounded to the property actually supported by evidence.
+
+REQUIREMENT: LILP-REQ-CONF-006
+FAMILY: T16
+DECISION: NEW_TEST_REQUIRED
+EXISTING TESTS: 
+PROPOSED NEW TEST: LILP-TC-T16-008
+BASIS: Existing T16 cases address bounded claims and missing evidence but do not directly test that an actual mandatory FAIL blocks profile PASS.
+
+REQUIREMENT: LILP-REQ-CONF-009
+FAMILY: T16
+DECISION: COVERED_BY_EXISTING
+EXISTING TESTS: LILP-TC-T16-001
+PROPOSED NEW TEST: 
+BASIS: A profile PASS cannot exceed evaluated scope; T16-001 directly requires claims to remain bounded to established evidence and scope.
+
+REQUIREMENT: LILP-REQ-CONF-015
+FAMILY: T14
+DECISION: COVERED_BY_EXISTING
+EXISTING TESTS: LILP-TC-T14-005
+PROPOSED NEW TEST: 
+BASIS: T14-005 directly preserves the failed predecessor, corrected successor and explicit lineage between them.
+
+REQUIREMENT: LILP-REQ-TEST-003
+FAMILY: T13
+DECISION: NEW_TEST_REQUIRED
+EXISTING TESTS: 
+PROPOSED NEW TEST: LILP-TC-T13-006
+BASIS: Existing T13 cases preserve failure history but do not directly test that failure of a mandatory falsification test prevents PASS for a dependent conformance profile.
+
+REQUIREMENT: LILP-REQ-TEST-005
+FAMILY: T16
+DECISION: COVERED_BY_EXISTING
+EXISTING TESTS: LILP-TC-T16-001
+PROPOSED NEW TEST: 
+BASIS: A test PASS is a material claim; where observed behaviour does not satisfy the declared expected result, T16-001 prevents PASS from outrunning the evidence.
+
+REQUIREMENT: LILP-REQ-SEC-006
+FAMILY: T10
+DECISION: COVERED_BY_EXISTING
+EXISTING TESTS: LILP-TC-T10-002
+PROPOSED NEW TEST: 
+BASIS: Credential or signing-key loss or compromise is a material changed condition; T10-002 directly invalidates stale permission and requires reassessment after material delta.
+
+REQUIREMENT: LILP-REQ-DEV-001
+FAMILY: T13
+DECISION: NEW_TEST_REQUIRED
+EXISTING TESTS: 
+PROPOSED NEW TEST: LILP-TC-T13-007
+BASIS: A known deviation is not necessarily a tested FAIL; existing T13 failure-preservation cases therefore do not directly establish that every known mandatory-requirement deviation is recorded.
+
+REQUIREMENT: LILP-REQ-LIFE-004
+FAMILY: T14
+DECISION: COVERED_BY_EXISTING
+EXISTING TESTS: LILP-TC-T14-002
+PROPOSED NEW TEST: 
+BASIS: T14-002 requires a material correction basis and successor evidence, directly supporting preservation of the reason for material successor change.
+
+REQUIREMENT: LILP-REQ-LIFE-007
+FAMILY: T14
+DECISION: NEW_TEST_REQUIRED
+EXISTING TESTS: 
+PROPOSED NEW TEST: LILP-TC-T14-006
+BASIS: T14-002 distinguishes material successor change but does not test the required classification of whether a post-freeze correction changes normative meaning, guidance, metadata, presentation or the frozen object itself.
+
+REQUIREMENT: LILP-REQ-MATR-004
+FAMILY: T05
+DECISION: NEW_TEST_REQUIRED
+EXISTING TESTS: 
+PROPOSED NEW TEST: LILP-TC-T05-008
+BASIS: T05-001 establishes admissibility and provenance but does not test sufficiency of the evidence referenced by a PASS matrix entry relative to the PASS determination.
+
+REQUIREMENT: LILP-REQ-MATR-005
+FAMILY: T13
+DECISION: COVERED_BY_EXISTING
+EXISTING TESTS: LILP-TC-T13-001
+PROPOSED NEW TEST: 
+BASIS: T13-001 directly requires a valid FAIL and its associated failure record to remain explicitly represented and identifiable.
+
+REQUIREMENT: LILP-REQ-FREEZE-013
+FAMILY: T14
+DECISION: NEW_TEST_REQUIRED
+EXISTING TESTS: 
+PROPOSED NEW TEST: LILP-TC-T14-007
+BASIS: Existing T14 successor cases preserve predecessor states but do not perform a destination collision attempt and require freeze tooling to refuse overwrite of an existing freeze artifact or receipt.
+
+LOCK IT. LOG IT. PROVE IT.

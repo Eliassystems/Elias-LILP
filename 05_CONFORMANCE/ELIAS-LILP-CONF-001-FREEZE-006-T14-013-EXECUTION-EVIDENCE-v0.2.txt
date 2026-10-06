@@ -1,0 +1,58 @@
+﻿ELIAS LILP CONF-001
+FREEZE-006 / T14-013 CONTROLLED EXECUTION EVIDENCE v0.2
+
+EXECUTED UTC:
+2026-10-04T17:12:52.5621913Z
+
+REQUIREMENT:
+LILP-REQ-FREEZE-006
+
+TEST CASE:
+LILP-TC-T14-013
+
+HARNESS IMPLEMENTATION:
+LILP-HI-FREEZE-006-v0.2
+
+HARNESS PATH:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-HI-FREEZE-006-v0.2.ps1
+
+HARNESS SHA-256:
+8F5646E626EF1800B13FC12F7468F38B7077279CCFF2D004D0261ACB459C4F9D
+
+EXECUTION-INPUT BINDING SHA-256:
+72127734DD49FF0DBA1DF69B51B99CFE6AB3996B0A8FC3D933EB1B6E67E60F3B
+
+EXECUTION-INPUT RECEIPT SHA-256:
+54C2E0C1C5E895CACC23D810CDEF62801D1BEA46E1423AD281A1E07A93686A66
+
+CANDIDATE PATH:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\01_STANDARD\ELIAS-LILP-STD-001-v0.1-FROZEN-BASELINE.txt
+
+CANDIDATE SHA-256:
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+PROCESS EXECUTION SUCCESS:
+False
+
+EXECUTION EXCEPTION:
+& : File C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-HI-FREEZE-006-v0.2.ps1 cannot be 
+loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at 
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:240 char:11
++         & $HarnessPath `
++           ~~~~~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+
+
+RAW HARNESS OUTPUT:
+-------------------
+HARNESS EXECUTION EXCEPTION
+& : File C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-HI-FREEZE-006-v0.2.ps1 cannot be 
+loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at 
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:240 char:11
++         & $HarnessPath `
++           ~~~~~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess

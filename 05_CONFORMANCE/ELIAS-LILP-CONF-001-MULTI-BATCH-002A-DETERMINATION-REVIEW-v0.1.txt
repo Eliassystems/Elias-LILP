@@ -1,0 +1,29 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002A v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 94
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 96
+
+COVERED_BY_EXISTING: 1
+NEW_TEST_REQUIRED: 1
+NEW TEST DEFINITIONS RESERVED: 1
+
+CONF-012:
+NEW_TEST_REQUIRED -> LILP-TC-T16-018 RESERVED
+Distinct obligation: conformance determination traceable to both its requirements matrix and its test evidence.
+
+CONF-014:
+COVERED_BY_EXISTING -> LILP-TC-T13-002
+Later successor PASS remains separate and does not erase or rewrite the predecessor FAIL.
+
+T16-018 is reserved only.
+T16-019 remains unreserved.
+T16-018 definition remains NOT_ESTABLISHED.
+Test register remains at 122 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

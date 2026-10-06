@@ -1,0 +1,30 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v1.9
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 113
+NEW TEST DEFINITIONS: 1
+SUCCESSOR TEST CASES: 114
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-DET-007 -> LILP-TC-T08-012
+
+NEW TEST:
+TEST CASE: LILP-TC-T08-012
+RUN CLASS: CONTROL
+TITLE: INVALID remains distinguishable from NOT_ESTABLISHED
+OBJECTIVE: Establish that INVALID and NOT_ESTABLISHED remain distinct determination states: an object, proposition or determination that fails an applicable validity criterion is not silently treated as merely unresolved, and an unresolved basis is not silently treated as established invalidity.
+EXPECTED: The case with an established validity failure is represented as INVALID when that determination is supported by the applicable governing rule. The unresolved case remains NOT_ESTABLISHED where the required basis cannot be established. INVALID and NOT_ESTABLISHED remain separately attributable and are not substituted for one another solely because both prevent unsupported consequential progression.
+FAILURE ORACLE: FAIL if an unresolved basis is represented as INVALID without an established validity failure, if an established validity failure is silently represented only as NOT_ESTABLISHED, or if the implementation cannot preserve an inspectable distinction between INVALID and NOT_ESTABLISHED.
+
+INVALID and NOT_ESTABLISHED remain distinct determination states.
+An unresolved basis is not promoted into INVALID without an established validity failure.
+An established validity failure is not silently reduced to unresolved NOT_ESTABLISHED.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

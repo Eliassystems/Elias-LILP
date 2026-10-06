@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 001S v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 78
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 80
+
+NEW_TEST_REQUIRED: 2
+COVERED_BY_EXISTING: 0
+NEW TEST DEFINITIONS RESERVED: 2
+
+CLAIM-001:
+NEW_TEST_REQUIRED -> LILP-TC-T16-010 RESERVED
+Distinct obligation: every material claim identifies its claim class or otherwise makes the claimed property unambiguous.
+
+CLAIM-002:
+NEW_TEST_REQUIRED -> LILP-TC-T16-011 RESERVED
+Distinct obligation: every claim identifies the subject to which it applies.
+
+Both IDs are reserved only.
+Neither test definition is yet established.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

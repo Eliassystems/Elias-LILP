@@ -1,0 +1,144 @@
+﻿ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+LILP EVIDENCE RECEIPT
+
+Receipt ID: ELIAS-LILP-RECEIPT-0003
+Receipt Type: LEXICON_V0.1_FREEZE
+Recorded UTC: 2026-10-01T21:21:12.977Z
+Status: FROZEN BASELINE ESTABLISHED
+
+======================================================================
+SUBJECT
+======================================================================
+
+Document ID:
+ELIAS-LILP-LEX-001
+
+Version:
+v0.1
+
+Subject:
+Elias Systems Consolidated Semantic, Symbiotic & Governance Lexicon
+
+Verified Working Source:
+03_LEXICON\ELIAS-LILP-LEX-001-v0.1.txt
+
+Frozen Baseline:
+03_LEXICON\ELIAS-LILP-LEX-001-v0.1-FROZEN-BASELINE.txt
+
+Byte Length:
+74356
+
+Hash Algorithm:
+SHA-256
+
+SHA-256:
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+======================================================================
+PRE-FREEZE VERIFICATION
+======================================================================
+
+Structural Verification:
+PASS
+
+Alphabetic Coverage:
+A-Z PRESENT
+
+Class Entry Count:
+321
+
+Definition Entry Count:
+321
+
+Class / Definition Structure:
+PASS
+
+PowerShell Prompt Contamination:
+NONE DETECTED
+
+PowerShell Continuation Prompt Contamination:
+NONE DETECTED
+
+Pre-freeze determination:
+READY TO FREEZE
+
+======================================================================
+FREEZE DETERMINATION
+======================================================================
+
+The exact verified byte sequence identified by:
+
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+is established as the ELIAS-LILP-LEX-001 v0.1 FROZEN BASELINE.
+
+The frozen baseline is byte-identical to the structurally verified
+working object.
+
+No content was retrospectively added, removed, corrected or rewritten
+as part of this freeze operation.
+
+======================================================================
+STATUS BOUNDARY
+======================================================================
+
+The internal document wording identifies this artifact as a
+"CONSOLIDATED WORKING LEXICON" and records that its content was not yet
+frozen at the time those bytes were created.
+
+Those statements are preserved intentionally because changing them
+after structural verification would create a different byte sequence.
+
+This receipt records the later governance event by which that exact
+working-state byte sequence became the frozen v0.1 baseline.
+
+The historical object is therefore preserved exactly as it existed.
+
+======================================================================
+CLAIM CEILING
+======================================================================
+
+This receipt establishes:
+
+- the byte identity of the frozen lexicon baseline;
+- its byte length;
+- successful structural verification before freeze;
+- byte equality between the verified source and frozen copy;
+- and the local freeze event represented by this receipt.
+
+This receipt does NOT, by itself, establish:
+
+- that every historical term has been traced to its earliest source;
+- that every definition has been independently externally validated;
+- scientific validation of historical conceptual terminology;
+- regulatory approval;
+- ISO or IEC adoption;
+- industry adoption;
+- external certification;
+- or immutable storage beyond the mechanisms actually evidenced.
+
+The local read-only file attribute is a write-protection guard.
+It is not represented as cryptographic or hardware-enforced immutability.
+
+======================================================================
+SUCCESSOR RULE
+======================================================================
+
+ELIAS-LILP-LEX-001 v0.1 must not be silently modified after this freeze.
+
+Any material correction, extension or terminology change must create a
+successor object with a new version identity and separate evidence
+record.
+
+PRESERVE THE ANCESTOR.
+LOG THE CHANGE.
+EXAMINE THE SUCCESSOR.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+ELIAS SYSTEMS LTD
+1 OCTOBER 2026

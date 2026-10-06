@@ -1,0 +1,29 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 001G v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 54
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 56
+
+BATCH RESULT:
+COVERED_BY_EXISTING: 0
+NEW_TEST_REQUIRED REQUIREMENTS: 2
+NEW TEST DEFINITIONS RESERVED: 2
+
+EVID-002:
+NEW_TEST_REQUIRED -> LILP-TC-T05-010 RESERVED
+Explicit evidence-class representation remains a distinct epistemic-state test obligation.
+
+EVID-007:
+NEW_TEST_REQUIRED -> LILP-TC-T05-011 RESERVED
+External payload or verifiable content-reference binding to an integrity identifier remains distinct from independent package re-hashability.
+
+The two requirements remain semantically distinct and therefore reserve two separate test definitions.
+
+No requirement mapping is established.
+No test definition is created by this determination artifact.
+
+LOCK IT. LOG IT. PROVE IT.

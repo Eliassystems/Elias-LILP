@@ -1,0 +1,160 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+CONF-001 CONTROLLED EXTRACTION-IMPACT COMPARATOR v2
+
+Comparator:
+EXACT HISTORICAL v0.1 SEMANTIC CLASSIFIER
+
+Corrected source rows: 24
+Unchanged source rows: 167
+
+Unexpected semantic drift on unchanged rows:
+0
+
+Primary-family changes:
+7
+
+Review-status changes:
+8
+
+Family-score changes:
+21
+
+======================================================================
+PRIMARY FAMILY CHANGES
+======================================================================
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-STATE-011
+
+Historical Primary:
+T01
+
+Controlled Primary:
+T14
+
+Historical Scores:
+T01=7;T14=7;T03=4;T05=3;T10=1
+
+Controlled Scores:
+T14=7;T01=6;T10=1
+
+Corrected Requirement:
+LILP-REQ-STATE-011 A frozen predecessor state SHALL NOT be modified to represent later conditions.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-EVID-008
+
+Historical Primary:
+T07
+
+Controlled Primary:
+T05
+
+Historical Scores:
+T07=10;T05=9;T04=5;T03=4;T14=4;T02=3;T08=3;T16=3;T01=2;T06=1
+
+Controlled Scores:
+T05=9;T16=3;T06=1
+
+Corrected Requirement:
+LILP-REQ-EVID-008 Evidence absence SHALL NOT be represented as evidence of the opposite proposition unless the applicable method independently establishes that inference.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-DELTA-007
+
+Historical Primary:
+T07
+
+Controlled Primary:
+T08
+
+Historical Scores:
+T07=16;T08=12;T03=4;T14=4;T02=3;T05=3;T10=2;T13=2
+
+Controlled Scores:
+T08=12;T07=11;T03=4;T10=2
+
+Corrected Requirement:
+LILP-REQ-DELTA-007 A system SHALL NOT preserve an earlier ALLOW determination as sufficient execution authority where a subsequent material delta invalidates one or more conditions on which that determination relied.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-EXEC-003
+
+Historical Primary:
+T01
+
+Controlled Primary:
+T11
+
+Historical Scores:
+T01=13;T09=11;T11=9;T05=8;T04=5;T07=5;T03=4;T06=4;T08=4;T02=3;T13=2
+
+Controlled Scores:
+T11=9;T06=4;T08=4;T09=2;T13=2
+
+Corrected Requirement:
+LILP-REQ-EXEC-003 Where consequence cannot be observed or established, the system SHALL permit NOT_ESTABLISHED rather than manufacturing success.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-DET-007
+
+Historical Primary:
+T01
+
+Controlled Primary:
+T08
+
+Historical Scores:
+T01=14;T08=14;T16=14;T05=11;T13=6;T02=5;T04=5;T07=5;T11=5;T12=5;T03=4;T06=4;T14=4
+
+Controlled Scores:
+T08=6;T13=2;T01=1
+
+Corrected Requirement:
+LILP-REQ-DET-007 INVALID SHALL remain distinguishable from NOT ESTABLISHED.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-TEST-008
+
+Historical Primary:
+T13
+
+Controlled Primary:
+T15
+
+Historical Scores:
+T13=11;T05=3;T08=3;T15=3
+
+Controlled Scores:
+T15=3;T13=2
+
+Corrected Requirement:
+LILP-REQ-TEST-008 Test scope SHALL be sufficiently explicit to prevent a bounded PASS from being represented as universal validation.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-DEV-008
+
+Historical Primary:
+T14
+
+Controlled Primary:
+T13
+
+Historical Scores:
+T14=11;T13=4;T05=3
+
+Controlled Scores:
+T13=4;T14=4;T05=3
+
+Corrected Requirement:
+LILP-REQ-DEV-008 Material deviations SHALL be included in the conformance evidence package.
+

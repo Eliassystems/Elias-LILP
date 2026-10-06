@@ -1,0 +1,25 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v3.7
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 135
+NEW TEST DEFINITIONS: 1
+SUCCESSOR TEST CASES: 136
+
+NEW TEST: LILP-TC-T16-027
+TITLE: Verification record identifies verifier relationship to originating party
+RUN CLASS: CONTROL
+HUMAN BASIS: LILP-REQ-VER-002 / Batch 002N
+
+WORD-008 remains human-resolved by existing LILP-TC-T16-001.
+T16-028 remains unreserved.
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+The control requires the verification record to identify the verifier's declared relationship to the originating party rather than leaving independence, affiliation, self-assessment or another material relationship to inference.
+Definition existence does not establish execution or conformance.
+
+LOCK IT. LOG IT. PROVE IT.

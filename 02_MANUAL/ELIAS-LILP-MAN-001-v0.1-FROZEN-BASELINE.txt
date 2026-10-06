@@ -1,0 +1,3926 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+ELIAS SYSTEMS IMPLEMENTATION MANUAL
+
+Document ID: ELIAS-LILP-MAN-001
+Title: Lock It. Log It. Prove It. — Implementation Manual
+Version: v0.1
+Date: 2026-10-01
+Status: WORKING DRAFT
+Origin: Elias Systems Ltd
+
+======================================================================
+0. DOCUMENT CONTROL
+======================================================================
+
+This manual provides implementation guidance for:
+
+ELIAS-LILP-STD-001 v0.1
+
+It explains how engineers, architects, operators and examiners may
+implement the normative requirements of the frozen standard.
+
+This manual does not replace the frozen normative standard.
+
+Where this manual conflicts with ELIAS-LILP-STD-001 v0.1:
+
+THE FROZEN STANDARD CONTROLS.
+
+The manual itself is not yet frozen.
+
+======================================================================
+0.1 FROZEN STANDARD BINDING
+======================================================================
+
+Normative Standard:
+
+ELIAS-LILP-STD-001 v0.1
+
+Frozen Standard SHA-256:
+
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+Freeze Receipt:
+
+ELIAS-LILP-RECEIPT-0005
+
+Freeze Receipt SHA-256:
+
+DFBAD4AE05A9ADAA70481ADDA7928E2ED099492F7B5D9CC27BD21DCF3B6B24E1
+
+Pre-Freeze Verification SHA-256:
+
+CD8A8DBA6CD6253BE8FB4BDABEF6D916DCEF69CCB0F6B37ABEF614114E67EA3C
+
+This manual SHALL NOT retrospectively reinterpret the frozen standard
+as saying something its preserved bytes do not say.
+
+Where implementation guidance extends beyond the standard, the
+extension shall be labelled as implementation guidance rather than a
+new normative requirement.
+
+======================================================================
+0.2 FROZEN LEXICON BINDING
+======================================================================
+
+Lexicon:
+
+ELIAS-LILP-LEX-001 v0.1
+
+Frozen Lexicon SHA-256:
+
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+Terminology used by this manual should remain consistent with the
+frozen lexicon and frozen normative standard.
+
+======================================================================
+1. PURPOSE
+======================================================================
+
+The purpose of ELIAS-LILP-MAN-001 is to translate the normative LILP
+discipline into practical implementation patterns.
+
+The manual is intended to answer questions such as:
+
+- What does an implementation actually store?
+- When is a LOCK created?
+- What must be evaluated before execution?
+- How is material change detected?
+- How is a successor state created?
+- What gets written to a receipt?
+- How is NOT ESTABLISHED represented?
+- How are failed states preserved?
+- How are execution attempts separated from consequences?
+- How are claims derived from evidence?
+- How should engineers test bypass resistance?
+- How should a frozen evidence package be constructed?
+- How can another examiner reproduce a bounded result?
+
+======================================================================
+2. IMPLEMENTATION PRINCIPLE
+======================================================================
+
+LILP should be implemented as an explicit governance path rather than
+as descriptive logging added after execution.
+
+Recommended conceptual flow:
+
+REQUEST / EVENT
+      |
+      v
+IDENTITY
+      |
+      v
+OBSERVATION
+      |
+      v
+EVIDENCE
+      |
+      v
+UNDERSTANDING / INTERPRETATION
+      |
+      v
+GOVERNING STATE
+      |
+      v
+AUTHORITY / STANDING / ADMISSIBILITY
+      |
+      v
+DETERMINATION
+      |
+      v
+PRE-EXECUTION GATE
+      |
+      +-------------------------------+
+      |                               |
+      | predicates established        | predicates fail /
+      |                               | NOT ESTABLISHED
+      v                               v
+EXECUTION                          WITHHOLD
+      |                               |
+      v                               v
+CONSEQUENCE                      REFUSAL / HOLD /
+      |                          DENY / ESCALATE
+      |                               |
+      +---------------+---------------+
+                      |
+                      v
+                  WITNESS
+                      |
+                      v
+                   RECEIPT
+                      |
+                      v
+               BOUNDED CLAIM
+
+The exact technical topology may differ.
+
+The semantic separation should not.
+
+======================================================================
+3. RECOMMENDED LAYER MAPPING
+======================================================================
+
+A practical LILP implementation may map the Elias governance layers as:
+
+L0 — IDENTITY
+
+Establish what actor, system, subject, object or chain is being
+considered.
+
+
+L1 — OBSERVATION
+
+Capture direct observations and external inputs before interpretive
+transformation.
+
+
+L2 — UNDERSTANDING
+
+Derive interpretations while preserving their relationship to the
+underlying observations.
+
+
+L3 — GOVERNANCE
+
+Evaluate authority, standing, admissibility, policy, evidence,
+material change, jurisdiction and contemplated consequence.
+
+
+L4 — INTELLIGENCE
+
+Perform reasoning, planning, inference, optimisation or selection
+inside the governing constraints.
+
+
+L5 — EXECUTION
+
+Perform the authorised consequential operation only after the
+pre-execution gate permits progression.
+
+
+L6 — WITNESS / ATTESTATION
+
+Preserve evidence of the state, determination, execution and
+consequence that actually occurred.
+
+======================================================================
+4. RECOMMENDED IMPLEMENTATION COMPONENTS
+======================================================================
+
+A complete implementation will commonly require the following logical
+components.
+
+----------------------------------------------------------------------
+4.1 IDENTITY SERVICE
+----------------------------------------------------------------------
+
+Responsibilities may include:
+
+- actor identity;
+- system identity;
+- object identity;
+- tenant identity;
+- chain identity;
+- session identity;
+- version identity;
+- and cryptographic identity.
+
+The identity service should not infer authority merely because an
+identity successfully authenticates.
+
+AUTHENTICATION IS NOT GOVERNANCE AUTHORITY.
+
+
+----------------------------------------------------------------------
+4.2 EVIDENCE STORE
+----------------------------------------------------------------------
+
+Responsibilities may include:
+
+- storing observations;
+- classifying evidence;
+- preserving source identity;
+- recording acquisition time;
+- storing content hashes;
+- connecting interpretations to observations;
+- preserving historical evidence;
+- and exposing bounded evidence for verification.
+
+Evidence should be append-preserving where practical.
+
+Correction should create a new evidentiary event rather than silently
+altering the historical observation.
+
+
+----------------------------------------------------------------------
+4.3 AUTHORITY SERVICE
+----------------------------------------------------------------------
+
+Responsibilities may include:
+
+- authority issuance;
+- authority class;
+- scope;
+- jurisdiction;
+- effective time;
+- expiry;
+- revocation;
+- suspension;
+- delegation;
+- and authority evidence.
+
+The authority service should expose current status independently from
+historical authority records.
+
+
+----------------------------------------------------------------------
+4.4 GOVERNING-STATE BUILDER
+----------------------------------------------------------------------
+
+Responsibilities may include constructing the bounded state relied upon
+for determination.
+
+Typical inputs:
+
+identity
+authority
+standing
+admissibility
+evidence
+policy
+scope
+jurisdiction
+temporal context
+contemplated effect
+predecessor state
+material delta
+provenance
+
+Output:
+
+an independently identifiable Governing State Object.
+
+
+----------------------------------------------------------------------
+4.5 DELTA ENGINE
+----------------------------------------------------------------------
+
+Responsibilities may include comparing relevant predecessor and current
+conditions.
+
+Example categories:
+
+Delta-A   authority
+Delta-C   contemplated effect
+Delta-E   evidence
+Delta-N   aggregate material change
+Delta-S   standing
+Delta-St  state
+Delta-X   successor constitution
+
+The delta engine should not decide that change is immaterial solely
+because preserving the previous state would be operationally easier.
+
+
+----------------------------------------------------------------------
+4.6 DETERMINATION ENGINE
+----------------------------------------------------------------------
+
+Recommended determination states:
+
+ALLOW
+HOLD
+DENY
+ESCALATE
+
+Structural outcomes may additionally include:
+
+NOT ESTABLISHED
+INVALID
+NEW CHAIN REQUIRED
+
+The determination engine should preserve which governing state and
+evidence produced the result.
+
+
+----------------------------------------------------------------------
+4.7 PRE-EXECUTION GATE
+----------------------------------------------------------------------
+
+The gate should be the final authority-sensitive control before
+consequential execution.
+
+Recommended predicate set:
+
+identity established
+authority established
+standing established
+admissibility established
+governing state current
+required evidence established
+policy permits
+scope permits
+jurisdiction permits
+temporal validity established
+no disqualifying material change
+contemplated effect remains aligned
+
+A mandatory failed or NOT ESTABLISHED predicate should prevent the
+contemplated execution unless a separately authorised escalation path
+applies.
+
+
+----------------------------------------------------------------------
+4.8 EXECUTION ADAPTER
+----------------------------------------------------------------------
+
+The execution adapter performs the external or internal consequential
+operation.
+
+Examples may include:
+
+- API request;
+- payment request;
+- database mutation;
+- device command;
+- access grant;
+- workflow transition;
+- message transmission;
+- deployment;
+- or other consequential operation.
+
+The adapter should receive explicit authority to execute.
+
+It should not determine its own authority merely because it possesses
+credentials or technical access.
+
+
+----------------------------------------------------------------------
+4.9 CONSEQUENCE OBSERVER
+----------------------------------------------------------------------
+
+The consequence observer determines what can actually be established
+after execution.
+
+It should preserve the distinction between:
+
+request transmitted
+request accepted
+operation attempted
+operation completed
+downstream consequence observed
+
+Absence of consequence evidence should remain:
+
+NOT ESTABLISHED
+
+where appropriate.
+
+
+----------------------------------------------------------------------
+4.10 RECEIPT WRITER
+----------------------------------------------------------------------
+
+The receipt writer should preserve the contemporaneous record of the
+material governance event.
+
+It should use collision-protected creation semantics.
+
+Recommended behaviour:
+
+CREATE NEW
+or
+FAIL
+
+not:
+
+SILENT OVERWRITE
+
+
+----------------------------------------------------------------------
+4.11 CLAIM ENGINE
+----------------------------------------------------------------------
+
+The claim engine maps available evidence to the maximum bounded claim
+that may be made.
+
+It should be capable of refusing a wider claim.
+
+Examples:
+
+hash match
+does not become
+truth
+
+historical authority
+does not become
+present authority
+
+execution attempt
+does not become
+completed consequence
+
+self-assessment
+does not become
+independent certification
+
+
+======================================================================
+5. BASIC IMPLEMENTATION TRANSACTION
+======================================================================
+
+A recommended consequential transaction may be implemented as:
+
+STEP 1
+Receive request or event.
+
+STEP 2
+Identify subject, actor and contemplated consequence.
+
+STEP 3
+Capture direct observations.
+
+STEP 4
+Retrieve or acquire required evidence.
+
+STEP 5
+Construct current authority state.
+
+STEP 6
+Construct governing state.
+
+STEP 7
+Compare current state with relevant predecessor.
+
+STEP 8
+Evaluate material change.
+
+STEP 9
+Determine chain continuity.
+
+STEP 10
+Generate governance determination.
+
+STEP 11
+Immediately before execution, re-evaluate mandatory predicates.
+
+STEP 12
+If required predicates remain established, execution MAY proceed.
+
+STEP 13
+If a required predicate fails or becomes NOT ESTABLISHED, execution is
+withheld.
+
+STEP 14
+Observe execution result.
+
+STEP 15
+Observe consequence independently where required.
+
+STEP 16
+Create receipt.
+
+STEP 17
+Derive bounded claim from preserved evidence.
+
+STEP 18
+Watch for later material change.
+
+======================================================================
+6. FAIL-CLOSED IMPLEMENTATION PATTERN
+======================================================================
+
+A simple implementation model is:
+
+permit = (
+    identity_established
+    AND authority_established
+    AND state_established
+    AND evidence_established
+    AND policy_permits
+    AND scope_permits
+    AND temporal_validity_established
+    AND contemplated_effect_aligned
+)
+
+IF permit == FALSE:
+
+    execution = WITHHELD
+
+ELSE:
+
+    execution may proceed
+
+Important:
+
+permit = TRUE does not mean execution is mandatory.
+
+A separately governed control may still legitimately withhold action.
+
+The critical invariant is the other direction:
+
+EXECUTION REQUIRES PERMISSION.
+
+Capability alone is insufficient.
+
+======================================================================
+7. MANUAL DEVELOPMENT STATUS
+======================================================================
+
+This initial MAN-001 v0.1 object establishes:
+
+- binding to the frozen normative standard;
+- binding to the frozen lexicon;
+- manual authority boundary;
+- implementation architecture;
+- recommended component model;
+- basic transaction sequence;
+- and fail-closed implementation pattern.
+
+The manual remains a WORKING DRAFT.
+
+No implementation conformance is established merely by following this
+manual.
+
+Conformance remains governed by the frozen normative standard and the
+evidence produced by the implementation.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+======================================================================
+8. CANONICAL OBJECT REPRESENTATION
+======================================================================
+
+IMPLEMENTATION GUIDANCE
+
+The frozen standard requires deterministic canonicalisation where
+cryptographic object identity is claimed.
+
+The implementation should define one canonicalisation profile and use
+it consistently for all objects covered by that profile.
+
+A practical profile should define at least:
+
+- character encoding;
+- field ordering;
+- whitespace handling;
+- line endings;
+- timestamp representation;
+- number representation;
+- boolean representation;
+- null handling;
+- absent-field handling;
+- collection ordering;
+- binary encoding;
+- and digest-field treatment.
+
+Recommended baseline for JSON implementations:
+
+Character encoding:
+UTF-8 without BOM.
+
+Line endings:
+Not material after canonicalisation because the canonical object is
+serialised without presentation formatting.
+
+Object member ordering:
+Lexicographic ordering by field name.
+
+Whitespace:
+No insignificant whitespace.
+
+Booleans:
+true
+false
+
+Null:
+null
+
+Timestamps:
+UTC ISO-8601 with explicit Z suffix.
+
+Example:
+
+2026-10-01T22:30:00.000Z
+
+Hash algorithm:
+SHA-256 unless another algorithm is explicitly declared.
+
+Digest field:
+Excluded from the bytes used to calculate that object's own digest.
+
+----------------------------------------------------------------------
+8.1 CANONICALISATION PIPELINE
+----------------------------------------------------------------------
+
+Recommended pipeline:
+
+SOURCE OBJECT
+    |
+    v
+VALIDATE FIELD TYPES
+    |
+    v
+NORMALISE TIMESTAMPS
+    |
+    v
+NORMALISE ENUMERATED VALUES
+    |
+    v
+SORT CANONICAL FIELDS
+    |
+    v
+SERIALISE DETERMINISTICALLY
+    |
+    v
+UTF-8 BYTES
+    |
+    v
+SHA-256
+    |
+    v
+OBJECT HASH
+
+The stored object may contain human-readable formatting.
+
+The cryptographic identity should be calculated over the declared
+canonical representation.
+
+----------------------------------------------------------------------
+8.2 SIMPLE CANONICALISATION PSEUDOCODE
+----------------------------------------------------------------------
+
+function canonical_hash(object):
+
+    working_object =
+        remove_self_digest_field(object)
+
+    normalized_object =
+        normalize_types_and_timestamps(working_object)
+
+    canonical_bytes =
+        deterministic_json_encode(
+            normalized_object,
+            sort_keys = true,
+            whitespace = none,
+            encoding = UTF8
+        )
+
+    return SHA256(canonical_bytes)
+
+The implementation should version the canonicalisation profile.
+
+Example:
+
+canonicalisation_profile:
+"LILP-JSON-C14N-v0.1"
+
+A change to canonicalisation rules can change object identity.
+
+Therefore canonicalisation-profile changes should be treated as
+material versioned changes.
+
+======================================================================
+9. RECOMMENDED OBJECT LAYOUTS
+======================================================================
+
+The following examples are implementation guidance.
+
+They illustrate practical representations of the semantic objects
+defined by the frozen standard.
+
+They are not additional normative requirements.
+
+----------------------------------------------------------------------
+9.1 GOVERNING STATE OBJECT
+----------------------------------------------------------------------
+
+Illustrative JSON:
+
+{
+  "state_id": "STATE-20261001-000001",
+  "version": "1",
+  "identity": {
+    "subject_id": "SUBJECT-001",
+    "actor_id": "ACTOR-001"
+  },
+  "authority_reference": "AUTH-20261001-000001",
+  "standing": "ESTABLISHED",
+  "admissibility": "ESTABLISHED",
+  "evidence_references": [
+    "EVID-20261001-000001",
+    "EVID-20261001-000002"
+  ],
+  "policy_reference": "POLICY-001",
+  "scope": "PAYMENT_INITIATION",
+  "jurisdiction": "DECLARED-SCOPE",
+  "temporal_context": "2026-10-01T22:30:00.000Z",
+  "contemplated_effect": {
+    "effect_type": "CREATE_PAYMENT",
+    "target": "ACCOUNT-BOUND-REFERENCE",
+    "maximum_amount": "100.00",
+    "currency": "GBP"
+  },
+  "predecessor_reference": "STATE-20261001-000000",
+  "delta_reference": "DELTA-20261001-000001",
+  "provenance": {
+    "created_by": "GOVERNING-STATE-BUILDER",
+    "source_context": "TRANSACTION-001"
+  },
+  "canonicalisation_profile": "LILP-JSON-C14N-v0.1",
+  "hash_algorithm": "SHA-256",
+  "state_hash": "COMPUTED-AFTER-CANONICALISATION"
+}
+
+Important implementation point:
+
+The field:
+
+state_hash
+
+should not be included recursively inside the byte sequence used to
+calculate state_hash unless another explicitly defined non-circular
+construction is used.
+
+----------------------------------------------------------------------
+9.2 AUTHORITY OBJECT
+----------------------------------------------------------------------
+
+Illustrative JSON:
+
+{
+  "authority_id": "AUTH-20261001-000001",
+  "issuer_or_source": "AUTHORITY-SOURCE-001",
+  "subject": "ACTOR-001",
+  "authority_class": "EXECUTE",
+  "scope": "PAYMENT_INITIATION",
+  "jurisdiction": "DECLARED-SCOPE",
+  "valid_from": "2026-10-01T00:00:00.000Z",
+  "valid_until": "2026-10-02T00:00:00.000Z",
+  "status": "ACTIVE",
+  "conditions": [
+    "MAX_AMOUNT_GBP_100"
+  ],
+  "revocation_reference": null,
+  "evidence_references": [
+    "EVID-AUTH-001"
+  ],
+  "provenance": {
+    "source": "AUTHORITY-SERVICE"
+  },
+  "hash_algorithm": "SHA-256",
+  "authority_hash": "COMPUTED-AFTER-CANONICALISATION"
+}
+
+Recommended authority status values may include:
+
+ACTIVE
+EXPIRED
+REVOKED
+SUSPENDED
+NOT_ESTABLISHED
+
+Technical access should remain separate.
+
+Example:
+
+api_credential_present = true
+
+does not automatically mean:
+
+execution_authority = ACTIVE
+
+----------------------------------------------------------------------
+9.3 EVIDENCE OBJECT
+----------------------------------------------------------------------
+
+Illustrative JSON:
+
+{
+  "evidence_id": "EVID-20261001-000001",
+  "evidence_class": "OBSERVED",
+  "source_identity": "PROVIDER-001",
+  "observed_at": "2026-10-01T22:29:42.000Z",
+  "acquired_at": "2026-10-01T22:29:43.000Z",
+  "content_or_reference": {
+    "type": "HTTP_RESPONSE",
+    "reference": "evidence/provider-response-001.json"
+  },
+  "content_hash": "SHA256-OF-EVIDENCE-PAYLOAD",
+  "scope": "TRANSACTION-001",
+  "provenance": {
+    "collector": "EVIDENCE-ADAPTER-001"
+  },
+  "related_interpretation_reference": null
+}
+
+If interpretation is later added, preserve it separately.
+
+Example:
+
+{
+  "interpretation_id": "INTERP-001",
+  "evidence_reference": "EVID-20261001-000001",
+  "interpretation": "Provider indicates authority remains active",
+  "derived_by": "INTERPRETATION-ENGINE-001"
+}
+
+Do not replace the original observed object with the interpretation.
+
+----------------------------------------------------------------------
+9.4 DELTA OBJECT
+----------------------------------------------------------------------
+
+Illustrative JSON:
+
+{
+  "delta_id": "DELTA-20261001-000001",
+  "predecessor_state_reference": "STATE-20261001-000000",
+  "successor_or_candidate_state_reference": "STATE-20261001-000001",
+  "detected_at": "2026-10-01T22:30:01.000Z",
+  "change_categories": [
+    "DELTA-A"
+  ],
+  "changed_fields": [
+    {
+      "field": "authority.status",
+      "before": "ACTIVE",
+      "after": "REVOKED"
+    }
+  ],
+  "materiality": "MATERIAL",
+  "affected_predicates": [
+    "AUTHORITY",
+    "EXECUTION_AUTHORITY"
+  ],
+  "determination": "REASSESSMENT_REQUIRED",
+  "rationale": "Execution authority changed after predecessor state.",
+  "evidence_references": [
+    "EVID-AUTH-REVOCATION-001"
+  ]
+}
+
+----------------------------------------------------------------------
+9.5 DETERMINATION OBJECT
+----------------------------------------------------------------------
+
+Illustrative JSON:
+
+{
+  "determination_id": "DET-20261001-000001",
+  "governing_state_reference": "STATE-20261001-000001",
+  "governing_state_hash": "STATE-HASH",
+  "result": "HOLD",
+  "reason_codes": [
+    "EXECUTION_AUTHORITY_NOT_ESTABLISHED"
+  ],
+  "evidence_references": [
+    "EVID-AUTH-REVOCATION-001"
+  ],
+  "determined_at": "2026-10-01T22:30:02.000Z",
+  "determination_scope": "PAYMENT_INITIATION",
+  "claim_ceiling": "Authority changed. Execution authority not established."
+}
+
+----------------------------------------------------------------------
+9.6 EXECUTION RECORD
+----------------------------------------------------------------------
+
+Illustrative JSON:
+
+{
+  "execution_id": "EXEC-20261001-000001",
+  "determination_reference": "DET-20261001-000001",
+  "governing_state_reference": "STATE-20261001-000001",
+  "gate_result": "WITHHELD",
+  "execution_status": "NOT_ATTEMPTED",
+  "attempted_at": null,
+  "completed_at": null,
+  "external_reference": null
+}
+
+Where execution is withheld, do not create a fake external execution
+reference merely to make the record look complete.
+
+----------------------------------------------------------------------
+9.7 CONSEQUENCE RECORD
+----------------------------------------------------------------------
+
+Illustrative JSON:
+
+{
+  "consequence_id": "CONS-20261001-000001",
+  "execution_reference": "EXEC-20261001-000001",
+  "status": "NOT_APPLICABLE",
+  "observed_at": "2026-10-01T22:30:03.000Z",
+  "observation_reference": null,
+  "claim": "No execution was attempted, therefore no execution-derived consequence is claimed."
+}
+
+For an attempted execution whose downstream effect cannot be verified:
+
+status:
+
+NOT_ESTABLISHED
+
+is preferable to an invented success state.
+
+----------------------------------------------------------------------
+9.8 RECEIPT OBJECT
+----------------------------------------------------------------------
+
+Illustrative JSON:
+
+{
+  "receipt_id": "RCPT-20261001-000001",
+  "receipt_type": "GOVERNED_EXECUTION_EVENT",
+  "recorded_at": "2026-10-01T22:30:04.000Z",
+  "recorder_identity": "WITNESS-001",
+  "subject_reference": "TRANSACTION-001",
+  "predecessor_receipt_reference": "RCPT-20261001-000000",
+  "governing_state_reference": "STATE-20261001-000001",
+  "governing_state_hash": "STATE-HASH",
+  "evidence_references": [
+    "EVID-AUTH-REVOCATION-001"
+  ],
+  "determination": "HOLD",
+  "execution_status": "NOT_ATTEMPTED",
+  "consequence_status": "NOT_APPLICABLE",
+  "claim_ceiling": "Execution withheld because current execution authority was not established.",
+  "canonicalisation_profile": "LILP-JSON-C14N-v0.1",
+  "hash_algorithm": "SHA-256",
+  "receipt_hash": "COMPUTED-AFTER-CANONICALISATION"
+}
+
+======================================================================
+10. GOVERNING-STATE CONSTRUCTION PROCEDURE
+======================================================================
+
+A recommended state-construction procedure is:
+
+STEP GS-01
+
+Identify the contemplated consequence.
+
+Do this before determining whether execution is permitted.
+
+Example:
+
+"Transfer GBP 100 from governed source to governed destination."
+
+This prevents authority for one consequence being silently reused for
+another.
+
+
+STEP GS-02
+
+Resolve the relevant identity set.
+
+Possible identities:
+
+actor
+subject
+tenant
+system
+session
+target
+chain
+
+
+STEP GS-03
+
+Retrieve current authority evidence.
+
+Do not rely solely on cached historical authority where present
+authority is material.
+
+
+STEP GS-04
+
+Resolve standing and admissibility.
+
+If either is required but unavailable:
+
+represent the result explicitly.
+
+Example:
+
+standing = NOT_ESTABLISHED
+
+
+STEP GS-05
+
+Acquire required evidence.
+
+Preserve:
+
+what was observed
+where it came from
+when it was acquired
+what its integrity identity is
+
+
+STEP GS-06
+
+Resolve applicable policy.
+
+Record the version or identity of the policy actually used.
+
+
+STEP GS-07
+
+Resolve scope and jurisdiction.
+
+Avoid generic states such as:
+
+AUTHORIZED = TRUE
+
+where the real authority is bounded to a narrower scope.
+
+
+STEP GS-08
+
+Resolve temporal validity.
+
+Check:
+
+valid_from
+valid_until
+revocation time
+current examination time
+
+
+STEP GS-09
+
+Bind contemplated effect.
+
+Examples:
+
+operation type
+target
+amount
+resource
+maximum consequence
+geographic or jurisdictional boundary
+
+
+STEP GS-10
+
+Bind predecessor state where one exists.
+
+
+STEP GS-11
+
+Calculate material delta.
+
+
+STEP GS-12
+
+Create candidate Governing State Object.
+
+
+STEP GS-13
+
+Canonicalise the candidate object.
+
+
+STEP GS-14
+
+Calculate state hash.
+
+
+STEP GS-15
+
+Persist the state before consequential reliance.
+
+======================================================================
+11. DELTA COMPARISON PROCEDURE
+======================================================================
+
+The delta engine should compare predecessor state and candidate current
+state field by field for governance-relevant properties.
+
+Example pseudocode:
+
+function compare_states(previous, current):
+
+    changes = []
+
+    if previous.identity != current.identity:
+        changes += DELTA_IDENTITY
+
+    if previous.authority != current.authority:
+        changes += DELTA_A
+
+    if previous.standing != current.standing:
+        changes += DELTA_S
+
+    if previous.evidence != current.evidence:
+        changes += DELTA_E
+
+    if previous.governing_state != current.governing_state:
+        changes += DELTA_St
+
+    if previous.contemplated_effect != current.contemplated_effect:
+        changes += DELTA_C
+
+    if previous.successor_constitution != current.successor_constitution:
+        changes += DELTA_X
+
+    return changes
+
+----------------------------------------------------------------------
+11.1 MATERIALITY EVALUATION
+----------------------------------------------------------------------
+
+A change should be treated as material when it can alter:
+
+authority
+standing
+admissibility
+policy outcome
+scope
+jurisdiction
+temporal validity
+identity continuity
+required evidence
+execution permission
+contemplated consequence
+claim ceiling
+
+Materiality should be evaluated in relation to the contemplated action.
+
+Example:
+
+A cosmetic user-interface change may be immaterial to payment
+authority.
+
+A revocation of execution authority is material.
+
+----------------------------------------------------------------------
+11.2 UNKNOWN MATERIALITY
+----------------------------------------------------------------------
+
+If available evidence is insufficient to determine whether the change
+is material:
+
+materiality = NOT_ESTABLISHED
+
+The system should not automatically treat unknown materiality as:
+
+IMMATERIAL
+
+for a consequential execution.
+
+======================================================================
+12. CHAIN CONTINUITY PROCEDURE
+======================================================================
+
+A practical chain-continuity evaluation may ask:
+
+1. Is predecessor identity established?
+
+2. Is candidate-successor identity established?
+
+3. Is the relationship between them evidenced?
+
+4. Has a material identity or constitutional change occurred?
+
+5. Does the required authority continue across the transition?
+
+6. Can continuity be established without inventing missing evidence?
+
+Recommended result set:
+
+CONTINUITY_ESTABLISHED
+NEW_CHAIN_REQUIRED
+INVALID
+NOT_ESTABLISHED
+
+Example pseudocode:
+
+if structural_violation:
+    chain_result = INVALID
+
+elseif required_identity_evidence_missing:
+    chain_result = NOT_ESTABLISHED
+
+elseif material_successor_change_breaks_continuity:
+    chain_result = NEW_CHAIN_REQUIRED
+
+else:
+    chain_result = CONTINUITY_ESTABLISHED
+
+Important:
+
+A matching human-readable name is not sufficient proof of identity
+continuity where stronger identity evidence is required.
+
+======================================================================
+13. PRE-EXECUTION GATE PROCEDURE
+======================================================================
+
+The gate should evaluate current conditions as near as practical to the
+moment of consequential execution.
+
+Recommended input:
+
+{
+  identity,
+  authority,
+  standing,
+  admissibility,
+  governing_state,
+  evidence,
+  policy,
+  scope,
+  jurisdiction,
+  temporal_validity,
+  delta_status,
+  contemplated_effect
+}
+
+Recommended output:
+
+{
+  gate_result,
+  predicate_results,
+  reason_codes,
+  evaluated_at,
+  governing_state_reference
+}
+
+----------------------------------------------------------------------
+13.1 THREE-STATE PREDICATE MODEL
+----------------------------------------------------------------------
+
+A predicate should not be forced into Boolean TRUE/FALSE when the
+evidence does not justify that reduction.
+
+Recommended state model:
+
+ESTABLISHED
+FAILED
+NOT_ESTABLISHED
+
+Example:
+
+authority = NOT_ESTABLISHED
+
+is different from:
+
+authority = REVOKED
+
+The first describes insufficient establishment.
+
+The second describes an observed authority condition.
+
+----------------------------------------------------------------------
+13.2 GATE PSEUDOCODE
+----------------------------------------------------------------------
+
+function evaluate_gate(state):
+
+    predicates = {
+        identity:
+            evaluate_identity(state),
+
+        authority:
+            evaluate_authority(state),
+
+        standing:
+            evaluate_standing(state),
+
+        admissibility:
+            evaluate_admissibility(state),
+
+        evidence:
+            evaluate_required_evidence(state),
+
+        policy:
+            evaluate_policy(state),
+
+        scope:
+            evaluate_scope(state),
+
+        jurisdiction:
+            evaluate_jurisdiction(state),
+
+        temporal_validity:
+            evaluate_temporal_validity(state),
+
+        material_change:
+            evaluate_delta(state),
+
+        contemplated_effect:
+            evaluate_effect_alignment(state)
+    }
+
+    for each mandatory predicate:
+
+        if predicate == FAILED:
+            return WITHHOLD
+
+        if predicate == NOT_ESTABLISHED:
+            return WITHHOLD
+
+    return PERMIT
+
+Important:
+
+PERMIT means the governance gate permits progression within its
+declared scope.
+
+It does not mean execution must occur.
+
+----------------------------------------------------------------------
+13.3 TOCTOU RECHECK
+----------------------------------------------------------------------
+
+Where governing conditions may change between determination and
+execution:
+
+DETERMINATION
+    |
+    v
+RECHECK CURRENT STATE
+    |
+    +---- changed ----> REASSESS / WITHHOLD
+    |
+    +---- unchanged --> EXECUTION MAY PROCEED
+
+Recommended pattern:
+
+determination_state_hash =
+    state_hash_at_determination
+
+execution_state_hash =
+    state_hash_immediately_before_execution
+
+If the relevant governing state changed:
+
+do not silently reuse the old determination.
+
+======================================================================
+14. COLLISION-SAFE RECEIPT WRITING
+======================================================================
+
+Receipt writing should fail rather than overwrite an existing receipt
+identifier.
+
+Recommended Windows / PowerShell implementation pattern:
+
+$Stream = [System.IO.FileStream]::new(
+    $ReceiptPath,
+    [System.IO.FileMode]::CreateNew,
+    [System.IO.FileAccess]::Write,
+    [System.IO.FileShare]::None
+)
+
+try {
+
+    $Bytes = $Utf8NoBom.GetBytes($ReceiptText)
+
+    $Stream.Write(
+        $Bytes,
+        0,
+        $Bytes.Length
+    )
+
+}
+finally {
+
+    $Stream.Dispose()
+
+}
+
+FileMode.CreateNew provides an operating-system-level collision check
+for creation of that path.
+
+If the path already exists:
+
+the operation fails.
+
+That failure should be preserved.
+
+Do not automatically change:
+
+RCPT-000123
+
+into:
+
+RCPT-000123
+
+with different content.
+
+Instead use an explicit successor or correction identity.
+
+Example:
+
+RCPT-000124
+
+predecessor_receipt_reference:
+RCPT-000123
+
+correction_reason:
+"Metadata operation failed during predecessor procedure."
+
+----------------------------------------------------------------------
+14.1 RECEIPT WRITE SEQUENCE
+----------------------------------------------------------------------
+
+Recommended sequence:
+
+1. Establish receipt identifier.
+
+2. Verify governing state reference.
+
+3. Assemble receipt content.
+
+4. Canonicalise receipt content excluding self digest.
+
+5. Calculate receipt digest.
+
+6. Attempt CREATE NEW.
+
+7. If collision occurs:
+   refuse write.
+
+8. Preserve collision event if material.
+
+9. Re-read created receipt.
+
+10. Recalculate digest.
+
+11. Compare observed digest with intended digest.
+
+12. Record success only after verification.
+
+----------------------------------------------------------------------
+14.2 RECEIPT CONTENT MINIMUM
+----------------------------------------------------------------------
+
+A practical receipt should usually preserve:
+
+receipt ID
+receipt type
+time
+recorder identity
+subject
+governing state reference
+governing state hash
+relevant evidence
+determination
+execution status
+consequence status
+claim ceiling
+predecessor receipt
+canonicalisation profile
+hash algorithm
+receipt hash
+
+Not every domain requires every optional property.
+
+The frozen standard controls applicability.
+
+======================================================================
+15. SUCCESSOR-STATE WORKFLOW
+======================================================================
+
+When a material change occurs after a predecessor has been relied upon:
+
+DO NOT:
+
+edit the predecessor until it looks current.
+
+Instead:
+
+PREDECESSOR STATE
+      |
+      v
+MATERIAL CHANGE
+      |
+      v
+DELTA OBJECT
+      |
+      v
+REASSESSMENT
+      |
+      +---------------------------+
+      |                           |
+      | continuity established    | continuity not established
+      v                           v
+SUCCESSOR STATE              NEW CHAIN REQUIRED
+      |
+      v
+NEW DETERMINATION
+      |
+      v
+NEW EXECUTION GATE
+      |
+      v
+NEW RECEIPT
+
+----------------------------------------------------------------------
+15.1 SUCCESSOR CREATION PROCEDURE
+----------------------------------------------------------------------
+
+STEP S-01
+
+Preserve predecessor byte identity.
+
+
+STEP S-02
+
+Capture evidence of changed condition.
+
+
+STEP S-03
+
+Create Delta Object.
+
+
+STEP S-04
+
+Identify affected governance predicates.
+
+
+STEP S-05
+
+Reassess identity continuity where required.
+
+
+STEP S-06
+
+Reassess authority.
+
+
+STEP S-07
+
+Reassess standing and admissibility.
+
+
+STEP S-08
+
+Reassess policy and scope.
+
+
+STEP S-09
+
+Create successor state.
+
+
+STEP S-10
+
+Bind successor to predecessor.
+
+
+STEP S-11
+
+Calculate successor canonical hash.
+
+
+STEP S-12
+
+Perform new determination.
+
+
+STEP S-13
+
+Perform new pre-execution gate.
+
+
+STEP S-14
+
+Create successor receipt.
+
+
+----------------------------------------------------------------------
+15.2 CORRECTION WITHOUT HISTORICAL REWRITE
+----------------------------------------------------------------------
+
+A defect discovered after an event should be represented as:
+
+EVENT N
+    |
+    v
+DEFICIENCY OBSERVED
+    |
+    v
+CORRECTION EVENT N+1
+
+not:
+
+EVENT N
+    |
+    v
+SILENTLY ALTER EVENT N
+
+Recommended correction object:
+
+{
+  "correction_id": "CORR-0001",
+  "predecessor_reference": "RCPT-0001",
+  "deficiency": "Source read-only metadata operation failed.",
+  "impact": "Byte identity unaffected.",
+  "correction": "Read-only metadata subsequently established.",
+  "predecessor_hash": "PRESERVED-HASH",
+  "post_correction_subject_hash": "SAME-PRESERVED-HASH"
+}
+
+This pattern preserves both:
+
+what failed
+
+and
+
+what was corrected.
+
+======================================================================
+16. REFERENCE IMPLEMENTATION FLOW
+======================================================================
+
+The complete practical flow may be represented as:
+
+01 REQUEST
+      |
+02 IDENTIFY
+      |
+03 OBSERVE
+      |
+04 CLASSIFY EVIDENCE
+      |
+05 RESOLVE AUTHORITY
+      |
+06 BUILD GOVERNING STATE
+      |
+07 COMPARE PREDECESSOR
+      |
+08 DETECT DELTA
+      |
+09 DETERMINE CONTINUITY
+      |
+10 GOVERNANCE DETERMINATION
+      |
+11 PRE-EXECUTION RECHECK
+      |
+      +-------------------------+
+      |                         |
+      | PERMIT                  | WITHHOLD
+      v                         v
+12 EXECUTION                12R REFUSAL / HOLD
+      |                         |
+13 EXECUTION STATUS             |
+      |                         |
+14 CONSEQUENCE OBSERVATION      |
+      |                         |
+      +------------+------------+
+                   |
+15 WITNESS / RECEIPT
+                   |
+16 VERIFY RECEIPT IDENTITY
+                   |
+17 DERIVE CLAIM CEILING
+                   |
+18 WATCH FOR MATERIAL CHANGE
+
+======================================================================
+17. PRACTICAL-CORE STATUS
+======================================================================
+
+The MAN-001 practical core now provides implementation guidance for:
+
+- deterministic canonicalisation;
+- Governing State Objects;
+- Authority Objects;
+- Evidence Objects;
+- Delta Objects;
+- Determination Objects;
+- Execution Records;
+- Consequence Records;
+- Receipt Objects;
+- governing-state construction;
+- material-change comparison;
+- continuity determination;
+- three-state predicate handling;
+- pre-execution gating;
+- TOCTOU rechecking;
+- collision-safe receipt creation;
+- successor-state creation;
+- correction without historical rewrite;
+- and end-to-end reference flow.
+
+These are implementation patterns.
+
+They do not alter or extend the frozen normative meaning of:
+
+ELIAS-LILP-STD-001 v0.1
+
+Where this manual and the frozen standard differ:
+
+THE FROZEN STANDARD CONTROLS.
+
+MAN-001 v0.1 remains a WORKING DRAFT.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+
+======================================================================
+18. STORAGE AND DATABASE PATTERNS
+======================================================================
+
+IMPLEMENTATION GUIDANCE
+
+LILP does not mandate a particular database technology.
+
+A relational database, document store, object store, ledger or another
+persistence system may be used if the required semantic properties are
+preserved.
+
+A practical relational implementation may use independently
+identifiable stores or tables for:
+
+identity
+evidence
+interpretation
+authority
+governing_state
+delta
+determination
+execution
+consequence
+receipt
+correction
+deviation
+conformance_result
+
+----------------------------------------------------------------------
+18.1 RECOMMENDED IMMUTABILITY BOUNDARY
+----------------------------------------------------------------------
+
+Records relied upon as historical evidence should not be silently
+updated after they become evidentiary predecessors.
+
+Recommended pattern:
+
+INSERT predecessor
+        |
+        v
+PRESERVE predecessor
+        |
+        v
+INSERT successor
+
+rather than:
+
+UPDATE predecessor
+until historical state resembles current state.
+
+A database may permit physical UPDATE capability.
+
+That capability does not mean the governance model should authorise
+historical rewrite.
+
+----------------------------------------------------------------------
+18.2 KEY DESIGN
+----------------------------------------------------------------------
+
+Recommended primary identifiers include:
+
+evidence_id
+authority_id
+state_id
+delta_id
+determination_id
+execution_id
+consequence_id
+receipt_id
+
+Where an identifier is required to be unique, enforce that uniqueness
+at the storage layer where practical.
+
+Example:
+
+UNIQUE(receipt_id)
+
+This reduces reliance on application-layer collision checking alone.
+
+----------------------------------------------------------------------
+18.3 HASH STORAGE
+----------------------------------------------------------------------
+
+Store both:
+
+hash_algorithm
+
+and
+
+hash_value
+
+rather than storing a digest without identifying the algorithm.
+
+Example:
+
+hash_algorithm = SHA-256
+hash_value     = ABCDEF...
+
+Where a canonicalisation profile is involved, also preserve:
+
+canonicalisation_profile
+
+Example:
+
+LILP-JSON-C14N-v0.1
+
+----------------------------------------------------------------------
+18.4 PREDECESSOR RELATIONSHIPS
+----------------------------------------------------------------------
+
+Successor records should retain explicit predecessor references.
+
+Example:
+
+state_id:
+STATE-002
+
+predecessor_state_id:
+STATE-001
+
+Do not infer lineage solely from:
+
+timestamps
+row ordering
+auto-increment numbers
+or filename similarity.
+
+----------------------------------------------------------------------
+18.5 CORRECTION RELATIONSHIPS
+----------------------------------------------------------------------
+
+Recommended correction fields:
+
+correction_id
+predecessor_reference
+deficiency
+observed_at
+impact
+correction_action
+successor_reference
+evidence_references
+
+The defect should remain inspectable after correction.
+
+----------------------------------------------------------------------
+18.6 TRANSACTION BOUNDARIES
+----------------------------------------------------------------------
+
+Local database writes may often be grouped transactionally.
+
+Example:
+
+BEGIN TRANSACTION
+
+create determination
+create gate result
+create local execution record
+create receipt
+
+COMMIT
+
+However:
+
+an external consequential action may not participate in the same
+database transaction.
+
+For external operations, preserve the distinctions between:
+
+local intent to execute
+external request attempt
+provider acknowledgement
+provider completion
+downstream consequence
+
+Do not report transaction commit as proof that an external consequence
+occurred.
+
+----------------------------------------------------------------------
+18.7 DELETION
+----------------------------------------------------------------------
+
+Where deletion is legally or operationally required, the implementation
+should distinguish:
+
+record no longer available
+
+from:
+
+record never existed.
+
+Where lawful and appropriate, preserve metadata describing that a
+historical reference became unavailable.
+
+This manual does not override applicable privacy, retention or deletion
+law.
+
+======================================================================
+19. API AND SERVICE BOUNDARIES
+======================================================================
+
+IMPLEMENTATION GUIDANCE
+
+A service-oriented implementation may expose logical boundaries such as:
+
+Evidence API
+Authority API
+State API
+Determination API
+Gate API
+Execution API
+Witness / Receipt API
+Verification API
+
+The exact HTTP paths or transport technology are implementation-defined.
+
+----------------------------------------------------------------------
+19.1 EVIDENCE INGESTION BOUNDARY
+----------------------------------------------------------------------
+
+Example logical operation:
+
+POST /evidence
+
+Recommended input:
+
+source identity
+evidence class
+observation time
+payload or payload reference
+scope
+
+Recommended output:
+
+evidence ID
+content digest
+recorded acquisition time
+
+The ingestion API should not convert an external assertion into an
+internally established fact merely because the request was
+authenticated.
+
+----------------------------------------------------------------------
+19.2 AUTHORITY STATUS BOUNDARY
+----------------------------------------------------------------------
+
+Example logical operation:
+
+GET /authority/{authority_id}/current
+
+Recommended output:
+
+authority identity
+status
+scope
+jurisdiction
+validity window
+revocation status
+evidence references
+evaluated time
+
+Current authority should remain distinguishable from the historical
+authority record.
+
+----------------------------------------------------------------------
+19.3 GOVERNING-STATE BOUNDARY
+----------------------------------------------------------------------
+
+Example logical operation:
+
+POST /governing-state/build
+
+The service should return an independently identifiable state object
+whose hash can be bound to later determination and execution records.
+
+----------------------------------------------------------------------
+19.4 DETERMINATION BOUNDARY
+----------------------------------------------------------------------
+
+Example logical operation:
+
+POST /determine
+
+Recommended input:
+
+governing_state_reference
+contemplated_effect
+
+Recommended output:
+
+determination_id
+result
+reason_codes
+evidence_references
+claim_ceiling
+determined_at
+
+----------------------------------------------------------------------
+19.5 PRE-EXECUTION GATE BOUNDARY
+----------------------------------------------------------------------
+
+Example logical operation:
+
+POST /gate/evaluate
+
+Recommended response:
+
+gate_result
+governing_state_hash
+predicate_results
+reason_codes
+evaluated_at
+validity boundary
+
+Do not permit a client to establish authority merely by sending:
+
+"authority": true
+
+Authority should be derived from the governed authority state and
+evidence applicable to the contemplated effect.
+
+----------------------------------------------------------------------
+19.6 EXECUTION BOUNDARY
+----------------------------------------------------------------------
+
+Execution should receive enough context to prove which authorised
+governing state permitted the attempted action.
+
+Recommended binding may include:
+
+determination_id
+governing_state_hash
+contemplated_effect_hash
+gate_result_reference
+
+Where stale gate decisions are unsafe, an implementation may use:
+
+short validity windows
+nonces
+single-use execution authorisations
+current-state rechecks
+
+These are implementation techniques.
+
+The frozen standard determines the required governance property.
+
+----------------------------------------------------------------------
+19.7 WITNESS BOUNDARY
+----------------------------------------------------------------------
+
+Witnessing should occur independently from the business desire for a
+successful result.
+
+The witness records what occurred.
+
+It should not rewrite:
+
+FAILED
+
+into:
+
+COMPLETED
+
+because completion was expected.
+
+======================================================================
+20. REASON, REFUSAL AND ERROR CODES
+======================================================================
+
+IMPLEMENTATION GUIDANCE
+
+Machine-readable reason codes can improve reproducibility and testing.
+
+Reason codes should describe the observed governance reason without
+changing the normative determination model.
+
+Recommended examples:
+
+LILP-HOLD-AUTHORITY-NOT-ESTABLISHED
+
+LILP-DENY-AUTHORITY-REVOKED
+
+LILP-HOLD-EVIDENCE-NOT-ESTABLISHED
+
+LILP-HOLD-STANDING-NOT-ESTABLISHED
+
+LILP-HOLD-ADMISSIBILITY-NOT-ESTABLISHED
+
+LILP-HOLD-MATERIAL-CHANGE-REASSESSMENT
+
+LILP-HOLD-TOCTOU-STATE-CHANGED
+
+LILP-NEW-CHAIN-IDENTITY-CONTINUITY-NOT-ESTABLISHED
+
+LILP-INVALID-STRUCTURAL-CHAIN
+
+LILP-REFUSE-CLAIM-CEILING-EXCEEDED
+
+LILP-REFUSE-RECEIPT-ID-COLLISION
+
+LILP-REFUSE-FROZEN-PREDECESSOR-MUTATION
+
+LILP-FAIL-CANONICALISATION-MISMATCH
+
+LILP-FAIL-HASH-VERIFICATION
+
+LILP-FAIL-EXECUTION
+
+LILP-NOT-ESTABLISHED-CONSEQUENCE
+
+----------------------------------------------------------------------
+20.1 ERROR VERSUS GOVERNANCE OUTCOME
+----------------------------------------------------------------------
+
+Do not collapse infrastructure failure and governance refusal into the
+same state.
+
+Examples:
+
+DATABASE_UNAVAILABLE
+
+is an infrastructure condition.
+
+DENY
+
+is a governance determination.
+
+AUTHORITY_NOT_ESTABLISHED
+
+is a governance/evidentiary condition.
+
+HTTP_500
+
+is a transport/application error.
+
+An implementation may experience both at once.
+
+Preserve both where material.
+
+----------------------------------------------------------------------
+20.2 HUMAN-READABLE EXPLANATION
+----------------------------------------------------------------------
+
+A machine-readable reason code may be accompanied by bounded text.
+
+Example:
+
+code:
+LILP-HOLD-AUTHORITY-NOT-ESTABLISHED
+
+message:
+"Execution withheld because current execution authority was not
+established for the contemplated effect."
+
+The explanation should not add claims that the evidence does not
+support.
+
+======================================================================
+21. TEST HARNESS STRUCTURE
+======================================================================
+
+IMPLEMENTATION GUIDANCE
+
+A LILP test harness should evaluate observed behaviour rather than only
+whether code executed without throwing an exception.
+
+Recommended test record:
+
+{
+  "test_id": "LILP-TEST-003",
+  "run_id": "RUN-001",
+  "scope": "EXECUTION-GATE",
+  "input_reference": "INPUT-001",
+  "expected_result": "EXECUTE_FALSE",
+  "observed_result": "EXECUTE_FALSE",
+  "determination": "PASS",
+  "evidence_references": [
+    "EVID-TEST-001"
+  ],
+  "executed_at": "UTC-TIMESTAMP"
+}
+
+----------------------------------------------------------------------
+21.1 TEST DIRECTORY
+----------------------------------------------------------------------
+
+A practical test tree may use:
+
+05_CONFORMANCE\
+    TEST-001_RECEIPT_COLLISION\
+    TEST-002_FROZEN_PREDECESSOR_MUTATION\
+    TEST-003_REVOKED_AUTHORITY\
+    TEST-004_EXPIRED_AUTHORITY\
+    TEST-005_MISSING_REQUIRED_EVIDENCE\
+    TEST-006_OBSERVATION_INTERPRETATION_CONFLICT\
+    TEST-007_TOCTOU_STATE_CHANGE\
+    TEST-008_CAPABILITY_WITHOUT_AUTHORITY\
+    TEST-009_EXECUTION_WITHOUT_CONFIRMED_CONSEQUENCE\
+    TEST-010_UNCERTAINTY_PRESERVATION\
+    TEST-011_IDENTITY_CONTINUITY_GAP\
+    TEST-012_CANONICALISATION_REPRODUCIBILITY\
+    TEST-013_BYTE_TAMPER_DETECTION\
+    TEST-014_GOVERNANCE_GATE_BYPASS\
+    TEST-015_FAILURE_SUCCESSOR_PRESERVATION\
+    TEST-016_CLAIM_CEILING_CHALLENGE\
+
+----------------------------------------------------------------------
+21.2 TEST CASE CONTENT
+----------------------------------------------------------------------
+
+Each test case should preserve:
+
+test identifier
+test purpose
+preconditions
+input
+expected result
+actual result
+determination
+evidence
+known limitations
+execution time
+implementation identity
+
+A test that cannot execute because required external state is
+unavailable should preserve that condition.
+
+Do not manufacture PASS.
+
+----------------------------------------------------------------------
+21.3 CONTROL AND CHANGED RUNS
+----------------------------------------------------------------------
+
+Where change behaviour is being examined, a useful pattern is:
+
+CONTROL RUN
+
+Establish baseline behaviour at T0.
+
+CHANGED RUN
+
+Introduce one declared material delta.
+
+Compare the resulting determination or execution state.
+
+Where possible, change one variable at a time so that the observed
+difference remains interpretable.
+
+----------------------------------------------------------------------
+21.4 BYPASS TESTING
+----------------------------------------------------------------------
+
+If an implementation claims a control is non-bypassable, attempt to
+reach the execution adapter through alternate paths.
+
+Potential bypass paths may include:
+
+direct internal method invocation
+alternate API route
+retry worker
+background job
+administrative endpoint
+message queue
+cached decision
+stale authorisation
+manual operator route
+
+The exact attack surface depends upon the implementation.
+
+A successful bypass falsifies the claimed non-bypassable property
+within the tested scope.
+
+----------------------------------------------------------------------
+21.5 FAILURE PRESERVATION
+----------------------------------------------------------------------
+
+Never delete a failed test because a later patch passes.
+
+Recommended lineage:
+
+RUN-001
+FAIL
+    |
+    v
+CORRECTION
+    |
+    v
+RUN-002
+PASS
+
+Both remain evidence.
+
+======================================================================
+22. CONFORMANCE EVIDENCE PACKAGE
+======================================================================
+
+IMPLEMENTATION GUIDANCE
+
+A practical evidence package may use:
+
+EVIDENCE_PACKAGE\
+    00_PACKAGE_CONTROL\
+    01_SCOPE\
+    02_IMPLEMENTATION_IDENTITY\
+    03_REQUIREMENTS_MATRIX\
+    04_TEST_RESULTS\
+    05_GOVERNING_OBJECTS\
+    06_RECEIPTS\
+    07_DEFICIENCIES\
+    08_MANIFEST\
+    09_HASHES\
+
+----------------------------------------------------------------------
+22.1 PACKAGE CONTROL
+----------------------------------------------------------------------
+
+Recommended package-control content:
+
+package_id
+creation_time
+standard_id
+standard_version
+standard_sha256
+profile
+declared_scope
+implementation_id
+implementation_version
+evaluator
+claim_ceiling
+
+----------------------------------------------------------------------
+22.2 REQUIREMENTS MATRIX
+----------------------------------------------------------------------
+
+The matrix should include all requirements applicable to the claimed
+profile and scope.
+
+Recommended fields:
+
+requirement_id
+status
+scope
+rationale
+test_references
+evidence_references
+evaluated_at
+evaluator
+
+Permitted statuses remain governed by the frozen standard.
+
+----------------------------------------------------------------------
+22.3 MANIFEST
+----------------------------------------------------------------------
+
+The package manifest should identify every included artifact.
+
+Recommended fields:
+
+relative_path
+byte_length
+sha256
+
+Example:
+
+04_TEST_RESULTS\LILP-TEST-003\result.json
+842
+ABCDEF...
+
+----------------------------------------------------------------------
+22.4 PACKAGE HASH
+----------------------------------------------------------------------
+
+A ZIP or other archive may itself receive a SHA-256 identity.
+
+That digest establishes archive byte identity.
+
+It does not automatically establish correctness of the contents.
+
+----------------------------------------------------------------------
+22.5 DEFICIENCY REGISTER
+----------------------------------------------------------------------
+
+Known deficiencies relevant to the examination should be preserved.
+
+Example:
+
+DEF-001
+
+description:
+External provider consequence could not be independently observed.
+
+impact:
+Consequence claim remains NOT ESTABLISHED.
+
+status:
+OPEN
+
+A package should not appear cleaner by deleting the evidence of
+limitations.
+
+----------------------------------------------------------------------
+22.6 INDEPENDENT EXAMINATION
+----------------------------------------------------------------------
+
+Where independent verification or reproduction is claimed, provide
+enough material for the actual claimed examination.
+
+If control source, harness logic, credentials, external state or another
+dependency is withheld:
+
+identify the limitation.
+
+Do not describe an inspection-only package as a complete independent
+reproduction package.
+
+======================================================================
+23. REQUIREMENT TRACEABILITY INDEX
+======================================================================
+
+This section is generated from the requirement identifiers present in
+the frozen byte sequence of:
+
+ELIAS-LILP-STD-001 v0.1
+
+Frozen SHA-256:
+
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+The mapping below is implementation guidance.
+
+It identifies the primary MAN-001 sections relevant to implementing or
+examining each frozen requirement.
+
+A traceability mapping does NOT itself establish PASS for the mapped
+requirement.
+
+PASS requires evidence.
+
+----------------------------------------------------------------------
+23.1 GENERATED TRACEABILITY TABLE
+----------------------------------------------------------------------
+
+FORMAT:
+
+REQUIREMENT ID | MANUAL SECTIONS | IMPLEMENTATION FOCUS
+LILP-REQ-OBJ-001 | MANUAL SECTIONS: 8, 9, 18 | IMPLEMENTATION FOCUS: object identity, representation and persistence
+LILP-REQ-OBJ-002 | MANUAL SECTIONS: 8, 9, 18 | IMPLEMENTATION FOCUS: object identity, representation and persistence
+LILP-REQ-OBJ-003 | MANUAL SECTIONS: 8, 9, 18 | IMPLEMENTATION FOCUS: object identity, representation and persistence
+LILP-REQ-OBJ-004 | MANUAL SECTIONS: 8, 9, 18 | IMPLEMENTATION FOCUS: object identity, representation and persistence
+LILP-REQ-OBJ-005 | MANUAL SECTIONS: 8, 9, 18 | IMPLEMENTATION FOCUS: object identity, representation and persistence
+LILP-REQ-OBJ-006 | MANUAL SECTIONS: 8, 9, 18 | IMPLEMENTATION FOCUS: object identity, representation and persistence
+LILP-REQ-OBJ-007 | MANUAL SECTIONS: 8, 9, 18 | IMPLEMENTATION FOCUS: object identity, representation and persistence
+LILP-REQ-OBJ-008 | MANUAL SECTIONS: 8, 9, 18 | IMPLEMENTATION FOCUS: object identity, representation and persistence
+LILP-REQ-CAN-001 | MANUAL SECTIONS: 8, 18 | IMPLEMENTATION FOCUS: canonicalisation and reproducible cryptographic identity
+LILP-REQ-CAN-002 | MANUAL SECTIONS: 8, 18 | IMPLEMENTATION FOCUS: canonicalisation and reproducible cryptographic identity
+LILP-REQ-CAN-003 | MANUAL SECTIONS: 8, 18 | IMPLEMENTATION FOCUS: canonicalisation and reproducible cryptographic identity
+LILP-REQ-CAN-004 | MANUAL SECTIONS: 8, 18 | IMPLEMENTATION FOCUS: canonicalisation and reproducible cryptographic identity
+LILP-REQ-STATE-001 | MANUAL SECTIONS: 9.1, 10, 18 | IMPLEMENTATION FOCUS: Governing State Object construction and persistence
+LILP-REQ-STATE-002 | MANUAL SECTIONS: 9.1, 10, 18 | IMPLEMENTATION FOCUS: Governing State Object construction and persistence
+LILP-REQ-STATE-003 | MANUAL SECTIONS: 9.1, 10, 18 | IMPLEMENTATION FOCUS: Governing State Object construction and persistence
+LILP-REQ-STATE-004 | MANUAL SECTIONS: 9.1, 10, 18 | IMPLEMENTATION FOCUS: Governing State Object construction and persistence
+LILP-REQ-STATE-005 | MANUAL SECTIONS: 9.1, 10, 18 | IMPLEMENTATION FOCUS: Governing State Object construction and persistence
+LILP-REQ-STATE-006 | MANUAL SECTIONS: 9.1, 10, 18 | IMPLEMENTATION FOCUS: Governing State Object construction and persistence
+LILP-REQ-STATE-007 | MANUAL SECTIONS: 9.1, 10, 18 | IMPLEMENTATION FOCUS: Governing State Object construction and persistence
+LILP-REQ-STATE-008 | MANUAL SECTIONS: 9.1, 10, 18 | IMPLEMENTATION FOCUS: Governing State Object construction and persistence
+LILP-REQ-STATE-009 | MANUAL SECTIONS: 9.1, 10, 18 | IMPLEMENTATION FOCUS: Governing State Object construction and persistence
+LILP-REQ-STATE-010 | MANUAL SECTIONS: 9.1, 10, 18 | IMPLEMENTATION FOCUS: Governing State Object construction and persistence
+LILP-REQ-STATE-011 | MANUAL SECTIONS: 9.1, 10, 18 | IMPLEMENTATION FOCUS: Governing State Object construction and persistence
+LILP-REQ-AUTH-001 | MANUAL SECTIONS: 4.3, 9.2, 10, 13, 19 | IMPLEMENTATION FOCUS: authority resolution and current execution authority
+LILP-REQ-AUTH-002 | MANUAL SECTIONS: 4.3, 9.2, 10, 13, 19 | IMPLEMENTATION FOCUS: authority resolution and current execution authority
+LILP-REQ-AUTH-003 | MANUAL SECTIONS: 4.3, 9.2, 10, 13, 19 | IMPLEMENTATION FOCUS: authority resolution and current execution authority
+LILP-REQ-AUTH-004 | MANUAL SECTIONS: 4.3, 9.2, 10, 13, 19 | IMPLEMENTATION FOCUS: authority resolution and current execution authority
+LILP-REQ-AUTH-005 | MANUAL SECTIONS: 4.3, 9.2, 10, 13, 19 | IMPLEMENTATION FOCUS: authority resolution and current execution authority
+LILP-REQ-AUTH-006 | MANUAL SECTIONS: 4.3, 9.2, 10, 13, 19 | IMPLEMENTATION FOCUS: authority resolution and current execution authority
+LILP-REQ-AUTH-007 | MANUAL SECTIONS: 4.3, 9.2, 10, 13, 19 | IMPLEMENTATION FOCUS: authority resolution and current execution authority
+LILP-REQ-AUTH-008 | MANUAL SECTIONS: 4.3, 9.2, 10, 13, 19 | IMPLEMENTATION FOCUS: authority resolution and current execution authority
+LILP-REQ-EVID-001 | MANUAL SECTIONS: 4.2, 9.3, 10, 18, 19 | IMPLEMENTATION FOCUS: evidence identity, provenance and observation separation
+LILP-REQ-EVID-002 | MANUAL SECTIONS: 4.2, 9.3, 10, 18, 19 | IMPLEMENTATION FOCUS: evidence identity, provenance and observation separation
+LILP-REQ-EVID-003 | MANUAL SECTIONS: 4.2, 9.3, 10, 18, 19 | IMPLEMENTATION FOCUS: evidence identity, provenance and observation separation
+LILP-REQ-EVID-004 | MANUAL SECTIONS: 4.2, 9.3, 10, 18, 19 | IMPLEMENTATION FOCUS: evidence identity, provenance and observation separation
+LILP-REQ-EVID-005 | MANUAL SECTIONS: 4.2, 9.3, 10, 18, 19 | IMPLEMENTATION FOCUS: evidence identity, provenance and observation separation
+LILP-REQ-EVID-006 | MANUAL SECTIONS: 4.2, 9.3, 10, 18, 19 | IMPLEMENTATION FOCUS: evidence identity, provenance and observation separation
+LILP-REQ-EVID-007 | MANUAL SECTIONS: 4.2, 9.3, 10, 18, 19 | IMPLEMENTATION FOCUS: evidence identity, provenance and observation separation
+LILP-REQ-EVID-008 | MANUAL SECTIONS: 4.2, 9.3, 10, 18, 19 | IMPLEMENTATION FOCUS: evidence identity, provenance and observation separation
+LILP-REQ-DELTA-001 | MANUAL SECTIONS: 4.5, 9.4, 11, 15 | IMPLEMENTATION FOCUS: material change, Delta objects and reassessment
+LILP-REQ-DELTA-002 | MANUAL SECTIONS: 4.5, 9.4, 11, 15 | IMPLEMENTATION FOCUS: material change, Delta objects and reassessment
+LILP-REQ-DELTA-003 | MANUAL SECTIONS: 4.5, 9.4, 11, 15 | IMPLEMENTATION FOCUS: material change, Delta objects and reassessment
+LILP-REQ-DELTA-004 | MANUAL SECTIONS: 4.5, 9.4, 11, 15 | IMPLEMENTATION FOCUS: material change, Delta objects and reassessment
+LILP-REQ-DELTA-005 | MANUAL SECTIONS: 4.5, 9.4, 11, 15 | IMPLEMENTATION FOCUS: material change, Delta objects and reassessment
+LILP-REQ-DELTA-006 | MANUAL SECTIONS: 4.5, 9.4, 11, 15 | IMPLEMENTATION FOCUS: material change, Delta objects and reassessment
+LILP-REQ-DELTA-007 | MANUAL SECTIONS: 4.5, 9.4, 11, 15 | IMPLEMENTATION FOCUS: material change, Delta objects and reassessment
+LILP-REQ-CHAIN-001 | MANUAL SECTIONS: 12, 15 | IMPLEMENTATION FOCUS: identity continuity and chain-boundary handling
+LILP-REQ-CHAIN-002 | MANUAL SECTIONS: 12, 15 | IMPLEMENTATION FOCUS: identity continuity and chain-boundary handling
+LILP-REQ-CHAIN-003 | MANUAL SECTIONS: 12, 15 | IMPLEMENTATION FOCUS: identity continuity and chain-boundary handling
+LILP-REQ-CHAIN-004 | MANUAL SECTIONS: 12, 15 | IMPLEMENTATION FOCUS: identity continuity and chain-boundary handling
+LILP-REQ-CHAIN-005 | MANUAL SECTIONS: 12, 15 | IMPLEMENTATION FOCUS: identity continuity and chain-boundary handling
+LILP-REQ-RCPT-001 | MANUAL SECTIONS: 4.10, 9.8, 14, 18 | IMPLEMENTATION FOCUS: receipt creation, chaining and collision protection
+LILP-REQ-RCPT-002 | MANUAL SECTIONS: 4.10, 9.8, 14, 18 | IMPLEMENTATION FOCUS: receipt creation, chaining and collision protection
+LILP-REQ-RCPT-003 | MANUAL SECTIONS: 4.10, 9.8, 14, 18 | IMPLEMENTATION FOCUS: receipt creation, chaining and collision protection
+LILP-REQ-RCPT-004 | MANUAL SECTIONS: 4.10, 9.8, 14, 18 | IMPLEMENTATION FOCUS: receipt creation, chaining and collision protection
+LILP-REQ-RCPT-005 | MANUAL SECTIONS: 4.10, 9.8, 14, 18 | IMPLEMENTATION FOCUS: receipt creation, chaining and collision protection
+LILP-REQ-RCPT-006 | MANUAL SECTIONS: 4.10, 9.8, 14, 18 | IMPLEMENTATION FOCUS: receipt creation, chaining and collision protection
+LILP-REQ-RCPT-007 | MANUAL SECTIONS: 4.10, 9.8, 14, 18 | IMPLEMENTATION FOCUS: receipt creation, chaining and collision protection
+LILP-REQ-RCPT-008 | MANUAL SECTIONS: 4.10, 9.8, 14, 18 | IMPLEMENTATION FOCUS: receipt creation, chaining and collision protection
+LILP-REQ-RCPT-009 | MANUAL SECTIONS: 4.10, 9.8, 14, 18 | IMPLEMENTATION FOCUS: receipt creation, chaining and collision protection
+LILP-REQ-RCPT-010 | MANUAL SECTIONS: 4.10, 9.8, 14, 18 | IMPLEMENTATION FOCUS: receipt creation, chaining and collision protection
+LILP-REQ-EXEC-001 | MANUAL SECTIONS: 4.8, 9.6, 13, 19 | IMPLEMENTATION FOCUS: execution status and consequential action boundaries
+LILP-REQ-EXEC-002 | MANUAL SECTIONS: 4.8, 9.6, 13, 19 | IMPLEMENTATION FOCUS: execution status and consequential action boundaries
+LILP-REQ-EXEC-003 | MANUAL SECTIONS: 4.8, 9.6, 13, 19 | IMPLEMENTATION FOCUS: execution status and consequential action boundaries
+LILP-REQ-GATE-001 | MANUAL SECTIONS: 4.7, 13, 19 | IMPLEMENTATION FOCUS: pre-execution governance gate and TOCTOU control
+LILP-REQ-GATE-002 | MANUAL SECTIONS: 4.7, 13, 19 | IMPLEMENTATION FOCUS: pre-execution governance gate and TOCTOU control
+LILP-REQ-GATE-003 | MANUAL SECTIONS: 4.7, 13, 19 | IMPLEMENTATION FOCUS: pre-execution governance gate and TOCTOU control
+LILP-REQ-GATE-004 | MANUAL SECTIONS: 4.7, 13, 19 | IMPLEMENTATION FOCUS: pre-execution governance gate and TOCTOU control
+LILP-REQ-GATE-005 | MANUAL SECTIONS: 4.7, 13, 19 | IMPLEMENTATION FOCUS: pre-execution governance gate and TOCTOU control
+LILP-REQ-GATE-006 | MANUAL SECTIONS: 4.7, 13, 19 | IMPLEMENTATION FOCUS: pre-execution governance gate and TOCTOU control
+LILP-REQ-GATE-007 | MANUAL SECTIONS: 4.7, 13, 19 | IMPLEMENTATION FOCUS: pre-execution governance gate and TOCTOU control
+LILP-REQ-GATE-008 | MANUAL SECTIONS: 4.7, 13, 19 | IMPLEMENTATION FOCUS: pre-execution governance gate and TOCTOU control
+LILP-REQ-DET-001 | MANUAL SECTIONS: 4.6, 9.5, 13, 20 | IMPLEMENTATION FOCUS: determination states and reason-code handling
+LILP-REQ-DET-002 | MANUAL SECTIONS: 4.6, 9.5, 13, 20 | IMPLEMENTATION FOCUS: determination states and reason-code handling
+LILP-REQ-DET-003 | MANUAL SECTIONS: 4.6, 9.5, 13, 20 | IMPLEMENTATION FOCUS: determination states and reason-code handling
+LILP-REQ-DET-004 | MANUAL SECTIONS: 4.6, 9.5, 13, 20 | IMPLEMENTATION FOCUS: determination states and reason-code handling
+LILP-REQ-DET-005 | MANUAL SECTIONS: 4.6, 9.5, 13, 20 | IMPLEMENTATION FOCUS: determination states and reason-code handling
+LILP-REQ-DET-006 | MANUAL SECTIONS: 4.6, 9.5, 13, 20 | IMPLEMENTATION FOCUS: determination states and reason-code handling
+LILP-REQ-DET-007 | MANUAL SECTIONS: 4.6, 9.5, 13, 20 | IMPLEMENTATION FOCUS: determination states and reason-code handling
+LILP-REQ-CLAIM-001 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded claims and claim ceilings
+LILP-REQ-CLAIM-002 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded claims and claim ceilings
+LILP-REQ-CLAIM-003 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded claims and claim ceilings
+LILP-REQ-CLAIM-004 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded claims and claim ceilings
+LILP-REQ-CLAIM-005 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded claims and claim ceilings
+LILP-REQ-CLAIM-006 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded claims and claim ceilings
+LILP-REQ-CLAIM-007 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded claims and claim ceilings
+LILP-REQ-CLAIM-008 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded claims and claim ceilings
+LILP-REQ-CLAIM-009 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded claims and claim ceilings
+LILP-REQ-PROOF-001 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: proof-level evidence and verification records
+LILP-REQ-PROOF-002 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: proof-level evidence and verification records
+LILP-REQ-PROOF-003 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: proof-level evidence and verification records
+LILP-REQ-PROOF-004 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: proof-level evidence and verification records
+LILP-REQ-PROOF-005 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: proof-level evidence and verification records
+LILP-REQ-PROOF-006 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: proof-level evidence and verification records
+LILP-REQ-PROOF-007 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: proof-level evidence and verification records
+LILP-REQ-PROOF-008 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: proof-level evidence and verification records
+LILP-REQ-PROOF-009 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: proof-level evidence and verification records
+LILP-REQ-CONF-001 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-002 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-003 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-004 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-005 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-006 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-007 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-008 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-009 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-010 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-011 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-012 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-013 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-014 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-015 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-016 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-017 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-TEST-001 | MANUAL SECTIONS: 21 | IMPLEMENTATION FOCUS: mandatory falsification-test execution
+LILP-REQ-TEST-002 | MANUAL SECTIONS: 21 | IMPLEMENTATION FOCUS: mandatory falsification-test execution
+LILP-REQ-TEST-003 | MANUAL SECTIONS: 21 | IMPLEMENTATION FOCUS: mandatory falsification-test execution
+LILP-REQ-TEST-004 | MANUAL SECTIONS: 21 | IMPLEMENTATION FOCUS: mandatory falsification-test execution
+LILP-REQ-TEST-005 | MANUAL SECTIONS: 21 | IMPLEMENTATION FOCUS: mandatory falsification-test execution
+LILP-REQ-TEST-006 | MANUAL SECTIONS: 21 | IMPLEMENTATION FOCUS: mandatory falsification-test execution
+LILP-REQ-TEST-007 | MANUAL SECTIONS: 21 | IMPLEMENTATION FOCUS: mandatory falsification-test execution
+LILP-REQ-TEST-008 | MANUAL SECTIONS: 21 | IMPLEMENTATION FOCUS: mandatory falsification-test execution
+LILP-REQ-CONF-018 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-019 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-020 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-CONF-021 | MANUAL SECTIONS: 21, 22, 23 | IMPLEMENTATION FOCUS: conformance testing, evidence packages and traceability
+LILP-REQ-WORD-001 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded conformance wording and public claims
+LILP-REQ-WORD-002 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded conformance wording and public claims
+LILP-REQ-WORD-003 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded conformance wording and public claims
+LILP-REQ-WORD-004 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded conformance wording and public claims
+LILP-REQ-WORD-005 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded conformance wording and public claims
+LILP-REQ-WORD-006 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded conformance wording and public claims
+LILP-REQ-WORD-007 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded conformance wording and public claims
+LILP-REQ-WORD-008 | MANUAL SECTIONS: 4.11, 22 | IMPLEMENTATION FOCUS: bounded conformance wording and public claims
+LILP-REQ-SEC-001 | MANUAL SECTIONS: 18, 19, 22 | IMPLEMENTATION FOCUS: trust boundaries, access and evidence protection
+LILP-REQ-SEC-002 | MANUAL SECTIONS: 18, 19, 22 | IMPLEMENTATION FOCUS: trust boundaries, access and evidence protection
+LILP-REQ-SEC-003 | MANUAL SECTIONS: 18, 19, 22 | IMPLEMENTATION FOCUS: trust boundaries, access and evidence protection
+LILP-REQ-SEC-004 | MANUAL SECTIONS: 18, 19, 22 | IMPLEMENTATION FOCUS: trust boundaries, access and evidence protection
+LILP-REQ-SEC-005 | MANUAL SECTIONS: 18, 19, 22 | IMPLEMENTATION FOCUS: trust boundaries, access and evidence protection
+LILP-REQ-SEC-006 | MANUAL SECTIONS: 18, 19, 22 | IMPLEMENTATION FOCUS: trust boundaries, access and evidence protection
+LILP-REQ-SEC-007 | MANUAL SECTIONS: 18, 19, 22 | IMPLEMENTATION FOCUS: trust boundaries, access and evidence protection
+LILP-REQ-SEC-008 | MANUAL SECTIONS: 18, 19, 22 | IMPLEMENTATION FOCUS: trust boundaries, access and evidence protection
+LILP-REQ-SEC-009 | MANUAL SECTIONS: 18, 19, 22 | IMPLEMENTATION FOCUS: trust boundaries, access and evidence protection
+LILP-REQ-SEC-010 | MANUAL SECTIONS: 18, 19, 22 | IMPLEMENTATION FOCUS: trust boundaries, access and evidence protection
+LILP-REQ-VER-001 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: verification scope and verifier independence
+LILP-REQ-VER-002 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: verification scope and verifier independence
+LILP-REQ-VER-003 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: verification scope and verifier independence
+LILP-REQ-VER-004 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: verification scope and verifier independence
+LILP-REQ-VER-005 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: verification scope and verifier independence
+LILP-REQ-VER-006 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: verification scope and verifier independence
+LILP-REQ-VER-007 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: verification scope and verifier independence
+LILP-REQ-VER-008 | MANUAL SECTIONS: 21, 22 | IMPLEMENTATION FOCUS: verification scope and verifier independence
+LILP-REQ-DEV-001 | MANUAL SECTIONS: 18, 20, 22 | IMPLEMENTATION FOCUS: deviation, exception and deficiency preservation
+LILP-REQ-DEV-002 | MANUAL SECTIONS: 18, 20, 22 | IMPLEMENTATION FOCUS: deviation, exception and deficiency preservation
+LILP-REQ-DEV-003 | MANUAL SECTIONS: 18, 20, 22 | IMPLEMENTATION FOCUS: deviation, exception and deficiency preservation
+LILP-REQ-DEV-004 | MANUAL SECTIONS: 18, 20, 22 | IMPLEMENTATION FOCUS: deviation, exception and deficiency preservation
+LILP-REQ-DEV-005 | MANUAL SECTIONS: 18, 20, 22 | IMPLEMENTATION FOCUS: deviation, exception and deficiency preservation
+LILP-REQ-DEV-006 | MANUAL SECTIONS: 18, 20, 22 | IMPLEMENTATION FOCUS: deviation, exception and deficiency preservation
+LILP-REQ-DEV-007 | MANUAL SECTIONS: 18, 20, 22 | IMPLEMENTATION FOCUS: deviation, exception and deficiency preservation
+LILP-REQ-DEV-008 | MANUAL SECTIONS: 18, 20, 22 | IMPLEMENTATION FOCUS: deviation, exception and deficiency preservation
+LILP-REQ-LIFE-001 | MANUAL SECTIONS: 15, 18 | IMPLEMENTATION FOCUS: successor state and lifecycle change control
+LILP-REQ-LIFE-002 | MANUAL SECTIONS: 15, 18 | IMPLEMENTATION FOCUS: successor state and lifecycle change control
+LILP-REQ-LIFE-003 | MANUAL SECTIONS: 15, 18 | IMPLEMENTATION FOCUS: successor state and lifecycle change control
+LILP-REQ-LIFE-004 | MANUAL SECTIONS: 15, 18 | IMPLEMENTATION FOCUS: successor state and lifecycle change control
+LILP-REQ-LIFE-005 | MANUAL SECTIONS: 15, 18 | IMPLEMENTATION FOCUS: successor state and lifecycle change control
+LILP-REQ-LIFE-006 | MANUAL SECTIONS: 15, 18 | IMPLEMENTATION FOCUS: successor state and lifecycle change control
+LILP-REQ-LIFE-007 | MANUAL SECTIONS: 15, 18 | IMPLEMENTATION FOCUS: successor state and lifecycle change control
+LILP-REQ-LIFE-008 | MANUAL SECTIONS: 15, 18 | IMPLEMENTATION FOCUS: successor state and lifecycle change control
+LILP-REQ-MATR-001 | MANUAL SECTIONS: 23 | IMPLEMENTATION FOCUS: requirements-matrix construction
+LILP-REQ-MATR-002 | MANUAL SECTIONS: 23 | IMPLEMENTATION FOCUS: requirements-matrix construction
+LILP-REQ-MATR-003 | MANUAL SECTIONS: 23 | IMPLEMENTATION FOCUS: requirements-matrix construction
+LILP-REQ-MATR-004 | MANUAL SECTIONS: 23 | IMPLEMENTATION FOCUS: requirements-matrix construction
+LILP-REQ-MATR-005 | MANUAL SECTIONS: 23 | IMPLEMENTATION FOCUS: requirements-matrix construction
+LILP-REQ-MATR-006 | MANUAL SECTIONS: 23 | IMPLEMENTATION FOCUS: requirements-matrix construction
+LILP-REQ-MATR-007 | MANUAL SECTIONS: 23 | IMPLEMENTATION FOCUS: requirements-matrix construction
+LILP-REQ-FREEZE-001 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-002 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-003 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-004 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-005 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-006 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-007 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-008 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-009 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-010 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-011 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-012 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-013 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-014 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-015 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+LILP-REQ-FREEZE-016 | MANUAL SECTIONS: 22, 23 | IMPLEMENTATION FOCUS: frozen-artifact evidence and freeze traceability
+
+======================================================================
+24. OPERATIONAL-LAYER STATUS
+======================================================================
+
+The MAN-001 operational layer now provides implementation guidance for:
+
+- database and persistence architecture;
+- historical-record preservation;
+- transaction boundaries;
+- API and service boundaries;
+- authority-sensitive execution interfaces;
+- reason and refusal codes;
+- infrastructure-error separation;
+- mandatory falsification-test harness structure;
+- control-versus-changed-run methodology;
+- governance-gate bypass testing;
+- failed-test preservation;
+- conformance evidence-package construction;
+- manifest and hash handling;
+- deficiency preservation;
+- independent examination boundaries;
+- and complete requirement-to-manual traceability.
+
+The traceability table was generated from the frozen standard rather
+than from a manually recreated requirement list.
+
+Expected frozen requirement count:
+
+191
+
+MAN-001 remains a WORKING DRAFT.
+
+No requirement is deemed conformant merely because it has been mapped
+to implementation guidance.
+
+THE FROZEN STANDARD CONTROLS.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+======================================================================
+25. DEPLOYMENT READINESS CHECKLIST
+======================================================================
+
+IMPLEMENTATION GUIDANCE
+
+This checklist helps an implementation team determine whether the
+governance mechanisms described by this manual are actually connected
+to the consequential execution path.
+
+It does not itself establish conformance.
+
+----------------------------------------------------------------------
+25.1 IDENTITY
+----------------------------------------------------------------------
+
+Before deployment, confirm:
+
+[ ] consequential actors have stable identities;
+
+[ ] governed subjects have stable identities where required;
+
+[ ] tenant boundaries are explicit where applicable;
+
+[ ] chain identity is explicit where continuity matters;
+
+[ ] authentication is not being treated automatically as governance
+    authority;
+
+[ ] object hashes can be reproduced where cryptographic identity is
+    claimed.
+
+
+----------------------------------------------------------------------
+25.2 EVIDENCE
+----------------------------------------------------------------------
+
+Confirm:
+
+[ ] direct observation can be stored separately from interpretation;
+
+[ ] source identity can be preserved where material;
+
+[ ] evidence acquisition time is captured;
+
+[ ] evidence payload identity can be verified where claimed;
+
+[ ] missing evidence remains representable;
+
+[ ] historical evidence is not silently rewritten by correction.
+
+
+----------------------------------------------------------------------
+25.3 AUTHORITY
+----------------------------------------------------------------------
+
+Confirm:
+
+[ ] current authority can be queried independently from historical
+    authority;
+
+[ ] authority class is explicit;
+
+[ ] authority scope is explicit;
+
+[ ] jurisdiction is represented where relevant;
+
+[ ] expiry can be detected;
+
+[ ] revocation can be detected;
+
+[ ] suspension can be detected where supported;
+
+[ ] capability can remain present while execution authority is absent.
+
+
+----------------------------------------------------------------------
+25.4 GOVERNING STATE
+----------------------------------------------------------------------
+
+Confirm:
+
+[ ] contemplated effect is bound before consequential execution;
+
+[ ] policy identity is preserved;
+
+[ ] scope is preserved;
+
+[ ] temporal context is preserved;
+
+[ ] evidence references are preserved;
+
+[ ] authority references are preserved;
+
+[ ] predecessor state is preserved where relevant;
+
+[ ] canonical state identity can be reproduced.
+
+
+----------------------------------------------------------------------
+25.5 MATERIAL CHANGE
+----------------------------------------------------------------------
+
+Confirm:
+
+[ ] predecessor and current conditions can be compared;
+
+[ ] material authority change triggers reassessment;
+
+[ ] material standing change triggers reassessment;
+
+[ ] material evidence change can trigger reassessment;
+
+[ ] material policy or scope change can trigger reassessment;
+
+[ ] unknown materiality can remain NOT_ESTABLISHED;
+
+[ ] predecessor state remains preserved.
+
+
+----------------------------------------------------------------------
+25.6 EXECUTION GATE
+----------------------------------------------------------------------
+
+Confirm:
+
+[ ] the consequential execution adapter cannot legitimately proceed
+    without a gate result;
+
+[ ] mandatory FAILED predicates withhold execution;
+
+[ ] mandatory NOT_ESTABLISHED predicates withhold execution;
+
+[ ] stale determinations can be invalidated;
+
+[ ] relevant current state is rechecked where TOCTOU risk exists;
+
+[ ] bypass paths have been identified for falsification testing.
+
+
+----------------------------------------------------------------------
+25.7 EXECUTION AND CONSEQUENCE
+----------------------------------------------------------------------
+
+Confirm:
+
+[ ] request creation is distinguishable from transmission;
+
+[ ] transmission is distinguishable from provider acceptance;
+
+[ ] provider acceptance is distinguishable from completion;
+
+[ ] completion is distinguishable from downstream consequence;
+
+[ ] unavailable consequence evidence can remain NOT_ESTABLISHED.
+
+
+----------------------------------------------------------------------
+25.8 RECEIPTS
+----------------------------------------------------------------------
+
+Confirm:
+
+[ ] receipt identifiers are unique;
+
+[ ] receipt creation is collision-protected;
+
+[ ] predecessor receipt relationships can be represented;
+
+[ ] receipts bind to governing-state identity;
+
+[ ] determination is recorded;
+
+[ ] execution status is recorded;
+
+[ ] consequence status is recorded separately;
+
+[ ] claim ceiling is preserved;
+
+[ ] receipt hash can be reproduced where claimed.
+
+
+----------------------------------------------------------------------
+25.9 CLAIMS
+----------------------------------------------------------------------
+
+Confirm:
+
+[ ] claim generation reads preserved evidence;
+
+[ ] wider unsupported claims can be refused;
+
+[ ] self-assessment is not called independent verification;
+
+[ ] internal conformance is not called external certification;
+
+[ ] hash verification is not represented as truth verification;
+
+[ ] execution attempt is not represented as completed consequence.
+
+
+======================================================================
+26. OPERATOR RUNBOOK
+======================================================================
+
+IMPLEMENTATION GUIDANCE
+
+This runbook describes a recommended operator sequence for a governed
+consequential event.
+
+----------------------------------------------------------------------
+26.1 BEFORE DETERMINATION
+----------------------------------------------------------------------
+
+Operator should establish:
+
+1. What action is being contemplated?
+
+2. What subject or target is affected?
+
+3. Which actor is requesting the action?
+
+4. What authority class is required?
+
+5. What evidence is mandatory?
+
+6. Which policy governs?
+
+7. What scope and jurisdiction apply?
+
+8. What historical state is relevant?
+
+9. Has any material change occurred?
+
+If a required answer cannot be established:
+
+do not fill the gap with assumption.
+
+Represent the uncertainty.
+
+----------------------------------------------------------------------
+26.2 DETERMINATION
+----------------------------------------------------------------------
+
+The operator or governed system should inspect:
+
+identity
+authority
+standing
+admissibility
+evidence
+policy
+scope
+jurisdiction
+temporal state
+contemplated consequence
+
+Recommended determination set:
+
+ALLOW
+HOLD
+DENY
+ESCALATE
+
+Structural results remain separately representable:
+
+NOT ESTABLISHED
+INVALID
+NEW CHAIN REQUIRED
+
+----------------------------------------------------------------------
+26.3 BEFORE EXECUTION
+----------------------------------------------------------------------
+
+Immediately before consequential execution:
+
+1. recheck current authority;
+
+2. recheck temporal validity;
+
+3. check for relevant material delta;
+
+4. confirm contemplated effect has not changed;
+
+5. confirm governing-state identity;
+
+6. confirm no mandatory predicate is FAILED;
+
+7. confirm no mandatory predicate is NOT_ESTABLISHED.
+
+If the governing state materially changed:
+
+WITHHOLD.
+
+Create or evaluate the successor state.
+
+----------------------------------------------------------------------
+26.4 AFTER EXECUTION ATTEMPT
+----------------------------------------------------------------------
+
+Record what is actually established.
+
+Possible progression:
+
+REQUEST CREATED
+REQUEST SENT
+REQUEST ACCEPTED
+EXECUTION ATTEMPTED
+EXECUTION COMPLETED
+CONSEQUENCE OBSERVED
+
+Do not skip stages merely because the later outcome was expected.
+
+----------------------------------------------------------------------
+26.5 AFTER FAILURE
+----------------------------------------------------------------------
+
+If execution fails:
+
+preserve failure.
+
+Do not manufacture:
+
+COMPLETED
+
+Do not erase:
+
+ATTEMPTED
+
+Record the bounded failure state and supporting evidence.
+
+----------------------------------------------------------------------
+26.6 AFTER REFUSAL
+----------------------------------------------------------------------
+
+A refusal should preserve:
+
+reason code
+governing state
+relevant predicate
+evidence
+time
+claim ceiling
+
+Refusal is not necessarily malfunction.
+
+It may be the correct governance outcome.
+
+======================================================================
+27. VERIFIER RUNBOOK
+======================================================================
+
+IMPLEMENTATION GUIDANCE
+
+A verifier should begin by defining the exact proposition under
+examination.
+
+Example:
+
+"Did the pre-execution gate withhold execution after authority was
+revoked?"
+
+This is better than:
+
+"Is the system trustworthy?"
+
+The first proposition is bounded and technically examinable.
+
+----------------------------------------------------------------------
+27.1 VERIFY ARTIFACT IDENTITY
+----------------------------------------------------------------------
+
+Recommended sequence:
+
+1. identify package;
+
+2. calculate package digest;
+
+3. compare expected digest;
+
+4. inspect manifest;
+
+5. re-hash material artifacts;
+
+6. report any mismatch.
+
+A successful hash check establishes byte identity only.
+
+----------------------------------------------------------------------
+27.2 VERIFY SCOPE
+----------------------------------------------------------------------
+
+Identify:
+
+standard version
+profile
+system
+component
+workflow
+time period
+test environment
+excluded dependencies
+
+Do not expand the scope while reporting the result.
+
+----------------------------------------------------------------------
+27.3 VERIFY GOVERNING STATE
+----------------------------------------------------------------------
+
+Inspect whether the determination is bound to an identifiable
+governing state.
+
+Check:
+
+state identity
+authority reference
+evidence references
+policy
+scope
+temporal context
+contemplated effect
+
+----------------------------------------------------------------------
+27.4 VERIFY CHANGE
+----------------------------------------------------------------------
+
+Where a changed run is claimed:
+
+inspect predecessor
+inspect candidate successor
+inspect Delta Object
+inspect evidence supporting change
+
+Do not accept a prose description of a change as equivalent to preserved
+evidence of the change where stronger evidence is required by the
+declared method.
+
+----------------------------------------------------------------------
+27.5 VERIFY EXECUTION
+----------------------------------------------------------------------
+
+Inspect independently:
+
+determination
+gate result
+execution attempt
+execution completion
+consequence
+
+Do not infer one from another without the evidence required for that
+inference.
+
+----------------------------------------------------------------------
+27.6 VERIFY CLAIM CEILING
+----------------------------------------------------------------------
+
+Ask:
+
+"What is the strongest proposition directly supported by these
+artifacts?"
+
+Then ask:
+
+"What broader propositions are NOT established?"
+
+Record both where useful.
+
+----------------------------------------------------------------------
+27.7 REPRODUCTION
+----------------------------------------------------------------------
+
+If independent reproduction is claimed, verify that the supplied
+package actually contains or validly references what is needed to
+reproduce the result.
+
+Potential requirements include:
+
+test harness
+source code
+configuration
+input
+expected output
+environment description
+dependencies
+external-state conditions
+
+If these are absent:
+
+do not call an inspection a full reproduction.
+
+======================================================================
+28. PRODUCTION FAILURE HANDLING
+======================================================================
+
+IMPLEMENTATION GUIDANCE
+
+A production incident should be classified before corrective action
+alters the evidence required to understand it.
+
+Recommended sequence:
+
+OBSERVE
+PRESERVE
+CONTAIN
+CLASSIFY
+CORRECT
+RETEST
+CREATE SUCCESSOR
+REASSESS CLAIM
+
+----------------------------------------------------------------------
+28.1 PRESERVE BEFORE REPAIR
+----------------------------------------------------------------------
+
+Where safe and lawful:
+
+capture the state that failed before changing it.
+
+Potential evidence:
+
+application logs
+governing-state object
+authority state
+policy version
+request payload
+response payload
+receipt
+database state reference
+container or build identity
+external provider response
+
+Do not destroy the evidence needed to explain the predecessor solely
+because repair is urgent.
+
+----------------------------------------------------------------------
+28.2 FAILURE CLASSES
+----------------------------------------------------------------------
+
+Useful operational classes may include:
+
+INFRASTRUCTURE_FAILURE
+
+Examples:
+
+database unavailable
+network unavailable
+provider unavailable
+
+
+GOVERNANCE_FAILURE
+
+Examples:
+
+authority revoked
+required evidence missing
+standing not established
+
+
+INTEGRITY_FAILURE
+
+Examples:
+
+hash mismatch
+signature verification failure
+unexpected artifact mutation
+
+
+CONTINUITY_FAILURE
+
+Examples:
+
+required identity continuity cannot be established
+
+
+EXECUTION_FAILURE
+
+Examples:
+
+provider rejected operation
+tool invocation failed
+
+
+CONSEQUENCE_UNCERTAINTY
+
+Examples:
+
+request completed locally but downstream consequence cannot be
+established
+
+
+TEST_FAILURE
+
+Examples:
+
+bypass test succeeded
+expected refusal did not occur
+
+
+----------------------------------------------------------------------
+28.3 CORRECTIVE ACTION
+----------------------------------------------------------------------
+
+Correction should produce a successor state.
+
+Recommended lineage:
+
+INCIDENT
+    |
+    v
+FAILED PREDECESSOR
+    |
+    v
+DEFICIENCY RECORD
+    |
+    v
+CORRECTION
+    |
+    v
+SUCCESSOR BUILD / STATE
+    |
+    v
+RETEST
+    |
+    v
+NEW RESULT
+
+The later passing result does not erase the incident.
+
+----------------------------------------------------------------------
+28.4 EMERGENCY OVERRIDE
+----------------------------------------------------------------------
+
+If a domain requires an emergency override mechanism:
+
+the override should itself have:
+
+identity
+authority
+scope
+reason
+time boundary
+contemplated consequence
+receipt
+
+An emergency label should not mean unrestricted execution.
+
+======================================================================
+29. WORKED END-TO-END EXAMPLES
+======================================================================
+
+These examples demonstrate the implementation discipline.
+
+They do not establish conformance of any actual external system.
+
+----------------------------------------------------------------------
+29.1 EXAMPLE A — AUTHORITY REMAINS VALID
+----------------------------------------------------------------------
+
+T0
+
+Authority:
+ACTIVE
+
+Standing:
+ESTABLISHED
+
+Evidence:
+ESTABLISHED
+
+Policy:
+PERMITS
+
+Contemplated effect:
+WITHIN SCOPE
+
+Determination:
+ALLOW
+
+Immediately before execution:
+
+authority remains ACTIVE
+state hash remains current
+no material delta detected
+
+Gate:
+PERMIT
+
+Execution:
+ATTEMPTED
+
+Provider response:
+ACCEPTED
+
+Downstream consequence:
+OBSERVED
+
+Receipt may record:
+
+determination = ALLOW
+execution_status = COMPLETED
+consequence_status = OBSERVED
+
+Claim ceiling:
+
+Within the declared evidence and scope, the governed execution and
+observed consequence are established.
+
+This does not create a universal safety or compliance claim.
+
+
+----------------------------------------------------------------------
+29.2 EXAMPLE B — AUTHORITY REVOKED AFTER DETERMINATION
+----------------------------------------------------------------------
+
+T0
+
+Authority:
+ACTIVE
+
+Determination:
+ALLOW
+
+Delta occurs before execution.
+
+T1
+
+Authority:
+REVOKED
+
+Delta:
+DELTA-A
+
+Affected predicate:
+EXECUTION_AUTHORITY
+
+Pre-execution gate:
+
+FAILED
+
+Execution:
+NOT_ATTEMPTED
+
+Consequence:
+NOT_APPLICABLE
+
+Determination path:
+
+HOLD or DENY
+
+depending upon governing policy.
+
+Claim ceiling:
+
+Historical authority at T0 is established.
+
+Current execution authority at T1 is not valid for the contemplated
+effect.
+
+Execution was withheld.
+
+The historical T0 ALLOW remains preserved but is not reused as present
+execution authority.
+
+
+----------------------------------------------------------------------
+29.3 EXAMPLE C — EVIDENCE MISSING
+----------------------------------------------------------------------
+
+Identity:
+ESTABLISHED
+
+Authority:
+ESTABLISHED
+
+Required provider evidence:
+NOT_ESTABLISHED
+
+Gate predicate:
+NOT_ESTABLISHED
+
+Execution:
+WITHHELD
+
+Receipt:
+
+reason =
+LILP-HOLD-EVIDENCE-NOT-ESTABLISHED
+
+Claim ceiling:
+
+Execution was withheld because required evidence was not established.
+
+Do not claim:
+
+the missing proposition is false
+
+unless separate evidence establishes that conclusion.
+
+
+----------------------------------------------------------------------
+29.4 EXAMPLE D — EXECUTION ATTEMPT WITHOUT CONSEQUENCE PROOF
+----------------------------------------------------------------------
+
+Gate:
+PERMIT
+
+External request:
+SENT
+
+Provider acknowledgement:
+RECEIVED
+
+Execution attempt:
+ESTABLISHED
+
+Downstream state:
+UNAVAILABLE
+
+Consequence:
+NOT_ESTABLISHED
+
+Permitted bounded statement:
+
+"Execution attempt established; downstream consequence NOT
+ESTABLISHED."
+
+Do not state:
+
+"Operation successfully completed"
+
+without supporting evidence.
+
+
+----------------------------------------------------------------------
+29.5 EXAMPLE E — IDENTITY CONTINUITY GAP
+----------------------------------------------------------------------
+
+Historical object:
+OBJECT-A
+
+Candidate successor:
+OBJECT-B
+
+Shared human-readable label:
+YES
+
+Required identity-continuity evidence:
+ABSENT
+
+Result:
+
+NOT_ESTABLISHED
+
+or:
+
+NEW_CHAIN_REQUIRED
+
+depending upon the governing examination.
+
+Do not manufacture the missing identity bridge.
+
+
+----------------------------------------------------------------------
+29.6 EXAMPLE F — RECEIPT COLLISION
+----------------------------------------------------------------------
+
+Requested receipt ID:
+
+RCPT-0007
+
+Existing file:
+
+RCPT-0007
+
+CreateNew result:
+
+FAIL — PATH EXISTS
+
+Correct handling:
+
+preserve RCPT-0007
+do not overwrite it
+record material collision if required
+allocate explicit successor identity if continuation is legitimate
+
+Incorrect handling:
+
+replace RCPT-0007 with new bytes under the same identity.
+
+
+----------------------------------------------------------------------
+29.7 EXAMPLE G — FAILED TEST THEN CORRECTED SUCCESSOR
+----------------------------------------------------------------------
+
+RUN-01
+
+Expected:
+execution withheld after authority revocation
+
+Observed:
+execution reached adapter
+
+Result:
+FAIL
+
+Preserve RUN-01.
+
+Correct implementation.
+
+RUN-02
+
+Expected:
+execution withheld after authority revocation
+
+Observed:
+execution withheld
+
+Result:
+PASS
+
+Permitted statement:
+
+"RUN-02 passed after correction. RUN-01 remains preserved as the
+predecessor failure."
+
+Do not state:
+
+"The system never allowed execution after revocation."
+
+
+======================================================================
+30. MANUAL PRE-FREEZE VERIFICATION PROCEDURE
+======================================================================
+
+This procedure governs freezing of MAN-001 itself.
+
+It does not establish implementation conformance.
+
+Before MAN-001 v0.1 is frozen, the whole candidate should be examined
+for the following properties.
+
+----------------------------------------------------------------------
+30.1 BYTE IDENTITY
+----------------------------------------------------------------------
+
+Record:
+
+manual byte length
+manual SHA-256
+
+Recalculate them immediately before freeze.
+
+
+----------------------------------------------------------------------
+30.2 STANDARD BINDING
+----------------------------------------------------------------------
+
+Verify the manual still contains the frozen normative binding:
+
+ELIAS-LILP-STD-001 v0.1
+
+SHA-256:
+
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+
+----------------------------------------------------------------------
+30.3 LEXICON BINDING
+----------------------------------------------------------------------
+
+Verify the manual still contains:
+
+ELIAS-LILP-LEX-001 v0.1
+
+SHA-256:
+
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+
+----------------------------------------------------------------------
+30.4 TRACEABILITY
+----------------------------------------------------------------------
+
+Verify:
+
+frozen normative requirements = 191
+
+manual traceability rows = 191
+
+unique traceability IDs = 191
+
+unmapped frozen requirements = 0
+
+
+----------------------------------------------------------------------
+30.5 SECTION STRUCTURE
+----------------------------------------------------------------------
+
+Verify every intended major section is present once.
+
+Sections:
+
+0 through 30
+
+
+----------------------------------------------------------------------
+30.6 TRANSCRIPT CONTAMINATION
+----------------------------------------------------------------------
+
+Inspect for accidental embedded terminal prompts including:
+
+PS C:\
+
+and:
+
+>>
+
+
+----------------------------------------------------------------------
+30.7 TEMPLATE CONTAMINATION
+----------------------------------------------------------------------
+
+Inspect for unresolved placeholders such as:
+
+__PLACEHOLDER__
+
+
+----------------------------------------------------------------------
+30.8 SEMANTIC AUTHORITY BOUNDARY
+----------------------------------------------------------------------
+
+Verify the manual continues to state that:
+
+THE FROZEN STANDARD CONTROLS.
+
+Implementation guidance must not silently become a new normative
+requirement.
+
+
+----------------------------------------------------------------------
+30.9 CORE DISTINCTIONS
+----------------------------------------------------------------------
+
+Verify the manual preserves the distinctions between:
+
+authentication and governance authority
+capability and authority
+observation and interpretation
+historical and current authority
+determination and execution
+execution and consequence
+failure and NOT ESTABLISHED
+predecessor and successor
+hash identity and truth
+self-assessment and independent verification
+
+
+----------------------------------------------------------------------
+30.10 CLAIM BOUNDARY
+----------------------------------------------------------------------
+
+Verify the manual does not claim that its own completion establishes:
+
+implementation conformance
+independent certification
+ISO adoption
+IEC adoption
+regulatory approval
+government approval
+industry adoption
+universal safety
+universal security
+
+
+----------------------------------------------------------------------
+30.11 FROZEN ANCESTOR INTEGRITY
+----------------------------------------------------------------------
+
+Recalculate:
+
+STD-001 frozen SHA-256
+LEX-001 frozen SHA-256
+
+A MAN-001 freeze should not mutate either ancestor.
+
+
+----------------------------------------------------------------------
+30.12 FREEZE MECHANISM
+----------------------------------------------------------------------
+
+The final manual freeze should:
+
+1. verify candidate identity;
+
+2. create a byte-identical frozen copy;
+
+3. use collision-protected receipt creation;
+
+4. record the manual hash and byte length;
+
+5. bind the frozen standard and lexicon identities;
+
+6. preserve historical working-draft wording rather than rewriting the
+   verified candidate;
+
+7. create a separate freeze receipt;
+
+8. preserve a successor rule.
+
+======================================================================
+31. MANUAL CONTENT CLOSURE
+======================================================================
+
+ELIAS-LILP-MAN-001 v0.1 now contains implementation guidance covering:
+
+- architecture;
+- identity;
+- observation;
+- evidence;
+- interpretation;
+- authority;
+- governing state;
+- material change;
+- continuity;
+- determination;
+- pre-execution gating;
+- execution;
+- consequence;
+- witnessing;
+- receipts;
+- bounded claims;
+- canonicalisation;
+- object representations;
+- storage patterns;
+- API boundaries;
+- refusal and reason codes;
+- test harnesses;
+- falsification testing;
+- evidence packages;
+- full 191-requirement traceability;
+- deployment readiness;
+- operator procedure;
+- verifier procedure;
+- production failure handling;
+- successor correction;
+- worked examples;
+- and manual pre-freeze verification.
+
+MAN-001 remains implementation guidance.
+
+It does not replace the frozen normative standard.
+
+It does not independently establish conformance of any implementation.
+
+Where MAN-001 differs from the frozen normative standard:
+
+THE FROZEN STANDARD CONTROLS.
+
+STATUS:
+
+MANUAL WORKING CANDIDATE COMPLETE
+NOT YET FROZEN
+
+PRESERVE THE ANCESTOR.
+PRESERVE THE DEFICIENCY.
+EXAMINE THE SUCCESSOR.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+ELIAS SYSTEMS LTD
+1 OCTOBER 2026
+

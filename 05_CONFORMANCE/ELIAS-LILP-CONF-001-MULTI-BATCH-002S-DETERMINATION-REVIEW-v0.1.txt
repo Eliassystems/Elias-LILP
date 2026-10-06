@@ -1,0 +1,28 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002S v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 130
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 132
+
+TRUE UNRESOLVED BEFORE BATCH 002S: 12
+TRUE UNRESOLVED AFTER BATCH 002S: 10
+
+DEV-002:
+NEW_TEST_REQUIRED -> LILP-TC-T13-009 RESERVED
+Distinct obligation: the deviation record contains the complete required field set.
+
+LIFE-008:
+NEW_TEST_REQUIRED -> LILP-TC-T14-008 RESERVED
+Distinct obligation: previous conformance claims remain bounded to the exact standard version under which they were established.
+
+T13-009 and T14-008 are reserved only.
+T13-010 remains unreserved.
+T14-009 remains unreserved.
+Test register remains at 142 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

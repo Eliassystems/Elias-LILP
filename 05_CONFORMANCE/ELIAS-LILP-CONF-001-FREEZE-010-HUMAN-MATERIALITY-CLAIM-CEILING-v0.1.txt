@@ -1,0 +1,85 @@
+ELIAS LILP CONF-001
+FREEZE-010 HUMAN MATERIALITY DETERMINATION — CLAIM CEILING v0.1
+
+RECORDED UTC:
+2026-10-04T10:32:05.080Z
+
+REVIEWER ID:
+Gary williams
+
+REVIEWER AUTHORITY:
+ELIAS_SYSTEMS_FOUNDER_AND_AUTHORIZED_HUMAN_REVIEWER
+
+AUTHORITY BOUNDARY:
+INTERNAL ELIAS SYSTEMS HUMAN REVIEW AUTHORITY ONLY
+
+TERM:
+CLAIM CEILING
+
+SOURCE MATERIALITY EVIDENCE SUPPORT:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-010-MATERIALITY-EVIDENCE-SUPPORT-v0.2.csv
+
+SOURCE SUPPORT SHA-256:
+88FBAFD23BF9FDA903273C461CFDAB5268E08132EEEAD3DE86371FAD5A2F6F2F
+
+SOURCE BASIS:
+LEXICON_CURRENT_NORMATIVE_TERM_USED_IN_STANDARD
+
+STANDARD OCCURRENCE COUNT:
+7
+
+LEXICON HEADING:
+CLAIM CEILING
+
+LEXICON CLASS OBSERVATION:
+CURRENT | DOCTRINE | TECHNICAL | CURRENT NORMATIVE
+
+LEXICON DEFINITION:
+The maximum claim supported by the available evidence.
+
+LEXICON BOUNDARY:
+No claim may outrun the evidence preserved to support it.
+
+HUMAN MATERIALITY DETERMINATION:
+MATERIAL
+
+REVIEWER RATIONALE:
+Claim ceiling is materially normative because the frozen standard establishes a dedicated claim-ceiling requirement, requires the claim ceiling to be evaluated independently from system, model, operator or commercial confidence, and defines it as the maximum claim supported by preserved evidence. The term therefore directly constrains what may legitimately be asserted and prevents confidence or capability from extending a claim beyond the evidence available to support it.
+
+BOUNDARY:
+
+This record establishes only the named human reviewer's bounded
+materiality determination for the term:
+
+CLAIM CEILING
+
+within the FREEZE-010 material-term inventory process.
+
+It does NOT establish:
+
+- semantic compatibility;
+- explicit narrowing;
+- material conflict;
+- material-term inventory completeness;
+- FREEZE-010 PASS;
+- execution input binding;
+- harness execution;
+- test result;
+- independent verification;
+- certification;
+- or conformance.
+
+SEMANTIC CLASSIFICATION:
+NOT_PERFORMED
+
+EXECUTION INPUT BINDING:
+NOT_ESTABLISHED
+
+HARNESS EXECUTION:
+NOT_EXECUTED
+
+RESULT:
+NOT_TESTED
+
+CONFORMANCE:
+NOT_ESTABLISHED

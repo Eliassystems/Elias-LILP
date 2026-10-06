@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002F v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 104
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 106
+
+COVERED_BY_EXISTING: 1
+NEW_TEST_REQUIRED: 1
+
+CONF-021:
+COVERED_BY_EXISTING -> LILP-TC-T16-001
+The conformance claim remains bounded to established evidence and evaluated scope.
+
+WORD-001:
+NEW_TEST_REQUIRED -> LILP-TC-T16-022 RESERVED
+Distinct obligation: a self-assessed PASS must identify itself as self-assessed where ambiguity with independent verification could otherwise arise.
+
+T16-022 is reserved only.
+T16-023 remains unreserved.
+Test register remains at 127 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

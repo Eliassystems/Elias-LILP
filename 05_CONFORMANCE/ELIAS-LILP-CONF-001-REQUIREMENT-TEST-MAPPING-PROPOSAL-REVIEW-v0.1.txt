@@ -1,0 +1,59 @@
+ELIAS LILP CONF-001
+REQUIREMENT-TO-TEST MAPPING PROPOSAL REVIEW v0.1
+
+Scope:
+Six post-2W semantic gaps resolved at test-definition layer.
+
+Proposal rows:
+6
+
+Source requirement matrix:
+ELIAS-LILP-CONF-001-REQUIREMENT-MATRIX-v0.3.csv
+SHA-256:
+7EAB99878691315145879458EFFFC020E5F0FBA1F78C1BD168480CE00193F537
+
+Source test register:
+ELIAS-LILP-CONF-001-TEST-CASE-CANDIDATE-v4.12.csv
+SHA-256:
+5A5744AB52EDDC7962754BBC44FD153EC0CFF3A6B554E2093B1A148308709EFB
+
+Historical coverage:
+ELIAS-LILP-CONF-001-REQUIREMENT-TEST-COVERAGE-CANDIDATE-v4.6.csv
+SHA-256:
+7AFADA6BC6365DBC8D6F43008296F07A4F672E39DD7F3CAB0D46769870AE65F3
+
+Proposal:
+ELIAS-LILP-CONF-001-REQUIREMENT-TEST-MAPPING-PROPOSAL-v0.1.csv
+
+Proposal SHA-256:
+8FD110FA893E3F52C4BE13BAA2851D1E19DA7C71AB3E907362B0DC519C66A230
+
+Proposal byte length:
+4581
+
+Proposed pairs:
+
+LILP-REQ-FREEZE-001 -> LILP-TC-T14-012
+LILP-REQ-FREEZE-006 -> LILP-TC-T14-013
+LILP-REQ-FREEZE-007 -> LILP-TC-T14-014
+LILP-REQ-FREEZE-008 -> LILP-TC-T14-015
+LILP-REQ-FREEZE-010 -> LILP-TC-T14-016
+LILP-REQ-FREEZE-012 -> LILP-TC-T16-029
+
+Status:
+PROPOSED_NOT_ESTABLISHED
+
+Verification method:
+NOT_ESTABLISHED
+
+Authority boundary:
+The proposal does not modify matrix v0.3.
+The proposal does not modify test register v4.12.
+The proposal does not modify historical coverage v4.6.
+The proposal does not establish authoritative requirement-to-test mapping.
+The proposal does not establish harness binding.
+The proposal does not execute a test.
+The proposal does not establish a result.
+The proposal does not establish conformance.
+
+LOCK IT. LOG IT. PROVE IT.

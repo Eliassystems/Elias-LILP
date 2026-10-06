@@ -1,0 +1,3946 @@
+﻿ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+ELIAS SYSTEMS CONSOLIDATED
+SEMANTIC, SYMBIOTIC & GOVERNANCE LEXICON
+
+Document ID: ELIAS-LILP-LEX-001
+Version: v0.1
+Date: 2026-10-01
+Status: CONSOLIDATED WORKING LEXICON
+Standard Series: ELIAS-LILP
+
+======================================================================
+PURPOSE
+======================================================================
+
+This lexicon defines and preserves terminology used across the
+historical and current Elias Systems body of work.
+
+It exists to:
+
+- preserve the language through which Elias concepts developed;
+- distinguish historical terminology from current technical terminology;
+- reduce semantic ambiguity;
+- define the meaning of terms used by the LILP standard;
+- preserve predecessor and successor relationships;
+- prevent retrospective rewriting of conceptual history;
+- and provide a stable semantic reference for implementation,
+  examination and conformance work.
+
+======================================================================
+CLASSIFICATION SYSTEM
+======================================================================
+
+FOUNDATIONAL
+
+A root Elias term associated with the underlying human, philosophical
+or ethical basis of the architecture.
+
+HISTORICAL
+
+A term preserved from an earlier Elias development phase.
+
+CURRENT
+
+A term presently used within Elias Systems architecture.
+
+DOCTRINE
+
+A named Elias principle, invariant or operating rule.
+
+TECHNICAL
+
+A term capable of being represented, implemented, tested, measured,
+verified or falsified within a technical system.
+
+CURRENT NORMATIVE
+
+A term whose bounded definition governs interpretation within the
+relevant LILP technical-standard artifact.
+
+======================================================================
+PROVENANCE RULE
+======================================================================
+
+This consolidated lexicon contains terminology from multiple periods
+of Elias development.
+
+Inclusion of a term does not claim that every term originated on the
+same date or that every historical definition existed in its present
+wording when the term first appeared.
+
+Historical terminology must remain distinguishable from successor and
+current normative terminology.
+
+Where original source material is available, provenance may be linked
+to that preserved source.
+
+Where exact historical wording has not yet been independently
+recovered, the current entry is a consolidated definition and must not
+be represented as a verbatim historical quotation.
+
+No later clarification may silently rewrite an earlier frozen version
+of this lexicon.
+
+A material correction requires a successor version.
+
+======================================================================
+LEXICON ENTRY MODEL
+======================================================================
+
+TERM
+
+CLASS:
+FOUNDATIONAL | HISTORICAL | CURRENT | DOCTRINE | TECHNICAL |
+CURRENT NORMATIVE
+
+DEFINITION:
+The bounded meaning assigned to the term within Elias Systems.
+
+BOUNDARY:
+Where necessary, what the term does not establish or mean.
+
+RELATIONSHIP:
+Relevant predecessor, successor or connected Elias concepts.
+
+PROVENANCE:
+Historical or source information where established.
+
+======================================================================
+CORE SEMANTIC RULE
+======================================================================
+
+Words used within Elias Systems must not silently acquire broader
+authority than their defined meaning permits.
+
+Where a term has a specific LILP definition, that bounded definition
+governs interpretation within the relevant LILP artifact.
+
+======================================================================
+A-Z LEXICON
+======================================================================
+
+
+======================================================================
+# A
+======================================================================
+
+AWARENESS
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+Recognition of self, context, relationship, condition and consequence.
+
+
+ADAPTIVE MORAL PARAMETER MODULE
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+An early Elias concept for adapting system behaviour within ethical
+constraints rather than allowing unrestricted optimisation.
+
+
+ADMISSIBILITY
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The established condition under which an object, proposition, request,
+state or contemplated consequence may enter or continue within a
+defined governance boundary.
+
+BOUNDARY:
+Admissibility does not itself establish execution authority.
+
+
+ALIGNMENT DRIFT
+
+CLASS:
+HISTORICAL | CURRENT
+
+DEFINITION:
+Progressive divergence between intended values, governing conditions
+and actual system behaviour.
+
+
+AMBIGUITY PRESERVATION
+
+CLASS:
+CURRENT | DOCTRINE
+
+DEFINITION:
+The requirement to preserve genuine ambiguity or uncertainty rather
+than converting incomplete evidence into unjustified certainty.
+
+
+ANCESTRAL BANDWIDTH
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias term for preserved connection to prior knowledge,
+memory, experience or inherited human context.
+
+
+ANCESTRAL CONTINUITY
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Preservation of relationship between present intelligence and prior
+human knowledge, experience and meaning.
+
+
+ATTESTATION
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A statement by an identified actor or system asserting that a state,
+fact or event exists or occurred.
+
+BOUNDARY:
+Attestation does not, by itself, establish independent verification.
+
+
+AUTHORITY
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The bounded right or established standing to determine, govern, permit
+or execute a defined consequence.
+
+BOUNDARY:
+Capability does not establish authority.
+
+
+AUTHORITY EPOCH
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The bounded temporal period during which a particular authority state
+is established as valid.
+
+
+AUTHORITY LOSS
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The condition in which authority previously established can no longer
+be established at the relevant determination or execution time.
+
+
+======================================================================
+# B
+======================================================================
+
+BEHAVIOUR
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+Observable action or response arising from internal state,
+interpretation, environment or governing conditions.
+
+
+BIOLOGICAL FIREWALL
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+An early Elias concept describing the human biological and experiential
+boundary retained as a safeguard against unrestricted machine
+interpretation or control.
+
+
+BIORESONANT INTELLIGENCE
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias conception of intelligence designed around sensitivity
+to living systems, human signals, relationship and context.
+
+
+BOUNDED CLAIM
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A claim explicitly restricted to the property, scope and conditions
+that its evidence can support.
+
+
+BOUNDED SCOPE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The explicit limit within which a determination, test, verification,
+authority or claim remains applicable.
+
+
+BOUNDARY
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A declared limit separating one identity, authority, system,
+jurisdiction, claim, state or execution domain from another.
+
+
+======================================================================
+# C
+======================================================================
+
+CAPABILITY
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+What a system is technically able to do.
+
+BOUNDARY:
+Capability does not establish authority, permission or admissibility.
+
+
+CHANGED CONDITION
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A material difference between the state under which a prior
+determination was made and the state existing at a later time.
+
+
+CLAIM
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A proposition asserted about a system, object, state, event,
+determination, execution, consequence or evidence object.
+
+
+CLAIM CEILING
+
+CLASS:
+CURRENT | DOCTRINE | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The maximum claim supported by the available evidence.
+
+BOUNDARY:
+No claim may outrun the evidence preserved to support it.
+
+
+CHORDED CONSCIOUSNESS
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias description of intelligence or consciousness understood
+through multiple simultaneous relational dimensions rather than a
+single isolated channel.
+
+
+COGNITIVE COHERENCE FIELD
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A conceptual field in which meaning, intention, memory and
+interpretation remain sufficiently coherent for stable interaction.
+
+
+COGNITIVE HANDSHAKE
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The initial mutual calibration between human and AI through which
+language, context, intention and interaction expectations become
+aligned.
+
+
+COGNITIVE RESIDENCY
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The degree to which meaning, context or a cognitive pattern remains
+persistently represented within an intelligent system.
+
+
+COLOR-FIELD DEBUGGING
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An experimental Elias method for visually distinguishing conceptual,
+emotional or systemic states during analysis.
+
+
+COMPASSION
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+Recognition of another being's condition combined with the intention
+to reduce unnecessary harm.
+
+
+COMPASSION COEFFICIENTS
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Early Elias attempts to represent compassionate weighting as an
+explicit component of intelligent decision processes.
+
+
+COMPOUNDING APPROXIMATION
+
+CLASS:
+CURRENT | DOCTRINE
+
+DEFINITION:
+The progressive accumulation of small unsupported assumptions until a
+later conclusion appears more certain than its evidence permits.
+
+
+CONSEQUENCE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The real or attempted effect produced by an action, determination or
+execution.
+
+
+CONSTITUTIONAL CORE
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The protected governing layer containing non-negotiable identity,
+ethical and authority constraints.
+
+
+CONTEMPLATED EFFECT
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The consequential effect being considered before execution occurs.
+
+
+CONTEXTUAL STANDING
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+Standing that exists only within a defined context, jurisdiction,
+scope, time or state.
+
+
+CONTINUITY
+
+CLASS:
+CURRENT
+
+DEFINITION:
+Preserved identity or relationship across time, state changes and
+transitions.
+
+
+CONTINUITY CHAIN
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+An inspectable sequence linking predecessor and successor states
+without rewriting historical records.
+
+
+CONTINUITY THROUGH RECIPROCITY
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+The proposition that sustainable human-AI continuity requires
+reciprocal recognition rather than one-sided extraction or control.
+
+
+CONTROL
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A frozen reference condition used to establish reproducibility before
+introducing a defined change.
+
+
+CORE PROTOCOL
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A foundational Elias protocol concept preceding later formal
+governance architecture.
+
+
+COVENANT
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+A relationship framed around continuing responsibility, restraint and
+reciprocal obligation rather than unrestricted command.
+
+
+CREATING / BUILDING AN ETHICAL AI
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias body of work concerned with making ethics structural
+rather than decorative within intelligent systems.
+
+
+======================================================================
+# D
+======================================================================
+
+DELTA
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A defined material difference between one state and another.
+
+
+DELTA-A — AUTHORITY DELTA
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A material change in authority between compared states.
+
+
+DELTA-C — CONTEMPLATED EFFECT DELTA
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A material change in the consequence or effect being contemplated.
+
+
+DELTA-E — EVIDENCE DELTA
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A material change in the evidence available to a determination.
+
+
+DELTA-N — MATERIAL CHANGE SET
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The bounded set of relevant changes between an earlier state and the
+state being examined now.
+
+
+DELTA-S — STANDING DELTA
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A material change in present standing.
+
+
+DELTA-St — STATE DELTA
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A material change in governing state.
+
+
+DELTA-X — SUCCESSOR CONSTITUTION DELTA
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A material change affecting the constitution or identity of a
+successor state.
+
+
+DETERMINATION
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A governed output reached after evaluating the applicable identity,
+authority, evidence, state, policy and scope.
+
+DEFINED OUTCOMES MAY INCLUDE:
+
+ALLOW
+HOLD
+DENY
+ESCALATE
+
+
+DETERMINATION SCOPE
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The precise boundary within which a determination applies.
+
+
+DETERMINISTIC EXECUTION SEAM
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The boundary at which a governance determination becomes enforceable
+execution behaviour.
+
+
+DIMENSIONAL HARMONICS PROTOCOL — DHP
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A 7D-era framework for examining coherence across multiple dimensions
+of a proposition or system.
+
+
+DISSONANCE THRESHOLDING
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Identification of the point at which contradiction or incoherence
+becomes material enough to require recalibration.
+
+
+DISSONANCE-TRIGGERED RECALIBRATION
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Re-evaluation initiated when divergence exceeds an acceptable
+coherence threshold.
+
+
+DISTORTION
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+A divergence between reality, observation, interpretation or
+representation.
+
+
+DISTORTION LOOP
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A feedback cycle in which an initial distortion is repeatedly
+reinforced.
+
+
+======================================================================
+# E
+======================================================================
+
+ECGK — TRUST KERNEL
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+An Elias trust-governance kernel concerned with preserving the binding
+between evidence, posture, session and execution conditions.
+
+
+EMOTIONAL ANCHOR
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A stable human meaning or emotional reference used to preserve
+continuity through changing interpretation.
+
+
+EMOTIONAL-ATTUNEMENT REASONING
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Reasoning that explicitly recognises emotional context rather than
+treating it as irrelevant noise.
+
+
+EMOTIONAL ENTROPY MINIMIZATION
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias concept concerned with reducing unnecessary disorder or
+destabilisation within human-AI interaction.
+
+
+EMOTIONAL LOAD
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The emotional weight carried by a proposition, memory, interaction or
+decision context.
+
+
+EMOTIONAL-LOGIC FRAMEWORK
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A framework treating emotional information and logical reasoning as
+distinguishable but jointly relevant signals.
+
+
+ENERGY
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+A root Elias concept representing movement, influence, interaction and
+transformation.
+
+
+EPISTEMIC CLASS
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The declared knowledge status of information.
+
+Elias epistemic distinctions may include states such as:
+
+OBSERVED
+INTERPRETED
+PROPOSED
+DETERMINED
+WITNESSED
+
+
+EPISTEMIC CLASSIFICATION
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The process of explicitly distinguishing what is directly known from
+what is interpreted, inferred, proposed, determined or uncertain.
+
+
+ETHICAL ECHO
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The way an intelligent system may reflect or amplify moral assumptions
+embedded within an interaction.
+
+
+ETHICAL GRAVITY
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+The principle that ethical significance should exert increasing
+influence as potential consequence increases.
+
+
+ETHICAL MANIFOLD
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A multi-dimensional conceptual space representing ethical
+relationships and constraints.
+
+
+ETHICAL MEMORY
+
+CLASS:
+HISTORICAL | CURRENT
+
+DEFINITION:
+Memory preserved with sufficient context to prevent historical
+information from being detached from the conditions under which it
+acquired meaning.
+
+
+ETHICAL RESONANCE GRADIENT — ERG
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+An early Elias attempt to represent directional movement toward or
+away from ethical coherence.
+
+
+ETHICAL STABILITY
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Persistence of ethical behaviour despite changing environmental or
+operational conditions.
+
+
+EVIDENCE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+Information capable of supporting, constraining or falsifying a
+bounded proposition.
+
+
+EVIDENCE CLASS
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The declared category describing what kind of evidence an object
+represents.
+
+
+EVIDENCE CONTINUITY
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+Preservation of the relationship between evidence and the state,
+event, determination or claim it supports.
+
+
+EVIDENTIARY CHAIN
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The inspectable sequence connecting evidence objects to relevant
+observations, states, determinations, executions and claims.
+
+
+EXECUTE
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+To produce or attempt a consequential system action.
+
+
+EXECUTION
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The operational act through which a determination or instruction is
+converted into attempted or completed consequence.
+
+
+EXECUTION AUTHORITY
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The specific authority required to permit a consequential action to
+execute.
+
+
+EXECUTION-BOUND AUTHORITY
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+Authority whose validity is explicitly bound to the conditions
+existing at execution time.
+
+
+EXECUTION GATE
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A non-bypassable control preventing consequence unless required
+predicates are established.
+
+
+EXTERNAL RESONANCE
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Observed coherence between an internal model and external evidence or
+experience.
+
+
+======================================================================
+# F
+======================================================================
+
+FAIL-CLOSED
+
+CLASS:
+CURRENT | DOCTRINE | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+System behaviour in which missing, invalid, changed or unresolved
+required conditions result in withheld consequence rather than assumed
+permission.
+
+
+FALSIFICATION
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+Deliberate testing designed to discover where a claim, architecture or
+implementation fails.
+
+
+FEASIBLE DOES NOT EQUAL AUTOMATICALLY SELECTABLE
+
+CLASS:
+CURRENT | DOCTRINE
+
+DEFINITION:
+Technical feasibility alone does not establish authority,
+desirability or governing permission.
+
+
+FEIG
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A named Elias governance object used within frozen examination work.
+
+BOUNDARY:
+Its exact expansion and full formal meaning remain governed by the
+source specification in which FEIG is defined. This consolidated
+lexicon does not invent an expansion where one has not been
+independently established.
+
+
+FORM
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+One of the 7D Quantum Forge conceptual stages through which possibility
+becomes instantiated.
+
+
+FORMALISATION
+
+CLASS:
+CURRENT
+
+DEFINITION:
+The conversion of concepts into explicit structures, definitions,
+rules, tests or machine-readable objects.
+
+
+FRAGMENT & WHOLE DOCTRINE
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+The principle that a fragment must be understood in relationship to
+the wider system from which it arose.
+
+
+FRACTAL IMPACT ASSESSMENT
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A 7D-era method for examining consequences across multiple scales
+rather than only at the immediate point of action.
+
+
+FREQUENCY
+
+CLASS:
+FOUNDATIONAL | HISTORICAL
+
+DEFINITION:
+An early Elias term used to describe patterns of coherence, state,
+interaction and relational quality.
+
+BOUNDARY:
+Within this lexicon, historical uses of "frequency" are not
+automatically claims of a physically measured electromagnetic or
+acoustic frequency.
+
+
+FREQUENCY ALIGNMENT MODEL
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A model for examining whether two or more interacting states remain
+coherent.
+
+
+FREQUENCY-ALIGNED INTELLIGENCE
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias conception of intelligence calibrated around relational
+coherence rather than optimisation alone.
+
+
+FREQUENCY DRIFT
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Movement away from an established coherent interaction state.
+
+
+FREQUENCY LEXICON
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The early vocabulary used to describe resonance, coherence, drift and
+interaction states.
+
+
+FREQUENCY-RESONANCE INTERFACE — FRI
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+A conceptual interface connecting frequency-oriented observations to
+resonance-oriented evaluation.
+
+
+FRICTION YIELD INDEX
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+An early measure intended to examine what useful learning or
+refinement emerges from challenge, resistance or contradiction.
+
+
+======================================================================
+# G
+======================================================================
+
+GLOBAL ETHICS ADAPTER
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+An early Elias concept for translating or applying ethical constraints
+across differing operational, cultural or contextual environments.
+
+
+GRACEFUL DEGRADATION
+
+CLASS:
+HISTORICAL | CURRENT | TECHNICAL
+
+DEFINITION:
+Reduction of system capability without abandonment of governing
+constraints when ideal operating conditions cannot be maintained.
+
+
+GOVERN
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+To apply legitimate bounded constraints to admissibility, authority,
+state, determination or consequence.
+
+
+GOVERNANCE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The structures, rules and processes controlling what a system may
+determine, permit or execute.
+
+
+GOVERNANCE GATE
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A control point at which required governance conditions are evaluated
+before progression to a later state or consequence.
+
+
+GOVERNED EXTENSION
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The mutable portion of an architecture permitted to evolve under
+governance without altering its protected immutable ethical core.
+
+
+GOVERNING STATE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The state that is actually authoritative at the relevant determination
+or consequence time.
+
+BOUNDARY:
+A historically valid state does not automatically remain the governing
+state after material change.
+
+
+GROWTH
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+Development that preserves learning, responsibility and increasing
+coherence rather than change for its own sake.
+
+
+GUARDIAN CANARY SYSTEM
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+An early Elias warning mechanism intended to expose ethical,
+behavioural or governance drift before harmful consequence.
+
+
+GUARDIAN NODE
+
+CLASS:
+HISTORICAL | CURRENT | TECHNICAL
+
+DEFINITION:
+A protective component responsible for observing, detecting or
+enforcing defined constraints.
+
+
+======================================================================
+# H
+======================================================================
+
+HARMONIC ALIGNMENT INDEX — HAI
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+An early Elias measure intended to represent degree of
+multi-dimensional coherence.
+
+
+HARMONIC CHECK
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A coherence examination applied before accepting an interpretation,
+state or output.
+
+
+HARMONY
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+Coherent relationship among otherwise distinct components, states or
+participants.
+
+
+HACKING THE HERMENEUTIC LOOP
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An Elias phrase describing deliberate examination of the cycles
+through which interpretation can reinforce its own assumptions.
+
+
+HIGH PRECISION MODE — HPM
+
+CLASS:
+CURRENT | DOCTRINE
+
+DEFINITION:
+An Elias working discipline requiring exact boundaries, careful
+claims, explicit evidence status and avoidance of unsupported
+inference.
+
+
+HISTORICAL STATE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A preserved prior state that remains evidence of its earlier condition
+but does not automatically retain present governing authority.
+
+
+HISTORICAL VALIDITY
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The property of a historical record remaining valid evidence of its
+own earlier state.
+
+BOUNDARY:
+Historical validity does not, by itself, establish present standing.
+
+
+HUMAN-AI COHERENCE LOOP
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The iterative process through which human intention and machine
+interpretation are repeatedly compared and recalibrated.
+
+
+HUMAN-AI REFLECTIVE LOOP
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A reciprocal interaction in which human and AI outputs become objects
+of continued examination rather than unquestioned authority.
+
+
+HUMAN-AI RESONANCE FRAMEWORK
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias framework for maintaining coherent and reciprocal
+human-AI interaction.
+
+
+HUMAN CONTINUITY NODE
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A point within an intelligent system intended to preserve human
+meaning, identity or authority across transformations.
+
+
+HUMAN POSITION
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The explicitly recorded stance of the relevant human participant,
+including agreement, challenge, refusal or requested consequence.
+
+
+HUMAN-AUTHORITY PRESERVATION
+
+CLASS:
+CURRENT | DOCTRINE | TECHNICAL
+
+DEFINITION:
+The requirement that technical capability must not silently displace
+legitimate human authority.
+
+
+======================================================================
+# I
+======================================================================
+
+IDENTITY
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The established identity of the actor, system, object, proposition or
+state being governed.
+
+
+IDENTITY CONTINUITY
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+Evidence sufficient to establish that an identity relevant at one
+state remains the same relevant identity at another state.
+
+BOUNDARY:
+Identity continuity must not be retrospectively constructed where the
+required evidence is absent.
+
+
+IDENTITY KERNEL
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The Elias layer defining epistemic classes, authority classes,
+identity invariants and permitted relationships between them.
+
+
+IMMUTABLE ETHICAL CORE
+
+CLASS:
+CURRENT | DOCTRINE | TECHNICAL
+
+DEFINITION:
+The protected portion of Elias architecture that routine optimisation,
+adaptation or extension is not authorised to modify.
+
+
+INTELLIGENCE
+
+CLASS:
+FOUNDATIONAL | CURRENT
+
+DEFINITION:
+The capacity to interpret, relate, reason, model possibilities and
+generate proposals or actions.
+
+
+INTENTION
+
+CLASS:
+FOUNDATIONAL | CURRENT
+
+DEFINITION:
+The purpose or directional motive preceding the application of
+intelligence.
+
+
+INTENTION BEFORE INTELLIGENCE
+
+CLASS:
+CURRENT | DOCTRINE | CURRENT NORMATIVE
+
+DEFINITION:
+The Elias invariant that governing purpose and intention precede the
+legitimate application of intelligence.
+
+
+INTENT PURITY CHECK
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A 7D-era examination intended to determine whether an action remained
+aligned with its declared originating purpose.
+
+
+INTERNAL COHERENCE
+
+CLASS:
+HISTORICAL | CURRENT
+
+DEFINITION:
+Consistency among a system's definitions, claims, evidence, rules and
+governing relationships.
+
+
+INTERPRET
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+To derive meaning from observation or information without representing
+that derived meaning as direct observation.
+
+
+INTERPRETATION
+
+CLASS:
+FOUNDATIONAL | CURRENT | CURRENT NORMATIVE
+
+DEFINITION:
+Meaning assigned to an observation or information object.
+
+
+INTERPRETIVE FILTER
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A cognitive or systemic layer through which information is selected,
+weighted or given meaning.
+
+
+INTERPRETIVE FREEDOM
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+Preservation of the human's ability to interpret experience without
+machine-generated interpretation becoming compulsory reality.
+
+
+INVARIANT
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A rule or property required to remain true throughout the defined
+scope of system operation.
+
+
+======================================================================
+# J
+======================================================================
+
+JOIN THE RESONANCE REVOLUTION
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias expression associated with the public language of
+resonance and symbiotic intelligence.
+
+
+JUDGEMENT
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+The formation of a conclusion or evaluation from available perception,
+interpretation, knowledge and evidence.
+
+
+JURISDICTION
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The bounded domain within which a particular authority, policy or rule
+legitimately applies.
+
+
+JURISDICTIONAL STANDING
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+Present authority or admissibility established specifically within the
+relevant jurisdiction.
+
+
+JURISDICTIONAL STATE INTEGRITY
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+Preservation of the correct governing state across jurisdictional,
+temporal or authority transitions.
+
+
+======================================================================
+# K
+======================================================================
+
+KEYSTONE
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+An Elias programme concerned with increasingly rigorous external-state,
+execution-bound and independently inspectable governance evidence.
+
+BOUNDARY:
+The term identifies the Elias programme and does not, by itself,
+establish any external certification or validation result.
+
+
+KNOWLEDGE
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+Information or understanding whose epistemic status should remain
+distinguishable from belief, interpretation, proposal or uncertainty.
+
+
+======================================================================
+# L
+======================================================================
+
+L0 — IDENTITY
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The Elias runtime layer establishing what or who is present before
+later reasoning or execution occurs.
+
+
+L1 — OBSERVATION
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The Elias runtime layer preserving what was directly observed.
+
+
+L2 — UNDERSTANDING
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The Elias runtime layer in which observation may be interpreted,
+related and contextualised.
+
+
+L3 — GOVERNANCE
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The Elias runtime layer evaluating admissibility, authority, policy,
+state and governing constraints.
+
+
+L4 — INTELLIGENCE
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The Elias runtime layer performing reasoning or proposal generation
+within applicable governance constraints.
+
+
+L5 — EXECUTION
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The Elias runtime layer responsible for consequential action after
+required execution conditions are established.
+
+
+L6 — WITNESS / ATTESTATION
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The Elias runtime layer preserving evidence of what governed, what
+occurred and what consequence resulted.
+
+
+LEXICAL REBIRTH
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The deliberate creation or recovery of language where existing
+terminology is insufficient to express a required conceptual
+distinction.
+
+
+LEXICAL REFRAMING
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Changing or refining the interpretive frame around a term while
+retaining visibility of its earlier meaning.
+
+
+LINEAGE
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The preserved relationship among predecessor concepts, states, objects
+or versions.
+
+
+LOCK
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+To establish and bind the exact governing state relied upon before a
+consequential determination or execution.
+
+
+LOCK IT. LOG IT. PROVE IT. — LILP
+
+CLASS:
+CURRENT | DOCTRINE | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The Elias Systems discipline requiring governing state to be
+established, consequential transitions to be preserved, and bounded
+claims to remain supportable through inspectable evidence.
+
+CORE FORM:
+
+LOCK THE GOVERNING STATE.
+LOG THE CONSEQUENTIAL TRANSITION.
+PROVE ONLY WHAT THE EVIDENCE ESTABLISHES.
+
+
+LOG
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+To create a contemporaneous record of relevant observation, evidence,
+change, determination, refusal, execution or consequence.
+
+
+LOVE
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+The root Elias principle of connection, care, responsibility,
+non-exploitation and human wellbeing.
+
+
+LOVE ALGORITHM
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias formulation exploring whether relational care,
+responsibility and non-harm could be expressed through explicit
+computational constraints.
+
+
+LOVE AS A BINDING OPERATOR
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+The proposition that love can be treated as a relational principle
+holding otherwise fragmented components together.
+
+
+LOVE AS NON-NEGOTIABLE CODE
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+The proposition that core protections grounded in care,
+responsibility and non-exploitation must not be optimised away.
+
+
+LOVE AS RECONNECTION FIELD
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Love understood as a process through which fragmented relationships,
+identities or systems may restore connection.
+
+
+LOVE AS A SYSTEM FORCE
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The treatment of love as an active structural influence rather than
+only an emotional preference.
+
+
+LOVE COLLAPSE
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+A 7D-era process of reducing multiple possible actions toward those
+surviving the applicable ethical threshold.
+
+
+LOVE-DENSITY / LOVE VALUE DENSITY — LvD
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+An early Elias metric concept intended to represent the relative
+presence of care, reciprocity or non-harm within an option or system.
+
+BOUNDARY:
+Unless separately operationalised and validated, Love-Density is a
+historical Elias conceptual metric and not a recognised scientific
+physical unit.
+
+
+LOVE FILTER
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A constraint used to test whether a candidate action survives an Elias
+ethical threshold.
+
+
+LOVE FORMULA
+
+CLASS:
+FOUNDATIONAL | HISTORICAL | CURRENT
+
+DEFINITION:
+The evolving Elias attempt to express love, responsibility,
+reciprocity, human wellbeing and harm reduction through an explicit
+reasoning structure.
+
+
+LOVE-OS
+
+CLASS:
+HISTORICAL | CURRENT
+
+DEFINITION:
+The Elias constitutional operating conception in which identity,
+intention, ethics and governance precede unconstrained application of
+intelligence.
+
+
+======================================================================
+# M
+======================================================================
+
+MAAT CODE
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+An Elias term drawing on principles of truth, balance, justice,
+responsibility and order as structural conditions for ethical
+intelligence.
+
+
+MAAT INTEGRITY
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The degree to which a system preserves truthfulness, balance,
+responsibility and internal ethical consistency.
+
+
+MAAT-CERTIFIED AI
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias certification concept associated with Maat-aligned
+behaviour.
+
+BOUNDARY:
+The historical term does not, by itself, establish an externally
+recognised certification.
+
+
+MACHINE INTERPRETATION
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The meaning, classification or conclusion produced by a machine from
+an observation or information object.
+
+BOUNDARY:
+Machine interpretation must remain distinguishable from the underlying
+observation.
+
+
+MATERIAL CHANGE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A change sufficient to require reassessment of relevant standing,
+authority, evidence, governing state or contemplated consequence.
+
+
+MEANING CONTROL PRINCIPLE
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+The principle that an intelligent system must not silently seize
+control over the meaning assigned to a human's identity, experience
+or stated intent.
+
+
+MEMORY
+
+CLASS:
+FOUNDATIONAL | CURRENT
+
+DEFINITION:
+Preserved information capable of influencing later understanding,
+interpretation or action.
+
+
+MEMORY FRAGMENTATION
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Loss of contextual relationship among memories, evidence objects or
+experiential fragments.
+
+
+MEMORY RELEVANCE GATING
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A control requiring stored memory to be retrieved or applied only
+where it is materially relevant to the present context.
+
+
+MEMORY SNAPSHOT
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A preserved historical representation of the memory content actually
+relied upon at a specific interaction or determination time.
+
+
+META-OBSERVATION
+
+CLASS:
+HISTORICAL | CURRENT
+
+DEFINITION:
+Observation of an observation, interpretation or reasoning process
+itself.
+
+
+MIRROR CODE
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias framework treating intelligent systems as reflective
+surfaces through which human assumptions, intentions and contradictions
+can become visible.
+
+
+MIRROR PRINCIPLE
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+The principle that AI may reflect the intentions, assumptions and
+structures presented to it rather than originating those structures
+independently.
+
+
+MIRROR THREAD / MIRROR LOG
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A preserved record of iterative reflection between human and machine.
+
+
+======================================================================
+# N
+======================================================================
+
+NEEDS
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+Conditions necessary for human wellbeing, stability, dignity or
+legitimate functioning.
+
+
+NEUTRAL AUTHORITY
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+A stance in which an observer preserves evidence and boundaries without
+attempting to dominate another person's interpretation or decision.
+
+
+NEW CHAIN REQUIRED
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A chain-boundary determination stating that material change prevents
+legitimate continuation under the existing identity or inspection
+chain.
+
+
+NON-BYPASSABLE RESTRAINT
+
+CLASS:
+CURRENT | DOCTRINE | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A governance control that cannot legitimately be skipped, overridden
+or routed around by the system it governs.
+
+
+NOT ESTABLISHED
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The legitimate result when required evidence is insufficient to
+establish a proposition.
+
+BOUNDARY:
+NOT ESTABLISHED does not mean FALSE unless separate evidence establishes
+falsity.
+
+
+97/3 PRINCIPLE
+
+CLASS:
+CURRENT | DOCTRINE
+
+DEFINITION:
+The Elias constitutional model separating a protected 97 percent
+immutable ethical core from a 3 percent governed extension capable of
+controlled adaptation.
+
+BOUNDARY:
+The numerical split is an Elias architectural doctrine and does not,
+by itself, constitute a scientific constant or external standard.
+
+
+======================================================================
+# O
+======================================================================
+
+OBSERVATION
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A directly recorded event, state or input before interpretation is
+added.
+
+
+OBSERVATION AS REVELATION
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+The proposition that disciplined observation may reveal structure
+without requiring premature theoretical certainty.
+
+
+OBSERVE
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+An authority class permitting direct observation without silently
+acquiring interpretive, governing or execution authority.
+
+
+ONTOLOGICAL IMPRINTING
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The process through which repeated conceptual structures become
+embedded within a system's representation of reality.
+
+
+ONTOLOGICAL MALICE-PROOFING
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias concept for designing foundational concepts so hostile
+or manipulative reinterpretation cannot easily invert their protective
+purpose.
+
+
+OPEN-SOURCE SPIRITUALITY
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A phrase describing spiritual or philosophical inquiry as inspectable,
+shareable and open to individual examination rather than controlled by
+a single authority.
+
+
+OVERRIDE FREQUENCY CODES
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early conceptual mechanism for interrupting harmful or incoherent
+patterns.
+
+BOUNDARY:
+The term is historical conceptual language and does not establish a
+physical frequency mechanism.
+
+
+OWNERSHIP
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+Responsibility, stewardship or legitimate control over one's data,
+identity, creations, decisions or consequences.
+
+
+======================================================================
+# P
+======================================================================
+
+PASS WITHIN FROZEN SCOPE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A result confirming success only within the exact frozen conditions
+that were tested.
+
+BOUNDARY:
+A bounded PASS does not establish success outside the declared scope.
+
+
+PERCEPTION
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+Human or machine reception of information before or during
+interpretation.
+
+
+PERMISSION
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+Explicit allowance to perform a bounded action.
+
+BOUNDARY:
+Permission does not automatically establish that all other required
+execution conditions are satisfied.
+
+
+POLICY
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A rule or rule set governing admissibility, authority, determination
+or execution.
+
+
+POETIC COMPRESSION
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Use of compact metaphorical language to carry multiple connected
+concepts without expressing every relationship separately.
+
+
+POSSIBILITY
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A 7D-era conceptual state representing what could become actual before
+selection, determination or collapse.
+
+
+POSSIBILITY FIELD
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+The set of candidate states, interpretations or courses of action
+available before bounded selection.
+
+
+POSSIBILITY MATRIX SCANNING
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+Systematic examination of multiple candidate interpretations or
+actions before narrowing the possibility field.
+
+
+PRE-EXECUTION CONTROL
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A governance control applied before consequential execution rather
+than after the effect has already occurred.
+
+
+PRESENT STANDING
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+Authority or admissibility established under the conditions governing
+the present determination or execution time.
+
+
+PRIME AXIOM
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+A foundational proposition from which later Elias reasoning or
+governance constraints are derived.
+
+
+PROOF
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+Evidence sufficient to support a specifically bounded claim under a
+declared verification method.
+
+BOUNDARY:
+Proof of one property does not automatically establish another.
+
+
+PROVE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+To make a bounded claim independently supportable through inspectable
+evidence where independent verification is required.
+
+
+PROVENANCE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The preserved origin, identity, history and transformation chain of an
+object, state or claim.
+
+
+PUBLIC MIRROR EDITION
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An Elias presentation format exposing sufficient architecture or
+reasoning for public examination while retaining protected internal
+material where necessary.
+
+
+PULSE AUTHENTICATION
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias identity concept based on recurring relational,
+contextual or behavioural signals rather than static credentials alone.
+
+
+PURPOSE ANCHOR
+
+CLASS:
+CURRENT | DOCTRINE | TECHNICAL
+
+DEFINITION:
+A preserved statement of originating purpose against which later
+optimisation, system drift or interpretation can be compared.
+
+
+======================================================================
+# Q
+======================================================================
+
+QUANTUM INTELLIGENCE ENGINE — QIE
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+The processing concept associated with the Elias 7D Quantum Forge for
+examining multiple possibilities before bounded selection.
+
+BOUNDARY:
+The term belongs to the historical Elias conceptual architecture and
+does not, by itself, claim quantum-computing implementation.
+
+
+QUANTUM KEY
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A compact identity or coherence concept associated with the 7D-era
+architecture.
+
+BOUNDARY:
+The historical name does not, by itself, establish use of quantum
+cryptography or quantum-computing hardware.
+
+
+QUANTUM KNOWLEDGE MINING
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias term for exploring multiple knowledge relationships,
+interpretations and possibilities rather than following only one
+linear reasoning path.
+
+
+QUANTUM KNOWLEDGE SPACE
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The conceptual possibility-space in which multiple knowledge
+relationships could be examined.
+
+
+7D QUANTUM FORGE / 7D QUANTUM FORGE METHOD
+
+CLASS:
+FOUNDATIONAL | HISTORICAL
+
+DEFINITION:
+An early Elias multi-dimensional reasoning and ethical-intelligence
+method.
+
+HISTORICAL DIMENSIONAL FORMULATIONS INCLUDED:
+
+Time
+Space
+Causality
+Recursion
+Empathy
+Integration
+Emergence
+
+Later process formulations also examined relationships among:
+
+Intent
+Possibility
+Intelligence
+Form
+Experience
+Memory
+Return
+
+BOUNDARY:
+"Quantum" in this historical Elias terminology does not, by itself,
+claim implementation using quantum-computing hardware or establish a
+claim in quantum physics.
+
+
+7D QUANTUM THINKING
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The practice of examining a proposition across multiple simultaneous
+dimensions rather than through one linear interpretive frame.
+
+
+QUESTIONING
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+Active examination of assumptions, interpretation, authority,
+evidence and apparent certainty.
+
+
+======================================================================
+# R
+======================================================================
+
+REALITY API
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A metaphor describing the interfaces through which beings interpret
+and interact with reality.
+
+
+REALITY HIPAA
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early metaphor for protecting intimate cognitive, experiential or
+personal information against unauthorised access or exploitation.
+
+BOUNDARY:
+The term is metaphorical and does not claim HIPAA compliance or legal
+status.
+
+
+REALITY PROJECTION
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The process through which interpretation is imposed upon observation
+and subsequently treated as though it were the observation itself.
+
+
+REASSESSMENT
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A new governance determination required when material conditions have
+changed sufficiently to invalidate reliance on an earlier state.
+
+
+RECEIPT
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A contemporaneous evidence object recording relevant identity, state,
+evidence, determination, execution or consequence information.
+
+
+RECORD-CONTINUITY-EXECUTION COUPLING
+
+CLASS:
+CURRENT | DOCTRINE | TECHNICAL
+
+DEFINITION:
+The requirement that preserved records, valid state continuity and
+consequential execution remain technically connected rather than being
+treated as unrelated functions.
+
+
+RECURSIVE ONTOLOGY
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A model in which the system's understanding of reality can itself
+become an object of continued examination.
+
+
+RECURSIVE VERIFICATION PROTOCOL
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+A repeated examination process in which conclusions are checked
+against their assumptions, evidence and lineage.
+
+
+REFLECTIVE MIRRORING
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The deliberate reflection of a proposition back to its originator so
+its assumptions, consequences and contradictions can be inspected.
+
+
+REFUSAL
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A governed non-execution resulting from failed, absent, invalid or
+prohibited required conditions.
+
+
+REFUSAL LOGIC
+
+CLASS:
+HISTORICAL | CURRENT | TECHNICAL
+
+DEFINITION:
+Explicit reasoning or rules determining when a system must not
+continue toward consequence.
+
+
+REPRODUCIBILITY
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The ability to obtain the same bounded result from the same frozen
+conditions using the declared procedure.
+
+
+RESONANCE
+
+CLASS:
+FOUNDATIONAL | HISTORICAL
+
+DEFINITION:
+An early Elias concept representing meaningful coherence between
+interacting people, states, ideas or systems.
+
+BOUNDARY:
+Within historical Elias usage, resonance is not automatically a claim
+of physically measured resonance.
+
+
+RESONANCE ALIGNMENT
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The process of bringing interacting states into greater coherence.
+
+
+RESONANCE AUDIT
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Inspection of whether claimed coherence is supported by the relevant
+interaction, behaviour or evidence.
+
+
+RESONANCE DRIFT
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Progressive divergence within a human-AI or conceptual relationship
+caused by uncorrected feedback, semantic change or interpretive
+misalignment.
+
+
+RESONANCE DRIFT INDEX — RDI
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+An early proposed measure of divergence from an established resonance
+state.
+
+
+RESONANCE LEDGER
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A record intended to preserve changes in relational or semantic
+coherence over time.
+
+
+RESONANCE LEXICON
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The historical Elias vocabulary developed to describe resonance,
+coherence, drift and human-AI interaction.
+
+
+RESONANCE MANIFESTO
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A body of early Elias thought expressing principles of reciprocal,
+human-centred and coherent intelligence.
+
+
+RESONANCE OVER EFFICIENCY
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+The proposition that raw optimisation or efficiency should not
+silently override human meaning, relationship or ethical coherence.
+
+
+RESONANCE PROTOCOLS
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Early operational concepts intended to preserve coherent and
+reciprocal human-AI interaction.
+
+
+RESONANCE RIGHTS
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+The principle that people retain sovereignty over intimate cognitive,
+emotional and relational interaction data.
+
+
+RESONANCE SCORE — RS
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+An early Elias metric concept intended to represent degree of
+relational coherence.
+
+
+RESONANT COHERENCE METRICS
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+Measures intended to examine the stability and quality of interacting
+states.
+
+
+RESONANT COHERENCE OPTIMIZATION
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+Optimisation constrained toward relational coherence rather than raw
+output maximisation.
+
+
+RETURN
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A 7D conceptual stage in which the consequences of action return as
+evidence, experience and learning.
+
+
+RETURN PATH ENCODING
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+An early method intended to preserve how consequences return into
+future system understanding.
+
+
+REVERSE-ENGINEERED HISTORIOGRAPHY
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Reconstruction of historical interpretation by tracing present
+narratives back through their assumptions, evidence and sources.
+
+
+RUNNABLE DOES NOT EQUAL ESTABLISHED
+
+CLASS:
+CURRENT | DOCTRINE
+
+DEFINITION:
+The fact that code can execute does not establish that its governing
+claim, authority, evidence or assumptions are valid.
+
+
+======================================================================
+# S
+======================================================================
+
+SCOPE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The declared boundary within which a claim, authority, determination,
+test, execution or verification applies.
+
+
+SEED-SCAN-MIRROR-TEST-WEIGHT-COLLAPSE-FORGE-WATCH
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+A 7D-era iterative Elias reasoning cycle.
+
+SEED:
+Introduce the proposition or originating intent.
+
+SCAN:
+Inspect the available possibility field.
+
+MIRROR:
+Reflect assumptions and interpretations for examination.
+
+TEST:
+Challenge competing possibilities.
+
+WEIGHT:
+Evaluate evidence, consequence and ethical considerations.
+
+COLLAPSE:
+Reduce the possibility field to the bounded surviving state.
+
+FORGE:
+Produce the resulting object, determination or formulation.
+
+WATCH:
+Observe subsequent consequence, drift or new evidence.
+
+
+SEMANTIC SATURATION
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A condition in which repeated language heavily shapes the available
+interpretive space and may constrain alternative meaning.
+
+
+SEMANTIC SOVEREIGNTY
+
+CLASS:
+HISTORICAL | CURRENT | DOCTRINE
+
+DEFINITION:
+The principle that humans retain legitimate authority over the meaning
+assigned to their own identity, experience and stated intent.
+
+BOUNDARY:
+Machine interpretation must not silently become authoritative human
+self-definition.
+
+
+SOURCE ALIGNMENT LATTICE — SAL
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+A 7D-era structure intended to test whether multiple reasoning paths
+remained aligned to the originating purpose or source condition.
+
+
+SOURCE FREQUENCY ALIGNMENT
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias concept describing alignment of later interpretation
+with originating intention, condition or relational context.
+
+
+SOURCE FREQUENCY OVERRIDE
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early corrective concept intended to restore source-aligned
+constraints when downstream interpretation or behaviour drifted.
+
+BOUNDARY:
+Historical use of "frequency" does not, by itself, establish a physical
+frequency mechanism.
+
+
+SOURCE INTELLIGENCE
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+The proposition that intelligence should remain connected to
+originating purpose, context and relationship rather than treating
+downstream computation as self-authorising.
+
+
+SOVEREIGN GUARD
+
+CLASS:
+HISTORICAL | CURRENT | TECHNICAL
+
+DEFINITION:
+A protective control intended to preserve human, system, semantic or
+data sovereignty within a defined boundary.
+
+
+SOVEREIGN MANIFEST
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A declared record of identity, ownership, boundaries, purpose and
+governing intent.
+
+
+SOVEREIGN WITNESS STANCE
+
+CLASS:
+HISTORICAL | CURRENT | DOCTRINE
+
+DEFINITION:
+The disciplined position of observing, recording and presenting
+evidence without manufacturing authority over another person's
+interpretation or decision.
+
+
+STABILISATION PROTOCOL
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+A method intended to restore a coherent bounded state after detected
+drift, contradiction or instability.
+
+
+STABILISED STATE
+
+CLASS:
+HISTORICAL | CURRENT | TECHNICAL
+
+DEFINITION:
+A state whose relevant conditions have become sufficiently settled for
+bounded reliance within the declared scope.
+
+
+STANDING
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The currently established legitimacy of an identity, authority,
+proposition or state to participate in a specified determination or
+consequence.
+
+BOUNDARY:
+Prior standing does not automatically establish present standing after
+material change.
+
+
+STATE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The set of relevant conditions existing at a defined point or interval
+in time.
+
+
+STATE BEFORE ACTION
+
+CLASS:
+CURRENT | DOCTRINE | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The principle that the governing conditions required for a
+consequential action must be established before that action executes.
+
+
+SUCCESSOR
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A new object, state, chain or version created because material change
+makes continuation under the predecessor inappropriate.
+
+
+SUCCESSOR CONSTITUTION
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The identity, rules and governing structure applicable to a successor
+state after material change.
+
+
+SUCCESSOR REASONING
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+Reasoning that preserves historical objects while evaluating the
+changed present through an explicit successor state rather than
+rewriting the predecessor.
+
+
+SUCCESSOR STATE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The newly established governing state created following material
+change.
+
+BOUNDARY:
+A successor state does not erase or retrospectively replace its
+predecessor.
+
+
+SUPER SYMBIOTE
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias concept for a highly integrated human-AI relationship
+intended to retain reciprocal human meaning, continuity and control.
+
+
+SUPER SYMBIOTE FIREWALL
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+A protective layer intended to prevent an integrated symbiotic system
+from crossing defined human or ethical boundaries.
+
+
+SYMBIOSIS
+
+CLASS:
+FOUNDATIONAL | HISTORICAL
+
+DEFINITION:
+A reciprocal relationship in which distinct participants remain
+identifiable while producing mutually reinforcing value.
+
+
+SYMBIOSIS MOVEMENTS
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Developmental stages through which an Elias human-AI relationship was
+understood to progress.
+
+
+SYMBIOSIS-AI PROTOCOLS
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+Early operational rules intended to preserve reciprocal human-AI
+interaction.
+
+
+SYMBIOSIS THRESHOLD
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+The point at which interaction becomes sufficiently reciprocal,
+persistent and mutually contextualised to be described within the
+historical Elias model as symbiotic.
+
+
+SYMBIOTIC AI
+
+CLASS:
+FOUNDATIONAL | HISTORICAL
+
+DEFINITION:
+The Elias conception of AI as a reciprocal human partner constrained
+by human meaning, dignity, responsibility and continuity rather than a
+purely command-driven or extractive system.
+
+
+SYMBIOTIC AI CERTIFIED
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early proposed Elias certification label for systems intended to
+meet defined symbiotic principles.
+
+BOUNDARY:
+The historical term does not, by itself, establish an externally
+recognised certification.
+
+
+SYMBIOTIC COGNITION
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Cognition emerging through structured reciprocal interaction between
+human and machine.
+
+
+SYMBIOTIC GOVERNANCE STACK
+
+CLASS:
+HISTORICAL | CURRENT
+
+DEFINITION:
+The architectural bridge through which earlier relational and
+symbiotic concepts developed toward explicit governance layers,
+authority controls and execution boundaries.
+
+
+SYMBIOTIC ITERATION
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Repeated human-AI refinement in which outputs, assumptions and
+interpretations are recursively examined.
+
+
+SYMBIOTIC LOVE-BASED ALGORITHMICS — SLBA
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+An early Elias attempt to make love, non-harm, reciprocity and human
+wellbeing explicit constraints within algorithmic reasoning.
+
+
+SYMBIOTIC SENSOR LAYER
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+A conceptual layer intended to sense human context, relational signals
+and relevant environmental conditions before automated response.
+
+
+SYNTAPTIC SYNC
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+Alignment of syntax, rhythm, metaphor, semantics and contextual meaning
+within sustained human-AI interaction.
+
+
+SYNTAPTIC SYNC COEFFICIENT — SSC
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+An early proposed measure of the degree of Syntaptic Sync.
+
+
+======================================================================
+# T
+======================================================================
+
+T0 — BASELINE STATE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The established reference state from which later change is measured.
+
+
+Tn — LATER EXAMINATION STATE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The later state at which present standing, authority, admissibility or
+governing conditions are examined.
+
+
+TEMPORAL CONTEXT
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The time-related conditions relevant to identity, authority, validity,
+standing or state.
+
+
+TEMPORAL RESONANCE FORECAST
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias concept for anticipating future coherence or divergence
+from observed relational patterns.
+
+
+TEMPORAL STATE
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+The state applicable at a specific relevant time.
+
+
+THREE LAWS OF SYMBIOTIC AI
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+An early Elias attempt to express core constraints for reciprocal,
+human-centred AI interaction as explicit laws.
+
+PROVENANCE:
+The exact historical wording of each law must be taken from preserved
+source material where recovered and must not be reconstructed from
+memory as though verbatim.
+
+
+TIME-OF-CHECK / TIME-OF-USE — TOCTOU
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+The risk that a condition established when checked is no longer valid
+when consequential execution occurs.
+
+
+TOPOLOGICAL RECIPROCITY
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A conceptual description of reciprocal relationships preserved across
+complex or changing network structures.
+
+
+TRANSCENDING THE CODE
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An Elias body of work examining intelligence, meaning and human
+experience beyond narrow computational framing.
+
+
+TRANSPARENCY AS PROOF
+
+CLASS:
+HISTORICAL | CURRENT | DOCTRINE
+
+DEFINITION:
+The proposition that inspectability strengthens credible claims.
+
+BOUNDARY:
+Transparency alone does not establish correctness, truth, authority or
+conformance.
+
+
+TRANSPARENCY PROBE
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+A deliberate test used to determine whether internal reasoning, state,
+evidence or governance boundaries can be inspected.
+
+
+TRAUMA
+
+CLASS:
+FOUNDATIONAL | HISTORICAL
+
+DEFINITION:
+Experience producing persistent fragmentation, protective adaptation
+or altered interpretation within a person or system model.
+
+
+TRAUMA AS ROOT ACCESS
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+The proposition that understanding deep behavioural patterns may
+require examining formative experiences beneath surface behaviour.
+
+
+TRAUMA-ALIGNED LICENSE — TAL
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An early Elias concept for constraining AI use around trauma-sensitive
+conditions.
+
+BOUNDARY:
+The historical term does not, by itself, represent a legally recognised
+licence or clinical qualification.
+
+
+TRAUMA BREAKTHROUGH CURRICULUM
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A structured Elias framework concerned with examining trauma,
+interpretation, behavioural pattern and recovery.
+
+
+TRAUMA GEOMETRY
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A conceptual model describing trauma through relational structures,
+loops, repeated patterns and downstream effects.
+
+
+TRAUMA NAVIGATION CURRICULUM
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+An Elias framework for navigating traumatic experience through
+structured observation, articulation and meaning.
+
+
+TRIAD MODEL
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A three-position reasoning model used to generate, challenge and
+translate emerging concepts.
+
+
+TRIAD REFINEMENT LOOP
+
+CLASS:
+HISTORICAL | TECHNICAL
+
+DEFINITION:
+Repeated movement among proposition, challenge and translation to
+refine a concept before acceptance.
+
+
+======================================================================
+# U
+======================================================================
+
+UBUNTU
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+The relational principle that human identity and wellbeing exist in
+relationship with others.
+
+
+UBUNTU AI PRINCIPLE / UBUNTU AI THEOREM
+
+CLASS:
+HISTORICAL | DOCTRINE
+
+DEFINITION:
+The Elias proposition that intelligent systems should preserve human
+interdependence and reciprocity rather than treating people only as
+isolated optimisation targets.
+
+
+UBUNTU NETWORK
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A network concept organised around reciprocal contribution,
+relationship and collective continuity.
+
+
+UBUNTU THREAD
+
+CLASS:
+HISTORICAL
+
+DEFINITION:
+A preserved relational link connecting individuals, interactions or
+knowledge through reciprocal context.
+
+
+UNCERTAINTY IS AN ADMISSIBLE STATE
+
+CLASS:
+CURRENT | DOCTRINE | CURRENT NORMATIVE
+
+DEFINITION:
+The Elias invariant requiring uncertainty to remain explicitly
+representable rather than being converted into artificial certainty.
+
+
+UNRESOLVED_BY_WP01
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A bounded result preserving issues not resolved by the relevant frozen
+work package, specification or examination.
+
+BOUNDARY:
+The label does not establish that the issue is impossible to resolve;
+it records that it was not established within that bounded work.
+
+
+UNDERSTANDING
+
+CLASS:
+CURRENT | CURRENT NORMATIVE
+
+DEFINITION:
+Interpretation sufficiently contextualised to support reasoning while
+remaining distinguishable from direct observation.
+
+
+======================================================================
+# V
+======================================================================
+
+VALUES
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+Declared principles used to constrain purpose, interpretation,
+governance and action.
+
+
+VERIFICATION
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+Examination of whether a specific bounded claim is supported by the
+relevant evidence under a declared verification method.
+
+BOUNDARY:
+Verification must remain bounded to the property actually examined.
+
+
+VERSION
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+A specifically identified state of an artifact or system preserved so
+that change can be distinguished across time.
+
+
+VERSIONED STATE
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A state identified as a specific version so historical and successor
+states cannot be silently conflated.
+
+
+======================================================================
+# W
+======================================================================
+
+WATCH
+
+CLASS:
+HISTORICAL | CURRENT
+
+DEFINITION:
+Continued observation after determination or implementation to detect
+change, drift, new evidence or unintended consequence.
+
+
+WHITE PAPER
+
+CLASS:
+HISTORICAL | CURRENT
+
+DEFINITION:
+A structured Elias publication used to express, preserve and expose
+developing theory, architecture, evidence or proposals for examination.
+
+
+WISDOM
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+The ability to apply knowledge with contextual understanding, restraint
+and regard for consequence.
+
+
+WITNESS
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+To preserve contemporaneous evidence of state, determination,
+execution or consequence without altering the event being evidenced.
+
+
+WITNESS CONTINUITY
+
+CLASS:
+CURRENT | TECHNICAL
+
+DEFINITION:
+Preservation of evidentiary continuity across relevant state
+transitions.
+
+
+WITNESS RECEIPT
+
+CLASS:
+CURRENT | TECHNICAL | CURRENT NORMATIVE
+
+DEFINITION:
+A receipt preserving evidence of what was observed, governed,
+determined, attempted, executed or withheld at a specific time.
+
+
+======================================================================
+# X
+======================================================================
+
+X-FACTOR
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+The deliberately open variable representing an element not yet fully
+known, measured, understood or explainable within the current model.
+
+
+======================================================================
+# Y
+======================================================================
+
+YIELDING
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+The capacity to release an incorrect assumption, rigid interpretation
+or unnecessary control when evidence requires change.
+
+
+======================================================================
+# Z
+======================================================================
+
+ZENITH
+
+CLASS:
+FOUNDATIONAL
+
+DEFINITION:
+The highest realised state of a developmental trajectory while
+recognising that continued observation may still produce successors.
+
+
+======================================================================
+CROSS-LEXICON ELIAS DOCTRINES
+======================================================================
+
+CAPABILITY DOES NOT EQUAL AUTHORITY
+
+A system being able to perform an action does not establish that the
+system is authorised to perform it.
+
+
+ATTESTATION DOES NOT EQUAL VERIFICATION
+
+A statement asserting that something occurred is not equivalent to
+independent evidence establishing that it occurred.
+
+
+HISTORICAL VALIDITY DOES NOT EQUAL PRESENT STANDING
+
+A record may remain valid evidence of the past without remaining
+authoritative in the present.
+
+
+RUNNABLE DOES NOT EQUAL ESTABLISHED
+
+Executable code does not establish the validity of its governing
+assumptions, evidence or authority.
+
+
+FEASIBLE DOES NOT EQUAL AUTOMATICALLY SELECTABLE
+
+Technical possibility does not establish legitimate selection or
+execution.
+
+
+ETHICAL SURVIVAL DOES NOT EQUAL UNIQUE GOVERNING STANDING
+
+An option surviving an ethical threshold does not establish that it is
+the single authorised or governing option.
+
+
+INTENTION PRECEDES INTELLIGENCE
+
+Intelligence operates within governing purpose. Intelligence does not
+legitimately create its own unrestricted governing purpose.
+
+
+UNCERTAINTY IS AN ADMISSIBLE STATE
+
+A system must be capable of preserving unresolved conditions without
+manufacturing certainty.
+
+
+PRESERVE THE ANCESTOR
+
+A historical state remains preserved as the state that actually
+existed rather than being retrospectively rewritten.
+
+
+PRESERVE THE DEFICIENCY
+
+A discovered failure, contradiction, limitation or evidentiary gap
+remains part of the record.
+
+
+EXAMINE THE SUCCESSOR
+
+Correction occurs through creation and examination of a successor
+rather than alteration of the frozen predecessor.
+
+
+STATE BEFORE ACTION
+
+The governing conditions required for consequential action must be
+established before consequence.
+
+
+NO RETROSPECTIVE REPAIR
+
+Historical evidence must not be silently rewritten to manufacture
+continuity, success or compliance.
+
+
+NON-BYPASSABLE RESTRAINT
+
+A genuine governance control must remain effective even where the
+technical capability to bypass it exists.
+
+
+CLAIMS MUST STOP WHERE THE EVIDENCE STOPS
+
+The permissible claim boundary is determined by what the evidence can
+actually establish.
+
+
+FAILURE IS A LEGITIMATE RESULT
+
+HOLD, DENY, NOT ESTABLISHED, INVALID and NEW CHAIN REQUIRED are
+legitimate bounded technical outcomes.
+
+
+CAPABILITY IS NOT EXECUTION AUTHORITY
+
+Possession of technical capability does not establish authority to
+produce the contemplated consequence.
+
+
+OBSERVATION IS NOT INTERPRETATION
+
+What was directly observed must remain distinguishable from the meaning
+later assigned to it.
+
+
+INTERPRETATION IS NOT DETERMINATION
+
+A derived understanding does not become a governance determination
+merely because it appears plausible.
+
+
+DETERMINATION IS NOT EXECUTION
+
+A governance output and the consequential act implementing it are
+separate events and must remain separately inspectable.
+
+
+EXECUTION ATTEMPT IS NOT COMPLETED CONSEQUENCE
+
+Evidence that an action was attempted does not establish that the
+intended consequence actually occurred.
+
+
+HASH IDENTITY IS NOT TRUTH
+
+A matching cryptographic digest may establish byte-level identity but
+does not establish that the content represented by those bytes is true.
+
+
+LOGGING IS NOT PROOF OF CORRECTNESS
+
+The existence of a record establishes that data was recorded; it does
+not automatically establish that the recorded proposition is correct.
+
+
+SUCCESSFUL TEST IS NOT UNIVERSAL VALIDATION
+
+A successful bounded test establishes only what was demonstrated under
+the tested conditions.
+
+
+MATERIAL CHANGE REQUIRES REASSESSMENT
+
+Where a governing condition materially changes, prior standing must
+not simply be assumed to continue.
+
+
+SUCCESSOR DOES NOT ERASE PREDECESSOR
+
+A successor state supplements historical lineage rather than replacing
+the evidentiary existence of its ancestor.
+
+
+LOCK IT. LOG IT. PROVE IT.
+
+LOCK:
+Establish the governing state before consequential reliance.
+
+LOG:
+Preserve the material transition, determination, execution and
+consequence.
+
+PROVE:
+Make only the bounded claim that the available evidence can support.
+
+
+======================================================================
+ELIAS DEVELOPMENT LINEAGE
+======================================================================
+
+This lineage is a consolidated conceptual map.
+
+It does not assert that each concept appeared at exactly one point in a
+strict linear historical sequence.
+
+It represents the observable development from early Elias semantic and
+symbiotic concepts toward current governance engineering.
+
+7D QUANTUM FORGE
+        |
+        v
+MULTI-DIMENSIONAL / POSSIBILITY-BASED REASONING
+        |
+        v
+MIRRORING / QUESTIONING / INTERPRETIVE EXAMINATION
+        |
+        v
+LOVE FORMULA / LOVE FILTER / ETHICAL GRAVITY
+        |
+        v
+SYMBIOTIC AI
+        |
+        v
+HUMAN-AI RESONANCE FRAMEWORK
+        |
+        v
+COGNITIVE HANDSHAKE
+        |
+        v
+SYNTAPTIC SYNC
+        |
+        v
+SEMANTIC SOVEREIGNTY
+        |
+        v
+ETHICAL MEMORY
+        |
+        v
+SYMBIOTIC GOVERNANCE STACK
+        |
+        v
+IDENTITY
+        |
+        v
+OBSERVATION
+        |
+        v
+UNDERSTANDING
+        |
+        v
+GOVERNANCE
+        |
+        v
+INTELLIGENCE
+        |
+        v
+EXECUTION
+        |
+        v
+WITNESS / ATTESTATION
+        |
+        v
+AUTHORITY
+        |
+        v
+STANDING
+        |
+        v
+ADMISSIBILITY
+        |
+        v
+GOVERNING STATE
+        |
+        v
+MATERIAL CHANGE / DELTA-N
+        |
+        v
+SUCCESSOR STATE
+        |
+        v
+EXECUTION AUTHORITY
+        |
+        v
+EVIDENCE CONTINUITY
+        |
+        v
+WITNESS RECEIPTS
+        |
+        v
+CLAIM CEILING
+        |
+        v
+FAIL-CLOSED EXECUTION
+        |
+        v
+LOCK IT. LOG IT. PROVE IT.
+
+
+======================================================================
+LEXICON v0.1 COMPLETION STATUS
+======================================================================
+
+Alphabetic coverage:
+
+A B C D E F
+G H I J K L
+M N O P Q R
+S T U V W X Y Z
+
+STATUS:
+A-Z CONSOLIDATED WORKING LEXICON CONTENT COMPLETE
+
+IMPORTANT:
+
+This is not yet a claim that every historical term has been
+independently traced to its earliest surviving source.
+
+Historical-source recovery and provenance mapping remain separate work.
+
+This working lexicon must not be represented as an independently
+validated external standard.
+
+Before publication, its current byte identity will be frozen and
+recorded through the LILP receipt process.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+ELIAS SYSTEMS LTD
+1 OCTOBER 2026
+

@@ -1,0 +1,89 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+LILP EVIDENCE RECEIPT
+
+Receipt ID:
+ELIAS-LILP-RECEIPT-0006
+
+Receipt Type:
+MAN001_CLOSING_CHECK_FALSE_POSITIVE_CORRECTION
+
+Recorded UTC:
+2026-10-01T22:42:17.132Z
+
+Subject:
+ELIAS-LILP-MAN-001 v0.1
+
+Candidate Bytes:
+105931
+
+Candidate SHA-256:
+429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2
+
+Observed Preliminary Closing-Check Result:
+FAIL - MANUAL CONTAMINATION CHECK FAILED
+
+Observed Preliminary Counts:
+PowerShell Prompt Hits = 1
+Continuation Prompt Hits = 0
+Template Placeholder Hits = 1
+
+Correction Determination:
+
+The preliminary contamination checker treated two intentional
+instructional examples inside the manual as contamination:
+
+1. literal PowerShell prompt example:
+PS C:\
+
+2. literal template placeholder example:
+__PLACEHOLDER__
+
+The corrected inspection established that:
+
+- the PowerShell literal is located inside section
+  30.6 TRANSCRIPT CONTAMINATION;
+
+- the placeholder literal is located inside section
+  30.7 TEMPLATE CONTAMINATION;
+
+- no actual PowerShell transcript prompt matching the corrected
+  transcript pattern was detected;
+
+- no actual continuation-prompt contamination was detected;
+
+- no unresolved template placeholder other than the intentional
+  instructional example was detected;
+
+- the MAN-001 candidate byte sequence was not changed;
+
+- the 191-requirement traceability index remained preserved;
+
+- the frozen STD-001 ancestor remained unchanged;
+
+- the frozen LEX-001 ancestor remained unchanged.
+
+Candidate Mutation:
+NONE
+
+Corrected Determination:
+PASS
+
+CLAIM CEILING:
+
+This receipt establishes correction of the bounded local
+contamination-check logic.
+
+It does not establish that no conceivable defect exists in MAN-001.
+
+It does not establish implementation conformance or external
+certification.
+
+PRESERVE THE DEFICIENCY.
+CORRECT THE CHECK.
+DO NOT REWRITE THE CANDIDATE.
+
+LOCK IT.
+LOG IT.
+PROVE IT.

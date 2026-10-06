@@ -1,0 +1,187 @@
+﻿ELIAS LILP CONF-001
+OBJ-003 VERIFICATION-METHOD DEFINITION FIELD PROPOSAL DESIGN REVIEW v0.1
+
+DETERMINATION:
+PASS
+
+STATE:
+OBJ-003_VERIFICATION_METHOD_DEFINITION_FIELD_PROPOSAL_DESIGN_ESTABLISHED_v0.1
+
+CLASSIFICATION:
+COMPLETE_DEFINITION_FIELD_VALUES_PROPOSED_PENDING_CONTROLLED_REVIEW
+
+NEXT AUTHORITY:
+AUTHORIZED_FOR_SEPARATE_OBJ-003_VERIFICATION_METHOD_DEFINITION_FIELD_PROPOSAL_CONTROLLED_REVIEW
+
+DEFINITION-FIELD DESIGN GOVERNANCE SHA256:
+FA2968C6FC5F937E3C5A8A1C40187BC92EA1628E3D06812BAEB5538AC8C6856C
+
+LIFECYCLE RECONCILIATION SHA256:
+6C485FFDCA9CD37CF3E26F7FBE0A6F0D6A282B2EAEE956000B7E18207B1478E8
+
+VM PROPOSAL DESIGN SHA256:
+4E5170FF8D4EFBA7BEEF7CB10372CBB5F0F912A62C74CB9EB5D7ADFD2515739B
+
+VM PROPOSAL CONTROLLED REVIEW SHA256:
+F9832E521B25F2409601A097DDFFA132E54C68D1FC7714F0D877236854F19324
+
+REQUIREMENT MATRIX SHA256:
+7766A309A002A8BB51475DD491DF1AAA88049CC7FA2B71D40F69DECE4D03AD14
+
+TEST-CASE REGISTER SHA256:
+C2A36BAB57414EF04400A76EFC1CD31E8E42B34E0053593EDF97ADEF0F67E9AF
+
+CURRENT VM REGISTER SHA256:
+3870674FCD975CF43DA0C79DC28AB644BAE44273D2F94C705BB4D0562FFC1419
+
+REQUIREMENT ID:
+LILP-REQ-OBJ-003
+
+REQUIREMENT TEXT:
+LILP-REQ-OBJ-003 Each object relied upon for consequential governance SHALL identify the time or temporal state relevant to its creation or applicability.
+
+TEST FAMILY:
+T02
+
+BOUND EXPLICIT TEST:
+LILP-TC-T02-007
+
+BOUND TEST TITLE:
+Consequential object carries relevant temporal context
+
+BOUND TEST OBJECTIVE:
+Establish that an object relied upon for consequential governance identifies the time or temporal state relevant to its creation or applicability.
+
+PROPOSED VERIFICATION METHOD ID:
+LILP-VM-OBJ-003-v0.1
+
+GOVERNED SEMANTIC SOURCE:
+LILP-REQ-OBJ-003 + LILP-TC-T02-007
+
+GOVERNED VERIFICATION BOUNDARY:
+OBJ-003_REQUIREMENT_AND_BOUND_EXPLICIT_TEST_ONLY_NO_UNSTATED_SEMANTIC_EXTENSION
+
+PROPOSED MethodTitle:
+OBJ-003 requirement-predicate verification
+
+PROPOSED MethodClass:
+DETERMINISTIC_READ_ONLY_REQUIREMENT_PREDICATE_INSPECTION
+
+PROPOSED Inputs:
+Designated candidate evidence; LILP-REQ-OBJ-003; bound explicit test LILP-TC-T02-007; preserved candidate identity and provenance required to inspect only the predicates explicitly required by the bound requirement and test.
+
+PROPOSED Procedure:
+Perform deterministic read-only inspection of the designated candidate evidence. Bind the inspection to LILP-REQ-OBJ-003 and LILP-TC-T02-007. Identify only the predicates explicitly required by the preserved requirement and bound explicit test. Inspect whether each required predicate is directly demonstrated by the designated candidate evidence. Record absent, ambiguous or contradictory predicates. Do not use filename inference, semantic substitution, retrospective construction or unstated assumption. Preserve the candidate identity, inspected evidence, predicate observations, determination and provenance.
+
+PROPOSED PassCondition:
+ESTABLISHED only when the exact predicates explicitly required by LILP-REQ-OBJ-003 and the bound explicit test definition are directly demonstrated by the designated candidate evidence without filename inference, semantic substitution, retrospective construction or unstated assumption.
+
+PROPOSED FailCondition:
+NOT_ESTABLISHED when any required predicate is absent, ambiguous, contradictory, not directly observable under the designated method, or requires inference beyond the preserved requirement/test definition.
+
+PROPOSED EvidenceOutput:
+VerificationMethodId; RequirementId; bound TestCaseId; designated candidate identity; designated candidate provenance; explicit required-predicate set as derived from the preserved requirement and bound test; per-predicate direct observations; absent, ambiguous or contradictory predicate findings where present; bounded determination; inspection record.
+
+PROPOSED Notes:
+Controlled forward verification-method definition for LILP-REQ-OBJ-003 bound to LILP-TC-T02-007. Method establishment does not establish requirement-matrix mapping, harness binding, execution, result or requirement/CONF-001 conformance.
+
+METHOD CLASS SOURCE:
+EXACT_MAPPING_FROM_GOVERNED_PROPOSED_VERIFICATION_CLASS
+
+PASS CONDITION SOURCE:
+EXACT_MAPPING_FROM_GOVERNED_PROPOSED_PASS_RULE
+
+FAIL CONDITION SOURCE:
+EXACT_MAPPING_FROM_GOVERNED_PROPOSED_FAIL_RULE
+
+METHOD TITLE SOURCE:
+FRESH_BOUNDED_OBJ003_VM_DEFINITION_DESIGN
+
+INPUTS SOURCE:
+FRESH_BOUNDED_OBJ003_VM_DEFINITION_DESIGN
+
+PROCEDURE SOURCE:
+FRESH_BOUNDED_OBJ003_VM_DEFINITION_DESIGN
+
+EVIDENCE OUTPUT SOURCE:
+FRESH_BOUNDED_OBJ003_VM_DEFINITION_DESIGN
+
+NOTES SOURCE:
+FRESH_VM_SPECIFIC_PROVENANCE_AND_CLAIM_CEILING_DESIGN
+
+NEW REQUIREMENT PREDICATE ADDED:
+FALSE
+
+OBJ-002 DEFINITION VALUE COPIED:
+FALSE
+
+FILENAME INFERENCE AUTHORIZED:
+FALSE
+
+SEMANTIC SUBSTITUTION AUTHORIZED:
+FALSE
+
+RETROSPECTIVE CONSTRUCTION AUTHORIZED:
+FALSE
+
+UNSTATED ASSUMPTION AUTHORIZED:
+FALSE
+
+DEFINITION FIELD VALUES REGISTERED:
+FALSE
+
+DEFINITION FIELD VALUES CONTROLLED-REVIEWED:
+FALSE
+
+LIFECYCLE RECONCILIATION REOPENED:
+FALSE
+
+ENTIRE ROW-DESIGN HOLD CLEARED:
+FALSE
+
+SUCCESSOR VM ROW CONSTRUCTED:
+FALSE
+
+SUCCESSOR VM REGISTER CONSTRUCTED:
+FALSE
+
+MATRIX MAPPING CREATED:
+FALSE
+
+HARNESS IMPLEMENTATION AUTHORIZED:
+FALSE
+
+HARNESS BINDING AUTHORIZED:
+FALSE
+
+EXECUTION AUTHORIZED:
+FALSE
+
+EXECUTION PERFORMED:
+FALSE
+
+REQUIREMENT CONFORMANCE ESTABLISHED:
+FALSE
+
+OBJ-002 REOPENED:
+FALSE
+
+RETROSPECTIVE REPAIR:
+FALSE
+
+CONF-001:
+NOT_ESTABLISHED
+
+PROPOSAL BOUNDARY:
+The proposed definition fields describe only the verification method for direct inspection of predicates already required by the preserved OBJ-003 requirement and bound explicit test.
+MethodClass, PassCondition and FailCondition are exact mappings from previously governed proposal semantics.
+MethodTitle, Inputs, Procedure and EvidenceOutput are newly proposed VM-definition text and require separate controlled review before use.
+Notes is a newly proposed VM-specific provenance and claim-ceiling statement and requires separate controlled review before use.
+No proposed field is registered by this review.
+The established lifecycle reconciliation remains unchanged.
+The overall row-design HOLD remains in force.
+
+NEXT STATE:
+READY_FOR_OBJ-003_VERIFICATION_METHOD_DEFINITION_FIELD_PROPOSAL_CONTROLLED_REVIEW
+
+LOCK IT. LOG IT. PROVE IT.

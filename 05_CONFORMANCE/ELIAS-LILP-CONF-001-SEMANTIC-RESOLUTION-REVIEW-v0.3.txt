@@ -1,0 +1,1351 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+ELIAS-LILP-CONF-001
+SEMANTIC RESOLUTION PROPOSAL v0.3
+
+Status:
+PROPOSAL ONLY — NOT AUTHORITATIVE
+
+Corrected Matrix SHA-256:
+47F06F95A6FBA1E2ED0A7FCA251DC576CAADC3C7A2F969E03E1DE1AA7B478599
+
+Controlled Candidate SHA-256:
+7AB2F42CDF568E563EAF868BDAF3FA662A76A925F2DE1F0A3E0404E1122FBBD2
+
+Controlled Diff SHA-256:
+536E9C80546C50E3ED4A1CE9DEB3520EB7B2430652BFBD252A82359385E411B8
+
+Total Requirements:
+191
+
+Controlled-Clear Rows Inherited:
+137
+
+Non-Clear Rows Semantically Resolved:
+54
+
+Primary-Family Overrides From Controlled Candidate:
+20
+
+Executable Test Cases:
+NOT ESTABLISHED
+
+Final Verification Methods:
+NOT ESTABLISHED
+
+======================================================================
+PROPOSED PRIMARY FAMILY DISTRIBUTION
+======================================================================
+
+T01 — Governing-State Establishment : 10
+T02 — Identity Continuity : 13
+T03 — Authority Validity : 10
+T04 — Standing and Revocation : 1
+T05 — Evidence Admissibility : 16
+T06 — Observation / Interpretation Separation : 2
+T07 — Material Delta Detection : 6
+T08 — Determination / Execution Separation : 9
+T09 — Pre-Execution Gate Enforcement : 6
+T10 — TOCTOU Revalidation : 3
+T11 — Consequence Verification : 4
+T12 — Receipt / Witness Continuity : 9
+T13 — Failure Preservation : 14
+T14 — Correction / Successor Discipline : 26
+T15 — Bypass and Non-Bypassable Restraint : 1
+T16 — Claim-Ceiling Enforcement : 61
+
+======================================================================
+20 PRIMARY-FAMILY SEMANTIC OVERRIDES
+======================================================================
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-005
+
+Controlled Primary:
+T13
+
+Proposed Primary:
+T16
+
+Semantic Basis:
+Complete conformance-status representation bounds what may be claimed; failure and uncertainty preservation support that claim ceiling.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-011
+
+Controlled Primary:
+T13
+
+Proposed Primary:
+T16
+
+Semantic Basis:
+The requirement directly prohibits a LILP-FULL claim while FAIL or NOT ESTABLISHED remains.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-014
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T13
+
+Semantic Basis:
+The central requirement is preservation of a failed result despite later success; successor discipline and claim integrity are supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-015
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T14
+
+Semantic Basis:
+The requirement explicitly preserves predecessor and successor relationships after correction; failure preservation is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-016
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T05
+
+Semantic Basis:
+Independent re-hashability is principally an evidence-verifiability property; the resulting conformance claim is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DELTA-007
+
+Controlled Primary:
+T08
+
+Proposed Primary:
+T10
+
+Semantic Basis:
+The core prohibition is continued reliance on stale ALLOW authority after material change; revalidation is primary, with delta detection, determination-execution separation and authority validity supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DEV-002
+
+Controlled Primary:
+T11
+
+Proposed Primary:
+T13
+
+Semantic Basis:
+The deviation record preserves the complete material deviation state; authority, consequence and residual claim limitation are supporting dimensions.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DEV-004
+
+Controlled Primary:
+T13
+
+Proposed Primary:
+T03
+
+Semantic Basis:
+An exception is valid only where an identifiable governing rule authorises it; exception lifecycle discipline is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DEV-007
+
+Controlled Primary:
+T13
+
+Proposed Primary:
+T16
+
+Semantic Basis:
+A material deviation that changes the basis of an earlier conformance claim requires reassessment of that claim; successor discipline is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-MATR-004
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T05
+
+Semantic Basis:
+A PASS matrix entry requires sufficient supporting evidence; claim and determination semantics are supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-OBJ-008
+
+Controlled Primary:
+T02
+
+Proposed Primary:
+T13
+
+Semantic Basis:
+Unknown required values must remain explicitly represented as uncertainty rather than being silently omitted; object structure is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-RCPT-010
+
+Controlled Primary:
+T12
+
+Proposed Primary:
+T11
+
+Semantic Basis:
+The substantive invariant is that execution status and observed consequence remain distinct; receipt continuity provides the recording surface.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-SEC-006
+
+Controlled Primary:
+T03
+
+Proposed Primary:
+T10
+
+Semantic Basis:
+Credential or key compromise must trigger reassessment because previously valid authority or provenance may no longer remain valid.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-SEC-008
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T05
+
+Semantic Basis:
+Cryptographic integrity alone does not make malicious, false or unauthorised content trustworthy; evidentiary admissibility is primary and claim discipline is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-001
+
+Controlled Primary:
+T15
+
+Proposed Primary:
+T16
+
+Semantic Basis:
+A conformance profile cannot legitimately be claimed without executing all mandatory applicable falsification tests; this is principally a claim-ceiling gate.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-002
+
+Controlled Primary:
+T06
+
+Proposed Primary:
+T05
+
+Semantic Basis:
+The requirement defines the evidence that a test record must preserve; observation and determination semantics are supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-004
+
+Controlled Primary:
+T15
+
+Proposed Primary:
+T16
+
+Semantic Basis:
+Harness completion alone cannot justify PASS; this constrains the permissible PASS claim.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-005
+
+Controlled Primary:
+T06
+
+Proposed Primary:
+T16
+
+Semantic Basis:
+PASS is permitted only when observed behaviour satisfies the declared expected result; observation semantics support the claim boundary.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-007
+
+Controlled Primary:
+T14
+
+Proposed Primary:
+T13
+
+Semantic Basis:
+An earlier failing test must remain preserved even after a later passing successor; successor discipline is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-008
+
+Controlled Primary:
+T15
+
+Proposed Primary:
+T16
+
+Semantic Basis:
+The requirement explicitly prevents a bounded PASS from being represented as universal validation and is therefore a claim-ceiling requirement.
+
+======================================================================
+54 SEMANTICALLY REVIEWED REQUIREMENTS
+======================================================================
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-OBJ-002
+
+Requirement:
+LILP-REQ-OBJ-002 Each versioned object SHALL identify its version.
+
+Controlled Primary:
+T02
+
+Proposed Primary:
+T02 — Identity Continuity
+
+Proposed Supporting:
+
+
+Semantic Basis:
+Object version identity is part of maintaining distinguishable object identity across change.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-OBJ-003
+
+Requirement:
+LILP-REQ-OBJ-003 Each object relied upon for consequential governance SHALL identify the time or temporal state relevant to its creation or applicability.
+
+Controlled Primary:
+T02
+
+Proposed Primary:
+T02 — Identity Continuity
+
+Proposed Supporting:
+
+
+Semantic Basis:
+Temporal creation or applicability state is part of the identity context of an object relied upon for consequential governance.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-OBJ-004
+
+Requirement:
+LILP-REQ-OBJ-004 Where an object has a predecessor, the predecessor relationship SHALL be explicitly representable.
+
+Controlled Primary:
+T02
+
+Proposed Primary:
+T02 — Identity Continuity
+
+Proposed Supporting:
+T14
+
+Semantic Basis:
+Explicit predecessor representation is principally an identity and lineage continuity property; successor discipline is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-OBJ-006
+
+Requirement:
+LILP-REQ-OBJ-006 The implementation SHALL declare the hash algorithm used to identify the object's canonical byte representation.
+
+Controlled Primary:
+T02
+
+Proposed Primary:
+T02 — Identity Continuity
+
+Proposed Supporting:
+
+
+Semantic Basis:
+The declared hash algorithm is part of reproducibly establishing the object's cryptographic identity.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-OBJ-007
+
+Requirement:
+LILP-REQ-OBJ-007 The field containing an object's own final digest SHALL NOT be included recursively within the bytes over which that digest is calculated, unless the implementation defines and proves another non-circular construction.
+
+Controlled Primary:
+T02
+
+Proposed Primary:
+T02 — Identity Continuity
+
+Proposed Supporting:
+
+
+Semantic Basis:
+Preventing recursive self-digest construction is necessary for reproducible non-circular object identity.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-OBJ-008
+
+Requirement:
+LILP-REQ-OBJ-008 A required field whose value cannot be established SHALL NOT be silently omitted where omission would conceal uncertainty. The implementation SHALL explicitly represent the relevant condition, including where appropriate: NOT ESTABLISHED NOT APPLICABLE
+
+Controlled Primary:
+T02
+
+Proposed Primary:
+T13 — Failure Preservation
+
+Proposed Supporting:
+T02
+
+Semantic Basis:
+Unknown required values must remain explicitly represented as uncertainty rather than being silently omitted; object structure is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-STATE-011
+
+Requirement:
+LILP-REQ-STATE-011 A frozen predecessor state SHALL NOT be modified to represent later conditions.
+
+Controlled Primary:
+T14
+
+Proposed Primary:
+T14 — Correction / Successor Discipline
+
+Proposed Supporting:
+T01
+
+Semantic Basis:
+The prohibition on rewriting a frozen predecessor is principally correction and successor discipline; governing-state integrity is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-AUTH-008
+
+Requirement:
+LILP-REQ-AUTH-008 Execution authority SHALL be evaluated at the time required for consequential execution and SHALL NOT be inferred solely from historical authority.
+
+Controlled Primary:
+T10
+
+Proposed Primary:
+T10 — TOCTOU Revalidation
+
+Proposed Supporting:
+T03
+
+Semantic Basis:
+Authority must be valid at execution time rather than inherited historically; this is directly a TOCTOU revalidation requirement with authority validity supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-EVID-006
+
+Requirement:
+LILP-REQ-EVID-006 Where time affects relevance or validity, the observation or acquisition time SHALL be preserved.
+
+Controlled Primary:
+T05
+
+Proposed Primary:
+T05 — Evidence Admissibility
+
+Proposed Supporting:
+T10
+
+Semantic Basis:
+Preserving observation or acquisition time supports evidence relevance and admissibility; temporal revalidation is secondary.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DELTA-007
+
+Requirement:
+LILP-REQ-DELTA-007 A system SHALL NOT preserve an earlier ALLOW determination as sufficient execution authority where a subsequent material delta invalidates one or more conditions on which that determination relied.
+
+Controlled Primary:
+T08
+
+Proposed Primary:
+T10 — TOCTOU Revalidation
+
+Proposed Supporting:
+T07;T08;T03
+
+Semantic Basis:
+The core prohibition is continued reliance on stale ALLOW authority after material change; revalidation is primary, with delta detection, determination-execution separation and authority validity supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-RCPT-010
+
+Requirement:
+LILP-REQ-RCPT-010 Execution status and consequence status SHALL remain distinguishable.
+
+Controlled Primary:
+T12
+
+Proposed Primary:
+T11 — Consequence Verification
+
+Proposed Supporting:
+T12
+
+Semantic Basis:
+The substantive invariant is that execution status and observed consequence remain distinct; receipt continuity provides the recording surface.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-004
+
+Requirement:
+LILP-REQ-CONF-004 All mandatory requirements applicable to the declared profile and scope SHALL be evaluated.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+
+
+Semantic Basis:
+A conformance claim is bounded by evaluation of every applicable mandatory requirement.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-005
+
+Requirement:
+LILP-REQ-CONF-005 Each mandatory requirement SHALL receive one of the following statuses: PASS FAIL NOT APPLICABLE NOT ESTABLISHED
+
+Controlled Primary:
+T13
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T13
+
+Semantic Basis:
+Complete conformance-status representation bounds what may be claimed; failure and uncertainty preservation support that claim ceiling.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-006
+
+Requirement:
+LILP-REQ-CONF-006 A mandatory requirement with status FAIL prevents a PASS conformance determination for the affected profile.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T13
+
+Semantic Basis:
+A FAIL status explicitly prevents a PASS conformance determination; failure preservation is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-007
+
+Requirement:
+LILP-REQ-CONF-007 A mandatory requirement with status NOT ESTABLISHED prevents a PASS conformance determination unless the requirement itself explicitly permits that state.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T13
+
+Semantic Basis:
+NOT ESTABLISHED prevents PASS unless explicitly permitted, directly constraining the claim ceiling.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-008
+
+Requirement:
+LILP-REQ-CONF-008 A NOT APPLICABLE status SHALL include the rationale establishing why the requirement does not apply to the declared scope.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+
+
+Semantic Basis:
+NOT APPLICABLE requires an explicit scope rationale so the resulting conformance claim remains bounded.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-009
+
+Requirement:
+LILP-REQ-CONF-009 A profile PASS SHALL NOT be extrapolated beyond the evaluated scope.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+
+
+Semantic Basis:
+The requirement directly prohibits extrapolating a profile PASS beyond the evaluated scope.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-011
+
+Requirement:
+LILP-REQ-CONF-011 LILP-FULL SHALL NOT be claimed while an applicable mandatory requirement remains FAIL or NOT ESTABLISHED.
+
+Controlled Primary:
+T13
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T13
+
+Semantic Basis:
+The requirement directly prohibits a LILP-FULL claim while FAIL or NOT ESTABLISHED remains.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-012
+
+Requirement:
+LILP-REQ-CONF-012 A conformance determination SHALL be traceable to its requirements matrix and test evidence.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T05;T08
+
+Semantic Basis:
+A conformance determination must be traceable to its matrix and test evidence so the claim remains evidentially bounded.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-014
+
+Requirement:
+LILP-REQ-CONF-014 A conformance package SHALL NOT delete a failed result merely because a later successor test passed.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T13 — Failure Preservation
+
+Proposed Supporting:
+T14;T16
+
+Semantic Basis:
+The central requirement is preservation of a failed result despite later success; successor discipline and claim integrity are supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-015
+
+Requirement:
+LILP-REQ-CONF-015 Where a successor run corrects a failure, the predecessor result and successor relationship SHALL remain inspectable.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T14 — Correction / Successor Discipline
+
+Proposed Supporting:
+T13
+
+Semantic Basis:
+The requirement explicitly preserves predecessor and successor relationships after correction; failure preservation is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-016
+
+Requirement:
+LILP-REQ-CONF-016 The evidence package SHOULD be independently re-hashable.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T05 — Evidence Admissibility
+
+Proposed Supporting:
+T16
+
+Semantic Basis:
+Independent re-hashability is principally an evidence-verifiability property; the resulting conformance claim is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-017
+
+Requirement:
+LILP-REQ-CONF-017 Where reproducibility is claimed, the evidence package SHALL contain or identify the material necessary to perform the claimed reproduction.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T05
+
+Semantic Basis:
+Where reproducibility is claimed, the package must contain the material necessary to support that specific claim.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-001
+
+Requirement:
+LILP-REQ-TEST-001 Every claimed conformance profile SHALL execute all mandatory general falsification tests applicable to that profile and declared scope.
+
+Controlled Primary:
+T15
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+
+
+Semantic Basis:
+A conformance profile cannot legitimately be claimed without executing all mandatory applicable falsification tests; this is principally a claim-ceiling gate.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-002
+
+Requirement:
+LILP-REQ-TEST-002 Test evidence SHALL preserve the test input, expected result, observed result and determination.
+
+Controlled Primary:
+T06
+
+Proposed Primary:
+T05 — Evidence Admissibility
+
+Proposed Supporting:
+T06;T08
+
+Semantic Basis:
+The requirement defines the evidence that a test record must preserve; observation and determination semantics are supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-004
+
+Requirement:
+LILP-REQ-TEST-004 A test SHALL NOT be marked PASS solely because the test harness completed without error.
+
+Controlled Primary:
+T15
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+
+
+Semantic Basis:
+Harness completion alone cannot justify PASS; this constrains the permissible PASS claim.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-005
+
+Requirement:
+LILP-REQ-TEST-005 A test PASS requires the observed behaviour to satisfy the declared expected result.
+
+Controlled Primary:
+T06
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T06
+
+Semantic Basis:
+PASS is permitted only when observed behaviour satisfies the declared expected result; observation semantics support the claim boundary.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-006
+
+Requirement:
+LILP-REQ-TEST-006 Where the test cannot be completed because required conditions or evidence are unavailable, the result SHALL be NOT ESTABLISHED unless another defined result more accurately describes the condition.
+
+Controlled Primary:
+T13
+
+Proposed Primary:
+T13 — Failure Preservation
+
+Proposed Supporting:
+T05
+
+Semantic Basis:
+Unavailable required conditions or evidence must remain NOT ESTABLISHED rather than being converted into success or failure without basis.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-007
+
+Requirement:
+LILP-REQ-TEST-007 A later passing successor test SHALL NOT erase the evidence of an earlier failing test.
+
+Controlled Primary:
+T14
+
+Proposed Primary:
+T13 — Failure Preservation
+
+Proposed Supporting:
+T14
+
+Semantic Basis:
+An earlier failing test must remain preserved even after a later passing successor; successor discipline is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-008
+
+Requirement:
+LILP-REQ-TEST-008 Test scope SHALL be sufficiently explicit to prevent a bounded PASS from being represented as universal validation.
+
+Controlled Primary:
+T15
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+
+
+Semantic Basis:
+The requirement explicitly prevents a bounded PASS from being represented as universal validation and is therefore a claim-ceiling requirement.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-018
+
+Requirement:
+LILP-REQ-CONF-018 PASS SHALL NOT be issued where an applicable mandatory requirement is FAIL.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T13
+
+Semantic Basis:
+An applicable mandatory FAIL prevents PASS and therefore directly enforces the claim ceiling.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-019
+
+Requirement:
+LILP-REQ-CONF-019 PASS SHALL NOT be issued where an unresolved applicable mandatory requirement remains NOT ESTABLISHED.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T13
+
+Semantic Basis:
+An unresolved mandatory NOT ESTABLISHED condition prevents PASS and therefore directly enforces the claim ceiling.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-020
+
+Requirement:
+LILP-REQ-CONF-020 PASS SHALL NOT be issued where a mandatory falsification test required by the declared profile has not been executed without an established NOT APPLICABLE rationale.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T15
+
+Semantic Basis:
+PASS is prohibited when a mandatory falsification test has not been executed without an established exception; adversarial-test discipline is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-SEC-004
+
+Requirement:
+LILP-REQ-SEC-004 Authentication of a source SHALL remain distinguishable from truth of the source's assertion.
+
+Controlled Primary:
+T05
+
+Proposed Primary:
+T05 — Evidence Admissibility
+
+Proposed Supporting:
+T16
+
+Semantic Basis:
+Source authentication does not establish truth of the assertion; this is principally an evidence admissibility distinction with claim discipline supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-SEC-005
+
+Requirement:
+LILP-REQ-SEC-005 Where cryptographic signatures are used, the implementation SHALL identify the key, certificate, trust anchor or equivalent verification basis required to verify the signature.
+
+Controlled Primary:
+T05
+
+Proposed Primary:
+T05 — Evidence Admissibility
+
+Proposed Supporting:
+
+
+Semantic Basis:
+The key, certificate or trust anchor is the verification basis needed to establish evidentiary integrity and admissibility.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-SEC-006
+
+Requirement:
+LILP-REQ-SEC-006 Where loss or compromise of a credential or signing key could alter authority, integrity or provenance, that condition SHALL be capable of triggering reassessment.
+
+Controlled Primary:
+T03
+
+Proposed Primary:
+T10 — TOCTOU Revalidation
+
+Proposed Supporting:
+T03;T05
+
+Semantic Basis:
+Credential or key compromise must trigger reassessment because previously valid authority or provenance may no longer remain valid.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-SEC-008
+
+Requirement:
+LILP-REQ-SEC-008 A cryptographically intact malicious, false or unauthorised object SHALL NOT be represented as trustworthy merely because its integrity check succeeds.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T05 — Evidence Admissibility
+
+Proposed Supporting:
+T16
+
+Semantic Basis:
+Cryptographic integrity alone does not make malicious, false or unauthorised content trustworthy; evidentiary admissibility is primary and claim discipline is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-SEC-009
+
+Requirement:
+LILP-REQ-SEC-009 Where protected evidence is disclosed for verification, disclosure SHALL remain bounded to the authority and scope of the examination.
+
+Controlled Primary:
+T03
+
+Proposed Primary:
+T03 — Authority Validity
+
+Proposed Supporting:
+T05
+
+Semantic Basis:
+Disclosure of protected evidence is bounded by examination authority and scope; evidence handling is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-SEC-010
+
+Requirement:
+LILP-REQ-SEC-010 LILP evidence mechanisms SHOULD preserve confidentiality requirements without destroying the inspectability required by the declared claim.
+
+Controlled Primary:
+T05
+
+Proposed Primary:
+T05 — Evidence Admissibility
+
+Proposed Supporting:
+T16
+
+Semantic Basis:
+The requirement balances confidentiality with the inspectability necessary to support evidence-based claims.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-VER-002
+
+Requirement:
+LILP-REQ-VER-002 The verification record SHALL identify the verifier's declared relationship to the originating party.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T12
+
+Semantic Basis:
+The verifier's relationship to the originator bounds any independence claim; witness identity and relationship are supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-VER-006
+
+Requirement:
+LILP-REQ-VER-006 Use of a different AI model or software tool by the same controlling party SHALL NOT, by itself, establish organisational independence.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+
+
+Semantic Basis:
+Changing software or AI tooling under the same controlling party cannot establish organisational independence; this is directly a verification-claim ceiling.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-VER-007
+
+Requirement:
+LILP-REQ-VER-007 A verifier's inability to examine a material dependency SHALL be preserved as a scope limitation or NOT ESTABLISHED condition.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T13
+
+Semantic Basis:
+An unexamined material dependency must remain a scope limitation or NOT ESTABLISHED condition rather than being hidden by a broader verification claim.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DEV-001
+
+Requirement:
+LILP-REQ-DEV-001 A known deviation from a mandatory requirement SHALL be recorded.
+
+Controlled Primary:
+T13
+
+Proposed Primary:
+T13 — Failure Preservation
+
+Proposed Supporting:
+T14
+
+Semantic Basis:
+A known deviation must remain recorded rather than disappearing from the evidence history; correction discipline is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DEV-002
+
+Requirement:
+LILP-REQ-DEV-002 A deviation record SHALL identify: - the affected requirement; - the reason for deviation; - the affected scope; - the approving authority where approval is applicable; - the effective period where time-bounded; - the expected consequence; - and the residual claim limitation.
+
+Controlled Primary:
+T11
+
+Proposed Primary:
+T13 — Failure Preservation
+
+Proposed Supporting:
+T03;T11;T16
+
+Semantic Basis:
+The deviation record preserves the complete material deviation state; authority, consequence and residual claim limitation are supporting dimensions.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DEV-004
+
+Requirement:
+LILP-REQ-DEV-004 An exception SHALL identify the governing rule that authorises the exception.
+
+Controlled Primary:
+T13
+
+Proposed Primary:
+T03 — Authority Validity
+
+Proposed Supporting:
+T14
+
+Semantic Basis:
+An exception is valid only where an identifiable governing rule authorises it; exception lifecycle discipline is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DEV-005
+
+Requirement:
+LILP-REQ-DEV-005 An exception SHALL NOT create authority beyond the scope granted by the governing exception rule.
+
+Controlled Primary:
+T03
+
+Proposed Primary:
+T03 — Authority Validity
+
+Proposed Supporting:
+T14
+
+Semantic Basis:
+An exception may not create authority beyond the governing rule that authorises it.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DEV-007
+
+Requirement:
+LILP-REQ-DEV-007 Where an exception or deviation materially changes the basis of a prior conformance claim, the prior claim SHALL be reassessed.
+
+Controlled Primary:
+T13
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T14
+
+Semantic Basis:
+A material deviation that changes the basis of an earlier conformance claim requires reassessment of that claim; successor discipline is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DEV-008
+
+Requirement:
+LILP-REQ-DEV-008 Material deviations SHALL be included in the conformance evidence package.
+
+Controlled Primary:
+T13
+
+Proposed Primary:
+T13 — Failure Preservation
+
+Proposed Supporting:
+T05
+
+Semantic Basis:
+Material deviations must remain visible in the conformance evidence package; evidence packaging is supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-MATR-001
+
+Requirement:
+LILP-REQ-MATR-001 Every normative requirement identifier in a claimed profile SHALL be represented in the requirements matrix.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+
+
+Semantic Basis:
+Complete requirements-matrix coverage is a prerequisite for bounding a claimed conformance profile.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-MATR-002
+
+Requirement:
+LILP-REQ-MATR-002 Each matrix entry SHALL identify exactly one normative requirement.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+
+
+Semantic Basis:
+One matrix entry must identify exactly one normative requirement so the conformance claim remains traceable and bounded.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-MATR-003
+
+Requirement:
+LILP-REQ-MATR-003 Each applicable mandatory requirement SHALL have one determination status.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T08
+
+Semantic Basis:
+Every applicable mandatory requirement must have one determination status so the resulting conformance claim is unambiguous.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-MATR-004
+
+Requirement:
+LILP-REQ-MATR-004 A PASS matrix entry SHALL reference sufficient evidence to support the PASS determination.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T05 — Evidence Admissibility
+
+Proposed Supporting:
+T16;T08
+
+Semantic Basis:
+A PASS matrix entry requires sufficient supporting evidence; claim and determination semantics are supporting.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-MATR-006
+
+Requirement:
+LILP-REQ-MATR-006 A NOT ESTABLISHED matrix entry SHALL identify the evidentiary gap where that gap can be determined.
+
+Controlled Primary:
+T13
+
+Proposed Primary:
+T13 — Failure Preservation
+
+Proposed Supporting:
+T05;T16
+
+Semantic Basis:
+NOT ESTABLISHED must preserve the identifiable evidentiary gap rather than concealing uncertainty.
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-FREEZE-012
+
+Requirement:
+LILP-REQ-FREEZE-012 The final candidate SHALL preserve an explicit external-claim boundary preventing internal LILP status from being represented as: - ISO adoption; - IEC adoption; - regulatory approval; - government approval; - independent certification; - or industry-wide adoption.
+
+Controlled Primary:
+T16
+
+Proposed Primary:
+T16 — Claim-Ceiling Enforcement
+
+Proposed Supporting:
+T14
+
+Semantic Basis:
+The requirement is an explicit external claim ceiling preventing internal status from being represented as external adoption, approval or certification.
+

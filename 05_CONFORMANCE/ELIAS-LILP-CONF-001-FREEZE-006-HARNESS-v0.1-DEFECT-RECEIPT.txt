@@ -1,0 +1,77 @@
+ELIAS LILP CONF-001
+FREEZE-006 HARNESS IMPLEMENTATION v0.1 DEFECT RECEIPT
+
+RECORDED UTC:
+2026-10-04T15:55:13.754Z
+
+REQUIREMENT:
+LILP-REQ-FREEZE-006
+
+TEST CASE:
+LILP-TC-T14-013
+
+HARNESS IMPLEMENTATION:
+LILP-HI-FREEZE-006-v0.1
+
+HARNESS SHA-256:
+11045B9179BAD7882BAA19A6BD4E0BE33DEF5E3EE95207144BE36186C7EBF794
+
+EXECUTION INPUT BINDING SHA-256:
+46118CB75C854A2BAA943253610388E9F683B086EA1C727F43E8A775C7351383
+
+EXECUTION INPUT BINDING RECEIPT SHA-256:
+79F72BF39BA881783EF14D88C24D8661F4B65F0FB3B40C271BEC885D31EE3736
+
+DEFECT CLASS:
+POWERSHELL_AUTOMATIC_VARIABLE_COLLISION
+
+DEFECT LOCATION:
+The implementation assigns a mutable generic List[object] to the variable
+named $Matches, then evaluates regular-expression expressions using the
+PowerShell -match operator, and subsequently calls $Matches.Add(...).
+
+POWER SHELL SEMANTIC CONFLICT:
+$Matches is PowerShell's automatic regular-expression match-result
+variable.
+
+A successful -match operation can replace the previously assigned list
+value with the automatic regex-match hashtable before the implementation
+attempts $Matches.Add(...).
+
+IMPACT:
+The positive-detection execution path cannot be relied upon to preserve
+the intended mutable match collection.
+
+The implementation therefore cannot be treated as a sound executable
+realisation of its match-detection purpose across the governed test
+surface.
+
+HARNESS EXECUTION:
+NOT_EXECUTED
+
+RESULT:
+NOT_TESTED
+
+CONFORMANCE:
+NOT_ESTABLISHED
+
+RETROSPECTIVE REPAIR:
+FALSE
+
+CORRECTION RULE:
+Preserve LILP-HI-FREEZE-006-v0.1 unchanged.
+
+Any correction SHALL be additive as a successor implementation with a
+distinct identity and SHA-256.
+
+Any successor implementation SHALL require its own governed identity
+binding before execution.
+
+The established CandidatePath input binding is preserved as historical
+evidence and is not itself treated as execution of the defective harness.
+
+CLAIM CEILING:
+This defect receipt establishes only the identified implementation defect.
+
+It does not establish a T14-013 PASS or FAIL result and does not establish
+overall CONF-001 conformance.

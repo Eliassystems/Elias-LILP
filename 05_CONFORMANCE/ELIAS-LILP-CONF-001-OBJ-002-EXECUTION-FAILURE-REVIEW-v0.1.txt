@@ -1,0 +1,98 @@
+﻿ELIAS LILP CONF-001
+OBJ-002 EXECUTION ATTEMPT FAILURE REVIEW v0.1
+
+SOURCE EXECUTION RECORD:
+ELIAS-LILP-CONF-001-OBJ-002-HARNESS-EXECUTION-v0.1.json
+
+SOURCE EXECUTION RECORD SHA256:
+B91EB8D0C6E7D8BBD0D56C86BC560DBED27AA672FAFBA413D75D72540EAFEC4C
+
+REQUIREMENT ID:
+LILP-REQ-OBJ-002
+
+TEST CASE ID:
+LILP-TC-T02-009
+
+HARNESS IMPLEMENTATION ID:
+LILP-HI-OBJ-002-v0.1
+
+HARNESS BINDING ID:
+LILP-BIND-OBJ-002-v0.1
+
+HARNESS ARTIFACT:
+ELIAS-LILP-HI-OBJ-002-v0.1.ps1
+
+HARNESS SHA256:
+796CBE620A6D6C1FC92B7B7AF4CC2D9C2C77F507C8844CC38606568493797E4A
+
+CandidatePath:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-HARNESS-IMPLEMENTATION-REGISTER-v0.4.csv
+
+CandidateVersion:
+0.4
+
+CandidateSHA256:
+340E483563015C622CB25C21E1316355C2D1EE307518BBA76CB54D4A8C8D725E
+
+ComparisonVersion:
+0.3
+
+EXECUTION ATTEMPTED:
+TRUE
+
+EXECUTION COMPLETED:
+FALSE
+
+HARNESS LOAD STATE:
+NOT_LOADED
+
+HARNESS RETURNED DETERMINATION:
+NONE
+
+HARNESS OUTPUT COUNT:
+0
+
+RECORDED ERROR:
+File C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-HI-OBJ-002-v0.1.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+
+FAILURE CLASS:
+ENVIRONMENTAL_SCRIPT_EXECUTION_POLICY_BLOCK
+
+FAILURE INTERPRETATION:
+The PowerShell host blocked loading of the bound harness before harness logic executed.
+This is an environmental launch failure, not a T02-009 test FAIL.
+
+TEST EXECUTION:
+NOT_EXECUTED
+
+TEST RESULT:
+NOT_ESTABLISHED
+
+CONF-001:
+NOT_ESTABLISHED
+
+RETRY AUTHORITY:
+NOT_AUTHORIZED_PENDING_CONTROLLED_LAUNCH_METHOD_REVIEW
+
+CURRENT EFFECTIVE POWERSHELL EXECUTION POLICY:
+Restricted
+
+POWERSHELL EXECUTION POLICY SNAPSHOT:
+MachinePolicy=Undefined
+UserPolicy=Undefined
+Process=Undefined
+CurrentUser=Undefined
+LocalMachine=Restricted
+
+AUTHORITY BOUNDARY:
+This review classifies and preserves the first controlled execution attempt.
+It does not modify the historical execution record.
+It does not convert the environmental launch failure into a test result.
+It does not authorize an execution-policy change.
+It does not authorize a second harness execution.
+It does not establish CONF-001 conformance.
+
+NEXT AUTHORIZED STEP:
+Controlled OBJ-002 execution launch-method review.
+
+LOCK IT. LOG IT. PROVE IT.

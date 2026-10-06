@@ -1,0 +1,29 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 001W v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 86
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 88
+
+COVERED_BY_EXISTING: 1
+NEW_TEST_REQUIRED: 1
+NEW TEST DEFINITIONS RESERVED: 1
+
+PROOF-001:
+COVERED_BY_EXISTING -> LILP-TC-T16-010;LILP-TC-T16-001
+Claimed-property identity plus evaluated-scope/evidence bounding preserves the bounded property to which the proof-level claim applies.
+
+PROOF-005:
+NEW_TEST_REQUIRED -> LILP-TC-T16-014 RESERVED
+Distinct obligation: PL3 identifies both the procedure and the evidence used.
+
+T16-004 proof-level uncertainty handling does not substitute for PL3 procedure identification.
+T16-014 is reserved only.
+T16-015 remains unreserved.
+T16-014 definition remains NOT_ESTABLISHED.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

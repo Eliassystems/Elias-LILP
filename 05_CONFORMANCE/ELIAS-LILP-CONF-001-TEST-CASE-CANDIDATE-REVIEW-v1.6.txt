@@ -1,0 +1,33 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v1.6
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 108
+NEW TEST DEFINITIONS: 2
+SUCCESSOR TEST CASES: 110
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-DET-001 -> reserved LILP-TC-T08-008
+LILP-REQ-GATE-006 -> reserved LILP-TC-T09-006
+
+NEW TEST 1:
+TEST CASE: LILP-TC-T08-008
+RUN CLASS: CONTROL
+TITLE: Determination is attributable to governing state and relied-upon evidence
+OBJECTIVE: Establish that every governance determination preserves an inspectable attribution to the governing state and material evidence on which that determination relied.
+
+NEW TEST 2:
+TEST CASE: LILP-TC-T09-006
+RUN CLASS: CONTROL
+TITLE: Execution gate preserves complete material decision evidence
+OBJECTIVE: Establish that the execution gate produces or causes preservation of sufficient evidence to determine what mandatory predicates were evaluated, what values were observed, what determination resulted, whether execution occurred and what consequence, if any, was established.
+
+No authoritative requirement mapping is established.
+Definition existence does not establish harness binding, execution, result or conformance.
+
+LOCK IT. LOG IT. PROVE IT.

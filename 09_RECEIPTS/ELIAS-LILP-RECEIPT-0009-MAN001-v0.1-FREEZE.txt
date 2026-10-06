@@ -1,0 +1,228 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+LILP EVIDENCE RECEIPT
+
+Receipt ID:
+ELIAS-LILP-RECEIPT-0009
+
+Receipt Type:
+MAN001_V0.1_IMPLEMENTATION_MANUAL_FREEZE
+
+Recorded UTC:
+2026-10-01T22:54:14.776Z
+
+Status:
+FROZEN BASELINE ESTABLISHED
+
+======================================================================
+SUBJECT
+======================================================================
+
+Document ID:
+ELIAS-LILP-MAN-001
+
+Title:
+Lock It. Log It. Prove It. — Implementation Manual
+
+Version:
+v0.1
+
+Verified Candidate:
+02_MANUAL\ELIAS-LILP-MAN-001-v0.1.txt
+
+Frozen Baseline:
+02_MANUAL\ELIAS-LILP-MAN-001-v0.1-FROZEN-BASELINE.txt
+
+Byte Length:
+105931
+
+Hash Algorithm:
+SHA-256
+
+Frozen SHA-256:
+429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2
+
+======================================================================
+NORMATIVE ANCESTORS
+======================================================================
+
+Frozen Normative Standard:
+ELIAS-LILP-STD-001 v0.1
+
+STD-001 SHA-256:
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+Frozen Semantic and Governance Lexicon:
+ELIAS-LILP-LEX-001 v0.1
+
+LEX-001 SHA-256:
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+The frozen normative standard remains controlling.
+
+======================================================================
+PRE-FREEZE EVIDENCE CHAIN
+======================================================================
+
+STD-001 Freeze Receipt 0005 SHA-256:
+DFBAD4AE05A9ADAA70481ADDA7928E2ED099492F7B5D9CC27BD21DCF3B6B24E1
+
+MAN-001 Closing-Check Correction Receipt 0006 SHA-256:
+E7704B0B20F823DE85829242B2FBC6A1069B98BF3A4A32AEBEA42B832AC60C8B
+
+MAN-001 Semantic-Checker Correction Receipt 0007 SHA-256:
+0415FD1ADF7A16E867F8F41CF0682EAEA10918065C7E6E1AD37F4C192DA4F59C
+
+MAN-001 v0.2 Interactive-Parser Deficiency Receipt 0008 SHA-256:
+84CD93A3EBE8ABA964D0C99D4F13B8BCF3CA3DAA95C795EE66FCC0F68C06E9B0
+
+Original MAN-001 Pre-Freeze HOLD Record SHA-256:
+7984699EAD8E7EE451DCF46967AE434ECABC41C60C84806F06068EFF6DEE65CB
+
+MAN-001 v0.2 Successor Pre-Freeze Record SHA-256:
+FAD5692E74982D1F1024B17C398DCEB22BAC0D3926F0423A52FA7E118AE79C8F
+
+MAN-001 v0.3 Clean Successor Pre-Freeze Record SHA-256:
+03354622065D6E1E37580037D9D1FA9D089779AC63D4D2344E3F10EFBEDFB472
+
+Final Pre-Freeze Determination:
+PASS
+
+Final Pre-Freeze Freeze Status:
+READY TO FREEZE
+
+======================================================================
+PRESERVED DEFICIENCY CHAIN
+======================================================================
+
+The freeze does not erase or retrospectively repair the preceding
+verification history.
+
+The evidence chain preserves:
+
+1. the original whole-object HOLD;
+
+2. the semantic line-wrapping checker correction;
+
+3. the v0.2 interactive PowerShell parser deficiency;
+
+4. the v0.3 clean successor examination;
+
+5. and the same unchanged MAN-001 candidate byte identity throughout.
+
+The frozen baseline therefore follows the successor evidence chain.
+
+The predecessor failures remain part of the record.
+
+======================================================================
+HISTORICAL STATUS WORDING
+======================================================================
+
+The exact frozen bytes contain historical development wording,
+including:
+
+WORKING DRAFT
+
+and:
+
+NOT YET FROZEN
+
+Those statements describe the object's status when those bytes were
+authored.
+
+They are intentionally preserved.
+
+They were not retrospectively rewritten after verification.
+
+This separate freeze receipt establishes the later freeze event.
+
+======================================================================
+LOCAL WRITE-PROTECTION
+======================================================================
+
+Candidate Read-Only:
+True
+
+Frozen Baseline Read-Only:
+True
+
+The Windows read-only attribute is a local write-protection mechanism.
+
+It is not claimed to provide cryptographic immutability,
+hardware-enforced immutability or protection from an authorised actor
+deliberately removing the attribute.
+
+======================================================================
+TRACEABILITY
+======================================================================
+
+Frozen STD-001 Normative Requirements:
+191
+
+MAN-001 Traceability Rows:
+191
+
+Unique MAN-001 Traceability IDs:
+191
+
+The presence of a traceability row does not by itself establish
+conformance with the referenced requirement.
+
+======================================================================
+CLAIM CEILING
+======================================================================
+
+This receipt establishes:
+
+- the exact byte identity of ELIAS-LILP-MAN-001 v0.1;
+- its frozen byte length;
+- byte identity between the verified candidate and frozen baseline;
+- the preserved STD-001 and LEX-001 ancestor bindings;
+- preservation of the predecessor HOLD and correction chain;
+- successful completion of the v0.3 local pre-freeze examination;
+- collision-protected creation of the frozen baseline;
+- and the local freeze event recorded here.
+
+This receipt does NOT establish:
+
+- that any implementation conforms to LILP;
+- external certification;
+- independent certification;
+- ISO adoption;
+- IEC adoption;
+- regulatory approval;
+- government approval;
+- industry-wide adoption;
+- universal safety;
+- universal security;
+- correctness of every possible implementation;
+- or absence of every conceivable defect.
+
+======================================================================
+SUCCESSOR RULE
+======================================================================
+
+ELIAS-LILP-MAN-001 v0.1 SHALL NOT be silently rewritten after this
+freeze.
+
+Any material correction, extension or implementation-guidance change
+shall be represented through a successor version and separate evidence
+chain.
+
+The frozen v0.1 ancestor shall remain preserved.
+
+PRESERVE THE ANCESTOR.
+PRESERVE THE DEFICIENCY.
+EXAMINE THE SUCCESSOR.
+
+LOCK THE GOVERNING STATE.
+LOG THE CONSEQUENTIAL TRANSITION.
+PROVE ONLY WHAT THE EVIDENCE ESTABLISHES.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+ELIAS SYSTEMS LTD
+1 OCTOBER 2026

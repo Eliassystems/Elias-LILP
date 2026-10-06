@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 001U v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 82
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 84
+
+COVERED_BY_EXISTING: 2
+NEW_TEST_REQUIRED: 0
+NEW TEST DEFINITIONS RESERVED: 0
+
+CLAIM-005:
+COVERED_BY_EXISTING -> LILP-TC-T16-001
+The claim preserves its evidence basis and provenance, establishing inspectable traceability to supporting evidence.
+
+CLAIM-006:
+COVERED_BY_EXISTING -> LILP-TC-T16-010;LILP-TC-T16-001
+Claim-class / claimed-property meaning remains explicit, while the claim remains bounded to the evidence actually established.
+
+No new test ID is reserved.
+Test register remains at 117 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

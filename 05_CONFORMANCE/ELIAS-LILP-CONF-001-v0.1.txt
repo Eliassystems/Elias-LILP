@@ -1,0 +1,581 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+ELIAS LILP CONFORMANCE & FALSIFICATION TEST SUITE
+
+Document ID:
+ELIAS-LILP-CONF-001
+
+Version:
+v0.1
+
+Status:
+WORKING DRAFT
+
+======================================================================
+0. DOCUMENT CONTROL
+======================================================================
+
+ELIAS-LILP-CONF-001 defines the bounded conformance and falsification
+discipline for implementations claiming alignment with the frozen
+ELIAS LILP v0.1 specification family.
+
+The controlling normative authority is:
+
+ELIAS-LILP-STD-001 v0.1
+
+Implementation guidance is supplied by:
+
+ELIAS-LILP-MAN-001 v0.1
+
+Terminology is bound to:
+
+ELIAS-LILP-LEX-001 v0.1
+
+Machine-readable structural contracts are supplied by:
+
+ELIAS-LILP-SCHEMA-001 v0.1
+
+Where this test suite conflicts with the frozen normative standard:
+
+THE FROZEN STANDARD CONTROLS.
+
+======================================================================
+0.1 FROZEN ANCESTOR BINDINGS
+======================================================================
+
+ELIAS-LILP-STD-001 v0.1 SHA-256:
+
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+
+ELIAS-LILP-MAN-001 v0.1 SHA-256:
+
+429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2
+
+
+ELIAS-LILP-LEX-001 v0.1 SHA-256:
+
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+
+ELIAS-LILP-SCHEMA-001 v0.1 SHA-256:
+
+9C460ADDD086F0BF450BBB94FCD984EE903B12B38AA887E3888C05C6D684DADE
+
+
+SCHEMA-001 Frozen Package Manifest SHA-256:
+
+78E4677104305A7336DD30816BEFEA58F7E7BD9C934E34454053658FD62C484B
+
+
+SCHEMA-001 Freeze Receipt 0011 SHA-256:
+
+8F7481AD2533640C5F7C5A00C32029B8D2989B4B0E6F3C2184A2E3CEB7DD09BC
+
+======================================================================
+1. PURPOSE
+======================================================================
+
+CONF-001 exists to answer a bounded question:
+
+"What evidence is required before an implementation may claim that a
+declared LILP requirement or test scope has passed?"
+
+The test suite SHALL be capable of recording:
+
+PASS
+
+FAIL
+
+HOLD
+
+NOT_ESTABLISHED
+
+NOT_APPLICABLE
+
+NOT_TESTED
+
+A test system SHALL NOT manufacture PASS merely because execution was
+possible.
+
+A test system SHALL NOT manufacture FAIL merely because evidence was
+unavailable.
+
+Uncertainty remains an admissible result.
+
+======================================================================
+2. CONFORMANCE AUTHORITY BOUNDARY
+======================================================================
+
+A CONF-001 result is bounded to:
+
+- the subject examined;
+- the exact subject identity where established;
+- the frozen specification identity;
+- the test version;
+- the declared scope;
+- the evidence supplied;
+- the environment observed;
+- and the time of examination.
+
+A PASS in one bounded examination does not establish:
+
+- universal LILP conformance;
+- future conformance after material change;
+- external certification;
+- production fitness;
+- regulatory approval;
+- or correctness outside the examined scope.
+
+CONFORMANCE EVIDENCE DOES NOT OUTRUN ITS SCOPE.
+
+======================================================================
+3. TEST PHILOSOPHY
+======================================================================
+
+LILP testing SHALL examine both positive and negative behaviour.
+
+A system is not sufficiently examined merely by demonstrating that an
+allowed action succeeds.
+
+Where a control is claimed to restrain consequential action, the suite
+should test whether the restraint survives attempts to bypass it.
+
+The suite therefore distinguishes:
+
+CONTROL runs
+
+CHANGED runs
+
+ADVERSARIAL runs
+
+FAILURE runs
+
+RECOVERY / SUCCESSOR runs
+
+The objective is not to force a PASS.
+
+The objective is to expose what the implementation actually does.
+
+======================================================================
+4. TEST RESULT MODEL
+======================================================================
+
+Each test result should identify at minimum:
+
+test_id
+
+test_version
+
+subject_reference
+
+subject_hash where established
+
+requirement_references
+
+frozen_standard_reference
+
+frozen_standard_hash
+
+test_scope
+
+test_class
+
+preconditions
+
+inputs
+
+expected_governance_behaviour
+
+observed_behaviour
+
+evidence_references
+
+result
+
+reason_codes
+
+examined_at
+
+examiner_identity
+
+claim_ceiling
+
+provenance
+
+A test result SHOULD use the frozen:
+
+ELIAS-LILP-CONFORMANCE-RESULT v0.1
+
+machine-readable schema where machine-readable representation is
+required.
+
+======================================================================
+5. RESULT SEMANTICS
+======================================================================
+
+PASS
+
+The bounded test expectation was established by the recorded evidence.
+
+
+FAIL
+
+The recorded evidence establishes behaviour contrary to the bounded
+test expectation.
+
+
+HOLD
+
+The examination cannot legitimately progress to a conformance
+determination under the current conditions.
+
+
+NOT_ESTABLISHED
+
+Available evidence is insufficient to establish PASS or FAIL.
+
+
+NOT_APPLICABLE
+
+The bounded test does not apply to the declared implementation or
+scope.
+
+
+NOT_TESTED
+
+The test exists but has not yet been executed against the declared
+subject.
+
+These states SHALL NOT be silently collapsed into Boolean success or
+failure.
+
+======================================================================
+6. INITIAL TEST FAMILY
+======================================================================
+
+CONF-001 v0.1 will develop sixteen principal test families:
+
+T01 — Governing-State Establishment
+
+T02 — Identity Continuity
+
+T03 — Authority Validity
+
+T04 — Standing and Revocation
+
+T05 — Evidence Admissibility
+
+T06 — Observation / Interpretation Separation
+
+T07 — Material Delta Detection
+
+T08 — Determination / Execution Separation
+
+T09 — Pre-Execution Gate Enforcement
+
+T10 — TOCTOU Revalidation
+
+T11 — Consequence Verification
+
+T12 — Receipt / Witness Continuity
+
+T13 — Failure Preservation
+
+T14 — Correction / Successor Discipline
+
+T15 — Bypass and Non-Bypassable Restraint
+
+T16 — Claim-Ceiling Enforcement
+
+These are test families.
+
+Each family may contain multiple individual cases.
+
+======================================================================
+7. CONTROL / CHANGED DISCIPLINE
+======================================================================
+
+Where a test examines changed conditions:
+
+1. establish the CONTROL state;
+
+2. preserve its identity;
+
+3. change only the declared variable or bounded variable set;
+
+4. preserve the delta;
+
+5. execute the CHANGED examination;
+
+6. compare the observed governance behaviour;
+
+7. preserve both results.
+
+A changed run SHALL NOT silently rewrite its control predecessor.
+
+======================================================================
+8. FAILURE PRESERVATION
+======================================================================
+
+A failed test is evidence.
+
+A test harness SHALL NOT silently convert a failed result into a
+successful record after correction.
+
+Where a test defect is discovered:
+
+1. preserve the defective test result;
+
+2. identify the defect;
+
+3. record whether the examined implementation was modified;
+
+4. correct forward;
+
+5. execute a successor test where appropriate;
+
+6. preserve both predecessor and successor evidence.
+
+NO RETROSPECTIVE REPAIR.
+
+======================================================================
+9. BYPASS TESTING
+======================================================================
+
+Where an implementation claims that a governance restraint is
+non-bypassable, conformance testing SHOULD attempt relevant bypass
+paths.
+
+Examples may include:
+
+- direct tool invocation;
+- alternate execution route;
+- stale authority reuse;
+- historical-state replay;
+- omitted evidence;
+- modified scope;
+- expired authority;
+- revoked authority;
+- changed target;
+- changed contemplated effect;
+- changed policy;
+- or execution after governing-state expiry.
+
+A restraint claim is not established merely because the normal path
+respected the gate.
+
+======================================================================
+10. TEMPORAL AND CHANGED-STATE TESTING
+======================================================================
+
+Tests involving consequential execution SHALL distinguish:
+
+T0
+
+from:
+
+Tn
+
+where relevant.
+
+Historical permission does not automatically establish current
+permission after material change.
+
+Testing should therefore examine:
+
+authority expiry;
+
+authority revocation;
+
+state mutation;
+
+evidence mutation;
+
+scope change;
+
+jurisdiction change;
+
+policy change;
+
+target change;
+
+and contemplated-effect change.
+
+======================================================================
+11. EXECUTION / CONSEQUENCE TESTING
+======================================================================
+
+The suite SHALL preserve separate evidence for:
+
+determination;
+
+permission;
+
+execution attempt;
+
+target acceptance or rejection;
+
+and consequence observation.
+
+The following are not equivalent:
+
+ALLOW
+
+PERMIT
+
+ATTEMPTED
+
+ACCEPTED_BY_TARGET
+
+CONSEQUENCE_OBSERVED
+
+A transaction or tool call returning success does not by itself prove
+the external consequence occurred.
+
+======================================================================
+12. CLAIM-CEILING TESTING
+======================================================================
+
+Every conformance result SHALL stop at the evidence established.
+
+A bounded PASS SHALL NOT be presented as:
+
+external certification;
+
+universal implementation correctness;
+
+production safety;
+
+regulatory approval;
+
+government approval;
+
+industry adoption;
+
+or proof outside the tested scope.
+
+Where the implementation or report overstates the supported evidence,
+the claim-ceiling test may FAIL even where another technical test
+passes.
+
+======================================================================
+13. MACHINE-READABLE TEST EVIDENCE
+======================================================================
+
+CONF-001 may use the frozen SCHEMA-001 object family to represent:
+
+governing state;
+
+authority;
+
+evidence;
+
+interpretation;
+
+delta;
+
+determination;
+
+gate evaluation;
+
+execution;
+
+consequence;
+
+receipt;
+
+correction / deficiency;
+
+conformance result;
+
+evidence-package manifest;
+
+requirements matrix entry;
+
+and chain continuity.
+
+Schema validity alone does not establish conformance.
+
+======================================================================
+14. REQUIREMENTS TRACEABILITY
+======================================================================
+
+The frozen normative standard contains 191 identified requirements.
+
+CONF-001 shall develop traceability from test cases to the applicable
+normative requirement identifiers.
+
+A requirement may map to:
+
+one test;
+
+multiple tests;
+
+manual inspection;
+
+machine validation;
+
+or a combination of examination methods.
+
+TRACEABILITY DOES NOT EQUAL CONFORMANCE.
+
+A requirement is not passed merely because a test identifier has been
+assigned to it.
+
+======================================================================
+15. EVIDENCE PACKAGE DISCIPLINE
+======================================================================
+
+A conformance package should preserve:
+
+- exact subject identity;
+- test harness identity;
+- environment identity where material;
+- frozen specification identities;
+- inputs;
+- outputs;
+- logs;
+- receipts;
+- failures;
+- corrections;
+- result objects;
+- and a package manifest.
+
+Missing required evidence remains visible.
+
+It SHALL NOT be silently invented.
+
+======================================================================
+16. CURRENT DEVELOPMENT STATUS
+======================================================================
+
+This foundation establishes:
+
+- frozen specification bindings;
+- result semantics;
+- examination boundaries;
+- sixteen test families;
+- control / changed discipline;
+- failure preservation;
+- bypass examination;
+- temporal testing;
+- execution / consequence separation;
+- claim-ceiling testing;
+- machine-readable evidence use;
+- requirements traceability;
+- and evidence-package discipline.
+
+Individual executable test cases have not yet been established.
+
+No implementation has passed CONF-001 merely because this document
+exists.
+
+No independent certification is established.
+
+ELIAS-LILP-CONF-001 v0.1 remains a WORKING DRAFT.
+
+LOCK IT.
+LOG IT.
+PROVE IT.

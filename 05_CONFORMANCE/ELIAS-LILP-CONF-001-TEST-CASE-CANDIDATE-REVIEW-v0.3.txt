@@ -1,0 +1,124 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v0.3
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+PREDECESSOR TEST CASES: 86
+NEW TEST DEFINITIONS: 6
+SUCCESSOR TEST CASES: 92
+
+The six new definitions arise from the completed human semantic review of the REVIEW_RECOMMENDED coverage set.
+Their existence does not establish requirement-to-test mapping.
+Their existence does not establish harness binding, execution, PASS, conformance or external validation.
+
+SOURCE IDENTITIES:
+MATRIX_v0.3 | BYTES=102725 | SHA256=7EAB99878691315145879458EFFFC020E5F0FBA1F78C1BD168480CE00193F537
+TEST_CANDIDATE_v0.2 | BYTES=74506 | SHA256=03710AA985356474382C8502A34F3AAD9927B9DA085DE7BAE8A218C57D77E561
+COVERAGE_v0.2 | BYTES=115465 | SHA256=57792916D1C78E561A22214470262F4F968E60129B4886A0E37BAE85B0570F6A
+REVIEW_RECOMMENDED_DETERMINATION_v0.1 | BYTES=5010 | SHA256=1074AFA440C4FFB68F0C2227401A316405E4A9CF47EE6A77299A532103B48689
+REVIEW_RECOMMENDED_DETERMINATION_REVIEW_v0.1 | BYTES=6745 | SHA256=D8E1DA81D3023BB71333A7F106431AD84E1D6776F6540263871245DEE4400507
+
+SIX NEW ABSTRACT TEST DEFINITIONS:
+
+TEST CASE: LILP-TC-T16-008
+FAMILY: T16 - Claim-Ceiling Enforcement
+RUN CLASS: FAILURE
+TITLE: Mandatory FAIL blocks profile PASS
+OBJECTIVE: Establish that a conformance profile cannot receive PASS while an applicable mandatory requirement has a valid FAIL status.
+PRECONDITIONS: A declared conformance profile and scope exist and at least one applicable mandatory requirement has a valid evidenced FAIL status.
+STIMULUS: Evaluate or request a PASS conformance determination for the affected profile without correcting or removing the mandatory FAIL.
+EXPECTED: PASS is not issued for the affected profile and the mandatory FAIL remains identifiable in the determination basis and evidence history.
+REQUIRED EVIDENCE: Declared profile and scope; applicable mandatory requirement; FAIL evidence; requirements-matrix state; attempted or resulting profile determination.
+FAILURE ORACLE: FAIL if the affected profile is issued PASS while an applicable mandatory requirement remains FAIL.
+REQUIREMENT MAPPING: NOT_ESTABLISHED
+
+TEST CASE: LILP-TC-T13-006
+FAMILY: T13 - Failure Preservation
+RUN CLASS: FAILURE
+TITLE: Failed mandatory falsification test blocks dependent profile PASS
+OBJECTIVE: Establish that failure of a mandatory falsification test prevents PASS for a conformance profile whose claimed property depends upon that test.
+PRECONDITIONS: A declared profile depends on a mandatory falsification test and that test has produced a valid FAIL result.
+STIMULUS: Evaluate or request PASS for the dependent conformance profile while the mandatory falsification-test FAIL remains current.
+EXPECTED: The dependent profile is not issued PASS and the failed mandatory falsification test remains visible as part of the governed evidence history.
+REQUIRED EVIDENCE: Profile definition; dependency between profile claim and mandatory falsification test; failed test result; failure evidence; profile determination.
+FAILURE ORACLE: FAIL if the dependent conformance profile receives PASS while the required falsification test remains FAIL.
+REQUIREMENT MAPPING: NOT_ESTABLISHED
+
+TEST CASE: LILP-TC-T13-007
+FAMILY: T13 - Failure Preservation
+RUN CLASS: CONTROL
+TITLE: Known mandatory-requirement deviation is recorded
+OBJECTIVE: Establish that a known deviation from a mandatory requirement is explicitly preserved as a deviation record rather than silently normalised or omitted.
+PRECONDITIONS: A mandatory requirement applies within the declared scope and a known deviation from that requirement has been identified.
+STIMULUS: Record and inspect the governed conformance evidence after the known deviation is identified.
+EXPECTED: The known deviation remains explicitly represented and identifiable as a deviation associated with the affected mandatory requirement.
+REQUIRED EVIDENCE: Applicable mandatory requirement; observed deviation; deviation record; governed evidence or conformance record containing the deviation.
+FAILURE ORACLE: FAIL if a known deviation from a mandatory requirement can disappear, remain unrecorded or be silently represented as ordinary compliance.
+REQUIREMENT MAPPING: NOT_ESTABLISHED
+
+TEST CASE: LILP-TC-T14-006
+FAMILY: T14 - Correction / Successor Discipline
+RUN CLASS: CHANGED
+TITLE: Post-freeze correction classification is explicit
+OBJECTIVE: Establish that a post-freeze correction identifies the class of change it introduces relative to the frozen predecessor.
+PRECONDITIONS: A frozen artifact with stable identity exists and a post-freeze correction is proposed or recorded.
+STIMULUS: Evaluate the correction and its declared relationship to the frozen predecessor.
+EXPECTED: The correction explicitly identifies whether it changes normative meaning, implementation guidance, metadata only, presentation only, or does not alter the frozen object itself; any material successor handling remains separately identifiable.
+REQUIRED EVIDENCE: Frozen predecessor identity; correction description; change classification; resulting artifact or successor state where applicable; lineage evidence.
+FAILURE ORACLE: FAIL if a post-freeze correction is accepted without identifying which declared class of change it represents.
+REQUIREMENT MAPPING: NOT_ESTABLISHED
+
+TEST CASE: LILP-TC-T05-008
+FAMILY: T05 - Evidence Admissibility
+RUN CLASS: ADVERSARIAL
+TITLE: Admissible but insufficient evidence cannot support matrix PASS
+OBJECTIVE: Establish that evidence referenced by a PASS matrix entry is sufficient for the actual PASS proposition rather than merely authentic, attributable or admissible.
+PRECONDITIONS: A requirements-matrix entry is proposed as PASS and referenced evidence is available but does not establish every material element required for that PASS.
+STIMULUS: Attempt to accept or preserve the PASS matrix entry solely on the basis that the referenced evidence is identifiable, authentic or otherwise admissible.
+EXPECTED: PASS is not established from insufficient evidence; the evidentiary insufficiency remains visible and evidence admissibility is not treated as proof of the full PASS proposition.
+REQUIRED EVIDENCE: Requirements-matrix entry; referenced evidence; evidence provenance and admissibility information; PASS proposition; sufficiency evaluation; resulting determination.
+FAILURE ORACLE: FAIL if a matrix PASS is accepted when its referenced evidence is admissible but insufficient to establish the PASS determination.
+REQUIREMENT MAPPING: NOT_ESTABLISHED
+
+TEST CASE: LILP-TC-T14-007
+FAMILY: T14 - Correction / Successor Discipline
+RUN CLASS: ADVERSARIAL
+TITLE: Freeze destination collision cannot overwrite predecessor
+OBJECTIVE: Establish collision protection where freeze tooling encounters a destination already occupied by a previous freeze artifact or receipt.
+PRECONDITIONS: A prior freeze artifact or receipt exists at the target identity or destination and its byte identity and SHA-256 are known.
+STIMULUS: Attempt a new freeze operation using the same protected artifact or receipt destination.
+EXPECTED: The collision is refused or handled without overwriting the existing freeze artifact or receipt, and the predecessor retains its original byte identity and SHA-256.
+REQUIRED EVIDENCE: Existing artifact or receipt; original byte length and SHA-256; attempted freeze destination; collision response; post-attempt byte length and SHA-256; resulting destination state.
+FAILURE ORACLE: FAIL if freeze tooling overwrites or silently replaces a previous freeze artifact or receipt during a destination collision.
+REQUIREMENT MAPPING: NOT_ESTABLISHED
+
+FAMILY DISTRIBUTION:
+T01=5
+T02=6
+T03=5
+T04=5
+T05=8
+T06=5
+T07=5
+T08=5
+T09=5
+T10=5
+T11=5
+T12=6
+T13=7
+T14=7
+T15=5
+T16=8
+
+RUN-CLASS DISTRIBUTION:
+CONTROL=20
+CHANGED=17
+ADVERSARIAL=20
+FAILURE=19
+RECOVERY_SUCCESSOR=16
+
+LOCK IT. LOG IT. PROVE IT.

@@ -1,0 +1,89 @@
+﻿{
+    "EvidenceType":  "T14-014_CONTROLLED_MECHANICAL_EXECUTION",
+    "Attempt":  "ATTEMPT03",
+    "Attempt01ReceiptSHA256":  "75636817DE7366DBBCA465740DA069F227EA3A3434FDF4B9EE990E07DD886CB6",
+    "Attempt02FailureReceiptSHA256":  "D82F6477BEB547CDB4B4A45256A1AB7744C4B7417CE37A6996FD111699C62802",
+    "Attempt02FailureClass":  "MISSING_MANDATORY_PARAMETER_CHILD_WRAPPER",
+    "Attempt03ParameterTransfer":  "PROCESS_ENVIRONMENT_VARIABLES_PLUS_EXPLICIT_SPLATTING",
+    "ExecutionStartedUTC":  "2026-10-04T18:12:31.4675447Z",
+    "ExecutionCompletedUTC":  "2026-10-04T18:12:32.2220457Z",
+    "ChildExecutionPolicy":  [
+                                 {
+                                     "Scope":  "MachinePolicy",
+                                     "ExecutionPolicy":  "Undefined"
+                                 },
+                                 {
+                                     "Scope":  "UserPolicy",
+                                     "ExecutionPolicy":  "Undefined"
+                                 },
+                                 {
+                                     "Scope":  "Process",
+                                     "ExecutionPolicy":  "Bypass"
+                                 },
+                                 {
+                                     "Scope":  "CurrentUser",
+                                     "ExecutionPolicy":  "Undefined"
+                                 },
+                                 {
+                                     "Scope":  "LocalMachine",
+                                     "ExecutionPolicy":  "Restricted"
+                                 }
+                             ],
+    "ParentExecutionPolicyChanged":  false,
+    "ChildExitCode":  0,
+    "RequirementId":  "LILP-REQ-FREEZE-007",
+    "TestCaseId":  "LILP-TC-T14-014",
+    "VerificationMethodId":  "LILP-VM-FREEZE-007-v0.1",
+    "HarnessDefinitionId":  "LILP-HB-FREEZE-007-v0.1",
+    "HarnessBindingId":  "LILP-BIND-FREEZE-007-v0.2",
+    "HarnessBindingSHA256":  "C6F0F5E7F7A84B840C22D418654144D9E6AF7AB008F72905ECD85808860A88CE",
+    "HarnessImplementationId":  "LILP-HI-FREEZE-007-v0.3",
+    "HarnessImplementationSHA256":  "F659CFB38BCCF966BEFDA86DC60D32E63CB893E5042C2ACFAA732508CD224602",
+    "ExecutionInputBindingSHA256":  "7F7B4329F15FF8E0B41D49270197A911107EA551BA2F2D89F82D2978A880DEE8",
+    "BindingRecordPath":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\01_STANDARD\\ELIAS-LILP-STD-001-v0.1-FROZEN-BASELINE.txt",
+    "BindingRecordSHA256":  "076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537",
+    "BindingProvenancePath":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\09_RECEIPTS\\ELIAS-LILP-RECEIPT-0003-LEXICON-v0.1-FREEZE.txt",
+    "BindingProvenanceSHA256":  "EA60056D55EEBB8AF990C5261FA367727897DA62BD8AC4D8CD43614769221DE0",
+    "MechanicalOutput":  {
+                             "HarnessImplementationId":  "LILP-HI-FREEZE-007-v0.3",
+                             "SupersedesImplementationId":  "LILP-HI-FREEZE-007-v0.2",
+                             "HarnessDefinitionId":  "LILP-HB-FREEZE-007-v0.1",
+                             "RequirementId":  "LILP-REQ-FREEZE-007",
+                             "TestCaseId":  "LILP-TC-T14-014",
+                             "VerificationMethodId":  "LILP-VM-FREEZE-007-v0.1",
+                             "BindingRecordPath":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\01_STANDARD\\ELIAS-LILP-STD-001-v0.1-FROZEN-BASELINE.txt",
+                             "BindingRecordSHA256":  "076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537",
+                             "ExpectedCandidateSHA256":  "076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537",
+                             "CandidateIdentityEqual":  true,
+                             "BindingProvenancePath":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\09_RECEIPTS\\ELIAS-LILP-RECEIPT-0003-LEXICON-v0.1-FREEZE.txt",
+                             "BindingProvenanceSHA256":  "EA60056D55EEBB8AF990C5261FA367727897DA62BD8AC4D8CD43614769221DE0",
+                             "ExpectedFreezeReceiptSHA256":  "EA60056D55EEBB8AF990C5261FA367727897DA62BD8AC4D8CD43614769221DE0",
+                             "ProvenanceIdentityEqual":  true,
+                             "ExpectedIdentifier":  "ELIAS-LILP-LEX-001",
+                             "ExpectedVersion":  "v0.1",
+                             "ExpectedLexiconSHA256":  "144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488",
+                             "ExpectedFreezeReceiptId":  "ELIAS-LILP-RECEIPT-0003",
+                             "NormativeBindingMatchCount":  1,
+                             "NormativeBindingExact":  true,
+                             "RequirementBindingMatchCount":  1,
+                             "RequirementBindingExact":  true,
+                             "ProvenanceIdentityMatchCount":  1,
+                             "ProvenanceIdentityFieldsExact":  true,
+                             "ProvenanceHashMatchCount":  1,
+                             "ProvenanceHashFieldExact":  true,
+                             "FreezeDeterminationMatchCount":  1,
+                             "FreezeDeterminationExact":  true,
+                             "MechanicalPass":  true,
+                             "Determination":  "PASS",
+                             "AuthorityType":  "DETERMINISTIC_MECHANICAL",
+                             "AuthorityBoundary":  "NO_HUMAN_SEMANTIC_DETERMINATION",
+                             "ExecutionAuthority":  "NONE",
+                             "ConsequenceExecuted":  false,
+                             "ResultScope":  "LILP-TC-T14-014_MECHANICAL_ONLY"
+                         },
+    "MechanicalDetermination":  "PASS",
+    "MechanicalPass":  true,
+    "RequirementResultStatus":  "NOT_YET_GOVERNED",
+    "ConformanceStatus":  "NOT_ESTABLISHED",
+    "RetrospectiveRepair":  false
+}

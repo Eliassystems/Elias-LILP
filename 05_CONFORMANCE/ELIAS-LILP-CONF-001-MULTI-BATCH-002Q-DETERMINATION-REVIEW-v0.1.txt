@@ -1,0 +1,28 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002Q v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 126
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 128
+
+TRUE UNRESOLVED BEFORE BATCH 002Q: 15
+TRUE UNRESOLVED AFTER BATCH 002Q: 13
+
+AUTH-005:
+NEW_TEST_REQUIRED -> LILP-TC-T03-009 RESERVED
+Distinct obligation: where authority depends on jurisdiction, the governing jurisdiction is identifiable.
+
+SEC-009:
+NEW_TEST_REQUIRED -> LILP-TC-T03-010 RESERVED
+Distinct obligation: disclosure of protected evidence for verification remains bounded to examination authority and scope.
+
+T03-009 is reserved only.
+T03-010 is reserved only.
+T03-011 remains unreserved.
+Test register remains at 139 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

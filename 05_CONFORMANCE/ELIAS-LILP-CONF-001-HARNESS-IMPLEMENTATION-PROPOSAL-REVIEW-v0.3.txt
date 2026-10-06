@@ -1,0 +1,110 @@
+ELIAS LILP CONF-001
+HARNESS-IMPLEMENTATION SUCCESSOR PROPOSAL REVIEW v0.3
+
+PREDECESSOR PROPOSAL v0.2 SHA-256:
+5BDD971D52A9A034FEE0B57C28DF8197CE8D58D37BF3F934DB4E8A2A2804F2DE
+
+PREDECESSOR PROPOSAL REVIEW v0.2 SHA-256:
+C053AD3A48A9F39D091F4F16A10A52DADF7ADF5119C622D84893776F373359CE
+
+PREDECESSOR CONTROLLED REVIEW v0.2 SHA-256:
+5CF63D90418ED93DC276CA0BAB0B3B7CE57F91431E4D4A04B3333BAF61D49C0B
+
+PREDECESSOR REVIEW DETERMINATION:
+NOT_ESTABLISHED
+
+PREDECESSOR PROMOTION-ELIGIBLE CANDIDATES:
+5
+
+CARRIED FORWARD BYTE-IDENTICALLY:
+LILP-HI-FREEZE-001-v0.1
+LILP-HI-FREEZE-006-v0.1
+LILP-HI-FREEZE-007-v0.2
+LILP-HI-FREEZE-008-v0.2
+LILP-HI-FREEZE-010-v0.2
+
+PRESERVED FAILED PREDECESSOR:
+LILP-HI-FREEZE-012-v0.2
+
+CONTROLLED SUCCESSOR:
+LILP-HI-FREEZE-012-v0.3
+
+CORRECTION BASIS:
+A human determination of EXTERNAL_STATUS_ASSERTED_SUPPORTED now fails closed unless a separate external-authority evidence artifact is actually supplied.
+
+The implementation records:
+- whether supported external status was asserted;
+- whether separate external-authority evidence was required;
+- whether that evidence was present;
+- and whether the minimum evidence-presence invariant was violated.
+
+Human authority remains responsible for:
+- materially conveyed meaning;
+- ambiguity;
+- sufficiency of external-authority evidence;
+- and attribution of that evidence.
+
+Automation authority remains limited to:
+- structure validation;
+- evidence-presence enforcement;
+- aggregation;
+- and evidence recording.
+
+SUCCESSOR PROPOSAL:
+ELIAS-LILP-CONF-001-HARNESS-IMPLEMENTATION-PROPOSAL-v0.3.csv
+
+SUCCESSOR PROPOSAL SHA-256:
+2623AAA3F8B9ECCC2AA4BD3DA6A771C04BA90F3B801AE1C4479CC328232EEC0D
+
+SUCCESSOR PROPOSAL BYTES:
+4190
+
+TOTAL CANDIDATES:
+6
+
+CARRIED FORWARD:
+5
+
+CONTROLLED SUCCESSORS:
+1
+
+DETERMINISTIC CANDIDATES:
+4
+
+HUMAN REVIEW-SURFACE CANDIDATES:
+2
+
+IMPLEMENTATION STATUS:
+NOT_ESTABLISHED
+
+HARNESS BINDING:
+NOT_ESTABLISHED
+
+EXECUTION:
+NOT_EXECUTED
+
+RESULT:
+NOT_TESTED
+
+CONFORMANCE:
+NOT_ESTABLISHED
+
+BOUNDARY:
+No predecessor implementation was modified.
+
+FREEZE-012 v0.2 remains preserved exactly as reviewed.
+
+FREEZE-012 v0.3 is a new successor candidate only.
+
+No harness was executed.
+
+No implementation is authoritative.
+
+No harness binding is established.
+
+No result is established.
+
+NEXT AUTHORIZED STEP:
+Controlled static implementation review of proposal v0.3.
+
+LOCK IT. LOG IT. PROVE IT.

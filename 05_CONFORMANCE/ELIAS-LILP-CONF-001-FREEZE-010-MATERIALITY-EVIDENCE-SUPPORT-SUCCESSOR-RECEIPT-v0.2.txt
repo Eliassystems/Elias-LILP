@@ -1,0 +1,89 @@
+ELIAS LILP CONF-001
+FREEZE-010 MATERIALITY EVIDENCE SUPPORT SUCCESSOR RECEIPT v0.2
+
+RECORDED UTC:
+2026-10-04T09:41:43.988Z
+
+STATUS:
+ADDITIVE MACHINE-SUPPORT SUCCESSOR CREATED
+
+PREDECESSOR SUPPORT:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-010-MATERIALITY-EVIDENCE-SUPPORT-v0.1.csv
+
+PREDECESSOR SHA-256:
+DF04B54E4260118359389FE071558712B474501A62227717C71FA7F21961D2C0
+
+SUCCESSOR SUPPORT:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-010-MATERIALITY-EVIDENCE-SUPPORT-v0.2.csv
+
+SUCCESSOR SHA-256:
+88FBAFD23BF9FDA903273C461CFDAB5268E08132EEEAD3DE86371FAD5A2F6F2F
+
+FIELD DELTA:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-010-MATERIALITY-EVIDENCE-SUPPORT-v0.1-to-v0.2-DELTA.csv
+
+FIELD DELTA SHA-256:
+1B6C8C80DF24AC1875D54F94C189CEEBC0332E94FE1D0EAEA9E243FD72730A8A
+
+CORRECTION BASIS:
+
+The v0.1 materiality-evidence support extractor located a DEFINITION
+label but, for lexicon entries without an explicit BOUNDARY label,
+its fallback definition range could continue beyond the current entry.
+
+Observed examples included definition text absorbing the next term
+heading and CLASS declaration.
+
+This is a machine-support extraction defect.
+
+It is NOT established as:
+
+- a defect in the frozen lexicon;
+- a defect in the frozen standard;
+- a semantic conflict;
+- a materiality determination;
+- or a conformance finding.
+
+v0.2 corrects the parser forward by bounding every lexicon entry at
+the heading immediately preceding the next CLASS block.
+
+The predecessor is preserved byte-identically.
+
+SUPPORT ROWS:
+57
+
+EXACT HEADING ROWS:
+51
+
+NO EXACT HEADING ROWS:
+6
+
+ROWS WITH v0.1 -> v0.2 DEFINITION/BOUNDARY DELTA:
+35
+
+HUMAN MATERIALITY REVIEW:
+NOT_PERFORMED
+
+SEMANTIC CLASSIFICATION:
+NOT_PERFORMED
+
+EXECUTION INPUT BINDING:
+NOT_ESTABLISHED
+
+HARNESS EXECUTION:
+NOT_EXECUTED
+
+RESULT:
+NOT_TESTED
+
+CONFORMANCE:
+NOT_ESTABLISHED
+
+NEXT AUTHORIZED STEP:
+
+Read-only inspection of the corrected v0.2 evidence-support object
+and its bounded predecessor delta before human materiality review.
+
+LOCK IT.
+LOG IT.
+PROVE IT.

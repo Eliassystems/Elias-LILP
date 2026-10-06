@@ -1,0 +1,80 @@
+﻿ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+LILP EVIDENCE RECEIPT
+Receipt ID: ELIAS-LILP-RECEIPT-0001
+Receipt Type: FOUNDING_PROVENANCE_IDENTITY
+Recorded UTC: 2026-10-01T21:10:53.790Z
+
+======================================================================
+SUBJECT
+======================================================================
+
+Document ID: ELIAS-LILP-FOUNDING-PROVENANCE
+Version: v0.1
+Founding Date: 2026-10-01
+
+File Name:
+ELIAS-LILP-FOUNDING-PROVENANCE-v0.1.txt
+
+Relative Location:
+00_PROVENANCE\ELIAS-LILP-FOUNDING-PROVENANCE-v0.1.txt
+
+Byte Length:
+6641
+
+Hash Algorithm:
+SHA-256
+
+SHA-256:
+2754F23DB9E41A2423D4F7749C617A488D76CE4D9C879A5AA70EFB7755D40E43
+
+======================================================================
+BOUNDED CLAIM
+======================================================================
+
+This receipt records the byte-level cryptographic identity of the
+specified founding provenance file as observed at the Recorded UTC time.
+
+A matching SHA-256 digest can establish that another byte sequence is
+identical to the byte sequence represented by this receipt.
+
+This receipt does NOT, by itself, establish:
+
+- truth of every statement contained in the document;
+- external validation;
+- external certification;
+- regulatory approval;
+- industry adoption;
+- authorship beyond the associated provenance record;
+- or immutability of copies held outside a protected storage mechanism.
+
+======================================================================
+LILP APPLICATION
+======================================================================
+
+LOCK:
+The founding provenance file and its observed byte identity are fixed
+for this receipt.
+
+LOG:
+The file name, size, hash algorithm, digest and receipt time are
+preserved here.
+
+PROVE:
+The SHA-256 digest may be independently recomputed against the subject
+file.
+
+======================================================================
+DEVELOPMENT RULE
+======================================================================
+
+If the founding provenance content later requires correction or
+extension, this v0.1 artifact is not to be silently rewritten as though
+the earlier state never existed.
+
+A successor version must be created and separately identified.
+
+LOCK IT.
+LOG IT.
+PROVE IT.

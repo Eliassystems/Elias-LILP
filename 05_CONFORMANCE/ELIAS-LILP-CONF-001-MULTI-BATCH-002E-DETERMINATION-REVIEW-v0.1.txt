@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002E v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 102
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 104
+
+COVERED_BY_EXISTING: 1
+NEW_TEST_REQUIRED: 1
+
+CONF-018:
+COVERED_BY_EXISTING -> LILP-TC-T16-008
+An applicable mandatory FAIL directly blocks profile PASS.
+
+CONF-020:
+NEW_TEST_REQUIRED -> LILP-TC-T16-021 RESERVED
+Distinct obligation: an unexecuted required mandatory falsification test blocks PASS unless an established NOT_APPLICABLE rationale authorises non-execution.
+
+T16-021 is reserved only.
+T16-022 remains unreserved.
+Test register remains at 126 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

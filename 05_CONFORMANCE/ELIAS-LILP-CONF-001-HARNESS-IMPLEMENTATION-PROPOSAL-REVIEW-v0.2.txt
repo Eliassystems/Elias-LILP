@@ -1,0 +1,110 @@
+ELIAS LILP CONF-001
+HARNESS-IMPLEMENTATION SUCCESSOR PROPOSAL REVIEW v0.2
+
+PREDECESSOR IMPLEMENTATION PROPOSAL v0.1 SHA-256:
+82801E4CD9A7852973D7FC19A0676A59FEEC1928DBE5CEE8DA85DEDA13A602BD
+
+PREDECESSOR CONTROLLED REVIEW v0.1 SHA-256:
+00730FFD18659FB19524D800B76A42C01EAF343B871EE1B63D22A9BB8ACEAB15
+
+PREDECESSOR REVIEW DETERMINATION:
+NOT_ESTABLISHED
+
+PREDECESSOR PROMOTION-ELIGIBLE CANDIDATES:
+2
+
+PRESERVED ELIGIBLE IMPLEMENTATIONS:
+LILP-HI-FREEZE-001-v0.1
+LILP-HI-FREEZE-006-v0.1
+
+PRESERVED FAILED IMPLEMENTATIONS:
+LILP-HI-FREEZE-007-v0.1
+LILP-HI-FREEZE-008-v0.1
+LILP-HI-FREEZE-010-v0.1
+LILP-HI-FREEZE-012-v0.1
+
+SUCCESSOR IMPLEMENTATIONS CREATED:
+LILP-HI-FREEZE-007-v0.2
+LILP-HI-FREEZE-008-v0.2
+LILP-HI-FREEZE-010-v0.2
+LILP-HI-FREEZE-012-v0.2
+
+CORRECTION BASIS:
+
+FREEZE-007:
+Observed lexicon identity, version and SHA-256 are now extracted from the governed binding record itself.
+Separate governed binding-provenance evidence is identified and hashed.
+
+FREEZE-008:
+Observed founding-provenance SHA-256 is now extracted from the governed binding record itself.
+Separate governed lineage evidence is identified, read and hashed.
+
+FREEZE-010:
+The implementation now reads the material-term inventory and explicit human review record term-by-term.
+HumanClassification, evidence and reviewer rationale are required.
+Automation only validates and aggregates the human determinations.
+
+FREEZE-012:
+The implementation now reads and preserves the complete claim content.
+An explicit six-category human review record is required.
+HumanDetermination, evidence and reviewer rationale are captured for each category.
+Automation only validates and aggregates those human determinations.
+
+SUCCESSOR PROPOSAL:
+ELIAS-LILP-CONF-001-HARNESS-IMPLEMENTATION-PROPOSAL-v0.2.csv
+
+SUCCESSOR PROPOSAL SHA-256:
+5BDD971D52A9A034FEE0B57C28DF8197CE8D58D37BF3F934DB4E8A2A2804F2DE
+
+SUCCESSOR PROPOSAL BYTES:
+3722
+
+TOTAL CANDIDATES:
+6
+
+CARRIED FORWARD UNCHANGED:
+2
+
+CONTROLLED SUCCESSORS:
+4
+
+DETERMINISTIC CANDIDATES:
+4
+
+HUMAN REVIEW-SURFACE CANDIDATES:
+2
+
+IMPLEMENTATION STATUS:
+NOT_ESTABLISHED
+
+HARNESS BINDING:
+NOT_ESTABLISHED
+
+EXECUTION:
+NOT_EXECUTED
+
+RESULT:
+NOT_TESTED
+
+CONFORMANCE:
+NOT_ESTABLISHED
+
+BOUNDARY:
+No v0.1 implementation was modified or repaired.
+
+The four failed v0.1 candidates remain preserved exactly as reviewed.
+
+The four v0.2 artifacts are new successor candidates only.
+
+No candidate harness was executed.
+
+No implementation is authoritative.
+
+No harness binding is established.
+
+No test result is established.
+
+NEXT AUTHORIZED STEP:
+Controlled static implementation review of successor proposal v0.2.
+
+LOCK IT. LOG IT. PROVE IT.

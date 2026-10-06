@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:elias:lilp:schema:governing-state:v0.1",
+  "title": "ELIAS LILP Governing State Object v0.1",
+  "description": "Working reference structural schema for an ELIAS LILP Governing State Object. Structural validity does not establish semantic truth, authority, admissibility, conformance or execution permission.",
+  "type": "object",
+  "x-elias-document-id": "ELIAS-LILP-SCHEMA-001",
+  "x-elias-object": "GOVERNING_STATE",
+  "x-elias-schema-version": "v0.1",
+  "x-elias-ancestors": {
+    "std001_sha256": "076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537",
+    "man001_sha256": "429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2",
+    "lex001_sha256": "144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488"
+  },
+  "x-elias-authority-boundary": "The frozen normative standard controls. Schema validity does not equal governance validity.",
+  "properties": {
+    "object_type": {
+      "const": "GOVERNING_STATE"
+    },
+    "schema_id": {
+      "const": "urn:elias:lilp:schema:governing-state:v0.1"
+    },
+    "schema_version": {
+      "const": "v0.1"
+    },
+    "state_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "identity": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": true
+    },
+    "authority_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "standing": {
+      "enum": [
+        "ESTABLISHED",
+        "FAILED",
+        "NOT_ESTABLISHED"
+      ]
+    },
+    "admissibility": {
+      "enum": [
+        "ESTABLISHED",
+        "FAILED",
+        "NOT_ESTABLISHED"
+      ]
+    },
+    "evidence_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "policy_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "jurisdiction": {
+      "type": "string",
+      "minLength": 1
+    },
+    "temporal_context": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "contemplated_effect": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": true
+    },
+    "predecessor_reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "delta_reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "canonicalisation_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hash_algorithm": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state_hash": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Digest value calculated under the declared hash algorithm and canonicalisation profile. A matching digest establishes identity under that procedure, not truth."
+    }
+  },
+  "required": [
+    "state_id",
+    "version",
+    "identity",
+    "authority_reference",
+    "standing",
+    "admissibility",
+    "evidence_references",
+    "policy_reference",
+    "scope",
+    "jurisdiction",
+    "temporal_context",
+    "contemplated_effect",
+    "predecessor_reference",
+    "delta_reference",
+    "provenance",
+    "canonicalisation_profile",
+    "hash_algorithm",
+    "state_hash"
+  ],
+  "additionalProperties": true
+}

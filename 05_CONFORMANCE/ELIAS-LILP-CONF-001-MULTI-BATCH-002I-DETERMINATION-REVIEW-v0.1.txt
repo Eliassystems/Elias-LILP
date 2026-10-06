@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002I v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 110
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 112
+
+TRUE UNRESOLVED BEFORE BATCH 002I: 23
+TRUE UNRESOLVED AFTER BATCH 002I: 21
+
+WORD-002:
+COVERED_BY_EXISTING -> LILP-TC-T16-003
+Unsupported certification wording is already rejected unless the stronger certification status is separately established.
+
+WORD-007:
+NEW_TEST_REQUIRED -> LILP-TC-T16-025 RESERVED
+Distinct obligation: the declared profile must accompany the public conformance claim at the point of representation.
+
+T16-025 is reserved only.
+T16-026 remains unreserved.
+Test register remains at 130 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

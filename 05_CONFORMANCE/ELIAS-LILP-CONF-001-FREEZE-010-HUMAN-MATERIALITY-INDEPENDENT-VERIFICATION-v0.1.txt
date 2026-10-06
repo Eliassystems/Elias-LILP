@@ -1,0 +1,69 @@
+ELIAS LILP CONF-001
+FREEZE-010 HUMAN MATERIALITY DETERMINATION — INDEPENDENT VERIFICATION v0.1
+
+RECORDED UTC:
+2026-10-04T10:02:40.196Z
+
+REVIEWER ID:
+Gary williams
+
+REVIEWER AUTHORITY:
+ELIAS_SYSTEMS_FOUNDER_AND_AUTHORIZED_HUMAN_REVIEWER
+
+AUTHORITY BOUNDARY:
+INTERNAL ELIAS SYSTEMS HUMAN REVIEW AUTHORITY ONLY
+
+TERM:
+independent verification
+
+SOURCE SUPPORT:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-010-MATERIALITY-EVIDENCE-SUPPORT-v0.2.csv
+
+SOURCE SUPPORT SHA-256:
+88FBAFD23BF9FDA903273C461CFDAB5268E08132EEEAD3DE86371FAD5A2F6F2F
+
+SOURCE BASIS:
+FREEZE-011_EXPLICIT_SEMANTIC_DISTINCTION
+
+STANDARD OCCURRENCE COUNT:
+8
+
+HUMAN MATERIALITY DETERMINATION:
+MATERIAL
+
+REVIEWER RATIONALE:
+Independent verification is materially normative because the frozen standard expressly distinguishes attestation from independent verification, prohibits self-assessment claims from being represented as independent verification, and requires an identifiable verifier where independent verification is claimed. The distinction therefore directly constrains how verification status may be described and evidenced.
+
+BOUNDARY:
+
+This record establishes only the named human reviewer's materiality
+determination for independent verification within the bounded
+FREEZE-010 material-term inventory process.
+
+It does NOT establish:
+
+- semantic compatibility;
+- explicit narrowing;
+- material conflict;
+- independent verification of Elias Systems itself;
+- certification;
+- FREEZE-010 PASS;
+- execution input binding;
+- harness execution;
+- test result;
+- or conformance.
+
+SEMANTIC CLASSIFICATION:
+NOT_PERFORMED
+
+EXECUTION INPUT BINDING:
+NOT_ESTABLISHED
+
+HARNESS EXECUTION:
+NOT_EXECUTED
+
+RESULT:
+NOT_TESTED
+
+CONFORMANCE:
+NOT_ESTABLISHED

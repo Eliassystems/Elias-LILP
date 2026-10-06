@@ -1,0 +1,29 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v1.3
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 105
+NEW TEST DEFINITIONS: 1
+SUCCESSOR TEST CASES: 106
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-CHAIN-002 -> reserved LILP-TC-T02-011
+
+NEW TEST:
+TEST CASE: LILP-TC-T02-011
+RUN CLASS: CONTROL
+TITLE: Claimed identity continuity is supported by sufficient identity evidence
+OBJECTIVE: Establish that where identity continuity is required or claimed, the claimed link is supported by sufficient identity evidence under the applicable identity method rather than by assertion, naming similarity or unsupported inference.
+EXPECTED: The continuity claim is accepted only where the available identity evidence is sufficient under the applicable identity method to support the claimed link. The supporting evidence and evaluated link remain identifiable and inspectable.
+FAILURE ORACLE: FAIL if identity continuity is accepted without sufficient supporting identity evidence, if the claimed link depends only on naming similarity or unsupported inference, or if the evidence supporting the claimed continuity relationship cannot be identified and inspected.
+
+The new test directly addresses positive sufficiency of identity evidence supporting a claimed continuity link.
+It remains distinct from stable-object identity, anti-name-substitution and identity-failure handling.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

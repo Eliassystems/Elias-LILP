@@ -1,0 +1,35 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v1.1
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 101
+NEW TEST DEFINITIONS: 2
+SUCCESSOR TEST CASES: 103
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-EVID-002 -> reserved LILP-TC-T05-010
+LILP-REQ-EVID-007 -> reserved LILP-TC-T05-011
+
+NEW TEST 1:
+TEST CASE: LILP-TC-T05-010
+TITLE: Material evidence class is explicitly represented
+OBJECTIVE: Establish that the evidence class of a material Evidence Object is explicitly represented where different epistemic classes could materially affect the determination.
+EXPECTED: Where epistemic class is material to the determination, the Evidence Object explicitly and unambiguously represents its evidence class before the evidence is relied upon.
+FAILURE ORACLE: FAIL if different epistemic classes could materially affect the determination and the relied-upon Evidence Object has no explicit evidence class, has an ambiguous class, or requires the class to be silently inferred from unrelated context.
+
+NEW TEST 2:
+TEST CASE: LILP-TC-T05-011
+TITLE: External evidence payload is bound to integrity identifier
+OBJECTIVE: Establish that where integrity of an external evidence payload is claimed, the payload itself or a verifiable content reference to that payload is explicitly bound to the integrity identifier supporting the claim.
+EXPECTED: The integrity identifier is explicitly and unambiguously bound to the external payload or to a verifiable content reference that resolves to the claimed payload, so the integrity claim is attributable to the identified content rather than to an unbound value.
+FAILURE ORACLE: FAIL if integrity is claimed but the integrity identifier is detached from the external payload or its verifiable content reference, the binding is absent or ambiguous, or the identifier cannot be attributed to the payload claimed without unsupported inference.
+
+The two tests remain semantically distinct: epistemic-class representation versus external-payload integrity binding.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

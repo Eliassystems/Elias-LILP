@@ -1,0 +1,29 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v2.2
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 117
+NEW TEST DEFINITIONS: 1
+SUCCESSOR TEST CASES: 118
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-CLAIM-008 -> LILP-TC-T16-013
+
+NEW TEST:
+TEST CASE: LILP-TC-T16-013
+RUN CLASS: CONTROL
+TITLE: Conformance claim identifies exact standard version and profile
+OBJECTIVE: Establish that every conformance claim identifies the exact standard version and conformance profile relied upon, so that the claimed conformance basis is bounded, reproducible and not silently transferred across different standard versions or profiles.
+EXPECTED: The conformance claim explicitly identifies or unambiguously binds both the exact standard version and the conformance profile relied upon. The claim cannot silently inherit, substitute or transfer conformance across a different standard version, profile or unspecified conformance basis.
+FAILURE ORACLE: FAIL if a conformance claim omits or materially ambiguates the standard version or conformance profile relied upon, if more than one materially different version or profile could support the wording, or if the claim can be transferred to another version or profile without a separately established conformance basis.
+
+Exact conformance-claim standard/version/profile identity remains distinct from requirements-matrix completeness.
+A declared profile does not by itself establish that a claim identifies the exact standard version and profile relied upon.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

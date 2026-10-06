@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v2.6
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 122
+NEW TEST DEFINITIONS: 1
+SUCCESSOR TEST CASES: 123
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-CONF-012 -> LILP-TC-T16-018
+
+NEW TEST:
+TEST CASE: LILP-TC-T16-018
+RUN CLASS: CONTROL
+TITLE: Conformance determination is traceable to requirements matrix and test evidence
+
+The test preserves traceability from the conformance determination to both its requirements matrix and its supporting test evidence.
+Traceability may not be reconstructed retrospectively from missing or ambiguous linkage.
+T16-019 remains unreserved.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

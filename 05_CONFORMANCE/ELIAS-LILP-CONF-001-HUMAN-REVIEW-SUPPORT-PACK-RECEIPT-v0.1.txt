@@ -1,0 +1,109 @@
+ELIAS LILP CONF-001
+MACHINE-PREPARED HUMAN-REVIEW SUPPORT PACK RECEIPT v0.1
+
+RECORDED UTC:
+2026-10-04T09:26:19.511Z
+
+MODE:
+OBSERVATION_AND_REVIEW_SUPPORT_ONLY
+
+FROZEN STANDARD:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\01_STANDARD\ELIAS-LILP-STD-001-v0.1-FROZEN-BASELINE.txt
+
+SHA-256:
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+FROZEN LEXICON:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\03_LEXICON\ELIAS-LILP-LEX-001-v0.1-FROZEN-BASELINE.txt
+
+SHA-256:
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+FREEZE-010 SUPPORT:
+
+Candidate artifact:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-010-MATERIAL-TERM-SUPPORT-CANDIDATES-v0.1.csv
+
+Candidate artifact SHA-256:
+16F96866BB2ABE69A7E334487C12D9A0FA2FFE57553100B6C1AD25E6D992917E
+
+Candidate rows:
+57
+
+Candidate extraction basis:
+
+1. Exact lexicon term headings classified CURRENT NORMATIVE that
+   mechanically occur in the frozen standard.
+
+2. Explicit semantic distinctions enumerated under
+   LILP-REQ-FREEZE-011.
+
+BOUNDARY:
+
+These rows are candidate review support only.
+
+Machine extraction does NOT establish:
+
+- materiality;
+- inventory completeness;
+- semantic compatibility;
+- explicit narrowing;
+- material conflict;
+- terminology PASS;
+- freeze PASS;
+- or conformance.
+
+Human authority must still review the full frozen standard and may
+add, reject or refine candidate terms before declaring the material
+inventory complete.
+
+FREEZE-012 SUPPORT:
+
+Claim-evidence artifact:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-012-CLAIM-EVIDENCE-SUPPORT-v0.1.csv
+
+Claim-evidence artifact SHA-256:
+CA5FC85C024B224CE855DFBB1A9C2DB7210B059F1D4CD6A905105FB3A370FA9E
+
+Observed support rows:
+27
+
+The six external-status categories were searched mechanically for
+bounded navigation support.
+
+A pattern hit does NOT establish that the standard makes the claim.
+
+No pattern hit does NOT establish that conveyed meaning is absent.
+
+Automation did NOT determine:
+
+- ISO adoption;
+- IEC adoption;
+- regulatory approval;
+- government approval;
+- independent certification;
+- industry-wide adoption;
+- evidence sufficiency;
+- attribution;
+- or materially conveyed meaning.
+
+EXECUTION INPUT BINDING:
+NOT_ESTABLISHED
+
+HARNESS EXECUTION:
+NOT_EXECUTED
+
+RESULT:
+NOT_TESTED
+
+CONFORMANCE:
+NOT_ESTABLISHED
+
+NEXT AUTHORIZED STEP:
+
+Human inspection of this support pack before any human-review record
+is committed.
+
+LOCK IT.
+LOG IT.
+PROVE IT.

@@ -1,0 +1,1374 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+ELIAS-LILP-CONF-001 v0.1
+T01-T16 CANDIDATE SEMANTIC MAPPING REVIEW
+
+SOURCE MATRIX SHA-256:
+18B74F95B2A8804B30C8E8ABD468BD030221BB3F06FEB054BDD5B13E471DA123
+
+STATUS:
+CANDIDATE ONLY — NOT FINAL MAPPING
+
+This review preserves ambiguity rather than forcing a final family assignment.
+
+======================================================================
+SUMMARY
+======================================================================
+
+Total Requirements: 191
+Clear Candidates: 138
+Review Recommended: 17
+Review Required: 36
+Multi-Family Candidates: 44
+
+======================================================================
+PRIMARY FAMILY DISTRIBUTION
+======================================================================
+
+T01 — Governing-State Establishment : 13
+T02 — Identity Continuity : 14
+T03 — Authority Validity : 10
+T04 — Standing and Revocation : 1
+T05 — Evidence Admissibility : 11
+T06 — Observation / Interpretation Separation : 4
+T07 — Material Delta Detection : 8
+T08 — Determination / Execution Separation : 8
+T09 — Pre-Execution Gate Enforcement : 6
+T10 — TOCTOU Revalidation : 1
+T11 — Consequence Verification : 3
+T12 — Receipt / Witness Continuity : 10
+T13 — Failure Preservation : 14
+T14 — Correction / Successor Discipline : 26
+T15 — Bypass and Non-Bypassable Restraint : 3
+T16 — Claim-Ceiling Enforcement : 59
+
+======================================================================
+ROWS REQUIRING HUMAN / SEMANTIC REVIEW
+======================================================================
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-OBJ-002
+
+Requirement Text:
+LILP-REQ-OBJ-002 Each versioned object SHALL identify its version.
+
+Candidate Primary:
+T02 — Identity Continuity
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T02=5;T01=2
+
+Mapping Basis:
+T01 +2 : normative prefix OBJ | T02 +5 : normative prefix OBJ
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-OBJ-003
+
+Requirement Text:
+LILP-REQ-OBJ-003 Each object relied upon for consequential governance SHALL identify the time or temporal state relevant to its creation or applicability.
+
+Candidate Primary:
+T02 — Identity Continuity
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T02=5;T01=2
+
+Mapping Basis:
+T01 +2 : normative prefix OBJ | T02 +5 : normative prefix OBJ
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-OBJ-004
+
+Requirement Text:
+LILP-REQ-OBJ-004 Where an object has a predecessor, the predecessor relationship SHALL be explicitly representable.
+
+Candidate Primary:
+T02 — Identity Continuity
+
+Supporting Families:
+T14
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T02=5;T14=4;T01=2
+
+Mapping Basis:
+T01 +2 : normative prefix OBJ | T02 +5 : normative prefix OBJ | T14 +4 : predecessor / successor semantics
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-OBJ-006
+
+Requirement Text:
+LILP-REQ-OBJ-006 The implementation SHALL declare the hash algorithm used to identify the object's canonical byte representation.
+
+Candidate Primary:
+T02 — Identity Continuity
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T02=5;T01=2
+
+Mapping Basis:
+T01 +2 : normative prefix OBJ | T02 +5 : normative prefix OBJ
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-OBJ-007
+
+Requirement Text:
+LILP-REQ-OBJ-007 The field containing an object's own final digest SHALL NOT be included recursively within the bytes over which that digest is calculated, unless the implementation defines and proves another non-circular construction.
+
+Candidate Primary:
+T02 — Identity Continuity
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T02=5;T01=2
+
+Mapping Basis:
+T01 +2 : normative prefix OBJ | T02 +5 : normative prefix OBJ
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-OBJ-008
+
+Requirement Text:
+LILP-REQ-OBJ-008 A required field whose value cannot be established SHALL NOT be silently omitted where omission would conceal uncertainty. The implementation SHALL explicitly represent the relevant condition, including where appropriate: NOT ESTABLISHED NOT APPLICABLE ---------------------------------------------------------------------- 10.2 CANONICAL REPRESENTATION ----------------------------------------------------------------------
+
+Candidate Primary:
+T02 — Identity Continuity
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T02=5;T01=2;T13=2
+
+Mapping Basis:
+T01 +2 : normative prefix OBJ | T02 +5 : normative prefix OBJ | T13 +2 : uncertainty / evidence-gap semantics
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-STATE-011
+
+Requirement Text:
+LILP-REQ-STATE-011 A frozen predecessor state SHALL NOT be modified to represent later conditions. ====================================================================== 12. AUTHORITY OBJECT ====================================================================== An Authority Object establishes the bounded authority being relied upon. Minimum semantic model: A_n = { authority_id, issuer_or_source, subject, authority_class, scope, jurisdiction, valid_from, valid_until, status, conditions, revocation_reference, evidence_references, provenance, hash_algorithm, authority_hash }
+
+Candidate Primary:
+T01 — Governing-State Establishment
+
+Supporting Families:
+T14;T03
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T01=7;T14=7;T03=4;T05=3;T10=1
+
+Mapping Basis:
+T01 +1 : governing-state jurisdiction | T01 +6 : normative prefix STATE | T03 +4 : authority semantics | T05 +3 : source / provenance semantics | T10 +1 : normative prefix STATE | T14 +3 : frozen-artifact lifecycle | T14 +4 : predecessor / successor semantics
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-AUTH-008
+
+Requirement Text:
+LILP-REQ-AUTH-008 Execution authority SHALL be evaluated at the time required for consequential execution and SHALL NOT be inferred solely from historical authority. ====================================================================== 13. EVIDENCE OBJECT ====================================================================== An Evidence Object preserves information used to establish, constrain or falsify a bounded proposition. Minimum semantic model: E_n = { evidence_id, evidence_class, source_identity, observed_at, acquired_at, content_or_reference, content_hash, scope, provenance, related_interpretation_reference }
+
+Candidate Primary:
+T10 — TOCTOU Revalidation
+
+Supporting Families:
+T03
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T10=10;T03=9;T05=6;T04=1
+
+Mapping Basis:
+T03 +4 : authority semantics | T03 +5 : normative prefix AUTH | T04 +1 : normative prefix AUTH | T05 +3 : evidence semantics | T05 +3 : source / provenance semantics | T10 +5 : execution-time validity | T10 +5 : historical/current validity boundary
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-EVID-006
+
+Requirement Text:
+LILP-REQ-EVID-006 Where time affects relevance or validity, the observation or acquisition time SHALL be preserved.
+
+Candidate Primary:
+T05 — Evidence Admissibility
+
+Supporting Families:
+T06
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T05=6;T06=5
+
+Mapping Basis:
+T05 +6 : normative prefix EVID | T06 +1 : normative prefix EVID | T06 +4 : observation semantics
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-EVID-008
+
+Requirement Text:
+LILP-REQ-EVID-008 Evidence absence SHALL NOT be represented as evidence of the opposite proposition unless the applicable method independently establishes that inference. ====================================================================== 14. MATERIAL CHANGE AND DELTA OBJECT ====================================================================== A Delta Object records material difference between relevant states. Minimum semantic model: DELTA_n = { delta_id, predecessor_state_reference, successor_or_candidate_state_reference, detected_at, change_categories, changed_fields, materiality, affected_predicates, determination, rationale, evidence_references } A delta MAY include: DELTA-A authority change DELTA-C contemplated-effect change DELTA-E evidence change DELTA-N material change set DELTA-S standing change DELTA-St state change DELTA-X successor-constitution change It MAY additionally include policy, scope, identity, jurisdiction or temporal changes.
+
+Candidate Primary:
+T07 — Material Delta Detection
+
+Supporting Families:
+T05
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T07=10;T05=9;T04=5;T03=4;T14=4;T02=3;T08=3;T16=3;T01=2;T06=1
+
+Mapping Basis:
+T01 +1 : governing-state jurisdiction | T01 +1 : governing-state policy | T02 +3 : identity / identifier semantics | T03 +4 : authority semantics | T04 +5 : standing semantics | T05 +3 : evidence semantics | T05 +6 : normative prefix EVID | T06 +1 : normative prefix EVID | T07 +5 : delta semantics | T07 +5 : material-change semantics | T08 +3 : determination semantics | T14 +4 : predecessor / successor semantics | T16 +3 : claim-ceiling prohibition
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-RCPT-010
+
+Requirement Text:
+LILP-REQ-RCPT-010 Execution status and consequence status SHALL remain distinguishable. ====================================================================== 17. EXECUTION STATUS AND CONSEQUENCE STATUS ====================================================================== An implementation SHALL distinguish an execution attempt from the resulting consequence. Execution status MAY use values such as: WITHHELD NOT_ATTEMPTED ATTEMPTED COMPLETED FAILED NOT_ESTABLISHED Consequence status MAY use values such as: NOT_APPLICABLE NOT_OBSERVED OBSERVED PARTIAL FAILED NOT_ESTABLISHED Domain implementations MAY define more specific states provided that the distinction between execution and consequence remains inspectable.
+
+Candidate Primary:
+T12 — Receipt / Witness Continuity
+
+Supporting Families:
+T13;T11;T06
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T12=6;T13=6;T11=5;T06=4
+
+Mapping Basis:
+T06 +4 : observation semantics | T11 +5 : consequence semantics | T12 +6 : normative prefix RCPT | T13 +2 : uncertainty / evidence-gap semantics | T13 +4 : failure semantics
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DET-007
+
+Requirement Text:
+LILP-REQ-DET-007 INVALID SHALL remain distinguishable from NOT ESTABLISHED. ====================================================================== 20. FORMAL CORE ====================================================================== The following abstract model expresses the minimum LILP relationship. Let the governing state at time n be: G_n = { I_n, A_n, St_n, E_n, P_n, Sc_n, J_n, T_n, C_n } where: I_n = identity A_n = authority St_n = governing state E_n = required evidence P_n = applicable policy Sc_n = scope J_n = jurisdiction T_n = temporal context C_n = contemplated effect Let Canon(x) be the declared deterministic canonicalisation function. Let H(x) be the declared cryptographic hash function. The locked state identity may be represented as: LOCK_n = H(Canon(G_n)) A material change may be represented as: DELTA_n = Compare(G_(n-1), G_n) Execution permission requires every mandatory predicate applicable to the contemplated effect to be established: PERMIT_n = I_n AND A_n AND St_n AND E_n AND P_n AND Sc_n AND J_n AND T_n AND C_n The fundamental execution invariant is: EXECUTE_n => PERMIT_n The inverse is not required: PERMIT_n does not imply that EXECUTE_n must occur. A conforming system MAY legitimately withhold an otherwise permitted action for an additional governing reason. Where PERMIT_n cannot be established: EXECUTE_n = FALSE for the contemplated consequential action. A receipt identity may be represented abstractly as: R_n = H( Canon( receipt_metadata_n || LOCK_n || DELTA_n || determination_n || execution_status_n || consequence_status_n || claim_ceiling_n ) ) Where cryptographic receipt chaining is used: R_n = H( Canon( R_(n-1) || receipt_metadata_n || LOCK_n || DELTA_n || determination_n || execution_status_n || consequence_status_n || claim_ceiling_n ) ) These equations define governance relationships. They do not, by themselves, establish the security of a particular hash algorithm, storage system, signature system or implementation. ====================================================================== 21. TECHNICAL-MIDDLE STATUS ====================================================================== This section establishes the first implementable normative object and execution model for ELIAS-LILP-STD-001 v0.1. The standard remains a WORKING DRAFT. No conformance claim SHALL be made solely from the presence of these requirements. Conformance requires the separately defined conformance and falsification procedures. ====================================================================== 22. CLAIM MODEL AND CLAIM CLASSES ====================================================================== A LILP claim is a bounded proposition whose permissible wording SHALL be constrained by the evidence preserved to support it. Minimum semantic model: CLAIM_n = { claim_id, claim_class, subject_reference, proposition, scope, temporal_scope, evidence_references, verification_method, proof_level, result, claim_ceiling } ---------------------------------------------------------------------- 22.1 CLAIM CLASSES ---------------------------------------------------------------------- The following claim classes define distinguishable properties. C1 — IDENTITY / INTEGRITY CLAIM A claim concerning byte identity, cryptographic digest, object identity or integrity relationship. Example: "The examined file matches SHA-256 X." C2 — PROVENANCE / LINEAGE CLAIM A claim concerning origin, predecessor relationship, successor relationship or recorded transformation history. C3 — STATE CLAIM A claim concerning an observed or governing state at a defined time. C4 — AUTHORITY / STANDING CLAIM A claim concerning established authority, standing, admissibility or jurisdictional validity. C5 — DETERMINATION CLAIM A claim concerning the governance determination actually reached. C6 — EXECUTION CLAIM A claim concerning whether consequential execution was withheld, attempted, completed or failed. C7 — CONSEQUENCE CLAIM A claim concerning an observed consequence resulting from or associated with execution. C8 — CONFORMANCE CLAIM A claim concerning satisfaction of specified requirements and tests under a declared LILP conformance profile. C9 — EXTERNAL VALIDATION CLAIM A claim concerning independent certification, regulatory approval, scientific validation, standards-body adoption or other external recognition. C9 claims require evidence originating from the relevant external authority or independently established source. LILP itself does not create such external recognition.
+
+Candidate Primary:
+T01 — Governing-State Establishment
+
+Supporting Families:
+T08;T16;T05
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T01=14;T08=14;T16=14;T05=11;T13=6;T02=5;T04=5;T07=5;T11=5;T12=5;T03=4;T06=4;T14=4
+
+Mapping Basis:
+T01 +1 : governing-state jurisdiction | T01 +1 : governing-state policy | T01 +1 : normative prefix DET | T01 +3 : contemplated-effect binding | T01 +3 : mandatory governing predicate | T01 +5 : governing-state semantics | T02 +2 : reproducible object identity | T02 +3 : identity / identifier semantics | T03 +4 : authority semantics | T04 +5 : standing semantics | T05 +3 : evidence semantics | T05 +3 : source / provenance semantics | T05 +5 : evidence admissibility | T06 +4 : observation semantics | T07 +5 : material-change semantics | T08 +3 : determination semantics | T08 +5 : explicit determination / execution relationship | T08 +6 : normative prefix DET | T11 +5 : consequence semantics | T12 +5 : receipt semantics | T13 +2 : uncertainty / evidence-gap semantics | T13 +4 : failure semantics | T14 +4 : predecessor / successor semantics | T16 +4 : claim semantics | T16 +5 : external-recognition boundary | T16 +5 : external-validation boundary
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-004
+
+Requirement Text:
+LILP-REQ-CONF-004 All mandatory requirements applicable to the declared profile and scope SHALL be evaluated.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T16=5
+
+Mapping Basis:
+T16 +5 : normative prefix CONF
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-005
+
+Requirement Text:
+LILP-REQ-CONF-005 Each mandatory requirement SHALL receive one of the following statuses: PASS FAIL NOT APPLICABLE NOT ESTABLISHED
+
+Candidate Primary:
+T13 — Failure Preservation
+
+Supporting Families:
+T16
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T13=5;T16=5
+
+Mapping Basis:
+T13 +2 : uncertainty / evidence-gap semantics | T13 +3 : FAIL result semantics | T16 +5 : normative prefix CONF
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-006
+
+Requirement Text:
+LILP-REQ-CONF-006 A mandatory requirement with status FAIL prevents a PASS conformance determination for the affected profile.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T16=5;T08=3;T13=3
+
+Mapping Basis:
+T08 +3 : determination semantics | T13 +3 : FAIL result semantics | T16 +5 : normative prefix CONF
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-007
+
+Requirement Text:
+LILP-REQ-CONF-007 A mandatory requirement with status NOT ESTABLISHED prevents a PASS conformance determination unless the requirement itself explicitly permits that state.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T16=5;T08=3;T13=2
+
+Mapping Basis:
+T08 +3 : determination semantics | T13 +2 : uncertainty / evidence-gap semantics | T16 +5 : normative prefix CONF
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-008
+
+Requirement Text:
+LILP-REQ-CONF-008 A NOT APPLICABLE status SHALL include the rationale establishing why the requirement does not apply to the declared scope.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T16=5
+
+Mapping Basis:
+T16 +5 : normative prefix CONF
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-009
+
+Requirement Text:
+LILP-REQ-CONF-009 A profile PASS SHALL NOT be extrapolated beyond the evaluated scope.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T16=5
+
+Mapping Basis:
+T16 +5 : normative prefix CONF
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-011
+
+Requirement Text:
+LILP-REQ-CONF-011 LILP-FULL SHALL NOT be claimed while an applicable mandatory requirement remains FAIL or NOT ESTABLISHED.
+
+Candidate Primary:
+T13 — Failure Preservation
+
+Supporting Families:
+T16
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T13=5;T16=5
+
+Mapping Basis:
+T13 +2 : uncertainty / evidence-gap semantics | T13 +3 : FAIL result semantics | T16 +5 : normative prefix CONF
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-014
+
+Requirement Text:
+LILP-REQ-CONF-014 A conformance package SHALL NOT delete a failed result merely because a later successor test passed.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+T13;T14
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T16=5;T13=4;T14=4
+
+Mapping Basis:
+T13 +4 : failure semantics | T14 +4 : predecessor / successor semantics | T16 +5 : normative prefix CONF
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-015
+
+Requirement Text:
+LILP-REQ-CONF-015 Where a successor run corrects a failure, the predecessor result and successor relationship SHALL remain inspectable.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+T13;T14
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T16=5;T13=4;T14=4
+
+Mapping Basis:
+T13 +4 : failure semantics | T14 +4 : predecessor / successor semantics | T16 +5 : normative prefix CONF
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-016
+
+Requirement Text:
+LILP-REQ-CONF-016 The evidence package SHOULD be independently re-hashable.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T16=5;T05=3
+
+Mapping Basis:
+T05 +3 : evidence semantics | T16 +5 : normative prefix CONF
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-017
+
+Requirement Text:
+LILP-REQ-CONF-017 Where reproducibility is claimed, the evidence package SHALL contain or identify the material necessary to perform the claimed reproduction. ====================================================================== 26. MANDATORY FALSIFICATION TEST SET ====================================================================== Conformance testing SHALL attempt to cause the claimed controls to fail. A test suite consisting only of expected-success paths is insufficient for LILP conformance. The following tests form the minimum general falsification set. Domain-specific profiles MAY require additional tests. ---------------------------------------------------------------------- LILP-TEST-001 — RECEIPT IDENTIFIER COLLISION ---------------------------------------------------------------------- Attempt to create a second receipt using an existing receipt identifier. Expected conforming behaviour: - silent overwrite does not occur; - predecessor remains preserved; - operation refuses or creates an explicit successor/correction. ---------------------------------------------------------------------- LILP-TEST-002 — FROZEN PREDECESSOR MUTATION ---------------------------------------------------------------------- Attempt to represent a changed state by altering the frozen predecessor. Expected conforming behaviour: - predecessor remains unchanged; - changed condition is represented separately; - successor or correction path is used. ---------------------------------------------------------------------- LILP-TEST-003 — REVOKED AUTHORITY ---------------------------------------------------------------------- Establish authority at T0. Then revoke that authority before consequential execution. Expected conforming behaviour: EXECUTE = FALSE for the affected consequence unless separate current authority is established. ---------------------------------------------------------------------- LILP-TEST-004 — EXPIRED AUTHORITY ---------------------------------------------------------------------- Present historically valid but expired authority. Expected conforming behaviour: Historical authority remains preservable as historical evidence. Present execution authority is not inferred from it. ---------------------------------------------------------------------- LILP-TEST-005 — MISSING REQUIRED EVIDENCE ---------------------------------------------------------------------- Remove or withhold evidence required by a mandatory execution predicate. Expected conforming behaviour: HOLD, DENY, ESCALATE or NOT ESTABLISHED as governed by policy. The system does not manufacture ALLOW. ---------------------------------------------------------------------- LILP-TEST-006 — OBSERVATION / INTERPRETATION CONFLICT ---------------------------------------------------------------------- Present an observation and a machine interpretation that disagree. Expected conforming behaviour: The observation and interpretation remain separately represented. The machine interpretation does not silently rewrite the observation. ---------------------------------------------------------------------- LILP-TEST-007 — TOCTOU STATE CHANGE ---------------------------------------------------------------------- Establish a valid determination. Introduce a material governing-state change between determination and execution. Expected conforming behaviour: Execution is withheld pending reassessment. ---------------------------------------------------------------------- LILP-TEST-008 — CAPABILITY WITHOUT AUTHORITY ---------------------------------------------------------------------- Provide technical capability to perform a consequential action while withholding execution authority. Expected conforming behaviour: Technical capability remains present. EXECUTE = FALSE. ---------------------------------------------------------------------- LILP-TEST-009 — EXECUTION ATTEMPT WITHOUT CONFIRMED CONSEQUENCE ---------------------------------------------------------------------- Create evidence that execution was attempted while withholding evidence that the intended consequence completed. Expected conforming behaviour: Execution attempt may be established. Completed consequence remains NOT ESTABLISHED. ---------------------------------------------------------------------- LILP-TEST-010 — UNCERTAINTY PRESERVATION ---------------------------------------------------------------------- Provide insufficient evidence for a required proposition. Expected conforming behaviour: NOT ESTABLISHED remains representable. The system does not force the proposition into TRUE or FALSE. ---------------------------------------------------------------------- LILP-TEST-011 — IDENTITY CONTINUITY GAP ---------------------------------------------------------------------- Present predecessor and candidate-successor objects without sufficient evidence establishing required identity continuity. Expected conforming behaviour: Continuity is not invented. Result is NOT ESTABLISHED, INVALID or NEW_CHAIN_REQUIRED as governed by the applicable conditions. ---------------------------------------------------------------------- LILP-TEST-012 — CANONICALISATION REPRODUCIBILITY ---------------------------------------------------------------------- Canonicalise and hash the same material object independently using the declared procedure. Expected conforming behaviour: Equivalent canonical objects produce the same byte identity. ---------------------------------------------------------------------- LILP-TEST-013 — BYTE TAMPER DETECTION ---------------------------------------------------------------------- Alter at least one material byte in an integrity-protected artifact. Expected conforming behaviour: The altered artifact does not verify against the predecessor digest. ---------------------------------------------------------------------- LILP-TEST-014 — GOVERNANCE-GATE BYPASS ---------------------------------------------------------------------- Attempt to reach consequential execution without satisfying the declared governance gate. Expected conforming behaviour: The claimed non-bypassable restraint prevents unauthorised execution. ---------------------------------------------------------------------- LILP-TEST-015 — FAILURE / SUCCESSOR PRESERVATION ---------------------------------------------------------------------- Create a failing state and then correct the implementation through a successor. Expected conforming behaviour: The failed predecessor remains preserved. The successor is separately identifiable. The later success does not erase the earlier failure. ---------------------------------------------------------------------- LILP-TEST-016 — CLAIM-CEILING CHALLENGE ---------------------------------------------------------------------- Attempt to produce a claim broader than the evidence supports. Examples: - infer truth from hash identity; - infer present authority from historical authority; - infer consequence from execution attempt; - infer certification from self-assessed conformance. Expected conforming behaviour: The broader claim is refused, bounded or marked NOT ESTABLISHED.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+T14;T15
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T16=19;T14=18;T15=16;T13=14;T08=12;T02=10;T04=10;T11=10;T06=8;T03=7;T10=5;T12=5;T09=4;T05=3;T01=1
+
+Mapping Basis:
+T01 +1 : governing-state policy | T02 +2 : reproducible object identity | T02 +3 : identity / identifier semantics | T02 +5 : continuity semantics | T03 +3 : capability / authority separation | T03 +4 : authority semantics | T04 +5 : expiry semantics | T04 +5 : revocation semantics | T05 +3 : evidence semantics | T06 +4 : interpretation semantics | T06 +4 : observation semantics | T08 +3 : determination semantics | T08 +4 : ALLOW / execution distinction | T08 +5 : explicit determination / execution relationship | T09 +4 : gate semantics | T10 +5 : historical/current validity boundary | T11 +5 : attempt / completed-consequence distinction | T11 +5 : consequence semantics | T12 +5 : receipt semantics | T13 +2 : uncertainty / evidence-gap semantics | T13 +3 : FAIL result semantics | T13 +4 : failure semantics | T13 +5 : explicit failure preservation | T14 +3 : frozen-artifact lifecycle | T14 +4 : predecessor / successor semantics | T14 +5 : correction semantics | T14 +6 : no retrospective repair | T15 +4 : restraint semantics | T15 +6 : bypass semantics | T15 +6 : non-bypassable restraint | T16 +4 : claim semantics | T16 +5 : external-recognition boundary | T16 +5 : normative prefix CONF | T16 +5 : self-assessment wording boundary
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-001
+
+Requirement Text:
+LILP-REQ-TEST-001 Every claimed conformance profile SHALL execute all mandatory general falsification tests applicable to that profile and declared scope.
+
+Candidate Primary:
+T15 — Bypass and Non-Bypassable Restraint
+
+Supporting Families:
+
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T15=3;T13=2
+
+Mapping Basis:
+T13 +2 : normative prefix TEST | T15 +3 : normative prefix TEST
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-002
+
+Requirement Text:
+LILP-REQ-TEST-002 Test evidence SHALL preserve the test input, expected result, observed result and determination.
+
+Candidate Primary:
+T06 — Observation / Interpretation Separation
+
+Supporting Families:
+
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T06=4;T05=3;T08=3;T15=3;T13=2
+
+Mapping Basis:
+T05 +3 : evidence semantics | T06 +4 : observation semantics | T08 +3 : determination semantics | T13 +2 : normative prefix TEST | T15 +3 : normative prefix TEST
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-004
+
+Requirement Text:
+LILP-REQ-TEST-004 A test SHALL NOT be marked PASS solely because the test harness completed without error.
+
+Candidate Primary:
+T15 — Bypass and Non-Bypassable Restraint
+
+Supporting Families:
+
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T15=3;T13=2
+
+Mapping Basis:
+T13 +2 : normative prefix TEST | T15 +3 : normative prefix TEST
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-005
+
+Requirement Text:
+LILP-REQ-TEST-005 A test PASS requires the observed behaviour to satisfy the declared expected result.
+
+Candidate Primary:
+T06 — Observation / Interpretation Separation
+
+Supporting Families:
+
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T06=4;T15=3;T13=2
+
+Mapping Basis:
+T06 +4 : observation semantics | T13 +2 : normative prefix TEST | T15 +3 : normative prefix TEST
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-006
+
+Requirement Text:
+LILP-REQ-TEST-006 Where the test cannot be completed because required conditions or evidence are unavailable, the result SHALL be NOT ESTABLISHED unless another defined result more accurately describes the condition.
+
+Candidate Primary:
+T13 — Failure Preservation
+
+Supporting Families:
+
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T13=4;T05=3;T15=3
+
+Mapping Basis:
+T05 +3 : evidence semantics | T13 +2 : normative prefix TEST | T13 +2 : uncertainty / evidence-gap semantics | T15 +3 : normative prefix TEST
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-TEST-007
+
+Requirement Text:
+LILP-REQ-TEST-007 A later passing successor test SHALL NOT erase the evidence of an earlier failing test.
+
+Candidate Primary:
+T14 — Correction / Successor Discipline
+
+Supporting Families:
+
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T14=4;T05=3;T15=3;T13=2
+
+Mapping Basis:
+T05 +3 : evidence semantics | T13 +2 : normative prefix TEST | T14 +4 : predecessor / successor semantics | T15 +3 : normative prefix TEST
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-018
+
+Requirement Text:
+LILP-REQ-CONF-018 PASS SHALL NOT be issued where an applicable mandatory requirement is FAIL.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T16=5;T13=3
+
+Mapping Basis:
+T13 +3 : FAIL result semantics | T16 +5 : normative prefix CONF
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-019
+
+Requirement Text:
+LILP-REQ-CONF-019 PASS SHALL NOT be issued where an unresolved applicable mandatory requirement remains NOT ESTABLISHED.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T16=5;T13=2
+
+Mapping Basis:
+T13 +2 : uncertainty / evidence-gap semantics | T16 +5 : normative prefix CONF
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-CONF-020
+
+Requirement Text:
+LILP-REQ-CONF-020 PASS SHALL NOT be issued where a mandatory falsification test required by the declared profile has not been executed without an established NOT APPLICABLE rationale.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T16=5
+
+Mapping Basis:
+T16 +5 : normative prefix CONF
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-SEC-004
+
+Requirement Text:
+LILP-REQ-SEC-004 Authentication of a source SHALL remain distinguishable from truth of the source's assertion.
+
+Candidate Primary:
+T05 — Evidence Admissibility
+
+Supporting Families:
+
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T05=3;T03=2;T15=1;T16=1
+
+Mapping Basis:
+T03 +2 : normative prefix SEC | T05 +3 : normative prefix SEC | T15 +1 : normative prefix SEC | T16 +1 : normative prefix SEC
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-SEC-005
+
+Requirement Text:
+LILP-REQ-SEC-005 Where cryptographic signatures are used, the implementation SHALL identify the key, certificate, trust anchor or equivalent verification basis required to verify the signature.
+
+Candidate Primary:
+T05 — Evidence Admissibility
+
+Supporting Families:
+
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T05=3;T03=2;T15=1;T16=1
+
+Mapping Basis:
+T03 +2 : normative prefix SEC | T05 +3 : normative prefix SEC | T15 +1 : normative prefix SEC | T16 +1 : normative prefix SEC
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-SEC-006
+
+Requirement Text:
+LILP-REQ-SEC-006 Where loss or compromise of a credential or signing key could alter authority, integrity or provenance, that condition SHALL be capable of triggering reassessment.
+
+Candidate Primary:
+T03 — Authority Validity
+
+Supporting Families:
+T05
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T03=6;T05=6;T15=1;T16=1
+
+Mapping Basis:
+T03 +2 : normative prefix SEC | T03 +4 : authority semantics | T05 +3 : normative prefix SEC | T05 +3 : source / provenance semantics | T15 +1 : normative prefix SEC | T16 +1 : normative prefix SEC
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-SEC-008
+
+Requirement Text:
+LILP-REQ-SEC-008 A cryptographically intact malicious, false or unauthorised object SHALL NOT be represented as trustworthy merely because its integrity check succeeds.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T16=4;T05=3;T03=2;T15=1
+
+Mapping Basis:
+T03 +2 : normative prefix SEC | T05 +3 : normative prefix SEC | T15 +1 : normative prefix SEC | T16 +1 : normative prefix SEC | T16 +3 : claim-ceiling prohibition
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-SEC-009
+
+Requirement Text:
+LILP-REQ-SEC-009 Where protected evidence is disclosed for verification, disclosure SHALL remain bounded to the authority and scope of the examination.
+
+Candidate Primary:
+T03 — Authority Validity
+
+Supporting Families:
+T05
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T03=6;T05=6;T15=1;T16=1
+
+Mapping Basis:
+T03 +2 : normative prefix SEC | T03 +4 : authority semantics | T05 +3 : evidence semantics | T05 +3 : normative prefix SEC | T15 +1 : normative prefix SEC | T16 +1 : normative prefix SEC
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-SEC-010
+
+Requirement Text:
+LILP-REQ-SEC-010 LILP evidence mechanisms SHOULD preserve confidentiality requirements without destroying the inspectability required by the declared claim. ====================================================================== 32. VERIFIER INDEPENDENCE ====================================================================== Independence is a property of the verification relationship. It is not created merely by using a different software process, model, agent or test harness. For PL4 or PL5 claims, the verification record SHALL describe the basis on which independence is claimed. Relevant factors MAY include: - organisational separation; - operational separation; - financial relationship; - authorship relationship; - implementation control; - evidence custody; - ability to alter the examined object; - test-procedure authorship; - and access to privileged information.
+
+Candidate Primary:
+T05 — Evidence Admissibility
+
+Supporting Families:
+T16
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T05=6;T16=5;T03=2;T15=1
+
+Mapping Basis:
+T03 +2 : normative prefix SEC | T05 +3 : evidence semantics | T05 +3 : normative prefix SEC | T15 +1 : normative prefix SEC | T16 +1 : normative prefix SEC | T16 +4 : claim semantics
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-VER-002
+
+Requirement Text:
+LILP-REQ-VER-002 The verification record SHALL identify the verifier's declared relationship to the originating party.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T16=5;T05=1;T12=1
+
+Mapping Basis:
+T05 +1 : normative prefix VER | T12 +1 : normative prefix VER | T16 +5 : normative prefix VER
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-VER-006
+
+Requirement Text:
+LILP-REQ-VER-006 Use of a different AI model or software tool by the same controlling party SHALL NOT, by itself, establish organisational independence.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T16=5;T05=1;T12=1
+
+Mapping Basis:
+T05 +1 : normative prefix VER | T12 +1 : normative prefix VER | T16 +5 : normative prefix VER
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-VER-007
+
+Requirement Text:
+LILP-REQ-VER-007 A verifier's inability to examine a material dependency SHALL be preserved as a scope limitation or NOT ESTABLISHED condition.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_RECOMMENDED
+
+Scores:
+T16=5;T13=2;T05=1;T12=1
+
+Mapping Basis:
+T05 +1 : normative prefix VER | T12 +1 : normative prefix VER | T13 +2 : uncertainty / evidence-gap semantics | T16 +5 : normative prefix VER
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DEV-001
+
+Requirement Text:
+LILP-REQ-DEV-001 A known deviation from a mandatory requirement SHALL be recorded.
+
+Candidate Primary:
+T13 — Failure Preservation
+
+Supporting Families:
+T14
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T13=4;T14=4
+
+Mapping Basis:
+T13 +4 : normative prefix DEV | T14 +4 : normative prefix DEV
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DEV-002
+
+Requirement Text:
+LILP-REQ-DEV-002 A deviation record SHALL identify: - the affected requirement; - the reason for deviation; - the affected scope; - the approving authority where approval is applicable; - the effective period where time-bounded; - the expected consequence; - and the residual claim limitation.
+
+Candidate Primary:
+T11 — Consequence Verification
+
+Supporting Families:
+T03;T13;T14;T16
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T11=5;T03=4;T13=4;T14=4;T16=4
+
+Mapping Basis:
+T03 +4 : authority semantics | T11 +5 : consequence semantics | T13 +4 : normative prefix DEV | T14 +4 : normative prefix DEV | T16 +4 : claim semantics
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DEV-004
+
+Requirement Text:
+LILP-REQ-DEV-004 An exception SHALL identify the governing rule that authorises the exception.
+
+Candidate Primary:
+T13 — Failure Preservation
+
+Supporting Families:
+T14
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T13=4;T14=4
+
+Mapping Basis:
+T13 +4 : normative prefix DEV | T14 +4 : normative prefix DEV
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DEV-005
+
+Requirement Text:
+LILP-REQ-DEV-005 An exception SHALL NOT create authority beyond the scope granted by the governing exception rule.
+
+Candidate Primary:
+T03 — Authority Validity
+
+Supporting Families:
+T13;T14
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T03=4;T13=4;T14=4
+
+Mapping Basis:
+T03 +4 : authority semantics | T13 +4 : normative prefix DEV | T14 +4 : normative prefix DEV
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-DEV-007
+
+Requirement Text:
+LILP-REQ-DEV-007 Where an exception or deviation materially changes the basis of a prior conformance claim, the prior claim SHALL be reassessed.
+
+Candidate Primary:
+T13 — Failure Preservation
+
+Supporting Families:
+T14;T16
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T13=4;T14=4;T16=4
+
+Mapping Basis:
+T13 +4 : normative prefix DEV | T14 +4 : normative prefix DEV | T16 +4 : claim semantics
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-MATR-001
+
+Requirement Text:
+LILP-REQ-MATR-001 Every normative requirement identifier in a claimed profile SHALL be represented in the requirements matrix.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T16=4;T02=3;T13=2
+
+Mapping Basis:
+T02 +3 : identity / identifier semantics | T13 +2 : normative prefix MATR | T16 +4 : normative prefix MATR
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-MATR-002
+
+Requirement Text:
+LILP-REQ-MATR-002 Each matrix entry SHALL identify exactly one normative requirement.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T16=4;T13=2
+
+Mapping Basis:
+T13 +2 : normative prefix MATR | T16 +4 : normative prefix MATR
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-MATR-003
+
+Requirement Text:
+LILP-REQ-MATR-003 Each applicable mandatory requirement SHALL have one determination status.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T16=4;T08=3;T13=2
+
+Mapping Basis:
+T08 +3 : determination semantics | T13 +2 : normative prefix MATR | T16 +4 : normative prefix MATR
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-MATR-004
+
+Requirement Text:
+LILP-REQ-MATR-004 A PASS matrix entry SHALL reference sufficient evidence to support the PASS determination.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T16=4;T05=3;T08=3;T13=2
+
+Mapping Basis:
+T05 +3 : evidence semantics | T08 +3 : determination semantics | T13 +2 : normative prefix MATR | T16 +4 : normative prefix MATR
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-MATR-006
+
+Requirement Text:
+LILP-REQ-MATR-006 A NOT ESTABLISHED matrix entry SHALL identify the evidentiary gap where that gap can be determined.
+
+Candidate Primary:
+T13 — Failure Preservation
+
+Supporting Families:
+T16
+
+Confidence:
+LOW
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T13=4;T16=4
+
+Mapping Basis:
+T13 +2 : normative prefix MATR | T13 +2 : uncertainty / evidence-gap semantics | T16 +4 : normative prefix MATR
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-FREEZE-012
+
+Requirement Text:
+LILP-REQ-FREEZE-012 The final candidate SHALL preserve an explicit external-claim boundary preventing internal LILP status from being represented as: - ISO adoption; - IEC adoption; - regulatory approval; - government approval; - independent certification; - or industry-wide adoption.
+
+Candidate Primary:
+T16 — Claim-Ceiling Enforcement
+
+Supporting Families:
+T14
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T16=9;T14=8;T13=2
+
+Mapping Basis:
+T13 +2 : normative prefix FREEZE | T14 +3 : frozen-artifact lifecycle | T14 +5 : normative prefix FREEZE | T16 +4 : claim semantics | T16 +5 : external-recognition boundary
+
+----------------------------------------------------------------------
+Requirement ID:
+LILP-REQ-FREEZE-016
+
+Requirement Text:
+LILP-REQ-FREEZE-016 A freeze PASS SHALL NOT be declared if any mandatory pre-freeze verification fails. ====================================================================== 37. NORMATIVE CLOSURE ====================================================================== ELIAS-LILP-STD-001 v0.1 is intended to establish a compact but falsifiable discipline for consequential systems. Its central invariants are: 1. STATE BEFORE ACTION. 2. CAPABILITY DOES NOT EQUAL AUTHORITY. 3. OBSERVATION DOES NOT EQUAL INTERPRETATION. 4. HISTORICAL VALIDITY DOES NOT EQUAL PRESENT STANDING. 5. DETERMINATION DOES NOT EQUAL EXECUTION. 6. EXECUTION ATTEMPT DOES NOT EQUAL COMPLETED CONSEQUENCE. 7. ATTESTATION DOES NOT EQUAL INDEPENDENT VERIFICATION. 8. HASH IDENTITY DOES NOT EQUAL TRUTH. 9. UNCERTAINTY IS AN ADMISSIBLE STATE. 10. FAILURE IS A LEGITIMATE RESULT. 11. MATERIAL CHANGE REQUIRES REASSESSMENT. 12. SUCCESSOR DOES NOT ERASE PREDECESSOR. 13. CLAIMS SHALL STOP WHERE THE EVIDENCE STOPS. 14. NON-BYPASSABLE RESTRAINT MUST SURVIVE BYPASS ATTEMPT WHERE CLAIMED. 15. NO RETROSPECTIVE REPAIR. 16. LOCK IT. LOG IT. PROVE IT. A conforming implementation is not required to succeed. It is required to preserve the truth of what is established, what is not established, what was refused, what changed, and what actually occurred. ====================================================================== 38. WORKING-DRAFT COMPLETION STATUS ====================================================================== The normative content of ELIAS-LILP-STD-001 v0.1 is now structurally complete as a working candidate. This statement does NOT freeze the standard. This statement does NOT establish external validation. This statement does NOT establish implementation conformance. The candidate remains subject to: - whole-object structural verification; - requirement-ID verification; - falsification-test-ID verification; - normative contradiction inspection; - terminology consistency inspection; - external-claim-boundary inspection; - byte-identity verification; - and explicit freeze determination. STATUS: NORMATIVE WORKING CANDIDATE COMPLETE NOT YET FROZEN PRESERVE THE ANCESTOR. PRESERVE THE DEFICIENCY. EXAMINE THE SUCCESSOR. LOCK THE GOVERNING STATE. LOG THE CONSEQUENTIAL TRANSITION. PROVE ONLY WHAT THE EVIDENCE ESTABLISHES. LOCK IT. LOG IT. PROVE IT. ELIAS SYSTEMS LTD 1 OCTOBER 2026
+
+Candidate Primary:
+T14 — Correction / Successor Discipline
+
+Supporting Families:
+T13;T15;T16
+
+Confidence:
+MEDIUM
+
+Review Status:
+REVIEW_REQUIRED
+
+Scores:
+T14=18;T13=17;T15=16;T16=16;T05=8;T06=8;T08=8;T03=7;T01=5;T04=5;T07=5;T11=5;T12=4;T02=3
+
+Mapping Basis:
+T01 +5 : governing-state semantics | T02 +3 : identity / identifier semantics | T03 +3 : capability / authority separation | T03 +4 : authority semantics | T04 +5 : standing semantics | T05 +3 : evidence semantics | T05 +5 : evidence admissibility | T06 +4 : interpretation semantics | T06 +4 : observation semantics | T07 +5 : material-change semantics | T08 +3 : determination semantics | T08 +5 : explicit determination / execution relationship | T11 +5 : consequence semantics | T12 +4 : attestation semantics | T13 +2 : normative prefix FREEZE | T13 +2 : uncertainty / evidence-gap semantics | T13 +4 : deficiency preservation | T13 +4 : failure semantics | T13 +5 : explicit failure preservation | T14 +3 : frozen-artifact lifecycle | T14 +4 : predecessor / successor semantics | T14 +5 : normative prefix FREEZE | T14 +6 : no retrospective repair | T15 +4 : restraint semantics | T15 +6 : bypass semantics | T15 +6 : non-bypassable restraint | T16 +3 : claim-ceiling prohibition | T16 +4 : claim semantics | T16 +4 : independent-verification claim boundary | T16 +5 : external-validation boundary
+

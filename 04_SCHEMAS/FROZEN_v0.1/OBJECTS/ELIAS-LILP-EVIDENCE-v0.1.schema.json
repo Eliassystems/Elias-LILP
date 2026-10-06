@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:elias:lilp:schema:evidence:v0.1",
+  "title": "ELIAS LILP Evidence Object v0.1",
+  "description": "Working reference structural schema for an ELIAS LILP Evidence Object. The schema preserves evidence structure and provenance without converting observation into interpretation or assertion into truth.",
+  "type": "object",
+  "x-elias-document-id": "ELIAS-LILP-SCHEMA-001",
+  "x-elias-object": "EVIDENCE",
+  "x-elias-schema-version": "v0.1",
+  "x-elias-ancestors": {
+    "std001_sha256": "076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537",
+    "man001_sha256": "429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2",
+    "lex001_sha256": "144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488"
+  },
+  "x-elias-authority-boundary": "Evidence structure does not establish evidentiary truth. Observation remains distinct from interpretation.",
+  "properties": {
+    "object_type": {
+      "const": "EVIDENCE"
+    },
+    "schema_id": {
+      "const": "urn:elias:lilp:schema:evidence:v0.1"
+    },
+    "schema_version": {
+      "const": "v0.1"
+    },
+    "evidence_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_class": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_identity": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": true
+        }
+      ]
+    },
+    "observed_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "acquired_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "content_or_reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "additionalProperties": true
+        },
+        {
+          "type": "array"
+        }
+      ]
+    },
+    "content_hash": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Where populated, the digest identifies the referenced or captured content under the implementation's declared hashing procedure. It does not establish truth."
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "related_interpretation_reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "canonicalisation_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hash_algorithm": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_hash": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "evidence_id",
+    "evidence_class",
+    "source_identity",
+    "observed_at",
+    "acquired_at",
+    "content_or_reference",
+    "content_hash",
+    "scope",
+    "provenance",
+    "related_interpretation_reference"
+  ],
+  "additionalProperties": true
+}

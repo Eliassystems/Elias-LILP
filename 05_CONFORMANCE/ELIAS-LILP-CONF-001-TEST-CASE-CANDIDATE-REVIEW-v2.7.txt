@@ -1,0 +1,33 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v2.7
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 123
+NEW TEST DEFINITIONS: 2
+SUCCESSOR TEST CASES: 125
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-CONF-017 -> LILP-TC-T16-019
+LILP-REQ-TEST-001 -> LILP-TC-T16-020
+
+NEW TEST 1:
+TEST CASE: LILP-TC-T16-019
+RUN CLASS: CONTROL
+TITLE: Reproducibility evidence package identifies material necessary to perform reproduction
+
+NEW TEST 2:
+TEST CASE: LILP-TC-T16-020
+RUN CLASS: CONTROL
+TITLE: Claimed profile executes all applicable mandatory general falsification tests
+
+T16-019 distinguishes reproduction material from reproduction conditions and reproduced result.
+T16-020 distinguishes actual mandatory-test execution from definition existence, mapping, planning or status assignment.
+T16-021 remains unreserved.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

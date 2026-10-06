@@ -1,0 +1,34 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v0.5
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 93
+NEW TEST DEFINITIONS: 2
+SUCCESSOR TEST CASES: 95
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-OBJ-003 -> reserved LILP-TC-T02-007
+LILP-REQ-OBJ-006 -> reserved LILP-TC-T02-008
+
+NEW TEST 1:
+TEST CASE: LILP-TC-T02-007
+TITLE: Consequential object carries relevant temporal context
+OBJECTIVE: Establish that an object relied upon for consequential governance identifies the time or temporal state relevant to its creation or applicability.
+EXPECTED: The object identifies the material time or temporal state relevant to its creation or applicability before it is relied upon for consequential governance; missing required temporal context remains explicit and is not silently inferred.
+FAILURE ORACLE: FAIL if an object is relied upon for consequential governance while a required creation or applicability time or temporal state is absent, ambiguous or silently inferred.
+
+NEW TEST 2:
+TEST CASE: LILP-TC-T02-008
+TITLE: Canonical object identity declares hash algorithm
+OBJECTIVE: Establish that the implementation explicitly declares the hash algorithm used to identify an object's canonical byte representation.
+EXPECTED: The hash algorithm used for object identity is explicitly declared, is unambiguous for the relevant object identity procedure and can be used with the canonical bytes to reproduce the claimed identifier.
+FAILURE ORACLE: FAIL if the object identifier depends on a hash algorithm that is absent, ambiguous, silently substituted or cannot be associated with the canonical byte representation used to produce the identifier.
+
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

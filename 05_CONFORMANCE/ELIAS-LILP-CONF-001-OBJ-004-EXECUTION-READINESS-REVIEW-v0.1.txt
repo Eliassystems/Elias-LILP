@@ -1,0 +1,175 @@
+﻿ELIAS LILP CONF-001
+OBJ-004 EXECUTION READINESS REVIEW v0.1
+
+DETERMINATION:
+PASS
+
+STATE:
+OBJ-004_EXECUTION_READINESS_ESTABLISHED_v0.1
+
+CLASSIFICATION:
+EXACT_ONE_CONTROLLED_HARNESS_EXECUTION_READY_WITH_CONTEMPORANEOUS_OUTPUT_CAPTURE_REQUIRED
+
+NEXT AUTHORITY:
+AUTHORIZED_FOR_EXACTLY_ONE_OBJ-004_CONTROLLED_HARNESS_EXECUTION
+
+EXECUTION INPUT DESIGNATION SHA256:
+67C00EA7F7B8F8F065F2DDA5572244F96AC53A1D16DD2D60A683E632CEC7D1D0
+
+REQUIREMENT ID:
+LILP-REQ-OBJ-004
+
+TEST CASE ID:
+LILP-TC-T02-012
+
+VERIFICATION METHOD ID:
+LILP-VM-OBJ-004-v0.1
+
+HARNESS BINDING ID:
+LILP-BIND-OBJ-004-v0.1
+
+DESIGNATED HARNESS ID:
+LILP-HI-OBJ-004-v0.1
+
+DESIGNATED HARNESS PATH:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-HI-OBJ-004-v0.1.ps1
+
+DESIGNATED HARNESS SHA256:
+A82FF894D9E4CAA15D84B0EA4338448ED0CB9BD3855A4CB9D9F8ECAB9BFD298D
+
+DESIGNATED HARNESS BYTES:
+13687
+
+DESIGNATED CANDIDATE ID:
+LILP-OBJ-004-CANDIDATE-v0.1
+
+DESIGNATED CandidatePath:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-OBJ-004-CONTROLLED-TEST-CANDIDATE-v0.1.json
+
+DESIGNATED CANDIDATE SHA256:
+4CE9C1E88D365EBC2FEBBB94F6F1EA6CF5B94D7BA40AE4FC4C8702B3500B394F
+
+DESIGNATED CANDIDATE BYTES:
+1366
+
+AUTHORIZED PROCESS:
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+AUTHORIZED PROCESS FLAGS:
+-NoProfile -NonInteractive -ExecutionPolicy Bypass
+
+AUTHORIZED INVOCATION:
+& "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -NonInteractive -ExecutionPolicy Bypass -File "C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-HI-OBJ-004-v0.1.ps1" -CandidatePath "C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-OBJ-004-CONTROLLED-TEST-CANDIDATE-v0.1.json"
+
+AUTHORIZED EXECUTION COUNT:
+1
+
+AUTHORIZED EXECUTION RECORD:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-OBJ-004-HARNESS-EXECUTION-v0.1.json
+
+EXECUTION CAPTURE REQUIREMENTS:
+The execution must create one new immutable execution record.
+The execution record must bind the readiness-review identity, harness identity and candidate identity.
+stdout must be captured contemporaneously.
+stderr must be captured contemporaneously.
+process exit code must be captured contemporaneously.
+the raw harness determination must be captured contemporaneously.
+the execution record must not reinterpret, repair or reclassify the harness output.
+the candidate must not be modified before, during or after execution.
+the harness must not be modified before, during or after execution.
+the execution-input designation must not be modified before, during or after execution.
+no second execution is authorized by this readiness review.
+
+READINESS CHECK - AUTHORIZED PROCESS EXISTS:
+PASS
+
+READINESS CHECK - HARNESS SHA256:
+PASS
+
+READINESS CHECK - HARNESS BYTE COUNT:
+PASS
+
+READINESS CHECK - HARNESS POWERSHELL PARSE:
+PASS
+
+READINESS CHECK - CandidatePath PARAMETER:
+PASS
+
+READINESS CHECK - CandidatePath EXISTS:
+PASS
+
+READINESS CHECK - CANDIDATE SHA256:
+PASS
+
+READINESS CHECK - CANDIDATE BYTE COUNT:
+PASS
+
+READINESS CHECK - CANDIDATE JSON PARSE:
+PASS
+
+READINESS CHECK - CONTROLLED EXISTS BRANCH:
+PASS
+
+READINESS CHECK - PREDECESSOR IDENTIFIER:
+PASS
+
+READINESS CHECK - RELATIONSHIP SOURCE:
+PASS
+
+READINESS CHECK - RELATIONSHIP ATTRIBUTION:
+PASS
+
+READINESS CHECK - PREMATURE EXECUTION ARTIFACT ABSENCE:
+PASS
+
+CANDIDATE SELECTED:
+TRUE
+
+INPUT DESIGNATION ESTABLISHED:
+TRUE
+
+EXECUTION READINESS ESTABLISHED:
+TRUE
+
+PROCESS LAUNCH AUTHORIZED:
+TRUE
+
+EXECUTION AUTHORIZED:
+TRUE
+
+AUTHORIZED EXECUTION COUNT IS EXACTLY ONE:
+TRUE
+
+HARNESS INVOKED:
+FALSE
+
+EXECUTION PERFORMED:
+FALSE
+
+RESULT DETERMINED:
+FALSE
+
+REQUIREMENT CONFORMANCE ESTABLISHED:
+FALSE
+
+CONF-001:
+NOT_ESTABLISHED
+
+CLAIM BOUNDARY:
+This review establishes readiness for exactly one controlled execution of the exact bound OBJ-004 harness against the exact designated CandidatePath.
+The authorized launch method is one powershell.exe child process using -NoProfile, -NonInteractive and process-scoped -ExecutionPolicy Bypass.
+This review does not invoke the harness.
+This review does not predetermine whether the harness will return ESTABLISHED or NOT_ESTABLISHED.
+Any actual stdout, stderr, exit code and harness determination must be captured contemporaneously in one new execution record.
+The raw harness output must not be retrospectively repaired, interpreted or reclassified during capture.
+This review does not establish a test result.
+This review does not establish requirement conformance.
+This review does not establish CONF-001.
+
+NEXT AUTHORIZED STEP:
+Perform exactly one controlled harness execution using the invocation recorded here and capture the operational and harness outputs contemporaneously without interpreting or reclassifying the result.
+
+NEXT STATE:
+READY_FOR_EXACTLY_ONE_OBJ-004_CONTROLLED_HARNESS_EXECUTION
+
+LOCK IT. LOG IT. PROVE IT.

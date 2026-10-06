@@ -1,0 +1,96 @@
+﻿ELIAS LILP CONF-001
+CONTROLLED VERIFICATION-METHOD REVIEW v0.2
+
+REVIEW TARGET
+ELIAS-LILP-CONF-001-VERIFICATION-METHOD-PROPOSAL-v0.2.csv
+SHA-256:
+73F8A6D751E993B9674FE57B0A1E09596CEEE18EA43322AB90E9804497063D60
+
+PREDECESSOR CONTROLLED REVIEW
+ELIAS-LILP-CONF-001-VERIFICATION-METHOD-CONTROLLED-REVIEW-v0.1.txt
+SHA-256:
+4C653FA0F509F564861E0DE970CC2F3B6F8D6149D40E4CBE506D4BECD64DF531
+
+AUTHORITATIVE TEST REGISTER
+ELIAS-LILP-CONF-001-TEST-CASE-CANDIDATE-v4.14.csv
+SHA-256:
+DC47BAC0291D4E064C2CDE9E8214C33B34D8BEE63C1655374FD01F7BEF516CE2
+
+REQUIREMENT
+LILP-REQ-OBJ-002
+LILP-REQ-OBJ-002 Each versioned object SHALL identify its version.
+
+TEST CASE
+LILP-TC-T02-009
+
+PROPOSED VERIFICATION METHOD
+LILP-VM-OBJ-002-v0.1
+
+CONTROLLED REVIEW BASIS
+- The requirement obliges every versioned object to identify its version.
+- T02-009 directly tests whether a versioned governance object contains an explicit, non-empty and unambiguous version identifier.
+- The proposed verification method inspects the governed object itself, its identity metadata, the explicit version representation and relevant predecessor/successor distinguishability.
+- The proposed PASS condition does not exceed T02-009 expected behaviour.
+- The proposed FAIL condition preserves the T02-009 failure oracle and additionally refuses retrospective reconstruction as a substitute for contemporaneous object identity.
+- The proposed evidence output is sufficient to support bounded inspection of version identity without itself establishing execution or conformance.
+
+REVIEW FINDINGS
+
+REQUIREMENT ALIGNMENT:
+PASS
+
+TEST-DEFINITION ALIGNMENT:
+PASS
+
+METHOD SCOPE BOUNDED TO TEST:
+PASS
+
+PASS CONDITION CONSISTENT WITH EXPECTED BEHAVIOUR:
+PASS
+
+FAIL CONDITION CONSISTENT WITH FAILURE ORACLE:
+PASS
+
+EVIDENCE OUTPUT SUFFICIENT FOR BOUNDED VERIFICATION:
+PASS
+
+RETROSPECTIVE REPAIR REQUIRED:
+FALSE
+
+HARNESS BINDING ESTABLISHED:
+FALSE
+
+TEST EXECUTED:
+FALSE
+
+RESULT ESTABLISHED:
+FALSE
+
+CONF-001 CONFORMANCE ESTABLISHED:
+FALSE
+
+CONTROLLED REVIEW DECISION
+PASS
+
+PROMOTION ELIGIBILITY
+ELIGIBLE_FOR_CONTROLLED_PROMOTION
+
+CLAIM CEILING
+This controlled review establishes only that LILP-VM-OBJ-002-v0.1 is semantically suitable for controlled promotion as the verification method for LILP-REQ-OBJ-002 / LILP-TC-T02-009.
+It does not itself establish the requirement-to-test mapping.
+It does not establish the verification method in an authoritative register.
+It does not establish a harness binding.
+It does not execute the test.
+It does not establish PASS or FAIL for the requirement.
+It does not establish overall CONF-001 conformance.
+
+CURRENT STATES
+Requirement-to-test mapping: NOT_ESTABLISHED
+Verification method: NOT_ESTABLISHED
+Harness binding: NOT_ESTABLISHED
+Execution: NOT_EXECUTED
+Result: NOT_TESTED
+CONF-001: NOT_ESTABLISHED
+
+NEXT AUTHORIZED STEP
+Controlled promotion into successor verification-method register and successor requirement matrix.

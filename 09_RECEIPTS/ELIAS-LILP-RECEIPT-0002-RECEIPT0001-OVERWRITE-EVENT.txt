@@ -1,0 +1,129 @@
+﻿ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+LILP DEFICIENCY / SUCCESSOR RECORD
+
+Record ID: ELIAS-LILP-RECEIPT-0002
+Record Type: RECEIPT_OVERWRITE_EVENT
+Recorded UTC: 2026-10-01T21:11:55.309Z
+Status: PRESERVED DEFICIENCY
+
+======================================================================
+EVENT
+======================================================================
+
+Receipt 0001 was created for the founding provenance object.
+
+The founding provenance subject remained byte-identical.
+
+Subject SHA-256:
+
+2754F23DB9E41A2423D4F7749C617A488D76CE4D9C879A5AA70EFB7755D40E43
+
+However, Receipt 0001 was subsequently regenerated using the same
+script and written to the same file path.
+
+Because the receipt contained a newly generated Recorded UTC value,
+the receipt bytes changed.
+
+The earlier receipt file was overwritten.
+
+======================================================================
+OBSERVED HASHES
+======================================================================
+
+FIRST RECORDED RECEIPT 0001 SHA-256:
+
+20B81A86AB3E8F5FF27695526E4FE7587BDBA94FAA7BC753995C8F3727FA3F8D
+
+LATER RECREATED RECEIPT 0001 SHA-256:
+
+3C8D0205D6188E029B88167B9C8C7C4E75A22499D2154CA83283B30C57719B06
+
+The two receipt identities are not equal.
+
+======================================================================
+EVIDENTIARY STATUS
+======================================================================
+
+FOUNDING PROVENANCE SUBJECT:
+ESTABLISHED UNCHANGED
+
+SUBJECT SHA-256:
+2754F23DB9E41A2423D4F7749C617A488D76CE4D9C879A5AA70EFB7755D40E43
+
+ORIGINAL RECEIPT 0001 HASH:
+PRESERVED FROM PRIOR CONSOLE OUTPUT
+
+ORIGINAL RECEIPT 0001 BYTES:
+NOT ESTABLISHED IN THE CURRENT LOCAL FILESYSTEM
+
+RECREATED RECEIPT 0001 BYTES:
+PRESERVED
+
+RECREATED RECEIPT LOCATION:
+09_RECEIPTS\ELIAS-LILP-RECEIPT-0001-RECREATED-v0.2.txt
+
+RECREATED RECEIPT SHA-256:
+3C8D0205D6188E029B88167B9C8C7C4E75A22499D2154CA83283B30C57719B06
+
+======================================================================
+CAUSE
+======================================================================
+
+The receipt-generation procedure used Set-Content against an existing
+receipt path and generated a new timestamp on each execution.
+
+Re-running the procedure therefore replaced the previous receipt.
+
+======================================================================
+LILP DETERMINATION
+======================================================================
+
+The correct response is NOT retrospective repair.
+
+The overwritten historical receipt must not be falsely represented as
+still locally preserved.
+
+The deficiency is recorded.
+
+The available successor receipt is preserved.
+
+Future receipt creation must be append-only or collision-protected.
+
+DETERMINATION:
+
+PRESERVE DEFICIENCY
+CREATE SUCCESSOR
+PROHIBIT SILENT OVERWRITE
+
+======================================================================
+CLAIM CEILING
+======================================================================
+
+It is established that:
+
+1. The founding provenance subject retained the same SHA-256 identity.
+2. Two different Receipt 0001 SHA-256 values were observed.
+3. The later receipt is presently preserved.
+4. The earlier receipt hash is preserved from the prior console record.
+
+It is NOT established from the current local filesystem that the
+original Receipt 0001 byte sequence remains available.
+
+======================================================================
+LESSON
+======================================================================
+
+A receipt system that permits silent replacement of an existing receipt
+does not satisfy the intended LILP evidence-preservation discipline.
+
+Future tooling must refuse an existing receipt identifier or create an
+explicit successor.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+DO NOT REWRITE THE FAILURE.
+PRESERVE IT.

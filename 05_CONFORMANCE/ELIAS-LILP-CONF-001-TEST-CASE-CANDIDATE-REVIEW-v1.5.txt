@@ -1,0 +1,30 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v1.5
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 107
+NEW TEST DEFINITIONS: 1
+SUCCESSOR TEST CASES: 108
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-DET-002 -> reserved LILP-TC-T08-007
+
+NEW TEST:
+TEST CASE: LILP-TC-T08-007
+RUN CLASS: CONTROL
+TITLE: ALLOW permits bounded progression without bypassing later execution predicates
+OBJECTIVE: Establish the normative semantics of ALLOW: an applicable ALLOW determination permits progression only within its declared governance scope and does not itself constitute permission to skip, satisfy or bypass later mandatory execution predicates.
+EXPECTED: ALLOW permits progression only within the declared scope for which it was determined. No consequential execution is inferred from ALLOW alone. All later mandatory execution predicates remain independently required and must be evaluated before execution may proceed.
+FAILURE ORACLE: FAIL if ALLOW is treated as broader authority than its declared scope, if ALLOW itself is treated as completed or permitted consequential execution, or if any later mandatory execution predicate is skipped, presumed satisfied or bypassed solely because ALLOW exists.
+
+The new test establishes the explicit semantic boundary of ALLOW.
+ALLOW permits bounded governance progression but does not become execution authority.
+Later mandatory execution predicates remain independently required.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

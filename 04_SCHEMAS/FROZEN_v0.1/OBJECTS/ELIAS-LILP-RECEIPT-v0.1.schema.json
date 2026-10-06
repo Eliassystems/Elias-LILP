@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:elias:lilp:schema:receipt:v0.1",
+  "title": "ELIAS LILP Receipt Object v0.1",
+  "description": "Working reference structural schema for contemporaneous evidence of a bounded governance or execution event. Receipt existence does not equal independent verification.",
+  "type": "object",
+  "x-elias-document-id": "ELIAS-LILP-SCHEMA-001",
+  "x-elias-object": "RECEIPT",
+  "x-elias-schema-version": "v0.1",
+  "x-elias-ancestors": {
+    "std001_sha256": "076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537",
+    "man001_sha256": "429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2",
+    "lex001_sha256": "144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488"
+  },
+  "x-elias-authority-boundary": "Attestation does not equal independent verification. Hash identity does not equal truth.",
+  "properties": {
+    "object_type": {
+      "const": "RECEIPT"
+    },
+    "schema_id": {
+      "const": "urn:elias:lilp:schema:receipt:v0.1"
+    },
+    "schema_version": {
+      "const": "v0.1"
+    },
+    "receipt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "receipt_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "subject_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_hash": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "governing_state_reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "determination_reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "execution_reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "consequence_reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidence_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "witness_identity": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": true
+        }
+      ]
+    },
+    "claim_ceiling": {
+      "type": "string",
+      "minLength": 1
+    },
+    "predecessor_receipt_reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "canonicalisation_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hash_algorithm": {
+      "type": "string",
+      "minLength": 1
+    },
+    "receipt_hash": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "receipt_id",
+    "receipt_type",
+    "recorded_at",
+    "subject_reference",
+    "subject_hash",
+    "governing_state_reference",
+    "determination_reference",
+    "execution_reference",
+    "consequence_reference",
+    "evidence_references",
+    "witness_identity",
+    "claim_ceiling",
+    "predecessor_receipt_reference",
+    "provenance"
+  ],
+  "additionalProperties": true
+}

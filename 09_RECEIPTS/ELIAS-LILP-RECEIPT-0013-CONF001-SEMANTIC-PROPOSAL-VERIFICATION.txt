@@ -1,0 +1,173 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+LILP EVIDENCE RECEIPT
+
+Receipt ID:
+ELIAS-LILP-RECEIPT-0013
+
+Receipt Type:
+CONF001_SEMANTIC_PROPOSAL_VERIFICATION
+
+Recorded UTC:
+2026-10-02T01:16:59.145Z
+
+Status:
+VERIFIED WITH PROCEDURAL OUTPUT CORRECTION
+
+======================================================================
+SUBJECT
+======================================================================
+
+ELIAS-LILP-CONF-001
+Semantic Resolution Proposal v0.3
+
+Proposal SHA-256:
+
+5E8E8E9FE171C917081C13A8D25EE01E6A2061CAED9049D78864A761BB1866EE
+
+Proposal Review SHA-256:
+
+7F331FF98F63C3047725F11DCF3BA1DD9077E5FC7CF6DBAC7244D5E602065D84
+
+Authoritative predecessor matrix:
+
+ELIAS-LILP-CONF-001-REQUIREMENT-MATRIX-v0.2.csv
+
+Authoritative predecessor matrix SHA-256:
+
+47F06F95A6FBA1E2ED0A7FCA251DC576CAADC3C7A2F969E03E1DE1AA7B478599
+
+======================================================================
+PROCEDURAL OUTPUT DEFICIENCY PRESERVED
+======================================================================
+
+The immediately preceding read-only terminal verification successfully
+established that the authoritative v0.2 matrix contained no assignments.
+
+That verification printed:
+
+AUTHORITATIVE UNASSIGNED        :
+
+with no numeric value.
+
+Cause:
+
+The output statement referenced the variable MatrixUnassigned without
+assigning that variable in the verification script.
+
+The same run separately evaluated the authoritative matrix for assigned
+rows and passed the requirement that no assigned rows existed.
+
+No source artifact was modified by that verification.
+
+The blank terminal field is preserved as historical procedural evidence.
+
+It is not retrospectively rewritten.
+
+This receipt corrects the verification evidence forward by recalculating
+the authoritative state directly from the v0.2 matrix.
+
+======================================================================
+CORRECTED AUTHORITATIVE STATE
+======================================================================
+
+Authoritative Matrix Rows:
+191
+
+Authoritative UNASSIGNED Rows:
+191
+
+Authoritative Assigned Rows:
+0
+
+Requirement Text Mismatches:
+0
+
+Controlled-Clear Inherited:
+137
+
+Semantically Reviewed:
+54
+
+Primary Semantic Overrides:
+20
+
+Corrected Source Rows:
+24
+
+Unchanged Source Rows:
+167
+
+Unresolved Semantic Rows:
+0
+
+Executable Test-Case IDs Assigned:
+0
+
+Final Verification Methods Assigned:
+0
+
+Primary Family Distribution Total:
+191
+
+======================================================================
+VERIFIED PROPOSAL STATE
+======================================================================
+
+All 191 authoritative requirement texts are preserved exactly in the
+semantic proposal.
+
+137 controlled-clear mappings are preserved.
+
+54 previously non-clear requirements have recorded semantic resolutions.
+
+20 classifier primary-family assignments are overridden by semantic
+review.
+
+The source lineage remains:
+
+167 unchanged extraction rows
+
+24 corrected extraction rows
+
+All 191 proposal rows have a proposed primary T01-T16 test family.
+
+The proposal remains non-authoritative.
+
+The authoritative matrix v0.2 remains completely UNASSIGNED.
+
+Executable test cases remain NOT ESTABLISHED.
+
+Final verification methods remain NOT ESTABLISHED.
+
+======================================================================
+CLAIM CEILING
+======================================================================
+
+This receipt establishes local verification of the semantic-resolution
+proposal and corrects one terminal-output evidence defect.
+
+It does not itself promote the proposal into the authoritative
+requirements matrix.
+
+It does not establish executable conformance tests.
+
+It does not establish implementation conformance.
+
+It does not establish external certification, regulatory approval,
+industry adoption or independent external validation.
+
+Mapping promotion, if performed, requires a separately versioned
+successor artifact.
+
+NO RETROSPECTIVE REPAIR.
+
+PRESERVE THE DEFECT.
+CORRECT FORWARD.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+ELIAS SYSTEMS LTD

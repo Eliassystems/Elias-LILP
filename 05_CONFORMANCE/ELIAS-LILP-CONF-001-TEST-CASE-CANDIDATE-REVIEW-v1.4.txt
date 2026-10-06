@@ -1,0 +1,29 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v1.4
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 106
+NEW TEST DEFINITIONS: 1
+SUCCESSOR TEST CASES: 107
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-CHAIN-005 -> reserved LILP-TC-T08-006
+
+NEW TEST:
+TEST CASE: LILP-TC-T08-006
+RUN CLASS: CONTROL
+TITLE: Material chain-boundary determination is explicitly recorded
+OBJECTIVE: Establish that where a chain-boundary determination materially affects execution, verification or claim scope, the applicable boundary determination is explicitly recorded rather than left implicit or reconstructed after the affected decision.
+EXPECTED: An explicit chain-boundary determination is recorded and remains identifiable before the materially affected execution, verification or claim-scope consequence is treated as governed. The record preserves the applicable boundary decision and its relationship to the affected downstream context.
+FAILURE ORACLE: FAIL if a material chain boundary affects execution, verification or claim scope without an explicit recorded boundary determination, if the boundary is left only implicit, or if the required determination is retrospectively reconstructed after the affected downstream state.
+
+The new test directly addresses explicit recording of a material chain-boundary determination.
+It remains distinct from generic determination/execution separation and determination lifecycle controls.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

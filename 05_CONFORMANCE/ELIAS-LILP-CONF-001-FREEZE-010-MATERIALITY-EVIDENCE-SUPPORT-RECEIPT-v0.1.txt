@@ -1,0 +1,107 @@
+ELIAS LILP CONF-001
+FREEZE-010 MATERIALITY EVIDENCE SUPPORT RECEIPT v0.1
+
+RECORDED UTC:
+2026-10-04T09:38:07.084Z
+
+MODE:
+MACHINE_EVIDENCE_NAVIGATION_SUPPORT_ONLY
+
+SOURCE FROZEN STANDARD:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\01_STANDARD\ELIAS-LILP-STD-001-v0.1-FROZEN-BASELINE.txt
+
+SHA-256:
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+SOURCE FROZEN LEXICON:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\03_LEXICON\ELIAS-LILP-LEX-001-v0.1-FROZEN-BASELINE.txt
+
+SHA-256:
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+SOURCE v0.2 TERM-SUPPORT POPULATION:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-010-MATERIAL-TERM-SUPPORT-CANDIDATES-v0.2.csv
+
+SHA-256:
+086C1A225C204F7EC25F873A4607D61C0AE8F5A66F3CBA2970112075714E8B56
+
+MATERIALITY-EVIDENCE SUPPORT:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-010-MATERIALITY-EVIDENCE-SUPPORT-v0.1.csv
+
+SHA-256:
+DF04B54E4260118359389FE071558712B474501A62227717C71FA7F21961D2C0
+
+SUPPORT ROWS:
+57
+
+EXACT LEXICON HEADING MATCHES:
+51
+
+NO EXACT LEXICON HEADING MATCH:
+6
+
+PURPOSE:
+
+This artifact provides bounded navigation evidence to an authorized
+human reviewer before material-term inventory selection.
+
+For each of the 57 v0.2 review candidates it records:
+
+- candidate identity;
+- source basis;
+- standard occurrence count;
+- first standard occurrence locations;
+- bounded standard context excerpts;
+- exact lexicon-heading status;
+- lexicon definition and boundary where an exact heading exists;
+- and bounded lexicon mention contexts where no exact heading exists.
+
+BOUNDARY:
+
+Automation did NOT determine:
+
+- whether a candidate is materially normative;
+- whether the candidate set is complete;
+- semantic compatibility;
+- explicit narrowing;
+- material conflict;
+- evidence sufficiency;
+- human rationale;
+- freeze PASS;
+- conformance;
+- or execution authority.
+
+An exact lexicon heading does NOT establish materiality.
+
+No exact lexicon heading does NOT establish conflict or immateriality.
+
+Occurrence count does NOT establish materiality.
+
+The frozen standard and frozen lexicon remain the governed sources.
+
+HUMAN MATERIALITY REVIEW:
+NOT_PERFORMED
+
+SEMANTIC CLASSIFICATION:
+NOT_PERFORMED
+
+EXECUTION INPUT BINDING:
+NOT_ESTABLISHED
+
+HARNESS EXECUTION:
+NOT_EXECUTED
+
+RESULT:
+NOT_TESTED
+
+CONFORMANCE:
+NOT_ESTABLISHED
+
+NEXT AUTHORIZED STEP:
+
+Read-only inspection of this 57-row materiality evidence support
+before explicit human materiality determination.
+
+LOCK IT.
+LOG IT.
+PROVE IT.

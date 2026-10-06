@@ -1,0 +1,104 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+ELIAS-LILP-MAN-001 v0.1
+WHOLE-OBJECT PRE-FREEZE VERIFICATION — SUCCESSOR RECORD
+
+Record ID:
+ELIAS-LILP-MAN001-PREFREEZE-002
+
+Recorded UTC:
+2026-10-01T22:48:43.283Z
+
+Candidate:
+02_MANUAL\ELIAS-LILP-MAN-001-v0.1.txt
+
+Candidate Bytes:
+105931
+
+Candidate SHA-256:
+429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2
+
+Predecessor Pre-Freeze Record:
+ELIAS-LILP-MAN-001-v0.1-PREFREEZE-VERIFICATION.txt
+
+Predecessor Pre-Freeze SHA-256:
+7984699EAD8E7EE451DCF46967AE434ECABC41C60C84806F06068EFF6DEE65CB
+
+Predecessor Determination:
+HOLD
+
+Semantic Checker Correction Receipt:
+ELIAS-LILP-RECEIPT-0007
+
+Semantic Checker Correction Receipt SHA-256:
+0415FD1ADF7A16E867F8F41CF0682EAEA10918065C7E6E1AD37F4C192DA4F59C
+
+Frozen STD-001 SHA-256:
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+Frozen LEX-001 SHA-256:
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+Frozen Requirement Count:
+191
+
+Manual Traceability Row Count:
+191
+
+Missing Requirement Mappings:
+0
+
+Extra Requirement Mappings:
+0
+
+Corrected Semantic Check Method:
+WHOLE-OBJECT WHITESPACE-NORMALISED PROPOSITION MATCH
+
+Corrected Semantic Proposition Count:
+9
+
+Corrected Semantic Failures:
+0
+
+Direct Contradiction Hits:
+0
+
+Determination:
+PASS
+
+Freeze Status:
+READY TO FREEZE
+
+Failures:
+NONE
+
+CLAIM CEILING:
+
+This successor record re-examines the same MAN-001 candidate byte
+sequence after correction of the predecessor semantic-checking method.
+
+The predecessor HOLD is preserved and remains part of the evidence
+chain.
+
+No MAN-001 content was modified to obtain this successor result.
+
+The corrected semantic inspection normalises whitespace only in the
+temporary examination representation.
+
+It does not alter the candidate artifact.
+
+This record does not establish implementation conformance, external
+certification, independent validation, ISO or IEC adoption, regulatory
+approval, government approval, industry adoption, universal safety or
+universal security.
+
+The frozen normative standard remains controlling.
+
+PRESERVE THE FAILED EXAMINATION.
+PRESERVE THE CORRECTION.
+PRESERVE THE SAME CANDIDATE BYTES.
+
+LOCK IT.
+LOG IT.
+PROVE IT.

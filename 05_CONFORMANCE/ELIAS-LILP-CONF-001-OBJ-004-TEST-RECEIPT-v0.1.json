@@ -1,0 +1,68 @@
+﻿{
+    "ReceiptType":  "TEST_RECEIPT",
+    "ReceiptId":  "LILP-OBJ-004-TEST-RECEIPT-v0.1",
+    "ReceiptVersion":  "v0.1",
+    "State":  "OBJ-004_TEST_RECEIPT_ESTABLISHED_v0.1",
+    "Classification":  "TEST_RECEIPT_ESTABLISHED_FOR_EXACT_EXECUTED_CONTROLLED_SYNTHETIC_OBJ004_CANDIDATE",
+    "Requirement":  {
+                        "RequirementId":  "LILP-REQ-OBJ-004",
+                        "RequirementText":  "LILP-REQ-OBJ-004 Where an object has a predecessor, the predecessor relationship SHALL be explicitly representable.",
+                        "RequirementConformanceEstablished":  false
+                    },
+    "Test":  {
+                 "TestCaseId":  "LILP-TC-T02-012",
+                 "TestFamily":  "T02",
+                 "TestTitle":  "Object predecessor relationship is explicitly representable"
+             },
+    "VerificationMethod":  {
+                               "VerificationMethodId":  "LILP-VM-OBJ-004-v0.1"
+                           },
+    "HarnessBinding":  {
+                           "HarnessBindingId":  "LILP-BIND-OBJ-004-v0.1",
+                           "HarnessImplementationId":  "LILP-HI-OBJ-004-v0.1",
+                           "HarnessSHA256":  "A82FF894D9E4CAA15D84B0EA4338448ED0CB9BD3855A4CB9D9F8ECAB9BFD298D"
+                       },
+    "Candidate":  {
+                      "CandidateId":  "LILP-OBJ-004-CANDIDATE-v0.1",
+                      "CandidatePath":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-OBJ-004-CONTROLLED-TEST-CANDIDATE-v0.1.json",
+                      "CandidateSHA256":  "4CE9C1E88D365EBC2FEBBB94F6F1EA6CF5B94D7BA40AE4FC4C8702B3500B394F",
+                      "CandidateType":  "SYNTHETIC_CONTROLLED_TEST_FIXTURE",
+                      "ControlledBranch":  "EXISTS",
+                      "RealWorldFactClaim":  false
+                  },
+    "Execution":  {
+                      "ExecutionRecord":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-OBJ-004-HARNESS-EXECUTION-v0.1.json",
+                      "ExecutionRecordSHA256":  "A32656CAC0EA5F6A67E5B0C794D5E66E09168213A5BA28F41C18382EBC8725E6",
+                      "ExecutionCountPerformed":  1,
+                      "ProcessExitCode":  0,
+                      "RawHarnessDetermination":  "ESTABLISHED",
+                      "HarnessRerunPerformed":  false
+                  },
+    "PostExecutionVerification":  {
+                                      "Artifact":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-OBJ-004-EXECUTION-RECORD-POST-EXECUTION-VERIFICATION-v0.1.txt",
+                                      "SHA256":  "B998716EA6FA30046FF6F44C146B68ABA1704A41F7F3A310BB65438E2CAE9409",
+                                      "Verified":  true
+                                  },
+    "BoundedResult":  {
+                          "Artifact":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-OBJ-004-BOUNDED-RESULT-v0.1.txt",
+                          "SHA256":  "AEE0EB69F47EF85E3A849FDF8D8CB0BDAC146D5CE0041A4C4D4BBF1773B88180",
+                          "ResultStatus":  "BOUNDED_RESULT_ESTABLISHED_v0.1",
+                          "ResultClassification":  "BOUNDED_PASS",
+                          "ResultScope":  "EXACT_EXECUTED_CONTROLLED_SYNTHETIC_OBJ004_EXISTS_BRANCH_CANDIDATE_ONLY",
+                          "ResultDetermined":  true
+                      },
+    "ClaimBoundary":  {
+                          "TestReceiptEstablished":  true,
+                          "BoundedExecutionPassPreserved":  true,
+                          "SystemWideOBJ004ConformanceEstablished":  false,
+                          "RequirementConformanceEstablished":  false,
+                          "CONF001":  "NOT_ESTABLISHED",
+                          "ExecutionRerunAuthorized":  false,
+                          "ExecutionRerunPerformed":  false,
+                          "RegisterModified":  false,
+                          "RequirementMatrixModified":  false,
+                          "ChainClosureEstablished":  false
+                      },
+    "NextAuthority":  "AUTHORIZED_FOR_SEPARATE_OBJ-004_BOUNDED_EXECUTION_CHAIN_CLOSURE_REVIEW",
+    "NextState":  "READY_FOR_OBJ-004_BOUNDED_EXECUTION_CHAIN_CLOSURE_REVIEW"
+}

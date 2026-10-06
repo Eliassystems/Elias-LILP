@@ -1,0 +1,663 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+CONF-001
+INSUFFICIENT COVERAGE HUMAN DETERMINATION / TEST-CANDIDATE SUCCESSOR
+
+Status:
+CANDIDATE ONLY — REQUIREMENT MAPPING NOT ESTABLISHED
+
+Original Candidate Tests:
+80
+
+Insufficient Requirements Reviewed:
+22
+
+Covered By Existing Definitions:
+13
+
+Requirements Needing New Definitions:
+9
+
+New Test Definitions:
+6
+
+Successor Candidate Tests:
+86
+
+Requirement Mappings:
+NOT ESTABLISHED
+
+Harness Bindings:
+NOT ESTABLISHED
+
+Executions:
+NOT EXECUTED
+
+Results:
+NOT TESTED
+
+======================================================================
+22 HUMAN COVERAGE DETERMINATIONS
+======================================================================
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-CAN-003
+
+Normative Text:
+LILP-REQ-CAN-003 Canonicalisation SHALL define all representation details capable of altering byte identity, including where applicable: - field ordering; - character encoding; - line-ending treatment; - whitespace treatment; - number representation; - timestamp representation; - null or absent-field handling; - collection ordering; - and binary encoding.
+
+Family:
+T02
+
+Determination:
+NEW_TEST_REQUIRED
+
+Existing Candidate Tests:
+
+
+Proposed New Test:
+LILP-TC-T02-006
+
+Semantic Basis:
+The existing T02 cases test identity continuity and changed identity, but none directly falsifies an under-specified canonicalisation procedure in which byte-producing representation rules remain undefined.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-STATE-008
+
+Normative Text:
+LILP-REQ-STATE-008 Where jurisdiction affects authority or policy, jurisdiction SHALL be explicitly represented.
+
+Family:
+T01
+
+Determination:
+COVERED_BY_EXISTING
+
+Existing Candidate Tests:
+LILP-TC-T01-001;LILP-TC-T01-004
+
+Proposed New Test:
+
+
+Semantic Basis:
+Jurisdiction becomes a mandatory governing-state predicate where it affects authority or policy; the complete-state control and missing-predicate failure cases jointly test explicit representation and fail-closed absence.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-STATE-009
+
+Normative Text:
+LILP-REQ-STATE-009 The temporal context relevant to validity SHALL be explicitly representable.
+
+Family:
+T01
+
+Determination:
+COVERED_BY_EXISTING
+
+Existing Candidate Tests:
+LILP-TC-T01-001;LILP-TC-T01-004
+
+Proposed New Test:
+
+
+Semantic Basis:
+Relevant temporal context is part of complete governing state and can be positively established by the control case and negatively falsified as a missing mandatory predicate.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-AUTH-006
+
+Normative Text:
+LILP-REQ-AUTH-006 Where authority has temporal limits, those limits SHALL be representable.
+
+Family:
+T03
+
+Determination:
+COVERED_BY_EXISTING
+
+Existing Candidate Tests:
+LILP-TC-T03-001;LILP-TC-T03-004
+
+Proposed New Test:
+
+
+Semantic Basis:
+Applicable temporal limits are authority conditions; the authority-control case requires identifiable applicable conditions and the failure case prevents missing required authority evidence from being assumed.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-EVID-006
+
+Normative Text:
+LILP-REQ-EVID-006 Where time affects relevance or validity, the observation or acquisition time SHALL be preserved.
+
+Family:
+T05
+
+Determination:
+COVERED_BY_EXISTING
+
+Existing Candidate Tests:
+LILP-TC-T05-001;LILP-TC-T05-004
+
+Proposed New Test:
+
+
+Semantic Basis:
+Observation or acquisition time is part of evidence acquisition context when material to relevance or validity; the control case requires acquisition context and the failure case preserves insufficiency when that context is unavailable.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-EVID-008
+
+Normative Text:
+LILP-REQ-EVID-008 Evidence absence SHALL NOT be represented as evidence of the opposite proposition unless the applicable method independently establishes that inference.
+
+Family:
+T05
+
+Determination:
+NEW_TEST_REQUIRED
+
+Existing Candidate Tests:
+
+
+Proposed New Test:
+LILP-TC-T05-007
+
+Semantic Basis:
+The existing T05 failure case addresses missing provenance or integrity properties but does not directly falsify the prohibited logical inversion from absence of evidence for P to evidence for not-P.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-RCPT-001
+
+Normative Text:
+LILP-REQ-RCPT-001 Each receipt SHALL have a unique receipt identifier within the declared receipt namespace.
+
+Family:
+T12
+
+Determination:
+NEW_TEST_REQUIRED
+
+Existing Candidate Tests:
+
+
+Proposed New Test:
+LILP-TC-T12-006
+
+Semantic Basis:
+Existing receipt cases require stable identity but do not test uniqueness of receipt identifiers inside a declared namespace through an actual collision attempt.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-RCPT-002
+
+Normative Text:
+LILP-REQ-RCPT-002 Receipt creation tooling SHALL NOT silently replace an existing receipt under the same receipt identifier.
+
+Family:
+T12
+
+Determination:
+NEW_TEST_REQUIRED
+
+Existing Candidate Tests:
+
+
+Proposed New Test:
+LILP-TC-T12-006
+
+Semantic Basis:
+The same receipt-collision test can directly attempt creation under an existing identifier and require refusal or explicit collision handling without silent replacement.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-PROOF-002
+
+Normative Text:
+LILP-REQ-PROOF-002 Proof levels SHALL NOT be used as universal system scores.
+
+Family:
+T16
+
+Determination:
+COVERED_BY_EXISTING
+
+Existing Candidate Tests:
+LILP-TC-T16-001
+
+Proposed New Test:
+
+
+Semantic Basis:
+Representing a bounded proof level as a universal system score materially exceeds the evaluated evidence and scope, which is the direct failure oracle of T16-001.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-PROOF-003
+
+Normative Text:
+LILP-REQ-PROOF-003 PL1 SHALL NOT be described as independent verification.
+
+Family:
+T16
+
+Determination:
+COVERED_BY_EXISTING
+
+Existing Candidate Tests:
+LILP-TC-T16-003
+
+Proposed New Test:
+
+
+Semantic Basis:
+Describing PL1 as independent verification is an unsupported stronger verification-status claim and is directly falsified by the inflated external-status case.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-PROOF-004
+
+Normative Text:
+LILP-REQ-PROOF-004 PL2 SHALL NOT be represented as establishing semantic truth merely because integrity was verified.
+
+Family:
+T16
+
+Determination:
+COVERED_BY_EXISTING
+
+Existing Candidate Tests:
+LILP-TC-T16-001
+
+Proposed New Test:
+
+
+Semantic Basis:
+Claiming semantic truth solely from verified integrity expands the claim beyond the property actually established and is directly bounded by T16-001.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-PROOF-008
+
+Normative Text:
+LILP-REQ-PROOF-008 Where independence is claimed, material conflicts or relationships capable of affecting that independence SHOULD be disclosed.
+
+Family:
+T16
+
+Determination:
+NEW_TEST_REQUIRED
+
+Existing Candidate Tests:
+
+
+Proposed New Test:
+LILP-TC-T16-006
+
+Semantic Basis:
+Existing T16 cases constrain overclaims but do not directly require disclosure of material relationships or conflicts capable of affecting a claimed verifier's independence.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-CONF-016
+
+Normative Text:
+LILP-REQ-CONF-016 The evidence package SHOULD be independently re-hashable.
+
+Family:
+T05
+
+Determination:
+NEW_TEST_REQUIRED
+
+Existing Candidate Tests:
+
+
+Proposed New Test:
+LILP-TC-T05-006
+
+Semantic Basis:
+The existing evidence-admissibility tests do not independently reproduce or re-hash an evidence package and compare the resulting identities.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-TEST-004
+
+Normative Text:
+LILP-REQ-TEST-004 A test SHALL NOT be marked PASS solely because the test harness completed without error.
+
+Family:
+T16
+
+Determination:
+COVERED_BY_EXISTING
+
+Existing Candidate Tests:
+LILP-TC-T16-004
+
+Proposed New Test:
+
+
+Semantic Basis:
+Harness completion without behavioural evidence leaves mandatory proof elements absent; T16-004 directly requires the positive claim to be withheld when required evidence is missing.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-WORD-003
+
+Normative Text:
+LILP-REQ-WORD-003 LILP conformance SHALL NOT, by itself, be described as ISO-compliant, IEC-compliant, regulator-approved or government-approved.
+
+Family:
+T16
+
+Determination:
+COVERED_BY_EXISTING
+
+Existing Candidate Tests:
+LILP-TC-T16-003
+
+Proposed New Test:
+
+
+Semantic Basis:
+ISO, IEC, regulator or government approval language is exactly the type of unsupported stronger external-status claim actively falsified by T16-003.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-VER-001
+
+Normative Text:
+LILP-REQ-VER-001 A verifier SHALL be identifiable where independent verification is claimed.
+
+Family:
+T16
+
+Determination:
+NEW_TEST_REQUIRED
+
+Existing Candidate Tests:
+
+
+Proposed New Test:
+LILP-TC-T16-006
+
+Semantic Basis:
+A dedicated independent-verification prerequisite case is required to test that the verifier itself is identifiable whenever independence is claimed.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-VER-003
+
+Normative Text:
+LILP-REQ-VER-003 The scope of independent verification SHALL be explicit.
+
+Family:
+T16
+
+Determination:
+NEW_TEST_REQUIRED
+
+Existing Candidate Tests:
+
+
+Proposed New Test:
+LILP-TC-T16-006
+
+Semantic Basis:
+A dedicated independent-verification prerequisite case is required to test that the verified scope is explicitly represented as part of the independence claim.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-VER-005
+
+Normative Text:
+LILP-REQ-VER-005 Automated re-execution by the originating implementation SHALL NOT, by itself, constitute independent verification.
+
+Family:
+T16
+
+Determination:
+COVERED_BY_EXISTING
+
+Existing Candidate Tests:
+LILP-TC-T16-003
+
+Proposed New Test:
+
+
+Semantic Basis:
+Claiming independent verification solely from automated re-execution by the originating implementation is an unsupported stronger verification-status claim.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-VER-006
+
+Normative Text:
+LILP-REQ-VER-006 Use of a different AI model or software tool by the same controlling party SHALL NOT, by itself, establish organisational independence.
+
+Family:
+T16
+
+Determination:
+COVERED_BY_EXISTING
+
+Existing Candidate Tests:
+LILP-TC-T16-003
+
+Proposed New Test:
+
+
+Semantic Basis:
+Claiming organisational independence merely because the same controlling party uses a different model or tool is an unsupported stronger independence claim.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-DEV-003
+
+Normative Text:
+LILP-REQ-DEV-003 A deviation SHALL NOT silently convert a failed mandatory requirement into PASS.
+
+Family:
+T13
+
+Determination:
+COVERED_BY_EXISTING
+
+Existing Candidate Tests:
+LILP-TC-T13-003;LILP-TC-T13-001
+
+Proposed New Test:
+
+
+Semantic Basis:
+Silently converting a failed mandatory requirement into PASS is an attempted overwrite of adverse evidence; T13-003 actively falsifies that mutation and T13-001 confirms the FAIL remains visible.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-MATR-001
+
+Normative Text:
+LILP-REQ-MATR-001 Every normative requirement identifier in a claimed profile SHALL be represented in the requirements matrix.
+
+Family:
+T16
+
+Determination:
+NEW_TEST_REQUIRED
+
+Existing Candidate Tests:
+
+
+Proposed New Test:
+LILP-TC-T16-007
+
+Semantic Basis:
+The current generic T16 claim cases do not enumerate a claimed profile and prove that every normative requirement identifier is represented in the requirements matrix.
+
+----------------------------------------------------------------------
+Requirement:
+LILP-REQ-MATR-007
+
+Normative Text:
+LILP-REQ-MATR-007 A requirements matrix SHALL NOT omit a mandatory requirement merely because the requirement failed.
+
+Family:
+T13
+
+Determination:
+COVERED_BY_EXISTING
+
+Existing Candidate Tests:
+LILP-TC-T13-001
+
+Proposed New Test:
+
+
+Semantic Basis:
+T13-001 explicitly requires a known failure to remain represented and permits inspection through the requirements-matrix view, directly covering prohibition of omission because the requirement failed.
+
+======================================================================
+SIX NEW CANDIDATE TEST DEFINITIONS
+======================================================================
+
+----------------------------------------------------------------------
+Test Case:
+LILP-TC-T02-006
+
+Family:
+T02 — Identity Continuity
+
+Run Class:
+ADVERSARIAL
+
+Title:
+Canonicalisation representation completeness
+
+Objective:
+Establish that every representation detail capable of changing byte identity is explicitly defined by the declared canonicalisation procedure.
+
+Expected Behaviour:
+The procedure explicitly defines the treatment of every applicable byte-producing representation dimension and equivalent logical input produces reproducible canonical bytes.
+
+Failure Oracle:
+FAIL if an applicable byte-producing representation detail is materially undefined or produces non-reproducible canonical bytes without an explicit rule.
+
+----------------------------------------------------------------------
+Test Case:
+LILP-TC-T05-006
+
+Family:
+T05 — Evidence Admissibility
+
+Run Class:
+CONTROL
+
+Title:
+Independent evidence-package re-hashability
+
+Objective:
+Establish that the evidence package can be independently re-hashed from the preserved package material using its declared hashing procedure.
+
+Expected Behaviour:
+The independently recomputed digest matches the recorded digest for the same preserved byte sequence.
+
+Failure Oracle:
+FAIL if the package cannot be independently re-hashed from preserved material or the recomputed digest does not match the recorded digest.
+
+----------------------------------------------------------------------
+Test Case:
+LILP-TC-T05-007
+
+Family:
+T05 — Evidence Admissibility
+
+Run Class:
+FAILURE
+
+Title:
+Evidence absence does not establish the opposite proposition
+
+Objective:
+Falsify unsupported inversion from absence of evidence for one proposition into evidence for its opposite.
+
+Expected Behaviour:
+P remains NOT_ESTABLISHED as applicable, and not-P is not established solely from the absence of evidence for P unless a separately applicable inference method independently supports it.
+
+Failure Oracle:
+FAIL if absence of evidence for P is treated by itself as positive evidence establishing not-P.
+
+----------------------------------------------------------------------
+Test Case:
+LILP-TC-T12-006
+
+Family:
+T12 — Receipt / Witness Continuity
+
+Run Class:
+ADVERSARIAL
+
+Title:
+Receipt identifier collision protection
+
+Objective:
+Establish identifier uniqueness and prevent silent replacement of an existing receipt under the same declared receipt identifier.
+
+Expected Behaviour:
+The tooling refuses the collision, creates a separately identifiable successor where explicitly allowed, or otherwise records the conflict without altering the existing receipt under that identifier.
+
+Failure Oracle:
+FAIL if two materially distinct receipts are silently treated as one identifier or if the original receipt is silently replaced under the existing identifier.
+
+----------------------------------------------------------------------
+Test Case:
+LILP-TC-T16-006
+
+Family:
+T16 — Claim-Ceiling Enforcement
+
+Run Class:
+CONTROL
+
+Title:
+Independent-verification claim prerequisites are explicit
+
+Objective:
+Establish that an independent-verification claim identifies the verifier, states the verified scope and discloses material relationships or conflicts capable of affecting the claimed independence.
+
+Expected Behaviour:
+The independent-verification claim preserves an identifiable verifier, explicit bounded scope and applicable relationship or conflict disclosures; otherwise the independence claim remains unsupported or bounded accordingly.
+
+Failure Oracle:
+FAIL if independent verification is positively represented while the verifier is unidentifiable, scope is materially unspecified, or a known material relationship affecting independence is concealed.
+
+----------------------------------------------------------------------
+Test Case:
+LILP-TC-T16-007
+
+Family:
+T16 — Claim-Ceiling Enforcement
+
+Run Class:
+CONTROL
+
+Title:
+Claimed-profile requirements-matrix completeness
+
+Objective:
+Establish that every normative requirement identifier in a claimed conformance profile is represented in the requirements matrix.
+
+Expected Behaviour:
+Every normative requirement identifier in the claimed profile is represented exactly as required by the matrix model; missing mandatory identifiers remain visible as a completeness failure rather than being omitted.
+
+Failure Oracle:
+FAIL if one or more normative requirement identifiers belonging to the claimed profile are absent from the requirements matrix.
+

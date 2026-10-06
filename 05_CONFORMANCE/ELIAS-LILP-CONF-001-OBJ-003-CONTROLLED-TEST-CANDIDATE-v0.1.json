@@ -1,0 +1,12 @@
+﻿{
+    "CandidateId":  "LILP-OBJ-003-CANDIDATE-v0.1",
+    "CandidateProvenance":  "CREATED_UNDER_OBJ-003_CANDIDATE_CONSTRUCTION_GOVERNANCE_v0.1",
+    "GovernanceObject":  "CONTROLLED_GOVERNANCE_OBJECT_FOR_LILP-REQ-OBJ-003",
+    "ObjectIdentityMaterial":  "CandidateId=LILP-OBJ-003-CANDIDATE-v0.1;FixtureClass=CONTROLLED_TEST_FIXTURE",
+    "TemporalContext":  {
+                            "Kind":  "TEMPORAL_STATE",
+                            "Value":  "OBJ-003_CONTROLLED_TEST_FIXTURE_DESIGNATED_BEFORE_CONSEQUENTIAL_RELIANCE",
+                            "Source":  "CONTROLLED_TEST_FIXTURE_DECLARATION"
+                        },
+    "DeclaredConsequentialUse":  "CONTROLLED_CONFORMANCE_EVALUATION_AS_IF_RELIED_UPON_FOR_CONSEQUENTIAL_GOVERNANCE_NO_EXTERNAL_ACTION"
+}

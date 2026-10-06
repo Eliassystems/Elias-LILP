@@ -1,0 +1,35 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v1.2
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 103
+NEW TEST DEFINITIONS: 2
+SUCCESSOR TEST CASES: 105
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-DELTA-002 -> reserved LILP-TC-T07-006
+LILP-REQ-DELTA-004 -> reserved LILP-TC-T07-007
+
+NEW TEST 1:
+TEST CASE: LILP-TC-T07-006
+TITLE: Detected material change is represented separately from predecessor state
+OBJECTIVE: Establish that a detected material change is represented as a distinct delta or change record rather than by mutating, replacing or conflating the preserved predecessor state.
+EXPECTED: The detected material change is represented in a distinct Delta Object or equivalent change record that is separately identifiable from the predecessor state, while the predecessor state remains preserved as the predecessor.
+FAILURE ORACLE: FAIL if a detected material change is represented only by mutating, replacing or silently rewriting the predecessor state, or if the change cannot be distinguished as a separate delta representation from the preserved predecessor.
+
+NEW TEST 2:
+TEST CASE: LILP-TC-T07-007
+TITLE: Delta Object identifies affected governing predicates
+OBJECTIVE: Establish that a Delta Object explicitly identifies the governing predicates affected by a material change where the relationship between the change and those predicates can be established.
+EXPECTED: Where the relationship can be established, the Delta Object explicitly and unambiguously identifies the affected governing predicates and preserves that relationship as part of the delta representation.
+FAILURE ORACLE: FAIL if an affected governing-predicate relationship can be established but the Delta Object omits it, represents it ambiguously, or requires the affected predicates to be silently inferred from unrelated context. FAIL if unsupported affected-predicate relationships are invented as established.
+
+The two tests remain semantically distinct: separate delta representation versus affected-governing-predicate identification.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

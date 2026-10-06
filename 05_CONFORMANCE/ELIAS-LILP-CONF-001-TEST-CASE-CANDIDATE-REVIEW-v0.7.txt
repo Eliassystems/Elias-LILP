@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v0.7
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 97
+NEW TEST DEFINITIONS: 1
+SUCCESSOR TEST CASES: 98
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-STATE-007 -> reserved LILP-TC-T01-006
+LILP-REQ-STATE-011 -> covered by existing LILP-TC-T14-005; no new test introduced.
+
+NEW TEST:
+TEST CASE: LILP-TC-T01-006
+TITLE: Governing-state scope is explicitly represented
+OBJECTIVE: Establish that the scope of the governing state is explicitly represented before that state is relied upon for consequential governance.
+EXPECTED: The governing state explicitly identifies its applicable scope in a non-empty and unambiguous representation before consequential determination or execution relies upon that state.
+FAILURE ORACLE: FAIL if consequential governance relies upon a governing state whose applicable scope is absent, ambiguous, only implicit, or inferred from unrelated context rather than explicitly represented.
+
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

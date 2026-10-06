@@ -1,0 +1,29 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 001T v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 80
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 82
+
+COVERED_BY_EXISTING: 1
+NEW_TEST_REQUIRED: 1
+NEW TEST DEFINITIONS RESERVED: 1
+
+CLAIM-003:
+COVERED_BY_EXISTING -> LILP-TC-T16-001
+T16-001 requires the claim to name or unambiguously preserve its evaluated scope.
+
+CLAIM-004:
+NEW_TEST_REQUIRED -> LILP-TC-T16-012 RESERVED
+Distinct obligation: where time materially affects validity, the claim itself identifies its temporal scope.
+
+T16-002 reassessment after material change does not substitute for temporal-scope identification.
+T16-012 is reserved only.
+T16-013 remains unreserved.
+T16-012 definition remains NOT_ESTABLISHED.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

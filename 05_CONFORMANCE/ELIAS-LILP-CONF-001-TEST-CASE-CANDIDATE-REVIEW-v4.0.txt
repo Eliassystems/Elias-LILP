@@ -1,0 +1,30 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v4.0
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 139
+NEW TEST DEFINITIONS: 2
+SUCCESSOR TEST CASES: 141
+
+NEW TEST: LILP-TC-T03-009
+TITLE: Jurisdiction-dependent authority identifies governing jurisdiction
+RUN CLASS: CONTROL
+HUMAN BASIS: LILP-REQ-AUTH-005 / Batch 002Q
+
+NEW TEST: LILP-TC-T03-010
+TITLE: Protected-evidence disclosure remains bounded to examination authority and scope
+RUN CLASS: CONTROL
+HUMAN BASIS: LILP-REQ-SEC-009 / Batch 002Q
+
+T03-011 remains unreserved.
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+T03-009 establishes explicit governing-jurisdiction identity where authority depends on jurisdiction.
+T03-010 establishes that protected-evidence disclosure for verification remains bounded to examination authority and scope.
+Definition existence does not establish execution or conformance.
+
+LOCK IT. LOG IT. PROVE IT.

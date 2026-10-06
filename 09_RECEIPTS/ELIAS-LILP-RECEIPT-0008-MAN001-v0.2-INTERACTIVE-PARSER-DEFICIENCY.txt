@@ -1,0 +1,88 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+LILP EVIDENCE RECEIPT
+
+Receipt ID:
+ELIAS-LILP-RECEIPT-0008
+
+Receipt Type:
+MAN001_V0.2_INTERACTIVE_POWERSHELL_EXECUTION_DEFICIENCY
+
+Recorded UTC:
+2026-10-01T22:51:35.785Z
+
+Subject:
+ELIAS-LILP-MAN-001 v0.1
+
+Candidate Bytes:
+105931
+
+Candidate SHA-256:
+429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2
+
+Affected Verification Record:
+ELIAS-LILP-MAN-001-v0.1-PREFREEZE-VERIFICATION-v0.2.txt
+
+Affected Verification Record SHA-256:
+FAD5692E74982D1F1024B17C398DCEB22BAC0D3926F0423A52FA7E118AE79C8F
+
+Predecessor Semantic Correction Receipt:
+ELIAS-LILP-RECEIPT-0007
+
+Receipt 0007 SHA-256:
+0415FD1ADF7A16E867F8F41CF0682EAEA10918065C7E6E1AD37F4C192DA4F59C
+
+Observed Procedural Deficiency:
+
+During interactive execution of the v0.2 successor verification,
+multiple PowerShell ELSE clauses were submitted after their preceding
+IF blocks had already completed.
+
+PowerShell therefore interpreted ELSE as a standalone command and
+returned CommandNotFoundException.
+
+The positive IF branches had already executed and displayed PASS
+results.
+
+The v0.2 successor record was also created.
+
+However, because the verification transcript contains interpreter
+errors, v0.2 SHALL NOT be used as the final clean authority for the
+MAN-001 freeze.
+
+Candidate Mutation:
+NONE OBSERVED
+
+Candidate SHA-256:
+429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2
+
+Candidate Bytes:
+105931
+
+Corrective Action:
+
+Preserve the v0.2 record unchanged.
+
+Preserve this deficiency receipt.
+
+Perform a new v0.3 successor verification against the same MAN-001
+candidate using verification logic containing no ELSE clauses.
+
+CLAIM CEILING:
+
+This receipt establishes the observed procedural execution deficiency
+and the decision not to rely on v0.2 as final freeze authority.
+
+It does not invalidate the evidence that individual v0.2 checks
+reported PASS.
+
+It does not itself establish MAN-001 ready to freeze.
+
+PRESERVE THE RECORD.
+PRESERVE THE ERROR.
+RE-EXAMINE THE SAME BYTES.
+
+LOCK IT.
+LOG IT.
+PROVE IT.

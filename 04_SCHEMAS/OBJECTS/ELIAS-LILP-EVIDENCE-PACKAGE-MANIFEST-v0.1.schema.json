@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:elias:lilp:schema:evidence-package-manifest:v0.1",
+  "title": "ELIAS LILP Evidence Package Manifest v0.1",
+  "description": "Working reference structural schema for a bounded manifest describing evidence-package contents and declared completeness.",
+  "type": "object",
+  "x-elias-document-id": "ELIAS-LILP-SCHEMA-001",
+  "x-elias-object": "EVIDENCE_PACKAGE_MANIFEST",
+  "x-elias-schema-version": "v0.1",
+  "x-elias-ancestors": {
+    "std001_sha256": "076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537",
+    "man001_sha256": "429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2",
+    "lex001_sha256": "144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488"
+  },
+  "x-elias-authority-boundary": "A manifest records declared package contents. Manifest completeness does not establish truth, reproduction or independent verification.",
+  "properties": {
+    "object_type": {
+      "const": "EVIDENCE_PACKAGE_MANIFEST"
+    },
+    "schema_id": {
+      "const": "urn:elias:lilp:schema:evidence-package-manifest:v0.1"
+    },
+    "schema_version": {
+      "const": "v0.1"
+    },
+    "package_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "package_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "artifact_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path_or_reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "byte_length": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "hash_algorithm": {
+            "type": "string",
+            "minLength": 1
+          },
+          "artifact_hash": {
+            "type": "string",
+            "minLength": 1
+          },
+          "media_type": {
+            "oneOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "artifact_id",
+          "path_or_reference",
+          "byte_length",
+          "hash_algorithm",
+          "artifact_hash"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "ancestor_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "receipt_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "completeness_status": {
+      "enum": [
+        "DECLARED_COMPLETE",
+        "DECLARED_PARTIAL",
+        "NOT_ESTABLISHED"
+      ]
+    },
+    "missing_declared_items": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "claim_ceiling": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "canonicalisation_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hash_algorithm": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifest_hash": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "package_id",
+    "package_version",
+    "created_at",
+    "purpose",
+    "scope",
+    "artifact_entries",
+    "ancestor_references",
+    "receipt_references",
+    "completeness_status",
+    "missing_declared_items",
+    "claim_ceiling",
+    "provenance"
+  ],
+  "additionalProperties": true
+}

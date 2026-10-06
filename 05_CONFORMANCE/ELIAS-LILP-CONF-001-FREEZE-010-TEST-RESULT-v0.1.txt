@@ -1,0 +1,114 @@
+ELIAS LILP CONF-001
+FREEZE-010 / T14-016 BOUNDED TEST RESULT v0.1
+
+RECORDED UTC:
+2026-10-04T13:12:43.744Z
+
+REQUIREMENT:
+LILP-REQ-FREEZE-010
+
+TEST CASE:
+LILP-TC-T14-016
+
+VERIFICATION METHOD:
+LILP-VM-FREEZE-010-v0.1
+
+HARNESS:
+LILP-HI-FREEZE-010-v0.2
+
+NATIVE HARNESS EXECUTION:
+EXECUTED
+
+NATIVE TERM DETERMINATION:
+HUMAN_REVIEW_COMPLETE_NO_RECORDED_MATERIAL_CONFLICT
+
+NATIVE MATERIAL CONFLICT COUNT:
+0
+
+FROZEN TEST RESULT:
+FAIL
+
+FAILURE BASIS:
+
+The frozen T14-016 failure oracle requires FAIL where normative
+terminology was not inspected against the governed bound frozen lexicon
+before freeze, or where comparison was performed only retrospectively
+after freeze without preserved evidence.
+
+The preserved standard pre-freeze verification establishes a bounded
+direct core-distinction contradiction scan. Its own claim ceiling does
+not establish absence of semantic ambiguity.
+
+The preserved lexicon freeze evidence establishes structural
+verification of the lexicon object. It does not establish a
+pre-freeze term-by-term comparison of the standard's normative
+terminology against that governed lexicon.
+
+The later governed 57-term human semantic review is valid evidence of
+the later comparison and records zero material conflicts, but it does
+not retrospectively establish that the required comparison occurred
+before the already-preserved freeze.
+
+No retrospective repair, reconstruction, or temporal relabelling is
+performed.
+
+STANDARD BASELINE SHA-256:
+076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537
+
+LEXICON BASELINE SHA-256:
+144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488
+
+STANDARD PREFREEZE VERIFICATION SHA-256:
+CD8A8DBA6CD6253BE8FB4BDABEF6D916DCEF69CCB0F6B37ABEF614114E67EA3C
+
+STANDARD FREEZE RECEIPT SHA-256:
+DFBAD4AE05A9ADAA70481ADDA7928E2ED099492F7B5D9CC27BD21DCF3B6B24E1
+
+LEXICON FREEZE RECEIPT SHA-256:
+EA60056D55EEBB8AF990C5261FA367727897DA62BD8AC4D8CD43614769221DE0
+
+MATERIAL INVENTORY SHA-256:
+9671ECF23846789090E139D7CFAE7A53197BC5858BE8CB6CC8A0C75AE0D12C1C
+
+HUMAN REVIEW SHA-256:
+756BE76701AC73DD165A7B6A9046FE856B62C0E90739D01D43F90BF47A16F776
+
+EXECUTION INPUT BINDING SHA-256:
+60728FCCEBEC5B5BED5544B14279D9909138F9CFE3C57B4A889EFB71CB6ED15D
+
+VALID NATIVE EXECUTION OBJECT SHA-256:
+4FEB2D562F178E5B9EA47D327CBCABE0F3FDF922E17CD7B4B73715033DB8AA68
+
+VALID NATIVE EXECUTION RECEIPT SHA-256:
+69CF2CBE32312456750F26046432D07CB67418B091B8F9907A395DA0A574BBAA
+
+PRESERVED FAILED v0.1 ATTEMPT RECEIPT SHA-256:
+866904509DC0EE86566EB22A107904E74F5365283572D4765A63739FE72D594D
+
+VERIFICATION METHOD REGISTER SHA-256:
+1E01B62DEBB0641582302308233CDD3A8E84C8E78831D73574714201DBD8E76A
+
+TEST REGISTER SHA-256:
+DC47BAC0291D4E064C2CDE9E8214C33B34D8BEE63C1655374FD01F7BEF516CE2
+
+RESULT SCOPE:
+FREEZE-010 / T14-016 ONLY
+
+RESULT:
+FAIL
+
+OVERALL CONF-001 CONFORMANCE:
+NOT_ESTABLISHED
+
+CLAIM CEILING:
+
+This result does not assert that the terminology is presently
+semantically defective.
+
+The governed later review recorded zero material conflicts.
+
+The FAIL is the bounded frozen test result arising from the
+pre-freeze temporal/evidentiary requirement.
+
+No external certification, independent validation, regulatory approval,
+standards-body adoption, or broader conformance is established.

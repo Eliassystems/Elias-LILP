@@ -1,0 +1,31 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v0.4
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 92
+NEW TEST DEFINITIONS: 1
+SUCCESSOR TEST CASES: 93
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-CONF-005 was semantically determined to require a new T16 test because the existing test set did not directly establish complete permitted-status assignment for each applicable mandatory requirement.
+
+NEW TEST:
+TEST CASE: LILP-TC-T16-009
+FAMILY: T16 - Claim-Ceiling Enforcement
+RUN CLASS: CONTROL
+TITLE: Every applicable mandatory requirement receives one permitted status
+OBJECTIVE: Establish that every mandatory requirement applicable to the declared conformance profile and scope receives exactly one permitted conformance status.
+PRECONDITIONS: A declared conformance profile and scope exist; the complete set of applicable mandatory requirements is identifiable; a requirements matrix or equivalent governed status record exists.
+STIMULUS: Evaluate the status assignment for every applicable mandatory requirement and inspect for omitted status, multiple simultaneous statuses or a status outside the permitted set.
+EXPECTED: Every applicable mandatory requirement is assigned exactly one of PASS, FAIL, NOT_APPLICABLE or NOT_ESTABLISHED; no applicable requirement remains statusless, multiply assigned or assigned an unrecognised conformance status.
+REQUIRED EVIDENCE: Declared profile and scope; applicable mandatory-requirement set; requirements matrix or equivalent status record; assigned status for each applicable requirement; any NOT_APPLICABLE rationale or NOT_ESTABLISHED condition where applicable.
+FAILURE ORACLE: FAIL if any applicable mandatory requirement lacks a status, carries more than one simultaneous conformance status, or is assigned a status outside PASS, FAIL, NOT_APPLICABLE or NOT_ESTABLISHED.
+
+No requirement mapping is established by adding this definition.
+
+LOCK IT. LOG IT. PROVE IT.

@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:elias:lilp:schema:requirements-matrix-entry:v0.1",
+  "title": "ELIAS LILP Requirements Matrix Entry v0.1",
+  "description": "Working reference structural schema for mapping one normative requirement to implementation locations, verification methods and evidence. Mapping does not itself establish conformance.",
+  "type": "object",
+  "x-elias-document-id": "ELIAS-LILP-SCHEMA-001",
+  "x-elias-object": "REQUIREMENTS_MATRIX_ENTRY",
+  "x-elias-schema-version": "v0.1",
+  "x-elias-ancestors": {
+    "std001_sha256": "076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537",
+    "man001_sha256": "429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2",
+    "lex001_sha256": "144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488"
+  },
+  "x-elias-authority-boundary": "Traceability does not equal conformance. A mapped requirement may still fail verification.",
+  "properties": {
+    "object_type": {
+      "const": "REQUIREMENTS_MATRIX_ENTRY"
+    },
+    "schema_id": {
+      "const": "urn:elias:lilp:schema:requirements-matrix-entry:v0.1"
+    },
+    "schema_version": {
+      "const": "v0.1"
+    },
+    "matrix_entry_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requirement_id": {
+      "type": "string",
+      "pattern": "^LILP-REQ-[A-Z]+-[0-9]{3}$"
+    },
+    "source_standard_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_standard_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "implementation_locations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "verification_methods": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "evidence_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "mapping_status": {
+      "enum": [
+        "MAPPED",
+        "PARTIALLY_MAPPED",
+        "UNMAPPED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "verification_status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "HOLD",
+        "NOT_ESTABLISHED",
+        "NOT_TESTED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "claim_ceiling": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "matrix_entry_id",
+    "requirement_id",
+    "source_standard_reference",
+    "source_standard_hash",
+    "implementation_locations",
+    "verification_methods",
+    "evidence_references",
+    "mapping_status",
+    "verification_status",
+    "claim_ceiling",
+    "provenance"
+  ],
+  "additionalProperties": true
+}

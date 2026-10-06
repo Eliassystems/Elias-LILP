@@ -1,0 +1,71 @@
+ELIAS LILP CONF-001
+FREEZE-010 HUMAN MATERIALITY DETERMINATION — PREDECESSOR v0.1
+
+RECORDED UTC:
+2026-10-04T10:09:38.411Z
+
+REVIEWER ID:
+Gary williams
+
+REVIEWER AUTHORITY:
+ELIAS_SYSTEMS_FOUNDER_AND_AUTHORIZED_HUMAN_REVIEWER
+
+AUTHORITY BOUNDARY:
+INTERNAL ELIAS SYSTEMS HUMAN REVIEW AUTHORITY ONLY
+
+TERM:
+predecessor
+
+SOURCE SUPPORT:
+C:\Users\garys\Documents\ELIAS-LILP-STANDARD\05_CONFORMANCE\ELIAS-LILP-CONF-001-FREEZE-010-MATERIALITY-EVIDENCE-SUPPORT-v0.2.csv
+
+SOURCE SUPPORT SHA-256:
+88FBAFD23BF9FDA903273C461CFDAB5268E08132EEEAD3DE86371FAD5A2F6F2F
+
+SOURCE BASIS:
+FREEZE-011_EXPLICIT_SEMANTIC_DISTINCTION
+
+STANDARD OCCURRENCE COUNT:
+31
+
+HUMAN MATERIALITY DETERMINATION:
+MATERIAL
+
+REVIEWER RATIONALE:
+Predecessor is materially normative because the frozen standard requires predecessor state to remain preserved when material change invalidates reliance on a prior LOCK, prohibits retrospective modification of predecessor state, and uses predecessor-successor continuity as part of its historical preservation discipline. The term therefore directly constrains how prior governed state must be preserved and related to successor state.
+
+BOUNDARY:
+
+This record establishes only the named human reviewer's materiality
+determination for predecessor within the bounded FREEZE-010
+material-term inventory process.
+
+It does NOT establish:
+
+- semantic compatibility;
+- explicit narrowing;
+- material conflict;
+- successor validity;
+- historical validity;
+- present standing;
+- FREEZE-010 PASS;
+- execution input binding;
+- harness execution;
+- test result;
+- independent verification;
+- or conformance.
+
+SEMANTIC CLASSIFICATION:
+NOT_PERFORMED
+
+EXECUTION INPUT BINDING:
+NOT_ESTABLISHED
+
+HARNESS EXECUTION:
+NOT_EXECUTED
+
+RESULT:
+NOT_TESTED
+
+CONFORMANCE:
+NOT_ESTABLISHED

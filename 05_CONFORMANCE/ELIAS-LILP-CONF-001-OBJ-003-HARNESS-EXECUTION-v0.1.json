@@ -1,0 +1,77 @@
+﻿{
+    "RecordType":  "ELIAS_LILP_OBJ003_HARNESS_EXECUTION",
+    "RecordVersion":  "v0.1",
+    "RequirementId":  "LILP-REQ-OBJ-003",
+    "TestCaseId":  "LILP-TC-T02-007",
+    "VerificationMethodId":  "LILP-VM-OBJ-003-v0.1",
+    "HarnessBindingId":  "LILP-BIND-OBJ-003-v0.1",
+    "HarnessImplementationId":  "LILP-HI-OBJ-003-v0.1",
+    "ExecutionReadinessReview":  {
+                                     "Path":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-OBJ-003-EXECUTION-READINESS-REVIEW-v0.1.txt",
+                                     "SHA256":  "0A7A1FBAD5A425026B03C3293B0814F6C49B7D8B46871F5566483F0E3ECD5876"
+                                 },
+    "AuthorizedExecution":  {
+                                "ExecutionCountAuthorized":  1,
+                                "Process":  "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                                "ProcessFlags":  "-NoProfile -NonInteractive -ExecutionPolicy Bypass",
+                                "Invocation":  "\u0026 \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-HI-OBJ-003-v0.1.ps1\" -CandidatePath \"C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-OBJ-003-CONTROLLED-TEST-CANDIDATE-v0.1.json\""
+                            },
+    "Harness":  {
+                    "Path":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-HI-OBJ-003-v0.1.ps1",
+                    "SHA256BeforeExecution":  "570352A80D01E30FD3F082271E21B48A37DF95F3DF33FF9C07577D381DA26DFD",
+                    "SHA256AfterExecution":  "570352A80D01E30FD3F082271E21B48A37DF95F3DF33FF9C07577D381DA26DFD",
+                    "Unchanged":  true
+                },
+    "Candidate":  {
+                      "CandidateId":  "LILP-OBJ-003-CANDIDATE-v0.1",
+                      "CandidatePath":  "C:\\Users\\garys\\Documents\\ELIAS-LILP-STANDARD\\05_CONFORMANCE\\ELIAS-LILP-CONF-001-OBJ-003-CONTROLLED-TEST-CANDIDATE-v0.1.json",
+                      "SHA256BeforeExecution":  "B3C0CEDBEB3F496E969B46F3E8E70988B4E276EE4574900AD6FE25A1212287E3",
+                      "SHA256AfterExecution":  "B3C0CEDBEB3F496E969B46F3E8E70988B4E276EE4574900AD6FE25A1212287E3",
+                      "BytesBeforeExecution":  785,
+                      "BytesAfterExecution":  785,
+                      "Unchanged":  true
+                  },
+    "Execution":  {
+                      "ExecutionCountPerformed":  1,
+                      "ExecutionStartedUtc":  "2026-10-05T14:51:44.1189185+00:00",
+                      "ExecutionCompletedUtc":  "2026-10-05T14:51:44.6366482+00:00",
+                      "ProcessExitCode":  0,
+                      "Stdout":  "{\r\n    \"HarnessId\":  \"LILP-HI-OBJ-003-v0.1\",\r\n    \"HarnessVersion\":  \"v0.1\",\r\n    \"VerificationMethodId\":  \"LILP-VM-OBJ-003-v0.1\",\r\n    \"RequirementId\":  \"LILP-REQ-OBJ-003\",\r\n    \"TestCaseId\":  \"LILP-TC-T02-007\",\r\n    \"CandidatePath\":  \"C:\\\\Users\\\\garys\\\\Documents\\\\ELIAS-LILP-STANDARD\\\\05_CONFORMANCE\\\\ELIAS-LILP-CONF-001-OBJ-003-CONTROLLED-TEST-CANDIDATE-v0.1.json\",\r\n    \"CandidateSHA256\":  \"B3C0CEDBEB3F496E969B46F3E8E70988B4E276EE4574900AD6FE25A1212287E3\",\r\n    \"CandidateId\":  \"LILP-OBJ-003-CANDIDATE-v0.1\",\r\n    \"CandidateProvenance\":  \"CREATED_UNDER_OBJ-003_CANDIDATE_CONSTRUCTION_GOVERNANCE_v0.1\",\r\n    \"RequiredPredicateSet\":  [\r\n                                 \"P01_CANDIDATE_ID_PRESENT\",\r\n                                 \"P02_CANDIDATE_PROVENANCE_PRESENT\",\r\n                                 \"P03_GOVERNANCE_OBJECT_PRESENT\",\r\n                                 \"P04_OBJECT_IDENTITY_MATERIAL_PRESENT\",\r\n                                 \"P05_DECLARED_CONSEQUENTIAL_USE_PRESENT\",\r\n                                 \"P06_TEMPORAL_CONTEXT_PRESENT\",\r\n                                 \"P07_TEMPORAL_CONTEXT_KIND_EXPLICIT_AND_ALLOWED\",\r\n                                 \"P08_TEMPORAL_CONTEXT_VALUE_PRESENT\",\r\n                                 \"P09_TEMPORAL_CONTEXT_SOURCE_PRESENT\",\r\n                                 \"P10_NO_TEMPORAL_CONTEXT_INFERENCE_REQUIRED\"\r\n                             ],\r\n    \"PredicateObservations\":  [\r\n                                  {\r\n                                      \"Predicate\":  \"P01_CANDIDATE_ID_PRESENT\",\r\n                                      \"Satisfied\":  true,\r\n                                      \"Observed\":  \"LILP-OBJ-003-CANDIDATE-v0.1\",\r\n                                      \"Reason\":  \"CandidateId directly observed.\"\r\n                                  },\r\n                                  {\r\n                                      \"Predicate\":  \"P02_CANDIDATE_PROVENANCE_PRESENT\",\r\n                                      \"Satisfied\":  true,\r\n                                      \"Observed\":  \"CREATED_UNDER_OBJ-003_CANDIDATE_CONSTRUCTION_GOVERNANCE_v0.1\",\r\n                                      \"Reason\":  \"CandidateProvenance directly observed.\"\r\n                                  },\r\n                                  {\r\n                                      \"Predicate\":  \"P03_GOVERNANCE_OBJECT_PRESENT\",\r\n                                      \"Satisfied\":  true,\r\n                                      \"Observed\":  \"CONTROLLED_GOVERNANCE_OBJECT_FOR_LILP-REQ-OBJ-003\",\r\n                                      \"Reason\":  \"GovernanceObject directly observed.\"\r\n                                  },\r\n                                  {\r\n                                      \"Predicate\":  \"P04_OBJECT_IDENTITY_MATERIAL_PRESENT\",\r\n                                      \"Satisfied\":  true,\r\n                                      \"Observed\":  \"CandidateId=LILP-OBJ-003-CANDIDATE-v0.1;FixtureClass=CONTROLLED_TEST_FIXTURE\",\r\n                                      \"Reason\":  \"ObjectIdentityMaterial directly observed.\"\r\n                                  },\r\n                                  {\r\n                                      \"Predicate\":  \"P05_DECLARED_CONSEQUENTIAL_USE_PRESENT\",\r\n                                      \"Satisfied\":  true,\r\n                                      \"Observed\":  \"CONTROLLED_CONFORMANCE_EVALUATION_AS_IF_RELIED_UPON_FOR_CONSEQUENTIAL_GOVERNANCE_NO_EXTERNAL_ACTION\",\r\n                                      \"Reason\":  \"DeclaredConsequentialUse directly observed.\"\r\n                                  },\r\n                                  {\r\n                                      \"Predicate\":  \"P06_TEMPORAL_CONTEXT_PRESENT\",\r\n                                      \"Satisfied\":  true,\r\n                                      \"Observed\":  {\r\n                                                       \"Kind\":  \"TEMPORAL_STATE\",\r\n                                                       \"Value\":  \"OBJ-003_CONTROLLED_TEST_FIXTURE_DESIGNATED_BEFORE_CONSEQUENTIAL_RELIANCE\",\r\n                                                       \"Source\":  \"CONTROLLED_TEST_FIXTURE_DECLARATION\"\r\n                                                   },\r\n                                      \"Reason\":  \"TemporalContext object directly observed.\"\r\n                                  },\r\n                                  {\r\n                                      \"Predicate\":  \"P07_TEMPORAL_CONTEXT_KIND_EXPLICIT_AND_ALLOWED\",\r\n                                      \"Satisfied\":  true,\r\n                                      \"Observed\":  \"TEMPORAL_STATE\",\r\n                                      \"Reason\":  \"TemporalContext.Kind is explicit and allowed.\"\r\n                                  },\r\n                                  {\r\n                                      \"Predicate\":  \"P08_TEMPORAL_CONTEXT_VALUE_PRESENT\",\r\n                                      \"Satisfied\":  true,\r\n                                      \"Observed\":  \"OBJ-003_CONTROLLED_TEST_FIXTURE_DESIGNATED_BEFORE_CONSEQUENTIAL_RELIANCE\",\r\n                                      \"Reason\":  \"TemporalContext.Value directly observed as an explicit scalar.\"\r\n                                  },\r\n                                  {\r\n                                      \"Predicate\":  \"P09_TEMPORAL_CONTEXT_SOURCE_PRESENT\",\r\n                                      \"Satisfied\":  true,\r\n                                      \"Observed\":  \"CONTROLLED_TEST_FIXTURE_DECLARATION\",\r\n                                      \"Reason\":  \"TemporalContext.Source directly observed as an explicit scalar.\"\r\n                                  },\r\n                                  {\r\n                                      \"Predicate\":  \"P10_NO_TEMPORAL_CONTEXT_INFERENCE_REQUIRED\",\r\n                                      \"Satisfied\":  true,\r\n                                      \"Observed\":  \"CONTROLLED_TEST_FIXTURE_DECLARATION\",\r\n                                      \"Reason\":  \"Required temporal context is directly present and no prohibited inference source is required.\"\r\n                                  }\r\n                              ],\r\n    \"AbsentPredicates\":  [\r\n\r\n                         ],\r\n    \"AmbiguousPredicates\":  [\r\n\r\n                            ],\r\n    \"ContradictoryPredicates\":  [\r\n\r\n                                ],\r\n    \"Determination\":  \"ESTABLISHED\",\r\n    \"InspectionRecord\":  {\r\n                             \"ReadOnlyInspection\":  true,\r\n                             \"CandidateExists\":  true,\r\n                             \"JsonParseSucceeded\":  true,\r\n                             \"CandidateContentAuthorityOnly\":  true,\r\n                             \"TemporalContextDirectlyObserved\":  true,\r\n                             \"FilenameSemanticAuthorityUsed\":  false,\r\n                             \"FilesystemMetadataAuthorityUsed\":  false,\r\n                             \"SystemClockAuthorityUsed\":  false,\r\n                             \"ExternalLookupAuthorityUsed\":  false,\r\n                             \"InferenceSourcesUsed\":  [\r\n\r\n                                                      ],\r\n                             \"AllowedTemporalKinds\":  [\r\n                                                          \"CREATION_TIME\",\r\n                                                          \"APPLICABILITY_TIME\",\r\n                                                          \"TEMPORAL_STATE\"\r\n                                                      ],\r\n                             \"ProhibitedTemporalSources\":  [\r\n                                                               \"FILENAME\",\r\n                                                               \"PATH\",\r\n                                                               \"FILESYSTEM\",\r\n                                                               \"FILESYSTEM_TIMESTAMP\",\r\n                                                               \"SYSTEM_CLOCK\",\r\n                                                               \"CURRENT_SYSTEM_TIME\",\r\n                                                               \"EXTERNAL_LOOKUP\"\r\n                                                           ],\r\n                             \"DesignSHA256\":  \"279091F276F834F234EDF0BBD1E9044C2D11EA3476F82A80463DC01D6A510285\",\r\n                             \"ConstructionGovernanceSHA256\":  \"C3BD4869CB504B31940E79C7A20F4C2A300203D94A5E735B673E4E9B9E4B2DBA\",\r\n                             \"Finding\":  \"All required predicates directly established from designated candidate content.\"\r\n                         }\r\n}\r\n",
+                      "StdoutSHA256":  "BD1B66B65704F0280FC6A234253625762F9BEC816DB174A30A032C89A94A8365",
+                      "Stderr":  "",
+                      "StderrSHA256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+                  },
+    "HarnessOutputCapture":  {
+                                 "JsonParsed":  true,
+                                 "DeterminationCaptured":  true,
+                                 "RawHarnessDetermination":  "ESTABLISHED",
+                                 "ParseError":  null
+                             },
+    "PostExecutionIntegrity":  {
+                                   "ReadinessReviewUnchanged":  true,
+                                   "HarnessUnchanged":  true,
+                                   "CandidateUnchanged":  true
+                               },
+    "GovernanceState":  {
+                            "CandidateSelected":  true,
+                            "InputDesignationEstablished":  true,
+                            "ExecutionReadinessEstablished":  true,
+                            "HarnessInvoked":  true,
+                            "ExecutionPerformed":  true,
+                            "ResultDetermined":  false,
+                            "RequirementConformanceEstablished":  false,
+                            "CONF001":  "NOT_ESTABLISHED",
+                            "NextState":  "READY_FOR_OBJ-003_EXECUTION_RECORD_POST-EXECUTION_VERIFICATION"
+                        },
+    "ClaimBoundary":  [
+                          "This record captures exactly one authorized controlled harness execution.",
+                          "stdout is recorded without reinterpretation.",
+                          "stderr is recorded without reinterpretation.",
+                          "the child-process exit code is recorded without reinterpretation.",
+                          "RawHarnessDetermination, when captured, is copied from the harness stdout JSON Determination property without reclassification.",
+                          "Execution timestamps are receipt metadata only and are not candidate temporal authority.",
+                          "This execution record does not establish the governed test result.",
+                          "This execution record does not establish requirement conformance.",
+                          "CONF-001 remains NOT_ESTABLISHED."
+                      ]
+}

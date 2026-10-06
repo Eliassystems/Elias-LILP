@@ -1,0 +1,71 @@
+﻿{
+    "RecordType":  "ELIAS_LILP_OBJ-002_v0.2_BOUNDED_RESULT",
+    "RecordVersion":  "0.1",
+    "State":  "BOUNDED_RESULT_ESTABLISHED",
+    "RequirementId":  "LILP-REQ-OBJ-002",
+    "TestCaseId":  "LILP-TC-T02-009",
+    "VerificationMethodId":  "LILP-VM-OBJ-002-v0.1",
+    "Harness":  {
+                    "ImplementationId":  "LILP-HI-OBJ-002-v0.2",
+                    "SHA256":  "789D793F0E74AB8EF9E9A230FD1321166ADE94E314F224EFF3C68317237182F3",
+                    "BindingId":  "LILP-BIND-OBJ-002-v0.2"
+                },
+    "Execution":  {
+                      "Record":  "ELIAS-LILP-CONF-001-OBJ-002-v0.2-HARNESS-EXECUTION-v0.1.json",
+                      "RecordSHA256":  "768D6E5BF86B5D9FC5384AFE04DC2898320CF61CE991A210FAACDCAA1F9F58F2",
+                      "AuthorizedExecutionCount":  1,
+                      "ExecutionCountConsumed":  1,
+                      "ExitCode":  0,
+                      "StderrEmpty":  true,
+                      "HarnessRerun":  false,
+                      "ExecutionAuthorityReset":  false
+                  },
+    "Inputs":  {
+                   "Candidate":  "ELIAS-LILP-CONF-001-HARNESS-IMPLEMENTATION-REGISTER-v0.5.csv",
+                   "CandidateSHA256":  "F1A44C84CC63C175D26A5383688AAC69D2CBEE8630FE4B4516503334D0A82398",
+                   "CandidateVersion":  "0.5",
+                   "ComparisonVersion":  "0.4",
+                   "ComparisonRole":  "EXACT_COMPARISON_INPUT_ONLY"
+               },
+    "Observations":  {
+                         "HarnessDetermination":  "ESTABLISHED",
+                         "ObservedVersion":  "0.5",
+                         "ExplicitPresent":  true,
+                         "NonEmpty":  true,
+                         "Unambiguous":  true,
+                         "ComparisonVersions":  [
+                                                    "0.4"
+                                                ],
+                         "ComparisonValuesValid":  true,
+                         "DistinctFromComparisons":  true
+                     },
+    "Result":  {
+                   "Classification":  "BOUNDED_PASS",
+                   "ResultStatus":  "ESTABLISHED",
+                   "Claim":  "The single authorized OBJ-002 v0.2 execution established explicit, non-empty, unambiguous version identity 0.5 and distinguished it from governed comparison version 0.4.",
+                   "Scope":  "OBJ-002_v0.2_EXECUTION_CHAIN_ONLY",
+                   "CONF001":  "NOT_ESTABLISHED"
+               },
+    "ReviewChain":  {
+                        "PriorControlledResultReview":  "ELIAS-LILP-CONF-001-OBJ-002-v0.2-CONTROLLED-RESULT-REVIEW-v0.1.txt",
+                        "PriorControlledResultReviewSHA256":  "A16803796B2C10340BF3CDBB71E7B46E62116543D33365BF64C8B8014C06FF7A",
+                        "PriorHoldBoundaryPreserved":  true,
+                        "ReconciliationReview":  "ELIAS-LILP-CONF-001-OBJ-002-v0.2-RESULT-RECONCILIATION-REVIEW-v0.1.txt",
+                        "ReconciliationReviewSHA256":  "92F61BC8320A0587AA4440FE60D700B3FB2034A96B8ABEC08BBD76C5045E30C6",
+                        "ReconciliationBasis":  "PRESERVED_EXECUTION_EVIDENCE_ONLY"
+                    },
+    "HistoricalBoundary":  {
+                               "HistoricalBoundedResult":  "ELIAS-LILP-CONF-001-OBJ-002-BOUNDED-RESULT-v0.1.json",
+                               "HistoricalBoundedResultSHA256":  "2157477107BD1F6EEA6DCD39D236C35272361AB72225C50FB9D1DBA148099F4D",
+                               "HistoricalClosureSHA256":  "7EA3D035086658EC7A29928CDB66FAD7C331546168D5482F281060C744F101E2",
+                               "HistoricalState":  "CLOSED_BOUNDED_FAIL",
+                               "HistoricalResultReused":  false,
+                               "HistoricalFailReclassified":  false,
+                               "RetrospectiveRepair":  false
+                           },
+    "RegisterBoundary":  {
+                             "RegisterUpdateAuthorized":  false,
+                             "RegisterUpdated":  false
+                         },
+    "NextState":  "READY_FOR_CONTROLLED_OBJ-002_v0.2_TEST_RECEIPT_CONSTRUCTION"
+}

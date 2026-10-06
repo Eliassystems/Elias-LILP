@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:elias:lilp:schema:correction-deficiency:v0.1",
+  "title": "ELIAS LILP Correction and Deficiency Object v0.1",
+  "description": "Working reference structural schema for preserving a discovered deficiency and any later correction without erasing the predecessor record.",
+  "type": "object",
+  "x-elias-document-id": "ELIAS-LILP-SCHEMA-001",
+  "x-elias-object": "CORRECTION_DEFICIENCY",
+  "x-elias-schema-version": "v0.1",
+  "x-elias-ancestors": {
+    "std001_sha256": "076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537",
+    "man001_sha256": "429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2",
+    "lex001_sha256": "144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488"
+  },
+  "x-elias-authority-boundary": "Correction does not erase predecessor failure. No retrospective repair.",
+  "properties": {
+    "object_type": {
+      "const": "CORRECTION_DEFICIENCY"
+    },
+    "schema_id": {
+      "const": "urn:elias:lilp:schema:correction-deficiency:v0.1"
+    },
+    "schema_version": {
+      "const": "v0.1"
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_class": {
+      "enum": [
+        "DEFICIENCY",
+        "CORRECTION",
+        "INCIDENT",
+        "SUCCESSOR_CORRECTION"
+      ]
+    },
+    "predecessor_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "predecessor_hash": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "discovered_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "deficiency_description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "effect_on_prior_claim": {
+      "enum": [
+        "NONE",
+        "LIMITED",
+        "HOLD",
+        "INVALIDATES_BOUNDED_CLAIM",
+        "NOT_ESTABLISHED"
+      ]
+    },
+    "correction_description": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "successor_reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidence_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "candidate_mutated": {
+      "type": "boolean"
+    },
+    "claim_ceiling": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "canonicalisation_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hash_algorithm": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_hash": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "record_id",
+    "record_class",
+    "predecessor_reference",
+    "predecessor_hash",
+    "discovered_at",
+    "deficiency_description",
+    "effect_on_prior_claim",
+    "correction_description",
+    "successor_reference",
+    "evidence_references",
+    "candidate_mutated",
+    "claim_ceiling",
+    "provenance"
+  ],
+  "additionalProperties": true
+}

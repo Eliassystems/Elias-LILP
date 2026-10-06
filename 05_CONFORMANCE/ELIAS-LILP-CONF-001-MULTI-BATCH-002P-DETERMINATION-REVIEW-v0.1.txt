@@ -1,0 +1,28 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002P v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 124
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 126
+
+TRUE UNRESOLVED BEFORE BATCH 002P: 17
+TRUE UNRESOLVED AFTER BATCH 002P: 15
+
+AUTH-002:
+NEW_TEST_REQUIRED -> LILP-TC-T03-007 RESERVED
+Distinct obligation: an Authority Object identifies the specific subject to whom or to which its authority applies.
+
+AUTH-003:
+NEW_TEST_REQUIRED -> LILP-TC-T03-008 RESERVED
+Distinct obligation: authority class itself is explicitly represented rather than merely appearing as possible evidence for general authority validity.
+
+T03-007 is reserved only.
+T03-008 is reserved only.
+T03-009 remains unreserved.
+Test register remains at 137 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

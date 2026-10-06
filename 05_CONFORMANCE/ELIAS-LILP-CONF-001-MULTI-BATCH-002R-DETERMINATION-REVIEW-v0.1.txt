@@ -1,0 +1,28 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002R v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 128
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 130
+
+TRUE UNRESOLVED BEFORE BATCH 002R: 13
+TRUE UNRESOLVED AFTER BATCH 002R: 11
+
+DEV-008:
+NEW_TEST_REQUIRED -> LILP-TC-T13-008 RESERVED
+Distinct obligation: material deviations are included specifically in the conformance evidence package.
+
+LIFE-001:
+COVERED_BY_EXISTING -> LILP-TC-T14-001
+T14-001 directly tests immutable identity/content of a frozen normative artifact and fails material mutation.
+
+T13-008 is reserved only.
+T13-009 remains unreserved.
+T14-008 remains unreserved.
+Test register remains at 141 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

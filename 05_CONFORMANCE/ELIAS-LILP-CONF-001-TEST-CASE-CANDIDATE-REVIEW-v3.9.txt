@@ -1,0 +1,30 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v3.9
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 137
+NEW TEST DEFINITIONS: 2
+SUCCESSOR TEST CASES: 139
+
+NEW TEST: LILP-TC-T03-007
+TITLE: Authority Object explicitly identifies its authority subject
+RUN CLASS: CONTROL
+HUMAN BASIS: LILP-REQ-AUTH-002 / Batch 002P
+
+NEW TEST: LILP-TC-T03-008
+TITLE: Authority class is explicitly represented
+RUN CLASS: CONTROL
+HUMAN BASIS: LILP-REQ-AUTH-003 / Batch 002P
+
+T03-009 remains unreserved.
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+T03-007 establishes explicit binding between an Authority Object and its authority subject.
+T03-008 establishes explicit authority-class representation and prevents authority-class inference or silent escalation.
+Definition existence does not establish execution or conformance.
+
+LOCK IT. LOG IT. PROVE IT.

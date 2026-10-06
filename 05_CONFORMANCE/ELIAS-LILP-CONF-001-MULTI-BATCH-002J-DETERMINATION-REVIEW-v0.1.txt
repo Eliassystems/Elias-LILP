@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002J v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 112
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 114
+
+TRUE UNRESOLVED BEFORE BATCH 002J: 23
+TRUE UNRESOLVED AFTER BATCH 002J: 21
+
+CONF-003:
+COVERED_BY_EXISTING -> LILP-TC-T16-013
+
+WORD-006:
+COVERED_BY_EXISTING -> LILP-TC-T16-013
+The general exact-standard-version claim rule is stronger than the narrower conditional public-claim wording requirement.
+
+NO NEW TEST REQUIRED.
+T16-026 remains unreserved.
+T16-027 remains unreserved.
+Test register remains at 131 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

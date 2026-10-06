@@ -1,0 +1,67 @@
+﻿{
+    "RecordType":  "ELIAS_LILP_OBJ-003_v0.1_CLOSURE_RECEIPT",
+    "RecordVersion":  "0.1",
+    "ClosureState":  "CLOSED_BOUNDED_PASS",
+    "Scope":  "OBJ-003_v0.1_EXECUTION_CHAIN_ONLY",
+    "RequirementId":  "LILP-REQ-OBJ-003",
+    "TestCaseId":  "LILP-TC-T02-007",
+    "VerificationMethodId":  "LILP-VM-OBJ-003-v0.1",
+    "Harness":  {
+                    "ImplementationId":  "LILP-HI-OBJ-003-v0.1",
+                    "SHA256":  "570352A80D01E30FD3F082271E21B48A37DF95F3DF33FF9C07577D381DA26DFD",
+                    "BindingId":  "LILP-BIND-OBJ-003-v0.1"
+                },
+    "Execution":  {
+                      "Record":  "ELIAS-LILP-CONF-001-OBJ-003-HARNESS-EXECUTION-v0.1.json",
+                      "SHA256":  "C354F88376110E9C7AC4927018C05128D9D3D53F2BAABC40F07614A242993EEE",
+                      "AuthorizedExecutionCount":  1,
+                      "ExecutionCountConsumed":  1,
+                      "HarnessRerun":  false,
+                      "ExecutionAuthorityReset":  false
+                  },
+    "Result":  {
+                   "Artifact":  "ELIAS-LILP-CONF-001-OBJ-003-BOUNDED-RESULT-v0.1.txt",
+                   "SHA256":  "CE4293E649B2E093E042C9F6EA213FB25A19E7C20890B35F51162F58172CDDA9",
+                   "Bytes":  3092,
+                   "Classification":  "BOUNDED_PASS",
+                   "Status":  "ESTABLISHED",
+                   "ObservedVersion":  "NOT_APPLICABLE",
+                   "ComparisonVersion":  "NOT_APPLICABLE"
+               },
+    "TestReceipt":  {
+                        "Artifact":  "ELIAS-LILP-CONF-001-OBJ-003-TEST-RECEIPT-v0.1.json",
+                        "SHA256":  "3242173FCC6229BDF2FBCD0FAA51CE7653860B8329DBB11694FC1FB982181D60",
+                        "Bytes":  3829,
+                        "State":  "TEST_RECEIPT_ESTABLISHED"
+                    },
+    "Governance":  {
+                       "ClosureGovernanceReview":  "ELIAS-LILP-CONF-001-OBJ-003-CLOSURE-GOVERNANCE-REVIEW-v0.1.txt",
+                       "ClosureGovernanceReviewSHA256":  "D95D0C99DA3CE7D6BA9F896B4896E299573723EA1D9D5CFE3A94D1BC8D36BE95",
+                       "ReconciliationReview":  "ELIAS-LILP-CONF-001-OBJ-003-EXECUTION-RECORD-POST-EXECUTION-VERIFICATION-v0.1.txt",
+                       "ReconciliationReviewSHA256":  "563A19FF15B3DEF80CCEF9A78BF22E6FAF6D6E4CC552226F5572D6711406C017",
+                       "PriorControlledResultReview":  "ELIAS-LILP-CONF-001-OBJ-003-BOUNDED-RESULT-v0.1.txt",
+                       "PriorControlledResultReviewSHA256":  "CE4293E649B2E093E042C9F6EA213FB25A19E7C20890B35F51162F58172CDDA9",
+                       "PriorHoldBoundaryPreserved":  false,
+                       "ReconciliationBasis":  "PRESERVED_EXECUTION_EVIDENCE_ONLY_NO_PRIOR_HOLD_BOUNDARY"
+                   },
+    "HistoricalBoundary":  {
+                               "HistoricalBoundedResult":  "NONE",
+                               "HistoricalBoundedResultSHA256":  "NOT_APPLICABLE",
+                               "HistoricalClosureReceipt":  "NONE",
+                               "HistoricalClosureReceiptSHA256":  "NOT_APPLICABLE",
+                               "HistoricalClosureState":  "NO_PRIOR_OBJ-003_CLOSURE_CHAIN",
+                               "HistoricalChainReopened":  false,
+                               "HistoricalResultReused":  false,
+                               "HistoricalFailReclassified":  false,
+                               "RetrospectiveRepair":  false
+                           },
+    "RegisterBoundary":  {
+                             "RegisterUpdateAuthorized":  false,
+                             "RegisterUpdated":  false
+                         },
+    "Conformance":  {
+                        "CONF001":  "NOT_ESTABLISHED"
+                    },
+    "ClaimCeiling":  "This receipt closes only the exact OBJ-003 v0.1 governed execution chain as CLOSED_BOUNDED_PASS. It does not generalize beyond the designated controlled test fixture, does not update any implementation, binding, test-case, verification-method, result or conformance register, does not establish universal LILP-REQ-OBJ-003 conformance, and does not establish CONF-001.",
+    "NextState":  "READY_FOR_CONTROLLED_OBJ-003_v0.1_POST_CLOSURE_REGISTER_GOVERNANCE_REVIEW"
+}

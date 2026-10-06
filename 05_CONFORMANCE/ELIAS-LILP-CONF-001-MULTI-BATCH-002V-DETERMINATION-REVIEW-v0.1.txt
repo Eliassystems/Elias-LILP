@@ -1,0 +1,28 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002V v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 136
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 138
+
+TRUE UNRESOLVED BEFORE BATCH 002V: 10
+TRUE UNRESOLVED AFTER BATCH 002V: 8
+
+MATR-003:
+COVERED_BY_EXISTING -> LILP-TC-T16-009
+T16-009 requires exactly one permitted status for every applicable mandatory requirement.
+
+FREEZE-002:
+NEW_TEST_REQUIRED -> LILP-TC-T14-009 RESERVED
+Distinct obligation: record the candidate standard byte length.
+
+T14-009 is reserved only.
+T14-010 remains unreserved.
+T16-029 remains unreserved.
+Test register remains at 146 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

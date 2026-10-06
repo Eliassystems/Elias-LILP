@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:elias:lilp:schema:authority:v0.1",
+  "title": "ELIAS LILP Authority Object v0.1",
+  "description": "Working reference structural schema for an ELIAS LILP Authority Object. Authentication, credentials or technical capability do not by themselves establish governance authority.",
+  "type": "object",
+  "x-elias-document-id": "ELIAS-LILP-SCHEMA-001",
+  "x-elias-object": "AUTHORITY",
+  "x-elias-schema-version": "v0.1",
+  "x-elias-ancestors": {
+    "std001_sha256": "076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537",
+    "man001_sha256": "429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2",
+    "lex001_sha256": "144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488"
+  },
+  "x-elias-authority-boundary": "Capability does not equal authority. The frozen normative standard controls.",
+  "properties": {
+    "object_type": {
+      "const": "AUTHORITY"
+    },
+    "schema_id": {
+      "const": "urn:elias:lilp:schema:authority:v0.1"
+    },
+    "schema_version": {
+      "const": "v0.1"
+    },
+    "authority_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "issuer_or_source": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": true
+        }
+      ]
+    },
+    "subject": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": true
+        }
+      ]
+    },
+    "authority_class": {
+      "enum": [
+        "OBSERVE",
+        "INTERPRET",
+        "PROPOSE",
+        "DETERMINE",
+        "GOVERN",
+        "EXECUTE",
+        "WITNESS"
+      ]
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "jurisdiction": {
+      "type": "string",
+      "minLength": 1
+    },
+    "valid_from": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "valid_until": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "status": {
+      "enum": [
+        "ACTIVE",
+        "EXPIRED",
+        "REVOKED",
+        "SUSPENDED",
+        "NOT_ESTABLISHED"
+      ]
+    },
+    "conditions": {
+      "type": "array",
+      "items": {}
+    },
+    "revocation_reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidence_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "canonicalisation_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hash_algorithm": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authority_hash": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Digest identity for the authority object under the declared procedure. Digest identity does not establish that the authority is genuine or currently valid."
+    }
+  },
+  "required": [
+    "authority_id",
+    "issuer_or_source",
+    "subject",
+    "authority_class",
+    "scope",
+    "jurisdiction",
+    "valid_from",
+    "valid_until",
+    "status",
+    "conditions",
+    "revocation_reference",
+    "evidence_references",
+    "provenance",
+    "hash_algorithm",
+    "authority_hash"
+  ],
+  "additionalProperties": true
+}

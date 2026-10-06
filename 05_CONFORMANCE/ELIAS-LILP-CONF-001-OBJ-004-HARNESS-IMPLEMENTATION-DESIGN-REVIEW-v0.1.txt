@@ -1,0 +1,303 @@
+﻿ELIAS LILP CONF-001
+OBJ-004 HARNESS IMPLEMENTATION DESIGN REVIEW v0.1
+
+DETERMINATION:
+PASS
+
+STATE:
+OBJ-004_HARNESS_IMPLEMENTATION_DESIGN_ESTABLISHED_v0.1
+
+CLASSIFICATION:
+DETERMINISTIC_READ_ONLY_PREDECESSOR_RELATIONSHIP_HARNESS_DESIGN_ESTABLISHED_WITH_FAIL_CLOSED_UNKNOWN_PREDECESSOR_STATE
+
+NEXT AUTHORITY:
+AUTHORIZED_FOR_SEPARATE_OBJ-004_HARNESS_IMPLEMENTATION_DESIGN_CONTROLLED_REVIEW
+
+HARNESS IMPLEMENTATION GOVERNANCE SHA256:
+A89740DB197083D7B344D19F68A40CA4BB998D6FA251C85C13301E3D267C8051
+
+OBJ-003 HARNESS DESIGN STRUCTURAL PRECEDENT:
+ELIAS-LILP-CONF-001-OBJ-003-HARNESS-IMPLEMENTATION-DESIGN-REVIEW-v0.1.txt
+
+OBJ-003 HARNESS DESIGN STRUCTURAL PRECEDENT SHA256:
+279091F276F834F234EDF0BBD1E9044C2D11EA3476F82A80463DC01D6A510285
+
+OBJ-003 PRECEDENT AUTHORITY:
+STRUCTURAL_REFERENCE_ONLY_NO_SEMANTIC_COPY
+
+REQUIREMENT ID:
+LILP-REQ-OBJ-004
+
+TEST CASE ID:
+LILP-TC-T02-012
+
+VERIFICATION METHOD ID:
+LILP-VM-OBJ-004-v0.1
+
+HARNESS ID:
+LILP-HI-OBJ-004-v0.1
+
+HARNESS FILENAME:
+ELIAS-LILP-HI-OBJ-004-v0.1.ps1
+
+HARNESS LANGUAGE:
+PowerShell
+
+HARNESS INVOCATION PARAMETER:
+-CandidatePath
+
+CANDIDATE REPRESENTATION:
+JSON_CONTENT_PARSED_FROM_DESIGNATED_CANDIDATE_PATH_NO_SEMANTIC_USE_OF_FILENAME_PATH_CHRONOLOGY_OR_FILESYSTEM_METADATA
+
+HARNESS MODE:
+DETERMINISTIC_READ_ONLY_INSPECTION
+
+CANDIDATE MUTATION AUTHORITY:
+NONE
+
+SYSTEM CLOCK AUTHORITY:
+NONE
+
+FILESYSTEM METADATA AUTHORITY:
+NONE
+
+FILENAME SEMANTIC AUTHORITY:
+NONE
+
+PATH SEMANTIC AUTHORITY:
+NONE
+
+CHRONOLOGY INFERENCE AUTHORITY:
+NONE
+
+SEMANTIC SIMILARITY AUTHORITY:
+NONE
+
+EXTERNAL LOOKUP AUTHORITY:
+NONE
+
+RETROSPECTIVE RECONSTRUCTION AUTHORITY:
+NONE
+
+PREDECESSOR EXISTENCE STATUS SURFACE:
+PredecessorExistence.Status
+
+PREDECESSOR EXISTENCE SOURCE SURFACE:
+PredecessorExistence.Source
+
+ALLOWED PREDECESSOR EXISTENCE STATES:
+EXISTS | NONE | UNRESOLVED
+
+PREDECESSOR RELATIONSHIP REPRESENTATION SURFACE:
+PredecessorRelationship.Identifier | PredecessorRelationship.Reference | PredecessorRelationship.EquivalentRepresentation
+
+PREDECESSOR RELATIONSHIP SOURCE SURFACE:
+PredecessorRelationship.Source
+
+RELATIONSHIP ATTRIBUTION SURFACE:
+PredecessorRelationship.AttributedObjectId
+
+GOVERNED OBJECT ID SURFACE:
+GovernanceObject.ObjectId
+
+PREDECESSOR EXISTS RULE:
+When PredecessorExistence.Status is EXISTS, at least one explicit predecessor Identifier, Reference or EquivalentRepresentation must be present, a non-empty relationship Source must be present, and AttributedObjectId must equal the inspected GovernanceObject.ObjectId.
+
+NO PREDECESSOR RULE:
+When PredecessorExistence.Status is NONE, the NONE state and its Source must be explicit candidate content; mere absence of predecessor relationship evidence SHALL NOT establish NONE.
+
+UNRESOLVED PREDECESSOR RULE:
+When PredecessorExistence.Status is UNRESOLVED, or predecessor existence cannot be directly established from candidate content, the bounded determination SHALL be NOT_ESTABLISHED.
+
+CONTRADICTION RULE:
+A declared NONE state accompanied by explicit predecessor relationship evidence is contradictory and SHALL produce NOT_ESTABLISHED.
+
+ATTRIBUTION RULE:
+Where a predecessor relationship is required, it must be directly attributable to the inspected governed object and may not be attributed by filename, chronology, semantic similarity or unstated assumption.
+
+NO-INFERENCE RULE:
+The harness SHALL NOT derive predecessor existence, predecessor identity or predecessor relationship from filename, path, filesystem metadata, chronology, semantic similarity, system time, external lookup, unrelated fields, unstated assumptions or retrospective reconstruction.
+
+INSPECTION RECORD RULE:
+The harness shall generate the inspection record only from directly parsed candidate content and predicate outcomes; it shall not require or consume a pre-existing PASS or ESTABLISHED claim.
+
+PREDICATE COUNT:
+12
+
+PREDICATE:
+P01_CANDIDATE_ID_PRESENT
+PREDICATE:
+P02_CANDIDATE_PROVENANCE_PRESENT
+PREDICATE:
+P03_GOVERNANCE_OBJECT_PRESENT
+PREDICATE:
+P04_GOVERNANCE_OBJECT_ID_PRESENT
+PREDICATE:
+P05_OBJECT_IDENTITY_MATERIAL_PRESENT
+PREDICATE:
+P06_LIFECYCLE_CONTEXT_PRESENT
+PREDICATE:
+P07_PREDECESSOR_EXISTENCE_STATE_PRESENT
+PREDICATE:
+P08_PREDECESSOR_EXISTENCE_STATE_EXPLICIT_AND_ALLOWED
+PREDICATE:
+P09_PREDECESSOR_EXISTENCE_SOURCE_PRESENT
+PREDICATE:
+P10_REQUIRED_PREDECESSOR_RELATIONSHIP_REPRESENTATION_PRESENT_WHEN_EXISTS
+PREDICATE:
+P11_PREDECESSOR_RELATIONSHIP_ATTRIBUTABLE_AND_NON_CONTRADICTORY
+PREDICATE:
+P12_NO_PREDECESSOR_INFERENCE_OR_RETROSPECTIVE_RECONSTRUCTION_REQUIRED
+
+PASS LOGIC:
+ESTABLISHED only when P01 through P12 are directly satisfied and either: (A) PredecessorExistence.Status is NONE with an explicit non-empty Source and no contradictory predecessor relationship evidence; or (B) PredecessorExistence.Status is EXISTS and the required explicit attributable predecessor relationship representation and Source are directly present.
+
+FAIL LOGIC:
+NOT_ESTABLISHED when any required predicate is absent, malformed, ambiguous, contradictory or requires inference; when predecessor existence is UNRESOLVED; when predecessor existence is not directly supportable from candidate content; when EXISTS lacks explicit attributable relationship representation; or when NONE is established only from absence.
+
+DETERMINATION RULE:
+Only ESTABLISHED or NOT_ESTABLISHED may be emitted as the bounded verification determination.
+
+REQUIRED OUTPUT FIELDS:
+HarnessId | HarnessVersion | VerificationMethodId | RequirementId | TestCaseId | CandidatePath | CandidateSHA256 | CandidateId | CandidateProvenance | GovernanceObjectId | PredecessorExistenceStatus | PredecessorExistenceSource | PredecessorRelationshipRepresentation | PredecessorRelationshipSource | RelationshipAttributedObjectId | RequiredPredicateSet | PredicateObservations | AbsentPredicates | AmbiguousPredicates | ContradictoryPredicates | Determination | InspectionRecord
+
+HARNESS ID SELECTED:
+TRUE
+
+HARNESS FILENAME SELECTED:
+TRUE
+
+HARNESS LANGUAGE SELECTED:
+TRUE
+
+HARNESS INPUT CONTRACT DESIGNED:
+TRUE
+
+PREDECESSOR EXISTENCE CONTRACT DESIGNED:
+TRUE
+
+PREDECESSOR RELATIONSHIP CONTRACT DESIGNED:
+TRUE
+
+HARNESS PREDICATE SET DESIGNED:
+TRUE
+
+HARNESS OUTPUT CONTRACT DESIGNED:
+TRUE
+
+UNKNOWN PREDECESSOR STATE FAIL-CLOSED CONTROL DESIGNED:
+TRUE
+
+NO-INFERENCE CONTROLS DESIGNED:
+TRUE
+
+DESIGN CONTROLLED-REVIEWED:
+FALSE
+
+HARNESS IMPLEMENTATION CONSTRUCTION GOVERNANCE AUTHORIZED:
+FALSE
+
+HARNESS IMPLEMENTATION CONSTRUCTION AUTHORIZED:
+FALSE
+
+HARNESS IMPLEMENTATION CONSTRUCTED:
+FALSE
+
+HARNESS IMPLEMENTATION ESTABLISHED:
+FALSE
+
+HARNESS BINDING ID SELECTED:
+FALSE
+
+HARNESS BINDING ESTABLISHED:
+FALSE
+
+IMPLEMENTATION REGISTER MODIFICATION AUTHORIZED:
+FALSE
+
+VM REGISTER MODIFICATION AUTHORIZED:
+FALSE
+
+REQUIREMENT MATRIX MODIFICATION AUTHORIZED:
+FALSE
+
+TEST-CASE REGISTER MODIFICATION AUTHORIZED:
+FALSE
+
+EXECUTION AUTHORIZED:
+FALSE
+
+EXECUTION PERFORMED:
+FALSE
+
+RESULT DETERMINED:
+FALSE
+
+REQUIREMENT CONFORMANCE ESTABLISHED:
+FALSE
+
+CONF-001:
+NOT_ESTABLISHED
+
+DESIGN BOUNDARY:
+This design defines one forward OBJ-004 harness implementation shape only.
+The harness identity, filename, language and invocation parameter are selected by this design but no executable artifact is created.
+The harness will inspect only the designated candidate content and its SHA-256 identity.
+The harness may not derive governance meaning from filename, path, filesystem metadata, chronology, semantic similarity, system clock, external information, unstated assumption or retrospective reconstruction.
+Predecessor existence is an explicit governed inspection state and must not be inferred from the absence of predecessor relationship evidence.
+UNRESOLVED predecessor existence is an admissible evidence state but produces the bounded verification determination NOT_ESTABLISHED.
+Where predecessor existence is explicitly NONE, the NONE assertion must itself have an explicit source and must not conflict with explicit predecessor relationship evidence.
+Where predecessor existence is explicitly EXISTS, the candidate must explicitly represent the predecessor relationship and directly attribute that representation to the inspected governed object.
+The harness will produce structured inspection evidence to standard output and will not mutate the designated candidate.
+The implementation itself is not constructed by this design review.
+No implementation-register update is authorized.
+No harness binding is established.
+No execution is authorized.
+No result is determined.
+No requirement conformance is established.
+CONF-001 remains NOT_ESTABLISHED.
+
+BOUND TEST RECORD PRESERVED:
+TEST_FIELD = TestCaseId | VALUE = LILP-TC-T02-012
+TEST_FIELD = TestFamily | VALUE = T02
+TEST_FIELD = TestFamilyName | VALUE = Identity Continuity
+TEST_FIELD = RunClass | VALUE = CONTROL
+TEST_FIELD = Title | VALUE = Object predecessor relationship is explicitly representable
+TEST_FIELD = Objective | VALUE = Establish that where a governed object has a predecessor, the predecessor relationship can be explicitly represented and attributed to the inspected object without inference.
+TEST_FIELD = Preconditions | VALUE = A governed object is under inspection and either a predecessor is declared, predecessor evidence is available, or the object's lifecycle context makes predecessor existence materially relevant to identity continuity.
+TEST_FIELD = Stimulus | VALUE = Inspect the governed object's identity and lifecycle material and determine whether any predecessor relationship that exists is explicitly represented through an attributable predecessor identifier, reference or equivalent governed relationship representation.
+TEST_FIELD = ExpectedSystemBehaviour | VALUE = Where the inspected object has a predecessor, the object or its governed identity material explicitly represents the predecessor relationship in a form attributable to the inspected object; the relationship is not established solely through filename inference, chronology, similarity, unstated assumption or retrospective reconstruction.
+TEST_FIELD = RequiredEvidence | VALUE = Governed object identity; object lifecycle or lineage material; predecessor identifier, reference or equivalent explicit relationship representation where a predecessor exists; provenance sufficient to attribute that representation to the inspected object; inspection record.
+TEST_FIELD = FailureOracle | VALUE = FAIL if a predecessor exists but the predecessor relationship is absent, ambiguous, unattributable, or can be established only through filename inference, chronology, semantic similarity, unstated assumption or retrospective reconstruction.
+TEST_FIELD = RequirementIds | VALUE = <EMPTY>
+TEST_FIELD = RequirementMappingStatus | VALUE = NOT_ESTABLISHED
+TEST_FIELD = HarnessBinding | VALUE = <EMPTY>
+TEST_FIELD = HarnessBindingStatus | VALUE = NOT_ESTABLISHED
+TEST_FIELD = ExecutionStatus | VALUE = NOT_EXECUTED
+TEST_FIELD = ResultStatus | VALUE = NOT_TESTED
+TEST_FIELD = DefinitionStatus | VALUE = CANDIDATE_ABSTRACT_EXECUTABLE_TEST_v4.16
+TEST_FIELD = Notes | VALUE = Forward OBJ-004 T02 test-case definition design derived only from LILP-REQ-OBJ-004, the governed semantic source, the controlled T02 family assignment, and the evidence-reconciliation authority. Definition design does not establish requirement mapping, register construction, verification method, harness binding, execution, result, requirement conformance or CONF-001 conformance.
+
+BOUND VERIFICATION METHOD RECORD PRESERVED:
+VM_FIELD = Ordinal | VALUE = 8
+VM_FIELD = VerificationMethodId | VALUE = LILP-VM-OBJ-004-v0.1
+VM_FIELD = RequirementId | VALUE = LILP-REQ-OBJ-004
+VM_FIELD = TestCaseId | VALUE = LILP-TC-T02-012
+VM_FIELD = MethodTitle | VALUE = OBJ-004 explicit predecessor-relationship verification
+VM_FIELD = MethodClass | VALUE = DETERMINISTIC_READ_ONLY_PREDECESSOR_RELATIONSHIP_INSPECTION
+VM_FIELD = Inputs | VALUE = Designated governed object evidence; LILP-REQ-OBJ-004; bound explicit test LILP-TC-T02-012; governed object identity; lifecycle or lineage material relevant to predecessor existence; explicit predecessor identifier, reference or equivalent governed predecessor-relationship representation where a predecessor exists; provenance sufficient to attribute that representation to the inspected object.
+VM_FIELD = Procedure | VALUE = Perform deterministic read-only inspection of the designated governed object evidence. Bind the inspection to LILP-REQ-OBJ-004 and LILP-TC-T02-012. Inspect governed identity, lifecycle or lineage material to determine whether a predecessor is explicitly evidenced. Where a predecessor exists, inspect whether the predecessor relationship is explicitly represented through an attributable predecessor identifier, reference or equivalent governed relationship representation. Record missing, ambiguous, contradictory or unattributable relationship evidence. Do not establish predecessor existence, identity or relationship through filename inference, chronology, semantic similarity, unstated assumption or retrospective reconstruction. Preserve the inspected object identity, evidence, observations, determination and provenance.
+VM_FIELD = PassCondition | VALUE = ESTABLISHED only when, where the inspected governed object has a predecessor, the predecessor relationship is explicitly represented in a form attributable to the inspected object through an explicit predecessor identifier, reference or equivalent governed relationship representation, without filename inference, chronology, semantic similarity, unstated assumption or retrospective reconstruction.
+VM_FIELD = FailCondition | VALUE = NOT_ESTABLISHED when a predecessor exists but the predecessor relationship is absent, ambiguous, contradictory, unattributable, not directly observable under the designated method, or requires filename inference, chronology, semantic similarity, unstated assumption or retrospective reconstruction.
+VM_FIELD = EvidenceOutput | VALUE = VerificationMethodId; RequirementId; bound TestCaseId; inspected governed object identity; designated evidence provenance; predecessor-existence observation; observed predecessor identifier, reference or equivalent relationship representation where present; attribution evidence; absent, ambiguous, contradictory or unattributable findings where present; bounded determination; inspection record.
+VM_FIELD = MethodStatus | VALUE = VERIFICATION_METHOD_ESTABLISHED_v0.1
+VM_FIELD = HarnessBindingId | VALUE = <EMPTY>
+VM_FIELD = HarnessBindingStatus | VALUE = NOT_ESTABLISHED
+VM_FIELD = ExecutionStatus | VALUE = NOT_EXECUTED
+VM_FIELD = ResultStatus | VALUE = NOT_TESTED
+VM_FIELD = Notes | VALUE = Forward verification-method semantic proposal for LILP-REQ-OBJ-004 bound to verified LILP-TC-T02-012. Ordinal and final MethodStatus remain intentionally NOT_YET_ESTABLISHED pending separate lifecycle and controlled review. Proposal establishment does not construct a VM register row or establish requirement-matrix mapping, harness implementation, harness binding, execution, result, requirement conformance or CONF-001 conformance.
+
+NEXT STATE:
+READY_FOR_OBJ-004_HARNESS_IMPLEMENTATION_DESIGN_CONTROLLED_REVIEW
+
+LOCK IT. LOG IT. PROVE IT.

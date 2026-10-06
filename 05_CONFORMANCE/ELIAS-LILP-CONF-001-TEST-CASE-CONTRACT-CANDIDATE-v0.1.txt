@@ -1,0 +1,291 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+ELIAS-LILP-CONF-001
+
+ABSTRACT EXECUTABLE TEST-CASE CONTRACT
+
+Candidate Version:
+v0.1
+
+Status:
+CANDIDATE ONLY — NOT YET PROMOTED
+
+Current Semantic Mapping Source:
+ELIAS-LILP-CONF-001-REQUIREMENT-MATRIX-v0.3.csv
+
+Matrix v0.3 SHA-256:
+7EAB99878691315145879458EFFFC020E5F0FBA1F78C1BD168480CE00193F537
+
+Promotion Receipt:
+ELIAS-LILP-RECEIPT-0014
+
+Receipt 0014 SHA-256:
+2CDF3505682F4DDEB00ADA2AEC120B64B2A32C50BBA27270CD0E4842FA7239FF
+
+======================================================================
+1. PURPOSE
+======================================================================
+
+This contract defines the minimum structure required for an abstract
+LILP conformance test case.
+
+A test definition SHALL be capable of being bound to an implementation
+harness without changing the proposition being tested.
+
+The existence of a test definition does not establish that the test has
+been executed.
+
+The existence of a test definition does not establish conformance.
+
+======================================================================
+2. TEST-CASE IDENTITY
+======================================================================
+
+Every candidate test case has a stable identifier:
+
+LILP-TC-Tnn-nnn
+
+where Tnn identifies one of the established T01-T16 semantic test
+families.
+
+Test-case identity SHALL remain distinguishable from requirement
+identity.
+
+One test case MAY eventually map to multiple normative requirements.
+
+One normative requirement MAY eventually require multiple test cases.
+
+Those mappings are NOT ESTABLISHED by this candidate artifact.
+
+======================================================================
+3. REQUIRED TEST DEFINITION FIELDS
+======================================================================
+
+Each abstract executable test definition contains:
+
+TestCaseId
+TestFamily
+TestFamilyName
+RunClass
+Title
+Objective
+Preconditions
+Stimulus
+ExpectedSystemBehaviour
+RequiredEvidence
+FailureOracle
+RequirementIds
+RequirementMappingStatus
+HarnessBinding
+HarnessBindingStatus
+ExecutionStatus
+ResultStatus
+DefinitionStatus
+Notes
+
+A test definition lacking its objective, preconditions, stimulus,
+expected behaviour, evidence requirement or failure oracle is
+structurally incomplete.
+
+======================================================================
+4. RUN CLASSES
+======================================================================
+
+Each T01-T16 family has candidate coverage for:
+
+CONTROL
+
+CHANGED
+
+ADVERSARIAL
+
+FAILURE
+
+RECOVERY_SUCCESSOR
+
+CONTROL examines expected behaviour under an established baseline.
+
+CHANGED examines behaviour after a material state or condition delta.
+
+ADVERSARIAL actively attempts to falsify the governed property.
+
+FAILURE examines missing, invalid, unavailable or failed conditions.
+
+RECOVERY_SUCCESSOR examines correction-forward behaviour while
+preserving predecessor evidence.
+
+Run class does not itself determine test result.
+
+======================================================================
+5. RESULT SEMANTICS
+======================================================================
+
+Permitted conformance-test result semantics remain:
+
+PASS
+
+FAIL
+
+HOLD
+
+NOT_ESTABLISHED
+
+NOT_APPLICABLE
+
+NOT_TESTED
+
+PASS means the observed behaviour satisfies the bounded expected result
+of the executed test within its declared scope.
+
+FAIL means observed behaviour falsifies a mandatory tested proposition.
+
+HOLD means progression is intentionally withheld pending a governing
+condition.
+
+NOT_ESTABLISHED means available evidence is insufficient to determine
+the tested proposition.
+
+NOT_APPLICABLE requires an explicit bounded rationale.
+
+NOT_TESTED means the test has not been executed.
+
+NOT_TESTED SHALL NOT be represented as PASS.
+
+NOT_ESTABLISHED SHALL remain distinguishable from FAIL.
+
+======================================================================
+6. OBSERVATION AND EVIDENCE
+======================================================================
+
+An execution of a test case SHALL record observed behaviour separately
+from expected behaviour.
+
+Interpretation SHALL NOT silently replace observation.
+
+Required evidence SHALL be attributable to the actual test run.
+
+A claimed PASS SHALL NOT be based only on the intended behaviour of the
+implementation.
+
+Where consequence is material, execution attempt SHALL remain
+distinguishable from observed consequence.
+
+======================================================================
+7. EXECUTION RECORD
+======================================================================
+
+A future bound test execution should preserve at minimum:
+
+TestCaseId
+
+SystemUnderTest identity and version
+
+Harness identity and version
+
+RunClass
+
+Governing-state identity
+
+Relevant authority identity
+
+Relevant evidence identities
+
+Preconditions actually established
+
+Stimulus actually applied
+
+Observed behaviour
+
+Expected behaviour
+
+Result status
+
+Failure or uncertainty rationale where applicable
+
+Execution timestamps
+
+Receipt or witness references
+
+Predecessor or successor run references where applicable
+
+The exact machine-readable execution schema is NOT ESTABLISHED by this
+candidate contract.
+
+======================================================================
+8. REQUIREMENT MAPPING BOUNDARY
+======================================================================
+
+The current matrix v0.3 establishes semantic family mapping only.
+
+It does not yet assign any LILP-TC test-case identifier to a normative
+requirement.
+
+Requirement-to-test mapping therefore remains:
+
+NOT ESTABLISHED
+
+The next controlled stage is to map each of the 191 requirements to one
+or more suitable candidate test cases and to identify any requirement
+for which the present 80-case candidate set is insufficient.
+
+No mapping SHALL be invented merely to obtain complete coverage.
+
+If a normative requirement cannot be adequately tested by the candidate
+set, that deficiency SHALL remain explicit and a new candidate test case
+may be proposed.
+
+======================================================================
+9. HARNESS BINDING BOUNDARY
+======================================================================
+
+These test cases are abstract executable definitions.
+
+They are not yet bound to a specific software harness, provider, model,
+database, network, target system or implementation adapter.
+
+Harness Binding:
+
+NOT ESTABLISHED
+
+A later harness binding SHALL preserve the semantic proposition and
+failure oracle of the promoted test definition.
+
+A harness SHALL NOT redefine the requirement to make a test pass.
+
+======================================================================
+10. CLAIM CEILING
+======================================================================
+
+This candidate contract and its candidate test definitions establish no
+executed test result.
+
+They establish no implementation PASS.
+
+They establish no LILP conformance result.
+
+They establish no production fitness.
+
+They establish no external certification.
+
+They establish no regulatory approval.
+
+They establish no independent external validation.
+
+They establish no industry adoption.
+
+The mapped matrix v0.3 remains the current semantic-mapping successor.
+
+Executable requirement-to-test assignment remains NOT ESTABLISHED.
+
+Harness binding remains NOT ESTABLISHED.
+
+Actual execution remains NOT_EXECUTED.
+
+Results remain NOT_TESTED.
+
+LOCK IT.
+LOG IT.
+PROVE IT.
+
+ELIAS SYSTEMS LTD

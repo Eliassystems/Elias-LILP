@@ -1,0 +1,24 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v3.0
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 127
+NEW TEST DEFINITIONS: 1
+SUCCESSOR TEST CASES: 128
+
+NEW TEST: LILP-TC-T16-022
+TITLE: Self-assessed PASS identifies itself as self-assessed when independence could be inferred
+RUN CLASS: CONTROL
+
+HUMAN BASIS: LILP-REQ-WORD-001 / Batch 002F
+T16-023 remains unreserved.
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+The control requires visible self-assessment identification where a PASS could otherwise reasonably be understood as independent verification.
+Definition existence does not establish execution or conformance.
+
+LOCK IT. LOG IT. PROVE IT.

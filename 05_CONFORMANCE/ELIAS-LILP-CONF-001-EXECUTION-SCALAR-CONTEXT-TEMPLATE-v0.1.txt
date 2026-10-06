@@ -1,0 +1,54 @@
+ELIAS LILP CONF-001
+EXECUTION SCALAR CONTEXT TEMPLATE v0.1
+
+STATUS:
+TEMPLATE_ONLY
+
+THIS FILE IS NOT AN EXECUTION-INPUT BINDING.
+THIS FILE IS NOT A HUMAN DETERMINATION.
+
+FREEZE-001
+
+StateMarker:
+
+
+FREEZE-010
+
+ReviewerId:
+
+ReviewerAuthority:
+
+
+FREEZE-012
+
+InternalStatus:
+
+ApplicableProfile:
+
+ReviewerId:
+
+ReviewerAuthority:
+
+ExternalAuthorityEvidencePath:
+
+
+BOUNDARY:
+
+Blank means NOT_ESTABLISHED.
+
+No blank field SHALL be interpreted as a determination, authorization,
+identity, authority, profile, status, evidence object or execution input.
+
+ExternalAuthorityEvidencePath remains conditional and is required only
+where the authorized human determination records
+EXTERNAL_STATUS_ASSERTED_SUPPORTED.
+
+No harness has been executed.
+
+No result has been established.
+
+Conformance remains NOT_ESTABLISHED.
+
+LOCK IT.
+LOG IT.
+PROVE IT.

@@ -1,0 +1,28 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 001B v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 44
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 46
+
+BATCH RESULT:
+COVERED_BY_EXISTING: 0
+COVERED_BY_MULTIPLE_EXISTING: 0
+NEW_TEST_REQUIRED: 2
+
+RESERVED TEST IDS:
+LILP-TC-T02-009
+LILP-TC-T02-010
+
+OBJ-002:
+Explicit object-version identification is a distinct proposition not directly tested by the current T02 suite.
+
+OBJ-007:
+Non-circular digest construction is distinct from canonicalisation completeness and hash-algorithm declaration.
+
+No mapping, test definition, harness binding, execution or result is established.
+
+LOCK IT. LOG IT. PROVE IT.

@@ -1,0 +1,132 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+LILP EVIDENCE RECEIPT
+
+Receipt ID:
+ELIAS-LILP-RECEIPT-0010
+
+Receipt Type:
+SCHEMA001_DUPLICATE_SET3_APPEND_DEFICIENCY_CORRECTION
+
+Recorded UTC:
+2026-10-01T23:15:43.866Z
+
+Subject:
+ELIAS-LILP-SCHEMA-001 v0.1
+
+Status:
+WORKING DRAFT CORRECTION
+
+======================================================================
+OBSERVED DEFICIENCY
+======================================================================
+
+A previously completed Set-3 construction block was executed a second
+time in an interactive PowerShell session.
+
+The rerun correctly produced:
+
+STOP: SCHEMA-001 catalog identity changed.
+
+and:
+
+STOP: Set-3 schema already exists. No overwrite permitted.
+
+Because commands were being submitted interactively rather than as one
+atomic script block, later commands continued after those exceptions.
+
+The Set-3 catalog text was therefore appended a second time.
+
+Observed Defective Catalog Bytes:
+23008
+
+Observed Defective Catalog SHA-256:
+B657B70E69D1B017FF9F217619F5A3E5F2879E19490CD657217EE20E48D25CB5
+
+Observed duplicated heading count:
+2 copies of each Set-3 section heading.
+
+======================================================================
+PRESERVATION
+======================================================================
+
+The exact defective catalog was preserved before correction as:
+
+09_RECEIPTS\ELIAS-LILP-SCHEMA-001-v0.1-DUPLICATE-SET3-DEFECTIVE-SNAPSHOT.txt
+
+Defective Snapshot SHA-256:
+B657B70E69D1B017FF9F217619F5A3E5F2879E19490CD657217EE20E48D25CB5
+
+The four Set-3 JSON schema artifacts were not overwritten.
+
+All eleven working JSON object schemas retained their previously
+established byte identities.
+
+The frozen STD-001, MAN-001 and LEX-001 ancestors remained unchanged.
+
+======================================================================
+CORRECTION
+======================================================================
+
+The first 19,304 bytes of the defective catalog were independently
+hashed before correction.
+
+Observed 19,304-byte Prefix SHA-256:
+BA1C4CF7343347949FCFB35A4D39305417B9DB4F42036505C5D70E070D73E424
+
+That prefix exactly matched the previously verified successful Set-3
+catalog identity:
+
+BA1C4CF7343347949FCFB35A4D39305417B9DB4F42036505C5D70E070D73E424
+
+Only after that identity was established was the working SCHEMA-001
+catalog restored to that exact 19,304-byte state.
+
+Corrected Catalog Bytes:
+19304
+
+Corrected Catalog SHA-256:
+BA1C4CF7343347949FCFB35A4D39305417B9DB4F42036505C5D70E070D73E424
+
+Candidate Frozen:
+FALSE
+
+The working catalog remains mutable until its later formal freeze.
+
+======================================================================
+PROCEDURAL CORRECTION
+======================================================================
+
+Future multi-step PowerShell procedures in this evidence chain should
+be executed inside one enclosing script block so that a terminating
+THROW aborts the entire submitted procedure rather than only one
+interactive command.
+
+======================================================================
+CLAIM CEILING
+======================================================================
+
+This receipt establishes:
+
+- preservation of the exact duplicated catalog;
+- identification of the duplicate Set-3 append;
+- preservation of all eleven JSON object schemas;
+- preservation of all three frozen ancestors;
+- verification of the exact pre-defect 19,304-byte catalog prefix;
+- and restoration of the working catalog to that previously verified
+  byte identity.
+
+This receipt does not establish implementation conformance,
+independent certification, regulatory approval, external validation,
+universal safety or universal security.
+
+THE FROZEN STANDARD CONTROLS.
+
+PRESERVE THE DEFECT.
+PROVE THE PREDECESSOR.
+CORRECT FORWARD.
+
+LOCK IT.
+LOG IT.
+PROVE IT.

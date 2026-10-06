@@ -1,0 +1,30 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v2.1
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 116
+NEW TEST DEFINITIONS: 1
+SUCCESSOR TEST CASES: 117
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-CLAIM-004 -> LILP-TC-T16-012
+
+NEW TEST:
+TEST CASE: LILP-TC-T16-012
+RUN CLASS: CONTROL
+TITLE: Time-sensitive claim identifies its temporal scope
+OBJECTIVE: Establish that where time materially affects the validity of a claim, the claim identifies the temporal scope within which the claimed property is asserted to hold.
+EXPECTED: Where time materially affects validity, the claim identifies or unambiguously preserves its temporal scope. The claim does not silently present a historically valid, future-valid, expired or otherwise time-bounded property as timeless or currently valid outside the supported temporal scope.
+FAILURE ORACLE: FAIL if time materially affects claim validity and the claim omits or materially obscures its temporal scope, if a historically or otherwise temporally bounded property is silently represented as timeless or current, or if the applicable temporal scope can only be reconstructed retrospectively from information not preserved in the governed claim representation.
+
+Temporal claim scope remains distinct from generic evaluated scope.
+Changed-condition reassessment remains distinct from temporal-scope identification in the claim itself.
+Historical validity does not imply current validity.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

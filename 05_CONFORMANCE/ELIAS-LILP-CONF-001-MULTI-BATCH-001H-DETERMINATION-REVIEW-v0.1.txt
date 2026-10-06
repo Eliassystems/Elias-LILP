@@ -1,0 +1,29 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 001H v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 56
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 58
+
+BATCH RESULT:
+COVERED_BY_EXISTING: 0
+NEW_TEST_REQUIRED REQUIREMENTS: 2
+NEW TEST DEFINITIONS RESERVED: 2
+
+DELTA-002:
+NEW_TEST_REQUIRED -> LILP-TC-T07-006 RESERVED
+Detected material change must be represented separately from the predecessor state; detection/classification alone does not establish that structural separation.
+
+DELTA-004:
+NEW_TEST_REQUIRED -> LILP-TC-T07-007 RESERVED
+Affected governing predicates must be identifiable in the Delta Object where the relationship can be established.
+
+The two requirements remain semantically distinct and reserve two separate test definitions.
+
+No requirement mapping is established.
+No test definition is created by this determination artifact.
+
+LOCK IT. LOG IT. PROVE IT.

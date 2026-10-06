@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:elias:lilp:schema:execution-record:v0.1",
+  "title": "ELIAS LILP Execution Record v0.1",
+  "description": "Working reference structural schema for an execution attempt or withheld execution. Determination and gate permission remain distinct from actual execution.",
+  "type": "object",
+  "x-elias-document-id": "ELIAS-LILP-SCHEMA-001",
+  "x-elias-object": "EXECUTION_RECORD",
+  "x-elias-schema-version": "v0.1",
+  "x-elias-ancestors": {
+    "std001_sha256": "076EE05F6441EA1A41F30006614AB0343E66E809A000B7509BDFF0CF729F5537",
+    "man001_sha256": "429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2",
+    "lex001_sha256": "144EFB9CAAB7A0F0537A84704626AC58C5659A0B50F92AA64086B07918E63488"
+  },
+  "x-elias-authority-boundary": "PERMIT does not mandate execution. An execution attempt does not establish successful consequence.",
+  "properties": {
+    "object_type": {
+      "const": "EXECUTION_RECORD"
+    },
+    "schema_id": {
+      "const": "urn:elias:lilp:schema:execution-record:v0.1"
+    },
+    "schema_version": {
+      "const": "v0.1"
+    },
+    "execution_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "determination_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "gate_evaluation_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "governing_state_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "governing_state_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contemplated_effect": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": true
+        }
+      ]
+    },
+    "execution_status": {
+      "enum": [
+        "NOT_EXECUTED",
+        "WITHHELD",
+        "ATTEMPTED",
+        "ACCEPTED_BY_TARGET",
+        "REJECTED_BY_TARGET",
+        "FAILED"
+      ]
+    },
+    "executor_identity": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": true
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "target_reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": true
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "attempted_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "completed_at": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "provider_or_tool_receipt_reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "consequence_reference": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "canonicalisation_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hash_algorithm": {
+      "type": "string",
+      "minLength": 1
+    },
+    "execution_hash": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "execution_id",
+    "determination_reference",
+    "gate_evaluation_reference",
+    "governing_state_reference",
+    "governing_state_hash",
+    "contemplated_effect",
+    "execution_status",
+    "executor_identity",
+    "target_reference",
+    "attempted_at",
+    "completed_at",
+    "reason_codes",
+    "provider_or_tool_receipt_reference",
+    "consequence_reference",
+    "provenance"
+  ],
+  "additionalProperties": true
+}

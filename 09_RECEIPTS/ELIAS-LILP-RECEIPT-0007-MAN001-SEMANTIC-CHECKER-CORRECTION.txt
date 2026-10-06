@@ -1,0 +1,108 @@
+ELIAS SYSTEMS LTD
+LOCK IT. LOG IT. PROVE IT.
+
+LILP EVIDENCE RECEIPT
+
+Receipt ID:
+ELIAS-LILP-RECEIPT-0007
+
+Receipt Type:
+MAN001_PREFREEZE_SEMANTIC_CHECKER_CORRECTION
+
+Recorded UTC:
+2026-10-01T22:48:40.753Z
+
+Subject:
+ELIAS-LILP-MAN-001 v0.1
+
+Candidate Bytes:
+105931
+
+Candidate SHA-256:
+429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2
+
+Predecessor Failed Pre-Freeze Record:
+ELIAS-LILP-MAN-001-v0.1-PREFREEZE-VERIFICATION.txt
+
+Predecessor Failed Pre-Freeze SHA-256:
+7984699EAD8E7EE451DCF46967AE434ECABC41C60C84806F06068EFF6DEE65CB
+
+Predecessor Determination:
+HOLD
+
+Predecessor Freeze Status:
+DO NOT FREEZE
+
+Observed Failure Count:
+3
+
+Observed Failure Class:
+SEMANTIC CHECKER FALSE NEGATIVE
+
+Observed Failed Statements:
+
+1.
+Current authority should remain distinguishable from the historical
+authority record.
+
+2.
+PERMIT means the governance gate permits progression within its
+declared scope.
+
+3.
+Do not report transaction commit as proof that an external consequence
+occurred.
+
+Correction:
+
+The predecessor verifier used line-oriented:
+
+Select-String -SimpleMatch
+
+against complete semantic sentences.
+
+The MAN-001 source intentionally wraps prose across physical lines.
+
+The corrected verifier creates an in-memory examination representation
+in which whitespace runs are normalised to a single space and then
+checks the complete semantic propositions against that representation.
+
+Candidate Mutation:
+NONE
+
+Candidate SHA-256 Before Correction:
+429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2
+
+Candidate SHA-256 After Correction:
+429BD91C06933FD21068C51D64ECE4D299C5B33A9F22DA1E2F3572302EADBEB2
+
+Corrected Semantic Result:
+PASS
+
+Corrected Semantic Statements:
+9 of 9 established.
+
+CLAIM CEILING:
+
+This receipt establishes correction of the semantic-checking procedure.
+
+It does not rewrite or invalidate the predecessor HOLD record.
+
+The predecessor HOLD remains valid evidence of the result produced by
+the earlier checker.
+
+This correction establishes why that checker produced the three false
+negative semantic results and records the corrected examination method.
+
+It does not itself freeze MAN-001.
+
+It does not establish implementation conformance, external
+certification, regulatory approval or independent validation.
+
+PRESERVE THE HOLD.
+CORRECT THE CHECKER.
+RE-EXAMINE THE SAME BYTES.
+
+LOCK IT.
+LOG IT.
+PROVE IT.

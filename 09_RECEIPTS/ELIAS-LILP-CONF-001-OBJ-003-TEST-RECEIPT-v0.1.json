@@ -1,0 +1,60 @@
+﻿{
+    "RecordType":  "ELIAS_LILP_OBJ-003_v0.1_TEST_RECEIPT",
+    "RecordVersion":  "0.1",
+    "ReceiptState":  "TEST_RECEIPT_ESTABLISHED",
+    "RequirementId":  "LILP-REQ-OBJ-003",
+    "TestCaseId":  "LILP-TC-T02-007",
+    "VerificationMethodId":  "LILP-VM-OBJ-003-v0.1",
+    "Harness":  {
+                    "ImplementationId":  "LILP-HI-OBJ-003-v0.1",
+                    "SHA256":  "570352A80D01E30FD3F082271E21B48A37DF95F3DF33FF9C07577D381DA26DFD",
+                    "BindingId":  "LILP-BIND-OBJ-003-v0.1"
+                },
+    "Execution":  {
+                      "Record":  "ELIAS-LILP-CONF-001-OBJ-003-HARNESS-EXECUTION-v0.1.json",
+                      "SHA256":  "C354F88376110E9C7AC4927018C05128D9D3D53F2BAABC40F07614A242993EEE",
+                      "AuthorizedExecutionCount":  1,
+                      "ExecutionCountConsumed":  1,
+                      "HarnessRerun":  false,
+                      "ExecutionAuthorityReset":  false
+                  },
+    "Result":  {
+                   "Artifact":  "ELIAS-LILP-CONF-001-OBJ-003-BOUNDED-RESULT-v0.1.txt",
+                   "SHA256":  "CE4293E649B2E093E042C9F6EA213FB25A19E7C20890B35F51162F58172CDDA9",
+                   "Bytes":  3092,
+                   "Classification":  "BOUNDED_PASS",
+                   "Status":  "ESTABLISHED",
+                   "Scope":  "OBJ-003_v0.1_EXECUTION_CHAIN_ONLY",
+                   "HarnessDetermination":  "ESTABLISHED",
+                   "ObservedVersion":  "NOT_APPLICABLE",
+                   "ComparisonVersion":  "NOT_APPLICABLE",
+                   "PositivePredicatesEstablished":  true
+               },
+    "ReviewChain":  {
+                        "PriorControlledResultReview":  "ELIAS-LILP-CONF-001-OBJ-003-BOUNDED-RESULT-v0.1.txt",
+                        "PriorControlledResultReviewSHA256":  "CE4293E649B2E093E042C9F6EA213FB25A19E7C20890B35F51162F58172CDDA9",
+                        "PriorHoldBoundaryPreserved":  true,
+                        "ReconciliationReview":  "ELIAS-LILP-CONF-001-OBJ-003-EXECUTION-RECORD-POST-EXECUTION-VERIFICATION-v0.1.txt",
+                        "ReconciliationReviewSHA256":  "563A19FF15B3DEF80CCEF9A78BF22E6FAF6D6E4CC552226F5572D6711406C017",
+                        "ReconciliationBasis":  "PRESERVED_EXECUTION_EVIDENCE_ONLY"
+                    },
+    "HistoricalBoundary":  {
+                               "HistoricalBoundedResult":  "NONE",
+                               "HistoricalBoundedResultSHA256":  "NOT_APPLICABLE",
+                               "HistoricalClosureReceipt":  "NONE",
+                               "HistoricalClosureReceiptSHA256":  "NOT_APPLICABLE",
+                               "HistoricalState":  "NO_PRIOR_OBJ-003_RESULT_OR_CLOSURE_CHAIN",
+                               "HistoricalResultReused":  false,
+                               "HistoricalFailReclassified":  false,
+                               "RetrospectiveRepair":  false
+                           },
+    "RegisterBoundary":  {
+                             "RegisterUpdateAuthorized":  false,
+                             "RegisterUpdated":  false
+                         },
+    "Conformance":  {
+                        "CONF001":  "NOT_ESTABLISHED"
+                    },
+    "ClaimCeiling":  "This receipt attests only that the OBJ-003 v0.1 controlled execution chain has an established BOUNDED_PASS result bound to the recorded execution, harness, designated candidate, post-execution verification and bounded-result evidence. It does not generalize beyond the exact governed test-fixture execution, update any register, close the OBJ-003 chain, establish universal LILP-REQ-OBJ-003 conformance, or establish CONF-001.",
+    "NextState":  "READY_FOR_CONTROLLED_OBJ-003_v0.1_CLOSURE_GOVERNANCE"
+}

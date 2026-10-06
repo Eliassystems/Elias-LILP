@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002N v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 120
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 122
+
+TRUE UNRESOLVED BEFORE BATCH 002N: 17
+TRUE UNRESOLVED AFTER BATCH 002N: 15
+
+WORD-008:
+COVERED_BY_EXISTING -> LILP-TC-T16-001
+Basis: T16-001 requires the claim to preserve evaluated scope and fails if the claim materially exceeds what the evidence establishes.
+
+VER-002:
+NEW_TEST_REQUIRED -> LILP-TC-T16-027 RESERVED
+Distinct obligation: verification record identifies the verifier's declared relationship to the originating party.
+
+T16-027 is reserved only.
+T16-028 remains unreserved.
+Test register remains at 135 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

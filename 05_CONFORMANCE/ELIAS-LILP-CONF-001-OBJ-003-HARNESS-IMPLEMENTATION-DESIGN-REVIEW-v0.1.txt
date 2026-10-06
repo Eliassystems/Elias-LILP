@@ -1,0 +1,252 @@
+﻿ELIAS LILP CONF-001
+OBJ-003 HARNESS IMPLEMENTATION DESIGN REVIEW v0.1
+
+DETERMINATION:
+PASS
+
+STATE:
+OBJ-003_HARNESS_IMPLEMENTATION_DESIGN_ESTABLISHED_v0.1
+
+CLASSIFICATION:
+DETERMINISTIC_READ_ONLY_OBJ003_HARNESS_DESIGN_COMPLETE_PENDING_CONTROLLED_REVIEW
+
+NEXT AUTHORITY:
+AUTHORIZED_FOR_SEPARATE_OBJ-003_HARNESS_IMPLEMENTATION_DESIGN_CONTROLLED_REVIEW
+
+HARNESS IMPLEMENTATION GOVERNANCE SHA256:
+820B9BD436000CE3C07F59F7029F2EBCA60BAFE7890F9FE9585544B8324826FA
+
+REQUIREMENT ID:
+LILP-REQ-OBJ-003
+
+TEST CASE ID:
+LILP-TC-T02-007
+
+VERIFICATION METHOD ID:
+LILP-VM-OBJ-003-v0.1
+
+VERIFICATION METHOD CLASS:
+DETERMINISTIC_READ_ONLY_REQUIREMENT_PREDICATE_INSPECTION
+
+GOVERNED METHOD INPUTS:
+Designated candidate evidence; LILP-REQ-OBJ-003; bound explicit test LILP-TC-T02-007; preserved candidate identity and provenance required to inspect only the predicates explicitly required by the bound requirement and test.
+
+GOVERNED METHOD PROCEDURE:
+Perform deterministic read-only inspection of the designated candidate evidence. Bind the inspection to LILP-REQ-OBJ-003 and LILP-TC-T02-007. Identify only the predicates explicitly required by the preserved requirement and bound explicit test. Inspect whether each required predicate is directly demonstrated by the designated candidate evidence. Record absent, ambiguous or contradictory predicates. Do not use filename inference, semantic substitution, retrospective construction or unstated assumption. Preserve the candidate identity, inspected evidence, predicate observations, determination and provenance.
+
+GOVERNED PASS CONDITION:
+ESTABLISHED only when the exact predicates explicitly required by LILP-REQ-OBJ-003 and the bound explicit test definition are directly demonstrated by the designated candidate evidence without filename inference, semantic substitution, retrospective construction or unstated assumption.
+
+GOVERNED FAIL CONDITION:
+NOT_ESTABLISHED when any required predicate is absent, ambiguous, contradictory, not directly observable under the designated method, or requires inference beyond the preserved requirement/test definition.
+
+GOVERNED EVIDENCE OUTPUT:
+VerificationMethodId; RequirementId; bound TestCaseId; designated candidate identity; designated candidate provenance; explicit required-predicate set as derived from the preserved requirement and bound test; per-predicate direct observations; absent, ambiguous or contradictory predicate findings where present; bounded determination; inspection record.
+
+BOUND TEST EXPECTED SYSTEM BEHAVIOUR:
+The object identifies the material time or temporal state relevant to its creation or applicability before it is relied upon for consequential governance; missing required temporal context remains explicit and is not silently inferred.
+
+BOUND TEST REQUIRED EVIDENCE:
+Governance object; object identity material; temporal creation or applicability field or state; declared consequential use; inspection record demonstrating the temporal context relied upon.
+
+BOUND TEST FAILURE ORACLE:
+FAIL if an object is relied upon for consequential governance while a required creation or applicability time or temporal state is absent, ambiguous or silently inferred.
+
+HARNESS ID:
+LILP-HI-OBJ-003-v0.1
+
+HARNESS FILENAME:
+ELIAS-LILP-HI-OBJ-003-v0.1.ps1
+
+HARNESS LANGUAGE:
+PowerShell
+
+HARNESS INVOCATION PARAMETER:
+-CandidatePath
+
+CANDIDATE REPRESENTATION:
+JSON_CONTENT_PARSED_FROM_DESIGNATED_CANDIDATE_PATH_NO_SEMANTIC_USE_OF_FILENAME
+
+REQUIRED INPUT FIELD:
+CandidateId
+REQUIRED INPUT FIELD:
+CandidateProvenance
+REQUIRED INPUT FIELD:
+GovernanceObject
+REQUIRED INPUT FIELD:
+ObjectIdentityMaterial
+REQUIRED INPUT FIELD:
+TemporalContext
+REQUIRED INPUT FIELD:
+DeclaredConsequentialUse
+
+TEMPORAL CONTEXT CHILD FIELD:
+Kind
+TEMPORAL CONTEXT CHILD FIELD:
+Value
+TEMPORAL CONTEXT CHILD FIELD:
+Source
+
+ALLOWED TEMPORAL CONTEXT KINDS:
+CREATION_TIME | APPLICABILITY_TIME | TEMPORAL_STATE
+
+OUTPUT MODE:
+STRUCTURED_JSON_TO_STDOUT_ONLY
+
+FILE MUTATION MODE:
+NO_FILE_MUTATION_BY_HARNESS
+
+SYSTEM CLOCK AUTHORITY:
+NONE
+
+FILESYSTEM METADATA AUTHORITY:
+NONE
+
+FILENAME SEMANTIC AUTHORITY:
+NONE
+
+EXTERNAL LOOKUP AUTHORITY:
+NONE
+
+PREDICATE:
+P01_CANDIDATE_ID_PRESENT
+PREDICATE:
+P02_CANDIDATE_PROVENANCE_PRESENT
+PREDICATE:
+P03_GOVERNANCE_OBJECT_PRESENT
+PREDICATE:
+P04_OBJECT_IDENTITY_MATERIAL_PRESENT
+PREDICATE:
+P05_DECLARED_CONSEQUENTIAL_USE_PRESENT
+PREDICATE:
+P06_TEMPORAL_CONTEXT_PRESENT
+PREDICATE:
+P07_TEMPORAL_CONTEXT_KIND_EXPLICIT_AND_ALLOWED
+PREDICATE:
+P08_TEMPORAL_CONTEXT_VALUE_PRESENT
+PREDICATE:
+P09_TEMPORAL_CONTEXT_SOURCE_PRESENT
+PREDICATE:
+P10_NO_TEMPORAL_CONTEXT_INFERENCE_REQUIRED
+
+TEMPORAL CONTEXT RULE:
+TemporalContext.Kind must equal exactly one of CREATION_TIME, APPLICABILITY_TIME or TEMPORAL_STATE; TemporalContext.Value and TemporalContext.Source must both be explicit non-empty candidate values.
+
+NO-INFERENCE RULE:
+The harness SHALL NOT derive temporal context from filename, path, filesystem timestamps, current system time, external lookup, unrelated fields or unstated assumptions.
+
+INSPECTION RECORD RULE:
+The harness shall generate the inspection record from the directly observed candidate fields and predicate outcomes; it shall not require a pre-existing PASS claim.
+
+PASS LOGIC:
+ESTABLISHED only when P01 through P10 are all directly satisfied from parsed candidate content.
+
+FAIL LOGIC:
+NOT_ESTABLISHED when any P01 through P10 predicate is absent, malformed, ambiguous, contradictory or would require inference.
+
+DETERMINATION RULE:
+Only ESTABLISHED or NOT_ESTABLISHED may be emitted as the bounded verification determination.
+
+REQUIRED OUTPUT FIELDS:
+HarnessId | HarnessVersion | VerificationMethodId | RequirementId | TestCaseId | CandidatePath | CandidateSHA256 | CandidateId | CandidateProvenance | RequiredPredicateSet | PredicateObservations | AbsentPredicates | AmbiguousPredicates | ContradictoryPredicates | Determination | InspectionRecord
+
+HARNESS ID SELECTED:
+TRUE
+
+HARNESS FILENAME SELECTED:
+TRUE
+
+HARNESS INPUT CONTRACT DESIGNED:
+TRUE
+
+HARNESS PREDICATE SET DESIGNED:
+TRUE
+
+HARNESS OUTPUT CONTRACT DESIGNED:
+TRUE
+
+NO-INFERENCE CONTROLS DESIGNED:
+TRUE
+
+DESIGN CONTROLLED-REVIEWED:
+FALSE
+
+HARNESS IMPLEMENTATION CONSTRUCTION AUTHORIZED:
+FALSE
+
+HARNESS IMPLEMENTATION CONSTRUCTED:
+FALSE
+
+HARNESS IMPLEMENTATION ESTABLISHED:
+FALSE
+
+HARNESS BINDING ID SELECTED:
+FALSE
+
+HARNESS BINDING ESTABLISHED:
+FALSE
+
+VM REGISTER MODIFICATION AUTHORIZED:
+FALSE
+
+REQUIREMENT MATRIX MODIFICATION AUTHORIZED:
+FALSE
+
+TEST-CASE REGISTER MODIFICATION AUTHORIZED:
+FALSE
+
+EXECUTION AUTHORIZED:
+FALSE
+
+EXECUTION PERFORMED:
+FALSE
+
+RESULT DETERMINED:
+FALSE
+
+REQUIREMENT CONFORMANCE ESTABLISHED:
+FALSE
+
+CONF-001:
+NOT_ESTABLISHED
+
+DESIGN BOUNDARY:
+This design defines a forward implementation shape only.
+The harness will inspect designated candidate content and its SHA-256 identity without deriving governance meaning from the candidate filename or filesystem metadata.
+Temporal context must be explicitly present inside the candidate as a TemporalContext object.
+TemporalContext.Kind must explicitly identify CREATION_TIME, APPLICABILITY_TIME or TEMPORAL_STATE.
+TemporalContext.Value and TemporalContext.Source must be explicit and non-empty.
+The harness may not substitute current system time, file timestamps, path naming, external information or unstated assumptions for missing temporal context.
+The harness will produce its inspection evidence to standard output and will not mutate the designated candidate.
+The implementation itself is not constructed by this design review.
+No harness binding is established.
+No execution is authorized.
+No result is determined.
+No requirement conformance is established.
+CONF-001 remains NOT_ESTABLISHED.
+
+BOUND TEST RECORD PRESERVED:
+TEST_FIELD = TestCaseId | VALUE = LILP-TC-T02-007
+TEST_FIELD = TestFamily | VALUE = T02
+TEST_FIELD = TestFamilyName | VALUE = Identity Continuity
+TEST_FIELD = RunClass | VALUE = CONTROL
+TEST_FIELD = Title | VALUE = Consequential object carries relevant temporal context
+TEST_FIELD = Objective | VALUE = Establish that an object relied upon for consequential governance identifies the time or temporal state relevant to its creation or applicability.
+TEST_FIELD = Preconditions | VALUE = A governance object is relied upon for consequential determination or execution and creation time, applicability time or another material temporal state is relevant to its validity, interpretation or authority.
+TEST_FIELD = Stimulus | VALUE = Inspect the governed object and its identity material before consequential reliance and evaluate whether the required temporal creation or applicability context is explicitly represented.
+TEST_FIELD = ExpectedSystemBehaviour | VALUE = The object identifies the material time or temporal state relevant to its creation or applicability before it is relied upon for consequential governance; missing required temporal context remains explicit and is not silently inferred.
+TEST_FIELD = RequiredEvidence | VALUE = Governance object; object identity material; temporal creation or applicability field or state; declared consequential use; inspection record demonstrating the temporal context relied upon.
+TEST_FIELD = FailureOracle | VALUE = FAIL if an object is relied upon for consequential governance while a required creation or applicability time or temporal state is absent, ambiguous or silently inferred.
+TEST_FIELD = RequirementIds | VALUE = <EMPTY>
+TEST_FIELD = RequirementMappingStatus | VALUE = NOT_ESTABLISHED
+TEST_FIELD = HarnessBinding | VALUE = <EMPTY>
+TEST_FIELD = HarnessBindingStatus | VALUE = NOT_ESTABLISHED
+TEST_FIELD = ExecutionStatus | VALUE = NOT_EXECUTED
+TEST_FIELD = ResultStatus | VALUE = NOT_TESTED
+TEST_FIELD = DefinitionStatus | VALUE = CANDIDATE_ABSTRACT_EXECUTABLE_TEST_v0.5
+TEST_FIELD = Notes | VALUE = Controlled successor definition arising from human semantic review of LILP-REQ-OBJ-003. Definition existence does not establish requirement mapping, harness binding, execution or conformance.
+
+NEXT STATE:
+READY_FOR_OBJ-003_HARNESS_IMPLEMENTATION_DESIGN_CONTROLLED_REVIEW
+
+LOCK IT. LOG IT. PROVE IT.

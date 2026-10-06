@@ -1,0 +1,161 @@
+﻿ELIAS LILP CONF-001
+OBJ-004 TEST-CASE DEFINITION DESIGN REVIEW v0.1
+
+DETERMINATION:
+PASS
+
+STATE:
+OBJ-004_TEST_CASE_DEFINITION_DESIGN_ESTABLISHED_v0.1
+
+CLASSIFICATION:
+FORWARD_T02_TEST_CASE_DEFINITION_PROPOSED_WITHOUT_MAPPING_OR_REGISTER_CONSTRUCTION
+
+NEXT AUTHORITY:
+AUTHORIZED_FOR_SEPARATE_OBJ-004_TEST_CASE_DEFINITION_CONTROLLED_REVIEW
+
+EVIDENCE-RECONCILIATION REVIEW:
+ELIAS-LILP-CONF-001-OBJ-004-SELECTED-REQUIREMENT-EVIDENCE-RECONCILIATION-REVIEW-v0.1.txt
+
+EVIDENCE-RECONCILIATION REVIEW SHA256:
+3F83189F54680DB9CE041D82D117D98470745A9A59AEF7AFD66DA84FDC7CF23A
+
+REQUIREMENT MATRIX:
+ELIAS-LILP-CONF-001-REQUIREMENT-MATRIX-v0.7.csv
+
+REQUIREMENT MATRIX SHA256:
+1CCD92FD87F6E7E2516C90BB808BEEDA2A06001DBBD3B4AAC1DA4BFF26A299C8
+
+TEST-CASE REGISTER:
+ELIAS-LILP-CONF-001-TEST-CASE-CANDIDATE-v4.15.csv
+
+TEST-CASE REGISTER SHA256:
+C2A36BAB57414EF04400A76EFC1CD31E8E42B34E0053593EDF97ADEF0F67E9AF
+
+SEMANTIC SOURCE SHA256:
+5E8E8E9FE171C917081C13A8D25EE01E6A2061CAED9049D78864A761BB1866EE
+
+REQUIREMENT ID:
+LILP-REQ-OBJ-004
+
+REQUIREMENT TEXT:
+LILP-REQ-OBJ-004 Where an object has a predecessor, the predecessor relationship SHALL be explicitly representable.
+
+CONTROLLED PRIMARY TEST FAMILY:
+T02
+
+CURRENT MAXIMUM T02 NUMERIC IDENTIFIER:
+11
+
+PROPOSED TEST CASE ID:
+LILP-TC-T02-012
+
+PROPOSED TEST CASE ID COLLISION IN CURRENT REGISTER:
+FALSE
+
+PROPOSED TEST CASE ID COLLISION IN GOVERNED CONFORMANCE ARTIFACTS:
+FALSE
+
+PROPOSED TEST DEFINITION:
+FIELD = TestCaseId | VALUE = LILP-TC-T02-012
+FIELD = TestFamily | VALUE = T02
+FIELD = TestFamilyName | VALUE = Identity Continuity
+FIELD = RunClass | VALUE = CONTROL
+FIELD = Title | VALUE = Object predecessor relationship is explicitly representable
+FIELD = Objective | VALUE = Establish that where a governed object has a predecessor, the predecessor relationship can be explicitly represented and attributed to the inspected object without inference.
+FIELD = Preconditions | VALUE = A governed object is under inspection and either a predecessor is declared, predecessor evidence is available, or the object's lifecycle context makes predecessor existence materially relevant to identity continuity.
+FIELD = Stimulus | VALUE = Inspect the governed object's identity and lifecycle material and determine whether any predecessor relationship that exists is explicitly represented through an attributable predecessor identifier, reference or equivalent governed relationship representation.
+FIELD = ExpectedSystemBehaviour | VALUE = Where the inspected object has a predecessor, the object or its governed identity material explicitly represents the predecessor relationship in a form attributable to the inspected object; the relationship is not established solely through filename inference, chronology, similarity, unstated assumption or retrospective reconstruction.
+FIELD = RequiredEvidence | VALUE = Governed object identity; object lifecycle or lineage material; predecessor identifier, reference or equivalent explicit relationship representation where a predecessor exists; provenance sufficient to attribute that representation to the inspected object; inspection record.
+FIELD = FailureOracle | VALUE = FAIL if a predecessor exists but the predecessor relationship is absent, ambiguous, unattributable, or can be established only through filename inference, chronology, semantic similarity, unstated assumption or retrospective reconstruction.
+FIELD = RequirementIds | VALUE = <EMPTY>
+FIELD = RequirementMappingStatus | VALUE = NOT_ESTABLISHED
+FIELD = HarnessBinding | VALUE = <EMPTY>
+FIELD = HarnessBindingStatus | VALUE = NOT_ESTABLISHED
+FIELD = ExecutionStatus | VALUE = NOT_EXECUTED
+FIELD = ResultStatus | VALUE = NOT_TESTED
+FIELD = DefinitionStatus | VALUE = PROPOSED_PENDING_CONTROLLED_REVIEW
+FIELD = Notes | VALUE = Forward OBJ-004 T02 test-case definition design derived only from LILP-REQ-OBJ-004, the governed semantic source, the controlled T02 family assignment, and the evidence-reconciliation authority. Definition design does not establish requirement mapping, register construction, verification method, harness binding, execution, result, requirement conformance or CONF-001 conformance.
+
+PROPOSED FIELD COUNT:
+19
+
+CURRENT REGISTER SCHEMA FIELD COUNT:
+19
+
+TEST CASE ID ALLOCATED WITHIN THIS DESIGN ARTIFACT:
+TRUE
+
+TEST CASE CONSTRUCTED IN REGISTER:
+FALSE
+
+TEST-CASE REGISTER MODIFIED:
+FALSE
+
+REQUIREMENT-TO-TEST MAPPING ESTABLISHED:
+FALSE
+
+REQUIREMENT MATRIX MODIFIED:
+FALSE
+
+VERIFICATION METHOD ESTABLISHED:
+FALSE
+
+VERIFICATION-METHOD REGISTER MODIFIED:
+FALSE
+
+HARNESS IMPLEMENTATION AUTHORIZED:
+FALSE
+
+HARNESS BINDING AUTHORIZED:
+FALSE
+
+EXECUTION AUTHORIZED:
+FALSE
+
+EXECUTION PERFORMED:
+FALSE
+
+RESULT DETERMINED:
+FALSE
+
+REQUIREMENT CONFORMANCE ESTABLISHED:
+FALSE
+
+SEMANTIC SUBSTITUTION AUTHORIZED:
+FALSE
+
+FILENAME INFERENCE AUTHORIZED:
+FALSE
+
+RETROSPECTIVE CONSTRUCTION AUTHORIZED:
+FALSE
+
+UNSTATED ASSUMPTION AUTHORIZED:
+FALSE
+
+HISTORICAL EVIDENCE MODIFIED:
+FALSE
+
+RETROSPECTIVE REPAIR:
+FALSE
+
+CONF-001:
+NOT_ESTABLISHED
+
+DESIGN BOUNDARY:
+This review uses the separately authorized forward OBJ-004 test-case definition design authority only.
+The proposed test is bounded to the exact OBJ-004 predecessor-relationship representability requirement and controlled primary family T02.
+The proposed candidate identity LILP-TC-T02-012 is allocated only inside this design artifact after proving that T02-011 is the current maximum and that LILP-TC-T02-012 is collision-free in the current register and governed conformance artifacts.
+The candidate definition may be evaluated by a separate controlled review but is not yet a constructed test-register row.
+RequirementIds remains empty and RequirementMappingStatus remains NOT_ESTABLISHED because test-definition existence does not establish requirement mapping.
+HarnessBinding remains empty; harness binding, execution and result remain NOT_ESTABLISHED / NOT_EXECUTED / NOT_TESTED.
+No verification method is established.
+No register or requirement matrix is modified.
+No execution is authorized.
+No requirement or CONF-001 conformance is established.
+The proposed DefinitionStatus value is proposal-stage only and must be reconciled against controlled register lifecycle vocabulary before any row construction.
+
+NEXT STATE:
+READY_FOR_OBJ-004_TEST_CASE_DEFINITION_CONTROLLED_REVIEW
+
+LOCK IT. LOG IT. PROVE IT.

@@ -1,0 +1,204 @@
+﻿ELIAS LILP CONF-001
+OBJ-003 VERIFICATION-METHOD DEFINITION FIELD DESIGN GOVERNANCE REVIEW v0.1
+
+DETERMINATION:
+PASS
+
+STATE:
+OBJ-003_VERIFICATION_METHOD_DEFINITION_FIELD_DESIGN_GOVERNANCE_ESTABLISHED_v0.1
+
+CLASSIFICATION:
+DEFINITION_FIELD_PROPOSAL_DESIGN_AUTHORIZED_WITH_EXPLICIT_ALIAS_AND_FRESH_DESIGN_BOUNDARIES
+
+NEXT AUTHORITY:
+AUTHORIZED_FOR_SEPARATE_OBJ-003_VERIFICATION_METHOD_DEFINITION_FIELD_PROPOSAL_DESIGN_REVIEW
+
+LIFECYCLE RECONCILIATION SHA256:
+6C485FFDCA9CD37CF3E26F7FBE0A6F0D6A282B2EAEE956000B7E18207B1478E8
+
+HELD ROW-DESIGN SHA256:
+D51953400F4F0C79AC4DF813DE7026036D591D9FE2323FF121267D1D643F7031
+
+REGISTER-SUCCESSOR GOVERNANCE SHA256:
+ADC53827EDA4D2B71777FDC5E6F4CE290939A8EC7F4ED7B2B6C7FA7401DA223D
+
+VM DESIGN GOVERNANCE SHA256:
+1BFB9B7B79A309CCBEF9641B0940A15A00BD3DFAF9B8CF799A0CB5C63731DFF2
+
+VM PROPOSAL DESIGN SHA256:
+4E5170FF8D4EFBA7BEEF7CB10372CBB5F0F912A62C74CB9EB5D7ADFD2515739B
+
+VM PROPOSAL CONTROLLED REVIEW SHA256:
+F9832E521B25F2409601A097DDFFA132E54C68D1FC7714F0D877236854F19324
+
+REQUIREMENT MATRIX SHA256:
+7766A309A002A8BB51475DD491DF1AAA88049CC7FA2B71D40F69DECE4D03AD14
+
+TEST-CASE REGISTER SHA256:
+C2A36BAB57414EF04400A76EFC1CD31E8E42B34E0053593EDF97ADEF0F67E9AF
+
+CURRENT VM REGISTER SHA256:
+3870674FCD975CF43DA0C79DC28AB644BAE44273D2F94C705BB4D0562FFC1419
+
+REQUIREMENT ID:
+LILP-REQ-OBJ-003
+
+REQUIREMENT TEXT:
+LILP-REQ-OBJ-003 Each object relied upon for consequential governance SHALL identify the time or temporal state relevant to its creation or applicability.
+
+TEST FAMILY:
+T02
+
+BOUND EXPLICIT TEST:
+LILP-TC-T02-007
+
+PROPOSED VM ID:
+LILP-VM-OBJ-003-v0.1
+
+GOVERNED VERIFICATION CLASS:
+DETERMINISTIC_READ_ONLY_REQUIREMENT_PREDICATE_INSPECTION
+
+GOVERNED SEMANTIC SOURCE:
+LILP-REQ-OBJ-003 + LILP-TC-T02-007
+
+GOVERNED PASS RULE:
+ESTABLISHED only when the exact predicates explicitly required by LILP-REQ-OBJ-003 and the bound explicit test definition are directly demonstrated by the designated candidate evidence without filename inference, semantic substitution, retrospective construction or unstated assumption.
+
+GOVERNED FAIL RULE:
+NOT_ESTABLISHED when any required predicate is absent, ambiguous, contradictory, not directly observable under the designated method, or requires inference beyond the preserved requirement/test definition.
+
+GOVERNED VERIFICATION BOUNDARY:
+OBJ-003_REQUIREMENT_AND_BOUND_EXPLICIT_TEST_ONLY_NO_UNSTATED_SEMANTIC_EXTENSION
+
+DEFINITION FIELDS IN VM REGISTER:
+MethodTitle | MethodClass | Inputs | Procedure | PassCondition | FailCondition | EvidenceOutput
+
+ALIAS-MAPPING CANDIDATE COUNT:
+3
+
+FRESH-DESIGN FIELD COUNT:
+4
+
+NOTES DISPOSITION:
+REQUIRES_SEPARATE_VM_SPECIFIC_NOTES_DESIGN_REVIEW
+
+DEFINITION FIELD PROPOSAL DESIGN AUTHORIZED:
+TRUE
+
+METHOD TITLE DESIGN AUTHORIZED:
+TRUE
+
+METHOD CLASS EXACT-MAPPING REVIEW AUTHORIZED:
+TRUE
+
+INPUTS DESIGN AUTHORIZED:
+TRUE
+
+PROCEDURE DESIGN AUTHORIZED:
+TRUE
+
+PASS CONDITION EXACT-MAPPING REVIEW AUTHORIZED:
+TRUE
+
+FAIL CONDITION EXACT-MAPPING REVIEW AUTHORIZED:
+TRUE
+
+EVIDENCE OUTPUT DESIGN AUTHORIZED:
+TRUE
+
+NOTES DESIGN AUTHORIZED:
+TRUE
+
+METHOD CLASS VALUE SELECTED BY THIS REVIEW:
+FALSE
+
+PASS CONDITION VALUE SELECTED BY THIS REVIEW:
+FALSE
+
+FAIL CONDITION VALUE SELECTED BY THIS REVIEW:
+FALSE
+
+METHOD TITLE VALUE SELECTED:
+FALSE
+
+INPUTS VALUE SELECTED:
+FALSE
+
+PROCEDURE VALUE SELECTED:
+FALSE
+
+EVIDENCE OUTPUT VALUE SELECTED:
+FALSE
+
+NOTES VALUE SELECTED:
+FALSE
+
+LIFECYCLE FIELDS REOPENED:
+FALSE
+
+ENTIRE ROW-DESIGN HOLD CLEARED:
+FALSE
+
+SUCCESSOR VM ROW CONSTRUCTION AUTHORIZED:
+FALSE
+
+SUCCESSOR VM REGISTER CONSTRUCTION AUTHORIZED:
+FALSE
+
+MATRIX MAPPING AUTHORIZED:
+FALSE
+
+HARNESS IMPLEMENTATION AUTHORIZED:
+FALSE
+
+HARNESS BINDING AUTHORIZED:
+FALSE
+
+EXECUTION AUTHORIZED:
+FALSE
+
+REQUIREMENT CONFORMANCE ESTABLISHED:
+FALSE
+
+OBJ-002 REOPENED:
+FALSE
+
+RETROSPECTIVE CONSTRUCTION:
+FALSE
+
+RETROSPECTIVE REPAIR:
+FALSE
+
+CONF-001:
+NOT_ESTABLISHED
+
+ALIAS-MAPPING CANDIDATES:
+FIELD = MethodClass | SOURCE = PROPOSED VERIFICATION CLASS | STATUS = ELIGIBLE_FOR_SEPARATE_EXACT_MAPPING_REVIEW | GOVERNED_VALUE = DETERMINISTIC_READ_ONLY_REQUIREMENT_PREDICATE_INSPECTION
+FIELD = PassCondition | SOURCE = PROPOSED PASS RULE | STATUS = ELIGIBLE_FOR_SEPARATE_EXACT_MAPPING_REVIEW | GOVERNED_VALUE = ESTABLISHED only when the exact predicates explicitly required by LILP-REQ-OBJ-003 and the bound explicit test definition are directly demonstrated by the designated candidate evidence without filename inference, semantic substitution, retrospective construction or unstated assumption.
+FIELD = FailCondition | SOURCE = PROPOSED FAIL RULE | STATUS = ELIGIBLE_FOR_SEPARATE_EXACT_MAPPING_REVIEW | GOVERNED_VALUE = NOT_ESTABLISHED when any required predicate is absent, ambiguous, contradictory, not directly observable under the designated method, or requires inference beyond the preserved requirement/test definition.
+
+FRESH-DESIGN FIELDS:
+MethodTitle
+Inputs
+Procedure
+EvidenceOutput
+
+NOTES DESIGN BOUNDARY:
+The requirement-matrix Notes and explicit-test Notes are provenance-bearing source notes.
+Neither source Notes value is automatically promoted into the verification-method register.
+A VM-specific Notes value may be proposed only if it accurately describes the new OBJ-003 verification-method definition and preserves the non-establishment of matrix mapping, harness binding, execution and conformance.
+
+DEFINITION DESIGN BOUNDARY:
+MethodTitle, Inputs, Procedure and EvidenceOutput require fresh OBJ-003 verification-method design grounded only in the preserved requirement, explicit test, governed semantic source and verification boundary.
+MethodClass, PassCondition and FailCondition already have governed semantic candidates in the preserved VM proposal, but mapping those proposal labels into the actual VM-register schema must be separately and explicitly established.
+No field may be populated merely by copying the OBJ-002 row.
+No new semantic predicate may be added beyond LILP-REQ-OBJ-003 and the bound explicit test.
+No filename inference, retrospective construction, unstated assumption or semantic substitution is permitted.
+The lifecycle reconciliation remains established and is not reopened.
+The existing row-design HOLD remains in force until all definition fields and Notes are separately resolved and controlled-reviewed.
+No successor VM row or register is constructed by this review.
+
+NEXT STATE:
+READY_FOR_OBJ-003_VERIFICATION_METHOD_DEFINITION_FIELD_PROPOSAL_DESIGN_REVIEW
+
+LOCK IT. LOG IT. PROVE IT.

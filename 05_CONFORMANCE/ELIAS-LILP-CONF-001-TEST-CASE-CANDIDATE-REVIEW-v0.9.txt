@@ -1,0 +1,28 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v0.9
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 99
+NEW TEST DEFINITIONS: 1
+SUCCESSOR TEST CASES: 100
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+HUMAN BASIS:
+LILP-REQ-STATE-003 -> reserved LILP-TC-T01-008
+LILP-REQ-STATE-004 -> reserved LILP-TC-T01-008
+
+NEW TEST:
+TEST CASE: LILP-TC-T01-008
+TITLE: Governing-state authority standing and admissibility are explicit
+OBJECTIVE: Establish that a Governing State Object explicitly identifies the authority relied upon or records authority as NOT_ESTABLISHED, and explicitly represents standing and admissibility where those properties are required by the applicable use case.
+EXPECTED: The Governing State Object explicitly identifies the authority relied upon or explicitly records authority as NOT_ESTABLISHED. Where standing or admissibility is required by the use case, each required property is explicitly and unambiguously represented before consequential reliance.
+FAILURE ORACLE: FAIL if relied-upon authority is absent or silently assumed without an explicit authority reference or NOT_ESTABLISHED state, or if standing or admissibility is required by the use case but is absent, ambiguous or silently inferred.
+
+One test definition addresses the shared structural-state representation gap.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

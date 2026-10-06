@@ -1,0 +1,27 @@
+ELIAS-LILP-CONF-001
+MULTI-CANDIDATE HUMAN SEMANTIC DETERMINATION — BATCH 002W v0.1
+
+STATUS: HUMAN DETERMINATION ESTABLISHED
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+
+PRIOR HUMAN-REVIEWED: 138
+NEWLY HUMAN-REVIEWED: 2
+TOTAL HUMAN-REVIEWED: 140
+
+TRUE UNRESOLVED BEFORE BATCH 002W: 8
+TRUE UNRESOLVED AFTER BATCH 002W: 6
+
+FREEZE-004:
+NEW_TEST_REQUIRED -> LILP-TC-T14-010 RESERVED
+Distinct obligation: every mandatory falsification test identifier is unique.
+
+FREEZE-005:
+NEW_TEST_REQUIRED -> LILP-TC-T14-011 RESERVED
+Distinct obligation: all expected normative section headings are present.
+
+T14-010 and T14-011 are reserved only.
+T14-012 remains unreserved.
+Test register remains at 147 definitions.
+No authoritative requirement mapping is established.
+
+LOCK IT. LOG IT. PROVE IT.

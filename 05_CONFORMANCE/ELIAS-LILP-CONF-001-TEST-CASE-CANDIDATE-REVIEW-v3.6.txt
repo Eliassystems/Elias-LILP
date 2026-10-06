@@ -1,0 +1,31 @@
+ELIAS-LILP-CONF-001
+ABSTRACT EXECUTABLE TEST-CASE CANDIDATE REVIEW v3.6
+
+STATUS: CONTROLLED SUCCESSOR CANDIDATE ESTABLISHED
+PREDECESSOR TEST CASES: 133
+NEW TEST DEFINITIONS: 2
+SUCCESSOR TEST CASES: 135
+
+NEW TEST: LILP-TC-T05-015
+TITLE: Confidentiality protections preserve claim-required inspectability
+RUN CLASS: CONTROL
+HUMAN BASIS: LILP-REQ-SEC-010 / Batch 002M
+
+NEW TEST: LILP-TC-T16-026
+TITLE: Unexamined material dependency is preserved as claim limitation
+RUN CLASS: CONTROL
+HUMAN BASIS: LILP-REQ-VER-007 / Batch 002M
+
+T05-016 remains unreserved.
+T16-027 remains unreserved.
+
+REQUIREMENT-TO-TEST MAPPING: NOT_ESTABLISHED
+HARNESS BINDING: NOT_ESTABLISHED
+TEST EXECUTION: NOT_EXECUTED
+TEST RESULTS: NOT_TESTED
+
+No 134-case intermediate register was created.
+The two-test successor directly preserves the two independently established Batch 002M semantic gaps.
+Definition existence does not establish execution or conformance.
+
+LOCK IT. LOG IT. PROVE IT.
